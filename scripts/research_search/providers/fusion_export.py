@@ -11,6 +11,17 @@ from .fusion import fuse_results
 from .models import ProviderPaper, ProviderResult
 
 
+def _safe_public(value: Any) -> Any:
+    """Keep public export free of raw provider payloads and local paths."""
+    if isinstance(value, dict):
+        return {key: _safe_public(item) for key, item in value.items() if key != "raw"}
+    if isinstance(value, list):
+        return [_safe_public(item) for item in value]
+    if isinstance(value, tuple):
+        return [_safe_public(item) for item in value]
+    return value
+
+
 def _read(path: Path) -> dict[str, Any]:
     try:
         value = json.loads(path.read_text(encoding="utf-8"))
@@ -42,6 +53,8 @@ def _result(value: dict[str, Any]) -> ProviderResult:
         raise ValueError("request_count must be non-negative")
     if type(result.fetched_count) is not int or result.fetched_count < 0:
         raise ValueError("fetched_count must be non-negative")
+    if result.reported_count is not None and (type(result.reported_count) is not int or result.reported_count < 0):
+        raise ValueError("reported_count must be a non-negative integer or null")
     if result.status not in {"planned", "not_executed", "success", "partial", "failed"}:
         raise ValueError("unsupported provider result status")
     return result
@@ -75,33 +88,40 @@ def export_provider_fusion(inputs: list[Path], output_dir: Path) -> dict[str, An
     fused = fuse_results(results)
     historical_requests = sum(result.request_count for result in results)
     source_coverage: dict[str, dict[str, Any]] = {}
+    source_entries: list[tuple[dict[str, Any], ProviderResult, str]] = []
     for value, result in zip(values, results):
-        details = source_coverage.setdefault(result.provider, {
-            "request_count": 0, "reported_counts": [], "fetched_count": 0,
-            "query_types": [], "input_result_count": 0,
+        query_type = value.get("query_type") or next((paper.channel for paper in result.papers if paper.channel), "unknown")
+        source_entries.append((value, result, query_type))
+        provider_details = source_coverage.setdefault(result.provider, {"query_types": [], "by_query_type": {}})
+        if query_type not in provider_details["query_types"]:
+            provider_details["query_types"].append(query_type)
+        details = provider_details["by_query_type"].setdefault(query_type, {
+            "historical_request_count": 0, "reported_counts": [], "fetched_count": 0, "input_result_count": 0,
         })
-        details["request_count"] += result.request_count
+        details["historical_request_count"] += result.request_count
         details["fetched_count"] += result.fetched_count
         details["input_result_count"] += 1
         if result.reported_count is not None:
             details["reported_counts"].append(result.reported_count)
-        query_type = value.get("query_type")
-        if query_type is None:
-            query_type = next((paper.channel for paper in result.papers if paper.channel), "unknown")
-        if query_type not in details["query_types"]:
-            details["query_types"].append(query_type)
-    for provider, details in source_coverage.items():
-        details["reported_count"] = details["reported_counts"][0] if len(details["reported_counts"]) == 1 else None
-        details["unique_provider_paper_count"] = len({paper.paper_id for result in results if result.provider == provider for paper in result.papers})
-        details["deduplicated_count"] = fused.coverage_by_provider.get(provider, {}).get("fusion_count", 0)
-        details.pop("reported_counts")
+    for provider, provider_details in source_coverage.items():
+        provider_entries = [(result, query_type) for _value, result, query_type in source_entries if result.provider == provider]
+        provider_ids = {paper.paper_id for result, _query_type in provider_entries for paper in result.papers}
+        for query_type, details in provider_details["by_query_type"].items():
+            channel_entries = [(result, query) for result, query in provider_entries if query == query_type]
+            details["reported_count"] = details["reported_counts"][0] if len(details["reported_counts"]) == 1 else None
+            details["unique_provider_paper_count"] = len({paper.paper_id for result, _query in channel_entries for paper in result.papers})
+            details["deduplicated_count"] = len({paper.paper_id for result, _query in channel_entries for paper in result.papers})
+            details.pop("reported_counts")
+        provider_details["historical_request_count"] = sum(item["historical_request_count"] for item in provider_details["by_query_type"].values())
+        provider_details["fetched_count"] = sum(item["fetched_count"] for item in provider_details["by_query_type"].values())
+        provider_details["deduplicated_count"] = len(provider_ids)
     payload = {
         "schema_version": "0.1", "mode": "offline_fusion", "new_network_request_count": 0,
         "historical_request_count": historical_requests, "source_coverage": source_coverage,
-        "input_file_count": len(paths), "fusion": fused.to_dict(),
+        "input_file_count": len(paths), "fusion": _safe_public(fused.to_dict()),
     }
-    canonical_records = [paper.to_dict() for paper in fused.papers]
-    source_records = [{"canonical_id": key, "records": redact_value(records)} for key, records in fused.source_records.items()]
+    canonical_records = [_safe_public(paper.to_dict()) for paper in fused.papers]
+    source_records = [{"canonical_id": key, "records": _safe_public(redact_value(records))} for key, records in fused.source_records.items()]
     conflicts = [conflict.to_dict() for conflict in fused.conflicts]
     output.mkdir(parents=True, exist_ok=False)
     (output / "fusion.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")

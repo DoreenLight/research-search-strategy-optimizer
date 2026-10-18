@@ -53,7 +53,7 @@ def test_offline_fusion_exports_provider_coverage_sources_and_conflicts(tmp_path
     assert report["fusion"]["coverage_by_provider"]["pubmed"]["reported_count"] == 10
     assert report["fusion"]["coverage_by_provider"]["semantic_scholar"]["fetched_count"] == 1
     assert report["source_coverage"]["pubmed"]["query_types"] == ["keyword"]
-    assert report["source_coverage"]["pubmed"]["deduplicated_count"] == 1
+    assert report["source_coverage"]["pubmed"]["by_query_type"]["keyword"]["deduplicated_count"] == 1
     source_record = json.loads((output / "source-records.jsonl").read_text().splitlines()[0])
     assert str(tmp_path) not in json.dumps(source_record)
     assert len(report["fusion"]["source_records"]) == 1
@@ -62,6 +62,18 @@ def test_offline_fusion_exports_provider_coverage_sources_and_conflicts(tmp_path
     assert (output / "source-records.jsonl").is_file()
     assert (output / "conflicts.jsonl").is_file()
     assert (output / "manifest.json").is_file()
+
+
+def test_same_provider_channels_keep_separate_request_and_count_ledgers(tmp_path):
+    keyword = write_result(tmp_path / "keyword.json", provider_result(
+        "semantic_scholar", paper_id="s2-k", title="Keyword", doi="10.1000/k", request_count=2))
+    recommendation = write_result(tmp_path / "recommendation.json", provider_result(
+        "semantic_scholar", paper_id="s2-r", title="Recommendation", doi="10.1000/r",
+        channel="semantic_recommendation", discovery=True, request_count=3))
+    report = export_provider_fusion([keyword, recommendation], tmp_path / "fusion")
+    by_channel = report["source_coverage"]["semantic_scholar"]["by_query_type"]
+    assert by_channel["keyword"]["historical_request_count"] == 2
+    assert by_channel["semantic_recommendation"]["historical_request_count"] == 3
 
 
 def test_discovery_channel_remains_separate_from_keyword_retrieval(tmp_path):
@@ -77,6 +89,28 @@ def test_discovery_channel_remains_separate_from_keyword_retrieval(tmp_path):
     assert len(fused["discovery_papers"]) == 1
     assert fused["discovery_papers"][0]["discovery_channel"] is True
     assert fused["paper_channels"]
+
+
+def test_sensitive_raw_is_not_written_to_any_export_file(tmp_path):
+    credential = "fixture-value"
+    source = write_result(tmp_path / "source.json", provider_result(
+        "pubmed", paper_id="1", title="Study", doi="10.1000/x", raw_response={"api_key": credential,
+        "local_path": str(tmp_path / "private"), "Authorization": "Bearer " + credential}))
+    output = tmp_path / "fusion"
+    export_provider_fusion([source], output)
+    for path in output.iterdir():
+        assert credential not in path.read_text(encoding="utf-8")
+        assert str(tmp_path) not in path.read_text(encoding="utf-8")
+
+
+def test_reported_count_must_be_non_negative_integer_or_null(tmp_path):
+    for value in [True, -1, "unknown"]:
+        source = tmp_path / f"{str(value).replace('-', 'neg')}.json"
+        payload = provider_result("pubmed", paper_id="1", title="Study", doi="10.1000/x")
+        payload["reported_count"] = value
+        source.write_text(json.dumps(payload), encoding="utf-8")
+        with pytest.raises(ValueError):
+            export_provider_fusion([source], tmp_path / f"out-{str(value).replace('-', 'neg')}")
 
 
 def test_export_rejects_invalid_provider_result_before_output(tmp_path):
