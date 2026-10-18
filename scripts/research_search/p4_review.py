@@ -28,9 +28,9 @@ def _nonempty(value: Any, field: str) -> str:
 
 def _safe_review_text(value: Any, field: str) -> str:
     text = _nonempty(value, field)
-    if re.search(r"(?i)(?:api[_-]?key|access[_-]?token|authorization|bearer|client[_-]?secret|password|token)\s*(?:=|:)", text):
+    if re.search(r"(?i)(?:api[_-]?key|access[_-]?token|authorization|bearer|client[_-]?secret|password|token)\s*(?:=|:|\s+)", text):
         raise ValueError(f"{field} contains a credential-shaped value")
-    if re.search(r"(?:^|[= ])/(?:Users|private|home)/|file://", text):
+    if re.search(r"(?i)(?:file://|(?:^|[ =])/(?:Users|private|home|tmp)/|[A-Za-z]:[\\/])", text):
         raise ValueError(f"{field} contains a local path")
     return text
 

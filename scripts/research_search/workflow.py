@@ -299,11 +299,11 @@ def run_package(case: dict[str, Any], output_dir: Path, *, snapshots: dict[str, 
         raise ValueError("candidate_limit must be between 1 and 500")
     provider_payloads = []
     provider_fusion = None
+    validated_provider_plan = None
     if provider_results is not None and provider_plan is not None:
         raise ValueError("provide provider_results or provider_plan, not both")
     if provider_plan is not None:
-        provider_results = execute_provider_plan(validate_provider_plan(provider_plan), live=provider_live, max_requests=provider_max_requests,
-                                                 use_default_public_transport=provider_use_default_transport)
+        validated_provider_plan = validate_provider_plan(provider_plan)
     if provider_results is not None:
         if not isinstance(provider_results, list):
             raise ValueError("provider_results must be a list")
@@ -334,6 +334,9 @@ def run_package(case: dict[str, Any], output_dir: Path, *, snapshots: dict[str, 
     output_dir = Path(output_dir)
     if output_dir.exists():
         raise FileExistsError(f"output directory already exists: {output_dir}")
+    if validated_provider_plan is not None:
+        provider_results = execute_provider_plan(validated_provider_plan, live=provider_live, max_requests=provider_max_requests,
+                                                 use_default_public_transport=provider_use_default_transport)
     mode = "replay" if replay is not None else "live" if client is not None else "planned"
     snapshot_kind = snapshots["snapshot_kind"] if snapshots is not None else "live_capture" if client is not None else None
     metadata: dict[str, Any] = {"package_schema_version": "0.1", "created_at": _now(), "case_id": case["case_id"],
@@ -442,13 +445,21 @@ def run_package(case: dict[str, Any], output_dir: Path, *, snapshots: dict[str, 
         if captured:
             _write_json(output_dir / "replay-bundle.json", {"schema_version": "0.1", "snapshot_kind": snapshot_kind, "snapshots": captured})
         summary = _summary(runs, mode, len(papers), output_dir)
+        provider_statuses = [item.get("status") for item in provider_payloads]
+        provider_failed_count = sum(status == "failed" for status in provider_statuses)
+        provider_partial_count = sum(status == "partial" for status in provider_statuses)
         summary.update({
             "provider_historical_request_count": sum(item.get("historical_request_count", item.get("request_count", 0)) for item in provider_payloads),
             "provider_new_network_request_count": sum(item.get("new_network_request_count", 0) for item in provider_payloads),
             "provider_unique_count": len((provider_fusion or {}).get("papers", [])),
             "provider_channel_count": len({item.get("query_type", "unknown") for item in provider_payloads}),
             "provider_result_count": len(provider_payloads),
+            "provider_failed_count": provider_failed_count,
+            "provider_partial_count": provider_partial_count,
+            "provider_statuses": provider_statuses,
         })
+        if provider_failed_count or provider_partial_count:
+            summary["status"] = "partial" if summary["status"] not in {"failed", "partial"} else summary["status"]
         (output_dir / "README.md").write_text(_readme(case, summary, keywords, snapshot_kind), encoding="utf-8")
         content = {"scope": scope, "plans": plan_records, "keywords": keywords, "papers": paper_records,
                    "provider_results": provider_payloads, "provider_fusion": provider_fusion}
