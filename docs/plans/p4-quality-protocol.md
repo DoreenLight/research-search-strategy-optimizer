@@ -4,6 +4,8 @@
 
 ## 1. 结果边界与 case 索引
 
+本仓库新增 `research_search.p4_review.prepare_p4_review` 作为离线人工审阅 intake：它只接受协调人提供的冻结 test reference IDs 和两份独立 reviewer JSONL，保留原始意见、冲突、缺失覆盖与 pending；不创建论文、真值或仲裁结论。生成的 `benchmark-manifest.json` 可继续交给 `run_benchmark` 计算正式 Recall@K/P@K；没有真实外部 reference set 和双人材料时，不能称 P4 已完成。
+
 公开入口是 `research_search.benchmark.run_benchmark(manifest: dict, output_dir: pathlib.Path) -> dict`。它汇总调用者已持有的观察记录，不执行检索，也不把输入中的 `live` 声明当作本次重新验证的事实。今日已有接口记录若需纳入，必须由协调人从其实际产物逐项导入；此协议和四个 case 不补造这些运行。
 
 | 分层 | 预设范围 fixture | 当前真值状态 |

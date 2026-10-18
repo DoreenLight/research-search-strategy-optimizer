@@ -1,6 +1,6 @@
 # P2 多数据库与独立发现通道
 
-状态：代码与离线测试已完成；真实 PubMed/Semantic Scholar 请求未在本轮执行。
+状态：Provider API、离线融合导出、主 `run_package` 可选 provider-plan/provider-results 接入已完成；2026-10-18 已完成一次 PubMed 小预算真实联调，Semantic Scholar 同主题请求返回 HTTP 429，失败已保留为结构化审计记录。
 
 ## 已实现
 

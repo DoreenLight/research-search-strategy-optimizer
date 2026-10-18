@@ -77,6 +77,23 @@ def validate_package(output: Path, *, check_hashes: bool = True) -> dict[str, in
             if not isinstance(item, dict) or not isinstance(item.get("candidate_rank"), int):
                 raise ValueError("candidate term rank is invalid")
             validate_record("keyword", {key: value for key, value in item.items() if key != "candidate_rank" and key not in {"source_fields", "source_field_count", "observed_in_multiple_papers", "review_status"}})
+    provider_results_path = output / "11-provider-results.jsonl"
+    provider_fusion_path = output / "12-provider-fusion.json"
+    if provider_results_path.exists() != provider_fusion_path.exists():
+        raise ValueError("provider result/fusion files must be emitted together")
+    if provider_results_path.exists():
+        provider_results = _read_jsonl(provider_results_path)
+        fusion = json.loads(provider_fusion_path.read_text(encoding="utf-8"))
+        if not isinstance(fusion, dict) or not isinstance(fusion.get("papers"), list):
+            raise ValueError("provider fusion must contain papers[]")
+        for item in provider_results:
+            _provider_required = {"provider", "status", "request_count", "fetched_count", "papers"}
+            if not _provider_required.issubset(item):
+                raise ValueError("provider result is missing required fields")
+            if type(item["request_count"]) is not int or item["request_count"] < 0:
+                raise ValueError("provider request_count is invalid")
+            if type(item["fetched_count"]) is not int or item["fetched_count"] < 0:
+                raise ValueError("provider fetched_count is invalid")
     reviewed_terms_path = output / "reviewed-keywords.json"
     if reviewed_terms_path.exists():
         reviewed_terms = json.loads(reviewed_terms_path.read_text(encoding="utf-8"))

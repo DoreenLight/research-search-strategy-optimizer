@@ -64,6 +64,9 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--use-api-key", action="store_true")
     run.add_argument("--cache-dir", type=Path, help="Optional local cache; requires --live to execute")
     run.add_argument("--candidate-limit", type=int, default=50)
+    run.add_argument("--provider-results", type=Path, action="append", help="Local ProviderResult JSON; no new network request")
+    run.add_argument("--provider-plan", type=Path, help="JSON provider plan; planned by default, live only with --live")
+    run.add_argument("--provider-max-requests", type=int, default=0)
     optimize = commands.add_parser("optimize", help="Run a versioned P1 plan/replay/live optimization session")
     optimize.add_argument("config", type=Path)
     optimize.add_argument("--output", type=Path, required=True)
@@ -84,6 +87,13 @@ def build_parser() -> argparse.ArgumentParser:
     benchmark = commands.add_parser("benchmark", help="Summarize supplied P4 benchmark observations offline")
     benchmark.add_argument("manifest", type=Path)
     benchmark.add_argument("--output", type=Path, required=True)
+    p4_review = commands.add_parser("p4-review", help="Aggregate two external human reviews into a P4 test manifest")
+    p4_review.add_argument("manifest", type=Path)
+    p4_review.add_argument("--reference-ids", nargs="+", required=True)
+    p4_review.add_argument("--reference-source", required=True)
+    p4_review.add_argument("--reviewers", nargs=2, type=Path, required=True)
+    p4_review.add_argument("--test-case-id", required=True)
+    p4_review.add_argument("--output", type=Path, required=True)
     review = commands.add_parser("review-workbench", help="Export a blinded, offline human review workbench")
     review.add_argument("packages", nargs="+", type=Path, help="Validated Research Search Packages to pool")
     review.add_argument("--output", type=Path, required=True)
@@ -158,8 +168,13 @@ def main(argv: list[str] | None = None) -> int:
             case = _json(args.case)
             client = OpenAlexClient(api_key=None if args.use_api_key else "", max_retries=0,
                                     max_requests=args.max_requests, timeout=15, cache_dir=args.cache_dir) if args.live else None
+            provider_results = [_json(path) for path in (args.provider_results or [])]
+            provider_plan = _json(args.provider_plan) if args.provider_plan else None
             summary = run_package(case, args.output, snapshots=_json(args.snapshots) if args.snapshots else None,
-                                  client=client, per_page=args.per_page, candidate_limit=args.candidate_limit)
+                                  client=client, per_page=args.per_page, candidate_limit=args.candidate_limit,
+                                  provider_results=provider_results or None, provider_plan=provider_plan,
+                                  provider_live=args.live, provider_max_requests=args.provider_max_requests,
+                                  provider_use_default_transport=args.live)
             _dump(summary)
             return 2 if summary["status"] in {"failed", "partial"} else 0
         elif args.command == "optimize":
@@ -183,6 +198,10 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "benchmark":
             from .benchmark import run_benchmark
             _dump(run_benchmark(_json(args.manifest), args.output))
+        elif args.command == "p4-review":
+            from .p4_review import prepare_p4_review
+            _dump(prepare_p4_review(_json(args.manifest), args.reference_ids, args.reference_source,
+                                    args.reviewers, args.output, test_case_id=args.test_case_id))
         elif args.command == "review-workbench":
             from .review_workbench import export_review_workbench
             _dump(export_review_workbench(args.packages, args.output))

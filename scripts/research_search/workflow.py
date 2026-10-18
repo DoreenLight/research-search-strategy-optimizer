@@ -15,6 +15,10 @@ from .keyword_normalizer import normalize_term
 from .keyword_pipeline import DEFAULT_CANDIDATE_LIMIT, keyword_layers
 from .models import ConceptGroup, Evidence, KeywordCandidate, Paper, SearchRun, TermOccurrence
 from .openalex_client import OpenAlexClient
+from .providers.base import redact_value
+from .providers.fusion import fuse_results
+from .providers.execution import execute_provider_plan, validate_provider_plan
+from .providers.fusion_export import _result as _provider_result, _safe_public
 from .paper_deduplicator import deduplicate_papers
 from .query_builder import build_strategy_plans
 from .search_evaluator import evaluate_retrieval
@@ -276,7 +280,12 @@ def _manifest(output: Path, metadata: dict[str, Any]) -> None:
 
 def run_package(case: dict[str, Any], output_dir: Path, *, snapshots: dict[str, Any] | None = None,
                 client: OpenAlexClient | None = None, per_page: int = 10, k: int = 10,
-                candidate_limit: int = DEFAULT_CANDIDATE_LIMIT) -> dict[str, Any]:
+                candidate_limit: int = DEFAULT_CANDIDATE_LIMIT,
+                provider_results: list[dict[str, Any]] | None = None,
+                provider_plan: list[dict[str, Any]] | None = None,
+                provider_live: bool = False,
+                provider_max_requests: int = 0,
+                provider_use_default_transport: bool = False) -> dict[str, Any]:
     """Plan, replay, or execute explicit OpenAlex strategies and write one package.
 
     Invalid inputs are rejected before output creation. Existing destinations are
@@ -288,6 +297,31 @@ def run_package(case: dict[str, Any], output_dir: Path, *, snapshots: dict[str, 
         raise ValueError("per_page must be 1..100 and k must be a positive integer")
     if type(candidate_limit) is not int or not 1 <= candidate_limit <= 500:
         raise ValueError("candidate_limit must be between 1 and 500")
+    provider_payloads = []
+    provider_fusion = None
+    if provider_results is not None and provider_plan is not None:
+        raise ValueError("provide provider_results or provider_plan, not both")
+    if provider_plan is not None:
+        provider_results = execute_provider_plan(validate_provider_plan(provider_plan), live=provider_live, max_requests=provider_max_requests,
+                                                 use_default_public_transport=provider_use_default_transport)
+    if provider_results is not None:
+        if not isinstance(provider_results, list):
+            raise ValueError("provider_results must be a list")
+        provider_payloads = []
+        provider_objects = []
+        for item in provider_results:
+            provider_object = _provider_result(item)
+            provider_objects.append(provider_object)
+            summary = dict(provider_object.to_dict())
+            summary["raw_response"] = None
+            summary["papers"] = [redact_value({**paper.to_dict(), "raw": None}) for paper in provider_object.papers]
+            summary["query_type"] = item.get("query_type") or next((paper.channel for paper in provider_object.papers if paper.channel), "unknown")
+            summary["channel"] = item.get("channel") or summary["query_type"]
+            summary["plan_id"] = item.get("plan_id")
+            summary["historical_request_count"] = item.get("historical_request_count", provider_object.request_count if not item.get("new_network_request_count") else 0)
+            summary["new_network_request_count"] = item.get("new_network_request_count", 0)
+            provider_payloads.append(redact_value(summary))
+        provider_fusion = _safe_public(redact_value(fuse_results(provider_objects).to_dict()))
     if snapshots is not None and client is not None:
         raise ValueError("provide snapshots or a live client, not both")
     groups = _concept_groups(case)
@@ -304,7 +338,8 @@ def run_package(case: dict[str, Any], output_dir: Path, *, snapshots: dict[str, 
     snapshot_kind = snapshots["snapshot_kind"] if snapshots is not None else "live_capture" if client is not None else None
     metadata: dict[str, Any] = {"package_schema_version": "0.1", "created_at": _now(), "case_id": case["case_id"],
                                 "mode": mode, "snapshot_kind": snapshot_kind, "status": "in_progress",
-                                "execution_parameters": {"per_page": per_page, "k": k, "filters": filters, "candidate_limit": candidate_limit}}
+                                "execution_parameters": {"per_page": per_page, "k": k, "filters": filters, "candidate_limit": candidate_limit,
+                                                         "provider_result_count": len(provider_payloads)}}
     output_dir.mkdir(parents=True, exist_ok=False)
     all_papers: list[Paper] = []
     runs: list[dict[str, Any]] = []
@@ -401,11 +436,22 @@ def run_package(case: dict[str, Any], output_dir: Path, *, snapshots: dict[str, 
         _write_json(output_dir / "09-deduplication.json", {"schema_version": "0.1", "merged_ids": aliases,
                                                          "conflicts": [asdict(conflict) for conflict in deduped.conflicts]})
         _write_jsonl(output_dir / "10-judgments.jsonl", judgments)
+        if provider_payloads:
+            _write_jsonl(output_dir / "11-provider-results.jsonl", provider_payloads)
+            _write_json(output_dir / "12-provider-fusion.json", provider_fusion)
         if captured:
             _write_json(output_dir / "replay-bundle.json", {"schema_version": "0.1", "snapshot_kind": snapshot_kind, "snapshots": captured})
         summary = _summary(runs, mode, len(papers), output_dir)
+        summary.update({
+            "provider_historical_request_count": sum(item.get("historical_request_count", item.get("request_count", 0)) for item in provider_payloads),
+            "provider_new_network_request_count": sum(item.get("new_network_request_count", 0) for item in provider_payloads),
+            "provider_unique_count": len((provider_fusion or {}).get("papers", [])),
+            "provider_channel_count": len({item.get("query_type", "unknown") for item in provider_payloads}),
+            "provider_result_count": len(provider_payloads),
+        })
         (output_dir / "README.md").write_text(_readme(case, summary, keywords, snapshot_kind), encoding="utf-8")
-        content = {"scope": scope, "plans": plan_records, "keywords": keywords, "papers": paper_records}
+        content = {"scope": scope, "plans": plan_records, "keywords": keywords, "papers": paper_records,
+                   "provider_results": provider_payloads, "provider_fusion": provider_fusion}
         metadata.update(status="failed" if summary["status"] == "failed" else "partial" if summary["status"] == "partial" else "completed",
                         result_status=summary["status"], summary=summary,
                         content_hash=hashlib.sha256(json.dumps(content, ensure_ascii=False, sort_keys=True, separators=(",", ":"), allow_nan=False).encode("utf-8")).hexdigest())

@@ -1,0 +1,55 @@
+{
+  "benchmark_id": "p4-four-domain-plan-20261018",
+  "cases": [
+    {
+      "case_fixture": "evals/cases/p4-mature-semg-joint-angle.json",
+      "case_id": "p4-mature-semg-joint-angle",
+      "domain_kind": "mature",
+      "human_judgments": {},
+      "model_judgments": {},
+      "notes": "Plan-only P4 case; no live run or independent truth supplied.",
+      "reference_set": null,
+      "runs": [],
+      "split": "discovery"
+    },
+    {
+      "case_fixture": "evals/cases/p4-emerging-vision-language-action.json",
+      "case_id": "p4-emerging-vision-language-action",
+      "domain_kind": "emerging",
+      "human_judgments": {},
+      "model_judgments": {},
+      "notes": "Plan-only P4 case; no live run or independent truth supplied.",
+      "reference_set": null,
+      "runs": [],
+      "split": "discovery"
+    },
+    {
+      "case_fixture": "evals/cases/p4-interdisciplinary-urban-heat.json",
+      "case_id": "p4-interdisciplinary-urban-heat",
+      "domain_kind": "interdisciplinary",
+      "human_judgments": {},
+      "model_judgments": {},
+      "notes": "Plan-only P4 case; no live run or independent truth supplied.",
+      "reference_set": null,
+      "runs": [],
+      "split": "discovery"
+    },
+    {
+      "case_fixture": "evals/cases/p4-medical-chest-radiograph-pneumonia.json",
+      "case_id": "p4-medical-chest-radiograph-pneumonia",
+      "domain_kind": "medical",
+      "human_judgments": {},
+      "model_judgments": {},
+      "notes": "Plan-only P4 case; no live run or independent truth supplied.",
+      "reference_set": null,
+      "runs": [],
+      "split": "discovery"
+    }
+  ],
+  "historical_run_count": null,
+  "planned_case_count": 4,
+  "planned_run_count": 0,
+  "retained_configuration_count": null,
+  "schema_version": "0.1",
+  "theoretical_search_space_size": null
+}
