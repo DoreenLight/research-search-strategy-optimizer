@@ -337,6 +337,21 @@ def run_package(case: dict[str, Any], output_dir: Path, *, snapshots: dict[str, 
     if validated_provider_plan is not None:
         provider_results = execute_provider_plan(validated_provider_plan, live=provider_live, max_requests=provider_max_requests,
                                                  use_default_public_transport=provider_use_default_transport)
+        provider_payloads = []
+        provider_objects = []
+        for item in provider_results:
+            provider_object = _provider_result(item)
+            provider_objects.append(provider_object)
+            summary = dict(provider_object.to_dict())
+            summary["raw_response"] = None
+            summary["papers"] = [redact_value({**paper.to_dict(), "raw": None}) for paper in provider_object.papers]
+            summary["query_type"] = item.get("query_type") or next((paper.channel for paper in provider_object.papers if paper.channel), "unknown")
+            summary["channel"] = item.get("channel") or summary["query_type"]
+            summary["plan_id"] = item.get("plan_id")
+            summary["historical_request_count"] = item.get("historical_request_count", 0)
+            summary["new_network_request_count"] = item.get("new_network_request_count", item.get("request_count", 0))
+            provider_payloads.append(redact_value(summary))
+        provider_fusion = _safe_public(redact_value(fuse_results(provider_objects).to_dict()))
     mode = "replay" if replay is not None else "live" if client is not None else "planned"
     snapshot_kind = snapshots["snapshot_kind"] if snapshots is not None else "live_capture" if client is not None else None
     metadata: dict[str, Any] = {"package_schema_version": "0.1", "created_at": _now(), "case_id": case["case_id"],

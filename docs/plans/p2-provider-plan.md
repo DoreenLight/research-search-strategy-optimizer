@@ -14,5 +14,5 @@
 
 - MeSH 和作者关键词不能互相替代。
 - 语义推荐不是直接引文边；未执行的接口不能写成已验证覆盖。
-- P2 适配器尚未接入主 `run_package`，当前通过独立 Provider API、CLI 计划命令和离线 `provider-fusion` 审计导出使用。
+- P2 适配器已通过可选 `provider-plan` / `provider-results` 接入主 `run_package`；默认仍离线，主包保留独立 Provider 计数和失败状态；CLI 仍支持独立 `provider-fusion` 审计导出。
 - 跨库实体等价仍依赖显式 DOI/PMID/OpenAlex/S2 ID，标题相似冲突保留人工审计。
