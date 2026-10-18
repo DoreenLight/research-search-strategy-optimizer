@@ -109,8 +109,9 @@ def export_provider_fusion(inputs: list[Path], output_dir: Path) -> dict[str, An
         for query_type, details in provider_details["by_query_type"].items():
             channel_entries = [(result, query) for result, query in provider_entries if query == query_type]
             details["reported_count"] = details["reported_counts"][0] if len(details["reported_counts"]) == 1 else None
-            details["unique_provider_paper_count"] = len({paper.paper_id for result, _query in channel_entries for paper in result.papers})
-            details["deduplicated_count"] = len({paper.paper_id for result, _query in channel_entries for paper in result.papers})
+            channel_ids = {paper.paper_id for result, _query in channel_entries for paper in result.papers}
+            details["unique_provider_paper_count"] = len(channel_ids)
+            details["deduplicated_count"] = len(channel_ids)
             details.pop("reported_counts")
         provider_details["historical_request_count"] = sum(item["historical_request_count"] for item in provider_details["by_query_type"].values())
         provider_details["fetched_count"] = sum(item["fetched_count"] for item in provider_details["by_query_type"].values())
