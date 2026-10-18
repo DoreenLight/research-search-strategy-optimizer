@@ -1,0 +1,43 @@
+{
+  "case_id": "semg-joint-angle",
+  "content_hash": "d8265cb540335c8457145b2a33de0760224f0a18117467854ca88cd1c4a05089",
+  "created_at": "2026-10-17T13:22:15.791367+00:00",
+  "execution_parameters": {
+    "filters": {},
+    "k": 10,
+    "per_page": 10
+  },
+  "files": {
+    "01-research-scope.json": "996dd4a16ae8f20a8be7b5cb692c4deefef24618084436115233bea904644653",
+    "02-keywords.json": "7dc0d10e8382490ca5009819ce00eea492087ecf4b6be6bb2642ace897943fa9",
+    "03-search-strategies.json": "e75829e4dc764a037688b12205d78aa4acf03c9138b27213ce61f506349e7b9b",
+    "04-papers.jsonl": "bfebae24e4468d24abd1aa16a988298fc7bc4149ca66067d835768e3c975d51f",
+    "05-search-runs.jsonl": "dbfeb4b6611e27afd7ab4c7be3eedf4ea8537791f58caa58dccf248c9a012f14",
+    "06-evaluation.json": "9113fde1fc634f2863f56c7720f5652f68e82dd68eae46d224c0847834f42864",
+    "07-evidence.jsonl": "f31d6af09110f275eb2a588e0455c6d1053054c6b5d058eee04f4c95d9871ee0",
+    "08-cooccurrence.json": "3be9a57e3f9a0319e8dd59232705684179b874de5492621a60b9a9a1b0c3c8e4",
+    "09-deduplication.json": "f44af232aea8c283907f3b3669d0ba164d24e7acafc128b93c8668c88e8ba2f8",
+    "10-judgments.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "README.md": "ac190edb9b9c342ff07f0b8ed2be66dd649a94cb47b8e4cb91f3bda3108555ff",
+    "input-case.json": "f69a08de0149e8f11c3a1cc128af8d86898106f7bb4ee439c1ee88f961899623",
+    "raw/run-plan-7e6e33787081.json": "a9c05097dfab4280bad3a67ae466c1eeba8295300add2d2063f2ecafeef28913",
+    "raw/run-plan-9e34ea8469d3.json": "6b1b54dcf98bb1d8a641b2549da00421a9294fef6fd95110ce9c4c63cc72df61",
+    "raw/run-plan-e7a1ff1c355c.json": "44a482826021ff0912b7909b1e80512bc14a549d1f21e2141c81616975c0b97c",
+    "replay-bundle.json": "c291b85aff3e1d551066d7adb6d25d111c3176792b934583bb3ea3ca9e325d75"
+  },
+  "mode": "replay",
+  "package_schema_version": "0.1",
+  "result_status": "replay_complete",
+  "snapshot_kind": "synthetic_test_fixture",
+  "status": "completed",
+  "summary": {
+    "executed_plan_count": 0,
+    "failed_plan_count": 0,
+    "output_dir": "artifacts/semg-synthetic-package",
+    "paper_count": 3,
+    "partial_plan_count": 0,
+    "replayed_plan_count": 3,
+    "request_count": 0,
+    "status": "replay_complete"
+  }
+}

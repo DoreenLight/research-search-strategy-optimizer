@@ -1,0 +1,27 @@
+{
+  "application": [],
+  "constraints": {},
+  "description": "基于表面肌电预测人体关节角度，想了解 Transformer 和其他方法的研究情况。",
+  "input_modality": [
+    "表面肌电"
+  ],
+  "method": [
+    "Transformer（方法分支，不限制探索检索）"
+  ],
+  "mode": "exploratory",
+  "research_object": [
+    "人体关节角度"
+  ],
+  "research_task": [
+    "关节角度估计或预测"
+  ],
+  "schema_version": "0.1",
+  "scope_id": "scope-semg",
+  "unspecified": [
+    "具体关节",
+    "实时性",
+    "预测时间跨度",
+    "发表日期",
+    "人群"
+  ]
+}

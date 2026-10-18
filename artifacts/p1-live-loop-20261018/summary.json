@@ -1,0 +1,13 @@
+{
+  "active_version": 0,
+  "actual_round_count": 2,
+  "coverage_claim": "not_proven_complete",
+  "current_version": 1,
+  "executed_round_count": 2,
+  "replayed_round_count": 0,
+  "request_count": 6,
+  "session_id": "semg-live-loop-20261018",
+  "status": "pending_review",
+  "stop_reason": "awaiting_human_judgments",
+  "total_request_count": 6
+}

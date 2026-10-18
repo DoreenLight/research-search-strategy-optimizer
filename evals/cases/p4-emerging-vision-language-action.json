@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.1",
+  "case_id": "p4-emerging-vision-language-action",
+  "research_scope": {
+    "schema_version": "0.1",
+    "scope_id": "scope-p4-emerging-vla",
+    "mode": "exploratory",
+    "description": "检索联合视觉观察和自然语言指令生成机器人动作的研究，比较 vision-language-action 术语分支与不限定方法名的任务检索，关注新术语造成的覆盖差异。",
+    "research_object": ["机器人动作"],
+    "input_modality": ["视觉观察", "自然语言指令"],
+    "research_task": ["机器人动作生成或预测"],
+    "method": ["vision-language-action（可选方法分支）"],
+    "application": ["机器人控制"],
+    "constraints": {},
+    "unspecified": ["机器人形态", "真实或仿真环境", "动作表示", "训练范式", "发表日期", "语言"]
+  },
+  "concept_groups": [
+    {"group_id": "input", "role": "input", "label": "语言条件输入的候选表达", "terms": ["language conditioned"]},
+    {"group_id": "object", "role": "object", "label": "研究对象", "terms": ["robot action"]},
+    {"group_id": "task", "role": "task", "label": "研究任务", "terms": ["action generation"]},
+    {"group_id": "method", "role": "method", "label": "可选方法分支", "terms": ["vision-language-action"]}
+  ],
+  "independent_relevance_set": null,
+  "judgments": [],
+  "notes": "P4 emerging 分层的预设范围样例，不代表新兴程度已量化或检索策略已验证。人工真值未提供；无论文 ID 和人工标签。视觉与语言是共同范围条件，不能将两者仅以 OR 合并后声称完整表达范围；现有候选组尚需人工调整和 PRESS 复核。不同写法、VLA 缩写和动作预测/控制之间的关系须先审阅，不默认互为同义词。"
+}

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# macOS
+.DS_Store
+
+# Local environments and credentials
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Generated release archives and extraction checks
+artifacts/*.zip
+artifacts/_zip-check/
+
+# Local editor / OS noise
+.vscode/
+.idea/

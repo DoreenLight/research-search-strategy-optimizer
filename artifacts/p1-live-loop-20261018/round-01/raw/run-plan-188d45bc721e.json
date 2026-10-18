@@ -1,0 +1,6128 @@
+{
+  "group_by": [],
+  "meta": {
+    "cost_usd": 0.001,
+    "count": 6066,
+    "db_response_time_ms": 65,
+    "groups_count": null,
+    "page": 1,
+    "per_page": 5,
+    "x_query": {
+      "oql": "get works where full text has (stemmed \"joint angle\" AND (stemmed \"estimation\" OR stemmed \"prediction\") AND (stemmed \"sEMG\" OR stemmed \"surface EMG\" OR stemmed \"surface electromyography\"))",
+      "oqo": {
+        "filter_rows": [
+          {
+            "column_id": "fulltext.search",
+            "operator": "has",
+            "value": "\"joint angle\""
+          },
+          {
+            "filters": [
+              {
+                "column_id": "fulltext.search",
+                "operator": "has",
+                "value": "\"estimation\""
+              },
+              {
+                "column_id": "fulltext.search",
+                "operator": "has",
+                "value": "\"prediction\""
+              }
+            ],
+            "join": "or"
+          },
+          {
+            "filters": [
+              {
+                "column_id": "fulltext.search",
+                "operator": "has",
+                "value": "\"sEMG\""
+              },
+              {
+                "column_id": "fulltext.search",
+                "operator": "has",
+                "value": "\"surface EMG\""
+              },
+              {
+                "column_id": "fulltext.search",
+                "operator": "has",
+                "value": "\"surface electromyography\""
+              }
+            ],
+            "join": "or"
+          }
+        ],
+        "get_rows": "works"
+      },
+      "url": "/works?filter=fulltext.search:%22joint angle%22,fulltext.search:%22estimation%22|%22prediction%22,fulltext.search:%22sEMG%22|%22surface EMG%22|%22surface electromyography%22&per_page=5",
+      "x_new_oql": "get works with (stemmed \"joint angle\" AND (stemmed \"estimation\" OR stemmed \"prediction\") AND (stemmed \"sEMG\" OR stemmed \"surface EMG\" OR stemmed \"surface electromyography\")) in the full text"
+    }
+  },
+  "results": [
+    {
+      "abstract_inverted_index": {
+        "(SEMG)": [
+          29
+        ],
+        "(VR)": [
+          4
+        ],
+        "+/-": [
+          165,
+          173,
+          183,
+          193
+        ],
+        "0.023": [
+          184
+        ],
+        "0.026": [
+          174
+        ],
+        "0.036": [
+          166
+        ],
+        "0.054": [
+          194
+        ],
+        "0.085": [
+          164
+        ],
+        "0.098": [
+          182
+        ],
+        "0.147": [
+          172
+        ],
+        "0.163": [
+          192
+        ],
+        "Although": [
+          201
+        ],
+        "BACKGROUND:": [
+          0
+        ],
+        "CONCLUSION:": [
+          200
+        ],
+        "Direct": [
+          21
+        ],
+        "EMG": [
+          60
+        ],
+        "However,": [
+          146
+        ],
+        "In": [
+          1
+        ],
+        "METHODOLOGY:": [
+          70
+        ],
+        "RESULTS:": [
+          133
+        ],
+        "RMS": [
+          160
+        ],
+        "SEMG": [
+          71,
+          111,
+          208,
+          224
+        ],
+        "SMEG": [
+          140
+        ],
+        "Several": [
+          95
+        ],
+        "The": [
+          40,
+          113,
+          122
+        ],
+        "There": [
+          134
+        ],
+        "VR": [
+          24
+        ],
+        "a": [
+          49
+        ],
+        "able": [
+          151,
+          216
+        ],
+        "accuracy.": [
+          159
+        ],
+        "actual": [
+          75
+        ],
+        "and": [
+          9,
+          14,
+          35,
+          180
+        ],
+        "angle": [
+          56,
+          77,
+          104,
+          156,
+          222
+        ],
+        "are": [
+          12
+        ],
+        "at": [
+          92
+        ],
+        "be": [
+          32
+        ],
+        "best": [
+          114
+        ],
+        "biocontrol": [
+          22
+        ],
+        "committees": [
+          125,
+          149,
+          211
+        ],
+        "committees.": [
+          121
+        ],
+        "control": [
+          17
+        ],
+        "cycle.": [
+          145
+        ],
+        "data": [
+          129
+        ],
+        "develop": [
+          48
+        ],
+        "during": [
+          142
+        ],
+        "electromyography": [
+          28
+        ],
+        "environments": [
+          25
+        ],
+        "environments.": [
+          20
+        ],
+        "errors": [
+          161
+        ],
+        "evaluated": [
+          127
+        ],
+        "extension,": [
+          179
+        ],
+        "extensor": [
+          64
+        ],
+        "extracted": [
+          108
+        ],
+        "fast": [
+          168,
+          187
+        ],
+        "finger": [
+          8,
+          54,
+          91,
+          178,
+          189,
+          198,
+          220
+        ],
+        "finger-extension": [
+          170
+        ],
+        "flexion": [
+          190
+        ],
+        "flexion-extension": [
+          86,
+          144
+        ],
+        "flexion.": [
+          199
+        ],
+        "for": [
+          167,
+          175,
+          185,
+          195
+        ],
+        "form": [
+          119
+        ],
+        "from": [
+          57,
+          105,
+          109,
+          130,
+          163,
+          181,
+          223
+        ],
+        "hand": [
+          10
+        ],
+        "hysteresis": [
+          136,
+          202
+        ],
+        "in": [
+          137,
+          205
+        ],
+        "index": [
+          90
+        ],
+        "investigation": [
+          45
+        ],
+        "joint": [
+          55,
+          76,
+          103,
+          155,
+          221
+        ],
+        "may": [
+          31
+        ],
+        "measured": [
+          139,
+          207
+        ],
+        "measurements": [
+          61,
+          78
+        ],
+        "models.": [
+          69
+        ],
+        "more": [
+          33
+        ],
+        "muscle": [
+          65
+        ],
+        "network": [
+          68,
+          124,
+          148
+        ],
+        "networks": [
+          97,
+          115,
+          214
+        ],
+        "neural": [
+          67,
+          96,
+          123,
+          147,
+          213
+        ],
+        "new": [
+          131
+        ],
+        "observed": [
+          204
+        ],
+        "obtained": [
+          80
+        ],
+        "of": [
+          23,
+          42,
+          62,
+          88,
+          212
+        ],
+        "parameters": [
+          107
+        ],
+        "performing": [
+          85
+        ],
+        "positions": [
+          11
+        ],
+        "predict": [
+          52,
+          101,
+          153,
+          218
+        ],
+        "present": [
+          44
+        ],
+        "purpose": [
+          41
+        ],
+        "ranged": [
+          162
+        ],
+        "reality": [
+          3
+        ],
+        "reasonable": [
+          158
+        ],
+        "rotation": [
+          87
+        ],
+        "selected": [
+          117
+        ],
+        "sensed": [
+          13
+        ],
+        "signals": [
+          30,
+          141
+        ],
+        "signals,": [
+          209
+        ],
+        "signals.": [
+          112,
+          225
+        ],
+        "six": [
+          120
+        ],
+        "slow": [
+          176,
+          196
+        ],
+        "speed": [
+          169,
+          177,
+          188,
+          197
+        ],
+        "speeds.": [
+          94
+        ],
+        "subject": [
+          83
+        ],
+        "subjects.": [
+          132
+        ],
+        "surface": [
+          27,
+          59
+        ],
+        "synergistic": [
+          34
+        ],
+        "systems,": [
+          5
+        ],
+        "technique": [
+          50
+        ],
+        "the": [
+          6,
+          18,
+          38,
+          43,
+          53,
+          58,
+          63,
+          74,
+          82,
+          89,
+          102,
+          106,
+          110,
+          138,
+          143,
+          154,
+          186,
+          206,
+          210,
+          219
+        ],
+        "three": [
+          93
+        ],
+        "to": [
+          16,
+          37,
+          47,
+          51,
+          100,
+          118,
+          152,
+          171,
+          191,
+          217
+        ],
+        "together": [
+          72
+        ],
+        "trained": [
+          99
+        ],
+        "unconstraining": [
+          36
+        ],
+        "used": [
+          15
+        ],
+        "user's": [
+          7
+        ],
+        "user.": [
+          39
+        ],
+        "using": [
+          26,
+          66,
+          128
+        ],
+        "virtual": [
+          2,
+          19
+        ],
+        "was": [
+          46,
+          84,
+          135,
+          203
+        ],
+        "were": [
+          79,
+          98,
+          116,
+          126,
+          150,
+          215
+        ],
+        "while": [
+          81
+        ],
+        "with": [
+          73,
+          157
+        ]
+      },
+      "apc_list": {
+        "currency": "USD",
+        "value": 2690,
+        "value_usd": 2690
+      },
+      "apc_paid": {
+        "currency": "USD",
+        "value": 2690,
+        "value_usd": 2690
+      },
+      "authorships": [
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I110152177"
+              ],
+              "raw_affiliation_string": "Department of Biomedical Engineering, University of Akron, Akron, OH 44325-0302, USA. nikhil@terarecon.com"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I110152177"
+              ],
+              "raw_affiliation_string": "Department of Biomedical Engineering, University of Akron, Akron, OH, 44325-0302, USA,"
+            }
+          ],
+          "author": {
+            "display_name": "Nikhil A Shrirao",
+            "id": "https://openalex.org/A5018998043",
+            "observed_orcids": [],
+            "orcid": null
+          },
+          "author_position": "first",
+          "countries": [
+            "US"
+          ],
+          "institutions": [
+            {
+              "country_code": "US",
+              "display_name": "University of Akron",
+              "id": "https://openalex.org/I110152177",
+              "lineage": [
+                "https://openalex.org/I110152177"
+              ],
+              "ror": "https://ror.org/02kyckx55",
+              "type": "education"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "Department of Biomedical Engineering, University of Akron, Akron, OH 44325-0302, USA. nikhil@terarecon.com",
+            "Department of Biomedical Engineering, University of Akron, Akron, OH, 44325-0302, USA,"
+          ],
+          "raw_author_name": "Nikhil A Shrirao",
+          "raw_orcid": null
+        },
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I110152177"
+              ],
+              "raw_affiliation_string": "Department of Biomedical Engineering, University of Akron, Akron, OH, 44325-0302, USA"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I110152177"
+              ],
+              "raw_affiliation_string": "Department of Biomedical Engineering, University of Akron,Akron,USA"
+            }
+          ],
+          "author": {
+            "display_name": "Narender P. Reddy",
+            "id": "https://openalex.org/A5103340757",
+            "observed_orcids": [],
+            "orcid": null
+          },
+          "author_position": "middle",
+          "countries": [
+            "US"
+          ],
+          "institutions": [
+            {
+              "country_code": "US",
+              "display_name": "University of Akron",
+              "id": "https://openalex.org/I110152177",
+              "lineage": [
+                "https://openalex.org/I110152177"
+              ],
+              "ror": "https://ror.org/02kyckx55",
+              "type": "education"
+            }
+          ],
+          "is_corresponding": true,
+          "raw_affiliation_strings": [
+            "Department of Biomedical Engineering, University of Akron, Akron, OH, 44325-0302, USA",
+            "Department of Biomedical Engineering, University of Akron,Akron,USA"
+          ],
+          "raw_author_name": "Narender P Reddy",
+          "raw_orcid": null
+        },
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I110152177"
+              ],
+              "raw_affiliation_string": "Department of Biomedical Engineering, University of Akron, Akron, OH, 44325-0302, USA"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I110152177"
+              ],
+              "raw_affiliation_string": "Department of Biomedical Engineering, University of Akron,Akron,USA"
+            }
+          ],
+          "author": {
+            "display_name": "Durga Renuka Kosuri",
+            "id": "https://openalex.org/A5064868700",
+            "observed_orcids": [],
+            "orcid": null
+          },
+          "author_position": "last",
+          "countries": [
+            "US"
+          ],
+          "institutions": [
+            {
+              "country_code": "US",
+              "display_name": "University of Akron",
+              "id": "https://openalex.org/I110152177",
+              "lineage": [
+                "https://openalex.org/I110152177"
+              ],
+              "ror": "https://ror.org/02kyckx55",
+              "type": "education"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "Department of Biomedical Engineering, University of Akron, Akron, OH, 44325-0302, USA",
+            "Department of Biomedical Engineering, University of Akron,Akron,USA"
+          ],
+          "raw_author_name": "Durga R Kosuri",
+          "raw_orcid": null
+        }
+      ],
+      "awards": [],
+      "best_oa_location": {
+        "doi": "https://doi.org/10.1186/1475-925x-8-2",
+        "id": "doi:10.1186/1475-925x-8-2",
+        "is_accepted": true,
+        "is_oa": true,
+        "is_published": true,
+        "landing_page_url": "https://doi.org/10.1186/1475-925x-8-2",
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "pdf_url": "https://biomedical-engineering-online.biomedcentral.com/counter/pdf/10.1186/1475-925X-8-2",
+        "raw_source_name": "BioMedical Engineering OnLine",
+        "raw_type": "journal-article",
+        "source": {
+          "display_name": "BioMedical Engineering OnLine",
+          "host_organization": "https://openalex.org/P4310320256",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320256",
+            "https://openalex.org/P4310319965"
+          ],
+          "host_organization_lineage_names": [
+            "BioMed Central",
+            "Springer Nature"
+          ],
+          "host_organization_name": "BioMed Central",
+          "id": "https://openalex.org/S162176842",
+          "is_core": true,
+          "is_in_doaj": true,
+          "is_oa": true,
+          "issn": [
+            "1475-925X"
+          ],
+          "issn_l": "1475-925X",
+          "listed_in": [
+            "cwts-core",
+            "doaj",
+            "dongbi-d",
+            "jufo-1",
+            "ki-jl-1",
+            "medline",
+            "norway-1",
+            "poland-70",
+            "russia-white-list-2",
+            "vabb-shw"
+          ],
+          "type": "journal"
+        },
+        "version": "publishedVersion"
+      },
+      "biblio": {
+        "first_page": "2",
+        "issue": "1",
+        "last_page": "2",
+        "volume": "8"
+      },
+      "citation_normalized_percentile": {
+        "is_in_top_10_percent": true,
+        "is_in_top_1_percent": false,
+        "value": 0.91737323
+      },
+      "cited_by_count": 81,
+      "cited_by_percentile_year": {
+        "max": 99,
+        "min": 89
+      },
+      "concepts": [
+        {
+          "display_name": "Artificial neural network",
+          "id": "https://openalex.org/C50644808",
+          "level": 2,
+          "score": 0.6589682698249817,
+          "wikidata": "https://www.wikidata.org/wiki/Q192776"
+        },
+        {
+          "display_name": "Finger joint",
+          "id": "https://openalex.org/C2777781587",
+          "level": 2,
+          "score": 0.6269460320472717,
+          "wikidata": "https://www.wikidata.org/wiki/Q1208242"
+        },
+        {
+          "display_name": "Joint (building)",
+          "id": "https://openalex.org/C18555067",
+          "level": 2,
+          "score": 0.6133021116256714,
+          "wikidata": "https://www.wikidata.org/wiki/Q8375051"
+        },
+        {
+          "display_name": "Index finger",
+          "id": "https://openalex.org/C2777087348",
+          "level": 2,
+          "score": 0.5760746002197266,
+          "wikidata": "https://www.wikidata.org/wiki/Q184848"
+        },
+        {
+          "display_name": "Computer science",
+          "id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.5717098712921143,
+          "wikidata": "https://www.wikidata.org/wiki/Q21198"
+        },
+        {
+          "display_name": "Electromyography",
+          "id": "https://openalex.org/C2777515770",
+          "level": 2,
+          "score": 0.5495012998580933,
+          "wikidata": "https://www.wikidata.org/wiki/Q507369"
+        },
+        {
+          "display_name": "Artificial intelligence",
+          "id": "https://openalex.org/C154945302",
+          "level": 1,
+          "score": 0.5220472812652588,
+          "wikidata": "https://www.wikidata.org/wiki/Q11660"
+        },
+        {
+          "display_name": "Rotation (mathematics)",
+          "id": "https://openalex.org/C74050887",
+          "level": 2,
+          "score": 0.44714295864105225,
+          "wikidata": "https://www.wikidata.org/wiki/Q848368"
+        },
+        {
+          "display_name": "Virtual reality",
+          "id": "https://openalex.org/C194969405",
+          "level": 2,
+          "score": 0.4173004627227783,
+          "wikidata": "https://www.wikidata.org/wiki/Q170519"
+        },
+        {
+          "display_name": "Pattern recognition (psychology)",
+          "id": "https://openalex.org/C153180895",
+          "level": 2,
+          "score": 0.41616949439048767,
+          "wikidata": "https://www.wikidata.org/wiki/Q7148389"
+        },
+        {
+          "display_name": "Computer vision",
+          "id": "https://openalex.org/C31972630",
+          "level": 1,
+          "score": 0.38686591386795044,
+          "wikidata": "https://www.wikidata.org/wiki/Q844240"
+        },
+        {
+          "display_name": "Simulation",
+          "id": "https://openalex.org/C44154836",
+          "level": 1,
+          "score": 0.3816315829753876,
+          "wikidata": "https://www.wikidata.org/wiki/Q45045"
+        },
+        {
+          "display_name": "Engineering",
+          "id": "https://openalex.org/C127413603",
+          "level": 0,
+          "score": 0.24454864859580994,
+          "wikidata": "https://www.wikidata.org/wiki/Q11023"
+        },
+        {
+          "display_name": "Physical medicine and rehabilitation",
+          "id": "https://openalex.org/C99508421",
+          "level": 1,
+          "score": 0.18376120924949646,
+          "wikidata": "https://www.wikidata.org/wiki/Q2678675"
+        },
+        {
+          "display_name": "Materials science",
+          "id": "https://openalex.org/C192562407",
+          "level": 0,
+          "score": 0.11925169825553894,
+          "wikidata": "https://www.wikidata.org/wiki/Q228736"
+        },
+        {
+          "display_name": "Medicine",
+          "id": "https://openalex.org/C71924100",
+          "level": 0,
+          "score": 0.10056081414222717,
+          "wikidata": "https://www.wikidata.org/wiki/Q11190"
+        },
+        {
+          "display_name": "Anatomy",
+          "id": "https://openalex.org/C105702510",
+          "level": 1,
+          "score": 0.082846999168396,
+          "wikidata": "https://www.wikidata.org/wiki/Q514"
+        },
+        {
+          "display_name": "Architectural engineering",
+          "id": "https://openalex.org/C170154142",
+          "level": 1,
+          "score": 0.0,
+          "wikidata": "https://www.wikidata.org/wiki/Q150737"
+        },
+        {
+          "display_name": "Composite material",
+          "id": "https://openalex.org/C159985019",
+          "level": 1,
+          "score": 0.0,
+          "wikidata": "https://www.wikidata.org/wiki/Q181790"
+        }
+      ],
+      "content_urls": {
+        "grobid_xml": "https://content.openalex.org/works/W2129308247.grobid-xml",
+        "pdf": "https://content.openalex.org/works/W2129308247.pdf"
+      },
+      "corresponding_author_ids": [
+        "https://openalex.org/A5103340757"
+      ],
+      "corresponding_institution_ids": [
+        "https://openalex.org/I110152177"
+      ],
+      "countries_distinct_count": 1,
+      "counts_by_year": [
+        {
+          "cited_by_count": 2,
+          "year": 2026
+        },
+        {
+          "cited_by_count": 1,
+          "year": 2025
+        },
+        {
+          "cited_by_count": 2,
+          "year": 2024
+        },
+        {
+          "cited_by_count": 1,
+          "year": 2023
+        },
+        {
+          "cited_by_count": 4,
+          "year": 2022
+        },
+        {
+          "cited_by_count": 7,
+          "year": 2021
+        },
+        {
+          "cited_by_count": 8,
+          "year": 2020
+        },
+        {
+          "cited_by_count": 7,
+          "year": 2019
+        },
+        {
+          "cited_by_count": 4,
+          "year": 2018
+        },
+        {
+          "cited_by_count": 7,
+          "year": 2017
+        },
+        {
+          "cited_by_count": 10,
+          "year": 2016
+        },
+        {
+          "cited_by_count": 5,
+          "year": 2015
+        },
+        {
+          "cited_by_count": 4,
+          "year": 2014
+        },
+        {
+          "cited_by_count": 2,
+          "year": 2013
+        },
+        {
+          "cited_by_count": 5,
+          "year": 2012
+        }
+      ],
+      "created_date": "2025-10-10T00:00:00",
+      "display_name": "Neural network committees for finger joint angle estimation from surface EMG signals",
+      "doi": "https://doi.org/10.1186/1475-925x-8-2",
+      "funders": [],
+      "fwci": 3.3008,
+      "has_content": {
+        "grobid_xml": true,
+        "pdf": true
+      },
+      "has_fulltext": true,
+      "id": "https://openalex.org/W2129308247",
+      "ids": {
+        "doi": "https://doi.org/10.1186/1475-925x-8-2",
+        "mag": "2129308247",
+        "openalex": "https://openalex.org/W2129308247",
+        "pmid": "https://pubmed.ncbi.nlm.nih.gov/19154615"
+      },
+      "indexed_in": [
+        "crossref",
+        "doaj",
+        "pubmed"
+      ],
+      "institutions": [],
+      "institutions_distinct_count": 1,
+      "is_paratext": false,
+      "is_retracted": false,
+      "is_xpac": false,
+      "keywords": [
+        {
+          "display_name": "finger joint angle estimation",
+          "id": "https://openalex.org/keywords/finger-joint-angle-estimation",
+          "score": 0.8230000138282776
+        },
+        {
+          "display_name": "surface electromyography",
+          "id": "https://openalex.org/keywords/surface-electromyography",
+          "score": 0.9950000047683716
+        },
+        {
+          "display_name": "virtual reality control",
+          "id": "https://openalex.org/keywords/virtual-reality-control",
+          "score": 0.6549999713897705
+        },
+        {
+          "display_name": "extensor muscles",
+          "id": "https://openalex.org/keywords/extensor-muscles",
+          "score": 0.7580000162124634
+        },
+        {
+          "display_name": "biological control",
+          "id": "https://openalex.org/keywords/biological-control",
+          "score": 0.5529999732971191
+        },
+        {
+          "display_name": "EMG signal processing",
+          "id": "https://openalex.org/keywords/emg-signal-processing",
+          "score": 0.375
+        }
+      ],
+      "language": "en",
+      "locations": [
+        {
+          "doi": "https://doi.org/10.1186/1475-925x-8-2",
+          "id": "doi:10.1186/1475-925x-8-2",
+          "is_accepted": true,
+          "is_oa": true,
+          "is_published": true,
+          "landing_page_url": "https://doi.org/10.1186/1475-925x-8-2",
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "pdf_url": "https://biomedical-engineering-online.biomedcentral.com/counter/pdf/10.1186/1475-925X-8-2",
+          "raw_source_name": "BioMedical Engineering OnLine",
+          "raw_type": "journal-article",
+          "source": {
+            "display_name": "BioMedical Engineering OnLine",
+            "host_organization": "https://openalex.org/P4310320256",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320256",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "BioMed Central",
+              "Springer Nature"
+            ],
+            "host_organization_name": "BioMed Central",
+            "id": "https://openalex.org/S162176842",
+            "is_core": true,
+            "is_in_doaj": true,
+            "is_oa": true,
+            "issn": [
+              "1475-925X"
+            ],
+            "issn_l": "1475-925X",
+            "listed_in": [
+              "cwts-core",
+              "doaj",
+              "dongbi-d",
+              "jufo-1",
+              "ki-jl-1",
+              "medline",
+              "norway-1",
+              "poland-70",
+              "russia-white-list-2",
+              "vabb-shw"
+            ],
+            "type": "journal"
+          },
+          "version": "publishedVersion"
+        },
+        {
+          "doi": null,
+          "id": "pmid:19154615",
+          "is_accepted": true,
+          "is_oa": false,
+          "is_published": true,
+          "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/19154615",
+          "license": null,
+          "license_id": null,
+          "pdf_url": null,
+          "raw_source_name": "Biomedical engineering online",
+          "raw_type": "Evaluation Study",
+          "source": {
+            "display_name": "PubMed",
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "host_organization_name": "National Institutes of Health",
+            "id": "https://openalex.org/S4306525036",
+            "is_core": false,
+            "is_in_doaj": false,
+            "is_oa": false,
+            "issn": null,
+            "issn_l": null,
+            "listed_in": [],
+            "type": "repository"
+          },
+          "version": "publishedVersion"
+        },
+        {
+          "doi": null,
+          "id": "pmh:oai:pubmedcentral.nih.gov:2661079",
+          "is_accepted": false,
+          "is_oa": true,
+          "is_published": false,
+          "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/2661079",
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "pdf_url": null,
+          "raw_source_name": "Biomed Eng Online",
+          "raw_type": "Text",
+          "source": {
+            "display_name": "PubMed Central",
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "host_organization_name": "National Institutes of Health",
+            "id": "https://openalex.org/S2764455111",
+            "is_core": false,
+            "is_in_doaj": false,
+            "is_oa": true,
+            "issn": null,
+            "issn_l": null,
+            "listed_in": [],
+            "type": "repository"
+          },
+          "version": "submittedVersion"
+        },
+        {
+          "doi": null,
+          "id": "pmh:oai:doaj.org/article:41b38c9b48434a4d8411fd34a72e8af3",
+          "is_accepted": false,
+          "is_oa": false,
+          "is_published": false,
+          "landing_page_url": "https://doaj.org/article/41b38c9b48434a4d8411fd34a72e8af3",
+          "license": null,
+          "license_id": null,
+          "pdf_url": null,
+          "raw_source_name": "BioMedical Engineering OnLine, Vol 8, Iss 1, p 2 (2009)",
+          "raw_type": "article",
+          "source": {
+            "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+            "host_organization": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "host_organization_name": null,
+            "id": "https://openalex.org/S4306401280",
+            "is_core": false,
+            "is_in_doaj": false,
+            "is_oa": false,
+            "issn": null,
+            "issn_l": null,
+            "listed_in": [],
+            "type": "repository"
+          },
+          "version": "submittedVersion"
+        }
+      ],
+      "locations_count": 4,
+      "mesh": [
+        {
+          "descriptor_name": "Adult",
+          "descriptor_ui": "D000328",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Adult",
+          "descriptor_ui": "D000328",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Adult",
+          "descriptor_ui": "D000328",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Algorithms",
+          "descriptor_ui": "D000465",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Algorithms",
+          "descriptor_ui": "D000465",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Algorithms",
+          "descriptor_ui": "D000465",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Electromyography",
+          "descriptor_ui": "D004576",
+          "is_major_topic": false,
+          "qualifier_name": "methods",
+          "qualifier_ui": "Q000379"
+        },
+        {
+          "descriptor_name": "Electromyography",
+          "descriptor_ui": "D004576",
+          "is_major_topic": false,
+          "qualifier_name": "methods",
+          "qualifier_ui": "Q000379"
+        },
+        {
+          "descriptor_name": "Electromyography",
+          "descriptor_ui": "D004576",
+          "is_major_topic": false,
+          "qualifier_name": "methods",
+          "qualifier_ui": "Q000379"
+        },
+        {
+          "descriptor_name": "Female",
+          "descriptor_ui": "D005260",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Female",
+          "descriptor_ui": "D005260",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Female",
+          "descriptor_ui": "D005260",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Finger Joint",
+          "descriptor_ui": "D005384",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Finger Joint",
+          "descriptor_ui": "D005384",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Finger Joint",
+          "descriptor_ui": "D005384",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Humans",
+          "descriptor_ui": "D006801",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Humans",
+          "descriptor_ui": "D006801",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Humans",
+          "descriptor_ui": "D006801",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Male",
+          "descriptor_ui": "D008297",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Male",
+          "descriptor_ui": "D008297",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Male",
+          "descriptor_ui": "D008297",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Movement",
+          "descriptor_ui": "D009068",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Movement",
+          "descriptor_ui": "D009068",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Movement",
+          "descriptor_ui": "D009068",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Muscle Contraction",
+          "descriptor_ui": "D009119",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Muscle Contraction",
+          "descriptor_ui": "D009119",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Muscle Contraction",
+          "descriptor_ui": "D009119",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Pattern Recognition, Automated",
+          "descriptor_ui": "D010363",
+          "is_major_topic": false,
+          "qualifier_name": "methods",
+          "qualifier_ui": "Q000379"
+        },
+        {
+          "descriptor_name": "Pattern Recognition, Automated",
+          "descriptor_ui": "D010363",
+          "is_major_topic": false,
+          "qualifier_name": "methods",
+          "qualifier_ui": "Q000379"
+        },
+        {
+          "descriptor_name": "Pattern Recognition, Automated",
+          "descriptor_ui": "D010363",
+          "is_major_topic": false,
+          "qualifier_name": "methods",
+          "qualifier_ui": "Q000379"
+        },
+        {
+          "descriptor_name": "Sensitivity and Specificity",
+          "descriptor_ui": "D012680",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Sensitivity and Specificity",
+          "descriptor_ui": "D012680",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Sensitivity and Specificity",
+          "descriptor_ui": "D012680",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Reproducibility of Results",
+          "descriptor_ui": "D015203",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Reproducibility of Results",
+          "descriptor_ui": "D015203",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Reproducibility of Results",
+          "descriptor_ui": "D015203",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Range of Motion, Articular",
+          "descriptor_ui": "D016059",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Range of Motion, Articular",
+          "descriptor_ui": "D016059",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Range of Motion, Articular",
+          "descriptor_ui": "D016059",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Neural Networks, Computer",
+          "descriptor_ui": "D016571",
+          "is_major_topic": true,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Neural Networks, Computer",
+          "descriptor_ui": "D016571",
+          "is_major_topic": true,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Neural Networks, Computer",
+          "descriptor_ui": "D016571",
+          "is_major_topic": true,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Muscle, Skeletal",
+          "descriptor_ui": "D018482",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Muscle, Skeletal",
+          "descriptor_ui": "D018482",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Muscle, Skeletal",
+          "descriptor_ui": "D018482",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Young Adult",
+          "descriptor_ui": "D055815",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Young Adult",
+          "descriptor_ui": "D055815",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Young Adult",
+          "descriptor_ui": "D055815",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        }
+      ],
+      "open_access": {
+        "any_repository_has_fulltext": true,
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://biomedical-engineering-online.biomedcentral.com/counter/pdf/10.1186/1475-925X-8-2"
+      },
+      "primary_location": {
+        "doi": "https://doi.org/10.1186/1475-925x-8-2",
+        "id": "doi:10.1186/1475-925x-8-2",
+        "is_accepted": true,
+        "is_oa": true,
+        "is_published": true,
+        "landing_page_url": "https://doi.org/10.1186/1475-925x-8-2",
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "pdf_url": "https://biomedical-engineering-online.biomedcentral.com/counter/pdf/10.1186/1475-925X-8-2",
+        "raw_source_name": "BioMedical Engineering OnLine",
+        "raw_type": "journal-article",
+        "source": {
+          "display_name": "BioMedical Engineering OnLine",
+          "host_organization": "https://openalex.org/P4310320256",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320256",
+            "https://openalex.org/P4310319965"
+          ],
+          "host_organization_lineage_names": [
+            "BioMed Central",
+            "Springer Nature"
+          ],
+          "host_organization_name": "BioMed Central",
+          "id": "https://openalex.org/S162176842",
+          "is_core": true,
+          "is_in_doaj": true,
+          "is_oa": true,
+          "issn": [
+            "1475-925X"
+          ],
+          "issn_l": "1475-925X",
+          "listed_in": [
+            "cwts-core",
+            "doaj",
+            "dongbi-d",
+            "jufo-1",
+            "ki-jl-1",
+            "medline",
+            "norway-1",
+            "poland-70",
+            "russia-white-list-2",
+            "vabb-shw"
+          ],
+          "type": "journal"
+        },
+        "version": "publishedVersion"
+      },
+      "primary_topic": {
+        "display_name": "Muscle activation and electromyography studies",
+        "domain": {
+          "display_name": "Physical Sciences",
+          "id": "https://openalex.org/domains/3"
+        },
+        "field": {
+          "display_name": "Engineering",
+          "id": "https://openalex.org/fields/22"
+        },
+        "id": "https://openalex.org/T10784",
+        "score": 0.9984999895095825,
+        "subfield": {
+          "display_name": "Biomedical Engineering",
+          "id": "https://openalex.org/subfields/2204"
+        }
+      },
+      "publication_date": "2009-01-20",
+      "publication_year": 2009,
+      "referenced_works": [
+        "https://openalex.org/W8205339",
+        "https://openalex.org/W584626426",
+        "https://openalex.org/W1489512566",
+        "https://openalex.org/W1504393353",
+        "https://openalex.org/W1552815313",
+        "https://openalex.org/W1766566602",
+        "https://openalex.org/W1970108221",
+        "https://openalex.org/W1988455886",
+        "https://openalex.org/W2002626177",
+        "https://openalex.org/W2028751575",
+        "https://openalex.org/W2036411590",
+        "https://openalex.org/W2046191927",
+        "https://openalex.org/W2078060701",
+        "https://openalex.org/W2092586972",
+        "https://openalex.org/W2093254109",
+        "https://openalex.org/W2093482088",
+        "https://openalex.org/W2096462065",
+        "https://openalex.org/W2123239981",
+        "https://openalex.org/W2131649129",
+        "https://openalex.org/W2133201420",
+        "https://openalex.org/W2145357800",
+        "https://openalex.org/W2164006146",
+        "https://openalex.org/W2411306069"
+      ],
+      "referenced_works_count": 23,
+      "related_works": [
+        "https://openalex.org/W2009629058",
+        "https://openalex.org/W2366723826",
+        "https://openalex.org/W2029099658",
+        "https://openalex.org/W2776436012",
+        "https://openalex.org/W2922041470",
+        "https://openalex.org/W169201349",
+        "https://openalex.org/W1982886040",
+        "https://openalex.org/W2610237166",
+        "https://openalex.org/W2320222129",
+        "https://openalex.org/W3083918942"
+      ],
+      "relevance_score": 113.43071,
+      "study_designs": [],
+      "sustainable_development_goals": [],
+      "sustainable_development_goals_aurora": [],
+      "title": "Neural network committees for finger joint angle estimation from surface EMG signals",
+      "topics": [
+        {
+          "display_name": "Muscle activation and electromyography studies",
+          "domain": {
+            "display_name": "Physical Sciences",
+            "id": "https://openalex.org/domains/3"
+          },
+          "field": {
+            "display_name": "Engineering",
+            "id": "https://openalex.org/fields/22"
+          },
+          "id": "https://openalex.org/T10784",
+          "score": 0.9984999895095825,
+          "subfield": {
+            "display_name": "Biomedical Engineering",
+            "id": "https://openalex.org/subfields/2204"
+          }
+        },
+        {
+          "display_name": "Hand Gesture Recognition Systems",
+          "domain": {
+            "display_name": "Physical Sciences",
+            "id": "https://openalex.org/domains/3"
+          },
+          "field": {
+            "display_name": "Computer Science",
+            "id": "https://openalex.org/fields/17"
+          },
+          "id": "https://openalex.org/T11398",
+          "score": 0.00019999999494757503,
+          "subfield": {
+            "display_name": "Human-Computer Interaction",
+            "id": "https://openalex.org/subfields/1709"
+          }
+        },
+        {
+          "display_name": "EEG and Brain-Computer Interfaces",
+          "domain": {
+            "display_name": "Life Sciences",
+            "id": "https://openalex.org/domains/1"
+          },
+          "field": {
+            "display_name": "Neuroscience",
+            "id": "https://openalex.org/fields/28"
+          },
+          "id": "https://openalex.org/T10429",
+          "score": 9.999999747378752e-05,
+          "subfield": {
+            "display_name": "Cognitive Neuroscience",
+            "id": "https://openalex.org/subfields/2805"
+          }
+        }
+      ],
+      "type": "article",
+      "updated_date": "2026-09-11T09:22:31.653822",
+      "volume": null
+    },
+    {
+      "abstract_inverted_index": null,
+      "apc_list": {
+        "currency": "USD",
+        "value": 2590,
+        "value_usd": 2590
+      },
+      "apc_paid": null,
+      "authorships": [
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I889458895"
+              ],
+              "raw_affiliation_string": "Department of Industrial and Manufacturing Systems Engineering, The University of Hong Kong, Pokfulam, Hong Kong Special Administrative Region"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ],
+              "raw_affiliation_string": "School of Mechanical Engineering, Xi’an Jiaotong University, Shannxi 710049, PR China"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ],
+              "raw_affiliation_string": "School of Mechanical Engineering, Xi'an Jiaotong University, Shannxi 710049, PR China"
+            }
+          ],
+          "author": {
+            "display_name": "Jiangcheng Chen",
+            "id": "https://openalex.org/A5074266365",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-8403-8801"
+            ],
+            "orcid": "https://orcid.org/0000-0002-8403-8801"
+          },
+          "author_position": "first",
+          "countries": [
+            "CN",
+            "HK"
+          ],
+          "institutions": [
+            {
+              "country_code": "CN",
+              "display_name": "Xi'an Jiaotong University",
+              "id": "https://openalex.org/I87445476",
+              "lineage": [
+                "https://openalex.org/I87445476"
+              ],
+              "ror": "https://ror.org/017zhmm22",
+              "type": "education"
+            },
+            {
+              "country_code": "HK",
+              "display_name": "University of Hong Kong",
+              "id": "https://openalex.org/I889458895",
+              "lineage": [
+                "https://openalex.org/I889458895"
+              ],
+              "ror": "https://ror.org/02zhqgq86",
+              "type": "education"
+            }
+          ],
+          "is_corresponding": true,
+          "raw_affiliation_strings": [
+            "Department of Industrial and Manufacturing Systems Engineering, The University of Hong Kong, Pokfulam, Hong Kong Special Administrative Region",
+            "School of Mechanical Engineering, Xi’an Jiaotong University, Shannxi 710049, PR China",
+            "School of Mechanical Engineering, Xi'an Jiaotong University, Shannxi 710049, PR China"
+          ],
+          "raw_author_name": "Jiangcheng Chen",
+          "raw_orcid": null
+        },
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ],
+              "raw_affiliation_string": "School of Mechanical Engineering, Xi’an Jiaotong University, Shannxi 710049, PR China"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ],
+              "raw_affiliation_string": "School of Mechanical Engineering, Xi'an Jiaotong University, Shannxi 710049, PR China"
+            }
+          ],
+          "author": {
+            "display_name": "Xiaodong Zhang",
+            "id": "https://openalex.org/A5100376248",
+            "observed_orcids": [
+              "https://orcid.org/0009-0008-5131-0523"
+            ],
+            "orcid": "https://orcid.org/0009-0008-5131-0523"
+          },
+          "author_position": "middle",
+          "countries": [
+            "CN"
+          ],
+          "institutions": [
+            {
+              "country_code": "CN",
+              "display_name": "Xi'an Jiaotong University",
+              "id": "https://openalex.org/I87445476",
+              "lineage": [
+                "https://openalex.org/I87445476"
+              ],
+              "ror": "https://ror.org/017zhmm22",
+              "type": "education"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "School of Mechanical Engineering, Xi’an Jiaotong University, Shannxi 710049, PR China",
+            "School of Mechanical Engineering, Xi'an Jiaotong University, Shannxi 710049, PR China"
+          ],
+          "raw_author_name": "Xiaodong Zhang",
+          "raw_orcid": null
+        },
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I889458895"
+              ],
+              "raw_affiliation_string": "Department of Industrial and Manufacturing Systems Engineering, The University of Hong Kong, Pokfulam, Hong Kong Special Administrative Region"
+            }
+          ],
+          "author": {
+            "display_name": "Cheng Hai Yu",
+            "id": "https://openalex.org/A5038606232",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-7359-9737"
+            ],
+            "orcid": "https://orcid.org/0000-0001-7359-9737"
+          },
+          "author_position": "middle",
+          "countries": [
+            "HK"
+          ],
+          "institutions": [
+            {
+              "country_code": "HK",
+              "display_name": "University of Hong Kong",
+              "id": "https://openalex.org/I889458895",
+              "lineage": [
+                "https://openalex.org/I889458895"
+              ],
+              "ror": "https://ror.org/02zhqgq86",
+              "type": "education"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "Department of Industrial and Manufacturing Systems Engineering, The University of Hong Kong, Pokfulam, Hong Kong Special Administrative Region"
+          ],
+          "raw_author_name": "Yu Cheng",
+          "raw_orcid": null
+        },
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I889458895"
+              ],
+              "raw_affiliation_string": "Department of Industrial and Manufacturing Systems Engineering, The University of Hong Kong, Pokfulam, Hong Kong Special Administrative Region"
+            }
+          ],
+          "author": {
+            "display_name": "Ning Xi",
+            "id": "https://openalex.org/A5023212284",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-8276-5696"
+            ],
+            "orcid": "https://orcid.org/0000-0001-8276-5696"
+          },
+          "author_position": "last",
+          "countries": [
+            "HK"
+          ],
+          "institutions": [
+            {
+              "country_code": "HK",
+              "display_name": "University of Hong Kong",
+              "id": "https://openalex.org/I889458895",
+              "lineage": [
+                "https://openalex.org/I889458895"
+              ],
+              "ror": "https://ror.org/02zhqgq86",
+              "type": "education"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "Department of Industrial and Manufacturing Systems Engineering, The University of Hong Kong, Pokfulam, Hong Kong Special Administrative Region"
+          ],
+          "raw_author_name": "Ning Xi",
+          "raw_orcid": null
+        }
+      ],
+      "awards": [],
+      "best_oa_location": null,
+      "biblio": {
+        "first_page": "335",
+        "issue": null,
+        "last_page": "342",
+        "volume": "40"
+      },
+      "citation_normalized_percentile": {
+        "is_in_top_10_percent": true,
+        "is_in_top_1_percent": false,
+        "value": 0.95683559
+      },
+      "cited_by_count": 177,
+      "cited_by_percentile_year": {
+        "max": 100,
+        "min": 94
+      },
+      "concepts": [
+        {
+          "display_name": "Computer science",
+          "id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.6728119850158691,
+          "wikidata": "https://www.wikidata.org/wiki/Q21198"
+        },
+        {
+          "display_name": "Deep belief network",
+          "id": "https://openalex.org/C97385483",
+          "level": 3,
+          "score": 0.6499530076980591,
+          "wikidata": "https://www.wikidata.org/wiki/Q16954980"
+        },
+        {
+          "display_name": "Artificial intelligence",
+          "id": "https://openalex.org/C154945302",
+          "level": 1,
+          "score": 0.6105725169181824,
+          "wikidata": "https://www.wikidata.org/wiki/Q11660"
+        },
+        {
+          "display_name": "Mean squared error",
+          "id": "https://openalex.org/C139945424",
+          "level": 2,
+          "score": 0.6101778745651245,
+          "wikidata": "https://www.wikidata.org/wiki/Q1940696"
+        },
+        {
+          "display_name": "Joint (building)",
+          "id": "https://openalex.org/C18555067",
+          "level": 2,
+          "score": 0.6023563146591187,
+          "wikidata": "https://www.wikidata.org/wiki/Q8375051"
+        },
+        {
+          "display_name": "Motion capture",
+          "id": "https://openalex.org/C48007421",
+          "level": 3,
+          "score": 0.5300623774528503,
+          "wikidata": "https://www.wikidata.org/wiki/Q676252"
+        },
+        {
+          "display_name": "Artificial neural network",
+          "id": "https://openalex.org/C50644808",
+          "level": 2,
+          "score": 0.48877498507499695,
+          "wikidata": "https://www.wikidata.org/wiki/Q192776"
+        },
+        {
+          "display_name": "Surface (topology)",
+          "id": "https://openalex.org/C2776799497",
+          "level": 2,
+          "score": 0.4855325222015381,
+          "wikidata": "https://www.wikidata.org/wiki/Q484298"
+        },
+        {
+          "display_name": "Electromyography",
+          "id": "https://openalex.org/C2777515770",
+          "level": 2,
+          "score": 0.4678063690662384,
+          "wikidata": "https://www.wikidata.org/wiki/Q507369"
+        },
+        {
+          "display_name": "Computer vision",
+          "id": "https://openalex.org/C31972630",
+          "level": 1,
+          "score": 0.46718671917915344,
+          "wikidata": "https://www.wikidata.org/wiki/Q844240"
+        },
+        {
+          "display_name": "Wearable computer",
+          "id": "https://openalex.org/C150594956",
+          "level": 2,
+          "score": 0.44464224576950073,
+          "wikidata": "https://www.wikidata.org/wiki/Q1334829"
+        },
+        {
+          "display_name": "Pattern recognition (psychology)",
+          "id": "https://openalex.org/C153180895",
+          "level": 2,
+          "score": 0.4319964647293091,
+          "wikidata": "https://www.wikidata.org/wiki/Q7148389"
+        },
+        {
+          "display_name": "Motion (physics)",
+          "id": "https://openalex.org/C104114177",
+          "level": 2,
+          "score": 0.32022085785865784,
+          "wikidata": "https://www.wikidata.org/wiki/Q79782"
+        },
+        {
+          "display_name": "Mathematics",
+          "id": "https://openalex.org/C33923547",
+          "level": 0,
+          "score": 0.2228771448135376,
+          "wikidata": "https://www.wikidata.org/wiki/Q395"
+        },
+        {
+          "display_name": "Engineering",
+          "id": "https://openalex.org/C127413603",
+          "level": 0,
+          "score": 0.14656612277030945,
+          "wikidata": "https://www.wikidata.org/wiki/Q11023"
+        },
+        {
+          "display_name": "Geometry",
+          "id": "https://openalex.org/C2524010",
+          "level": 1,
+          "score": 0.0,
+          "wikidata": "https://www.wikidata.org/wiki/Q8087"
+        },
+        {
+          "display_name": "Statistics",
+          "id": "https://openalex.org/C105795698",
+          "level": 1,
+          "score": 0.0,
+          "wikidata": "https://www.wikidata.org/wiki/Q12483"
+        },
+        {
+          "display_name": "Embedded system",
+          "id": "https://openalex.org/C149635348",
+          "level": 1,
+          "score": 0.0,
+          "wikidata": "https://www.wikidata.org/wiki/Q193040"
+        },
+        {
+          "display_name": "Architectural engineering",
+          "id": "https://openalex.org/C170154142",
+          "level": 1,
+          "score": 0.0,
+          "wikidata": "https://www.wikidata.org/wiki/Q150737"
+        },
+        {
+          "display_name": "Psychology",
+          "id": "https://openalex.org/C15744967",
+          "level": 0,
+          "score": 0.0,
+          "wikidata": "https://www.wikidata.org/wiki/Q9418"
+        },
+        {
+          "display_name": "Psychiatry",
+          "id": "https://openalex.org/C118552586",
+          "level": 1,
+          "score": 0.0,
+          "wikidata": "https://www.wikidata.org/wiki/Q7867"
+        }
+      ],
+      "content_urls": null,
+      "corresponding_author_ids": [
+        "https://openalex.org/A5074266365"
+      ],
+      "corresponding_institution_ids": [
+        "https://openalex.org/I87445476",
+        "https://openalex.org/I889458895"
+      ],
+      "countries_distinct_count": 2,
+      "counts_by_year": [
+        {
+          "cited_by_count": 12,
+          "year": 2026
+        },
+        {
+          "cited_by_count": 14,
+          "year": 2025
+        },
+        {
+          "cited_by_count": 29,
+          "year": 2024
+        },
+        {
+          "cited_by_count": 31,
+          "year": 2023
+        },
+        {
+          "cited_by_count": 19,
+          "year": 2022
+        },
+        {
+          "cited_by_count": 32,
+          "year": 2021
+        },
+        {
+          "cited_by_count": 23,
+          "year": 2020
+        },
+        {
+          "cited_by_count": 15,
+          "year": 2019
+        },
+        {
+          "cited_by_count": 2,
+          "year": 2018
+        }
+      ],
+      "created_date": "2025-10-10T00:00:00",
+      "display_name": "Surface EMG based continuous estimation of human lower limb joint angles by using deep belief networks",
+      "doi": "https://doi.org/10.1016/j.bspc.2017.10.002",
+      "funders": [],
+      "fwci": 4.6645,
+      "has_content": {
+        "grobid_xml": false,
+        "pdf": false
+      },
+      "has_fulltext": false,
+      "id": "https://openalex.org/W2762367260",
+      "ids": {
+        "doi": "https://doi.org/10.1016/j.bspc.2017.10.002",
+        "mag": "2762367260",
+        "openalex": "https://openalex.org/W2762367260"
+      },
+      "indexed_in": [
+        "crossref"
+      ],
+      "institutions": [],
+      "institutions_distinct_count": 2,
+      "is_paratext": false,
+      "is_retracted": false,
+      "is_xpac": false,
+      "keywords": [
+        {
+          "display_name": "surface electromyography",
+          "id": "https://openalex.org/keywords/surface-electromyography",
+          "score": 0.9990000128746033
+        },
+        {
+          "display_name": "joint angle estimation",
+          "id": "https://openalex.org/keywords/joint-angle-estimation",
+          "score": 0.8240000009536743
+        },
+        {
+          "display_name": "lower extremity",
+          "id": "https://openalex.org/keywords/lower-limb",
+          "score": 0.6650000214576721
+        },
+        {
+          "display_name": "deep belief network",
+          "id": "https://openalex.org/keywords/deep-belief-network",
+          "score": 0.949999988079071
+        },
+        {
+          "display_name": "restricted Boltzmann machine",
+          "id": "https://openalex.org/keywords/restricted-boltzmann-machine",
+          "score": 0.9350000023841858
+        },
+        {
+          "display_name": "EMG feature extraction",
+          "id": "https://openalex.org/keywords/emg-feature-extraction",
+          "score": 0.7739999890327454
+        },
+        {
+          "display_name": "human walking",
+          "id": "https://openalex.org/keywords/human-walking",
+          "score": 0.6690000295639038
+        },
+        {
+          "display_name": "human-machine interaction",
+          "id": "https://openalex.org/keywords/human-machine-interaction",
+          "score": 0.843999981880188
+        }
+      ],
+      "language": "en",
+      "locations": [
+        {
+          "doi": "https://doi.org/10.1016/j.bspc.2017.10.002",
+          "id": "doi:10.1016/j.bspc.2017.10.002",
+          "is_accepted": true,
+          "is_oa": false,
+          "is_published": true,
+          "landing_page_url": "https://doi.org/10.1016/j.bspc.2017.10.002",
+          "license": null,
+          "license_id": null,
+          "pdf_url": null,
+          "raw_source_name": "Biomedical Signal Processing and Control",
+          "raw_type": "journal-article",
+          "source": {
+            "display_name": "Biomedical Signal Processing and Control",
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "host_organization_name": "Elsevier BV",
+            "id": "https://openalex.org/S8427965",
+            "is_core": true,
+            "is_in_doaj": false,
+            "is_oa": false,
+            "issn": [
+              "1746-8094",
+              "1746-8108"
+            ],
+            "issn_l": "1746-8094",
+            "listed_in": [
+              "cwts-core",
+              "dongbi-c",
+              "jufo-1",
+              "ki-jl-1",
+              "norway-1",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "type": "journal"
+          },
+          "version": "publishedVersion"
+        }
+      ],
+      "locations_count": 1,
+      "mesh": [],
+      "open_access": {
+        "any_repository_has_fulltext": false,
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null
+      },
+      "primary_location": {
+        "doi": "https://doi.org/10.1016/j.bspc.2017.10.002",
+        "id": "doi:10.1016/j.bspc.2017.10.002",
+        "is_accepted": true,
+        "is_oa": false,
+        "is_published": true,
+        "landing_page_url": "https://doi.org/10.1016/j.bspc.2017.10.002",
+        "license": null,
+        "license_id": null,
+        "pdf_url": null,
+        "raw_source_name": "Biomedical Signal Processing and Control",
+        "raw_type": "journal-article",
+        "source": {
+          "display_name": "Biomedical Signal Processing and Control",
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "host_organization_name": "Elsevier BV",
+          "id": "https://openalex.org/S8427965",
+          "is_core": true,
+          "is_in_doaj": false,
+          "is_oa": false,
+          "issn": [
+            "1746-8094",
+            "1746-8108"
+          ],
+          "issn_l": "1746-8094",
+          "listed_in": [
+            "cwts-core",
+            "dongbi-c",
+            "jufo-1",
+            "ki-jl-1",
+            "norway-1",
+            "poland-140",
+            "russia-white-list-1",
+            "vabb-shw"
+          ],
+          "type": "journal"
+        },
+        "version": "publishedVersion"
+      },
+      "primary_topic": {
+        "display_name": "Muscle activation and electromyography studies",
+        "domain": {
+          "display_name": "Physical Sciences",
+          "id": "https://openalex.org/domains/3"
+        },
+        "field": {
+          "display_name": "Engineering",
+          "id": "https://openalex.org/fields/22"
+        },
+        "id": "https://openalex.org/T10784",
+        "score": 0.9994999766349792,
+        "subfield": {
+          "display_name": "Biomedical Engineering",
+          "id": "https://openalex.org/subfields/2204"
+        }
+      },
+      "publication_date": "2017-10-16",
+      "publication_year": 2017,
+      "referenced_works": [
+        "https://openalex.org/W44815768",
+        "https://openalex.org/W418709959",
+        "https://openalex.org/W1964812476",
+        "https://openalex.org/W1970639711",
+        "https://openalex.org/W1985385588",
+        "https://openalex.org/W2000439420",
+        "https://openalex.org/W2004158418",
+        "https://openalex.org/W2031878187",
+        "https://openalex.org/W2036663497",
+        "https://openalex.org/W2039041360",
+        "https://openalex.org/W2051642036",
+        "https://openalex.org/W2052430436",
+        "https://openalex.org/W2053628882",
+        "https://openalex.org/W2055499229",
+        "https://openalex.org/W2057170399",
+        "https://openalex.org/W2062939404",
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W2078039548",
+        "https://openalex.org/W2090656762",
+        "https://openalex.org/W2093188224",
+        "https://openalex.org/W2100495367",
+        "https://openalex.org/W2100830232",
+        "https://openalex.org/W2116064496",
+        "https://openalex.org/W2150538314",
+        "https://openalex.org/W2157602065",
+        "https://openalex.org/W2157780858",
+        "https://openalex.org/W2173194528",
+        "https://openalex.org/W6682140176"
+      ],
+      "referenced_works_count": 28,
+      "related_works": [
+        "https://openalex.org/W2376139493",
+        "https://openalex.org/W2141253262",
+        "https://openalex.org/W3156756500",
+        "https://openalex.org/W4251090744",
+        "https://openalex.org/W2386293158",
+        "https://openalex.org/W2433638048",
+        "https://openalex.org/W2906214541",
+        "https://openalex.org/W1992153410",
+        "https://openalex.org/W4282981700",
+        "https://openalex.org/W2006061919"
+      ],
+      "relevance_score": 105.98828,
+      "study_designs": [],
+      "sustainable_development_goals": [],
+      "sustainable_development_goals_aurora": [],
+      "title": "Surface EMG based continuous estimation of human lower limb joint angles by using deep belief networks",
+      "topics": [
+        {
+          "display_name": "Muscle activation and electromyography studies",
+          "domain": {
+            "display_name": "Physical Sciences",
+            "id": "https://openalex.org/domains/3"
+          },
+          "field": {
+            "display_name": "Engineering",
+            "id": "https://openalex.org/fields/22"
+          },
+          "id": "https://openalex.org/T10784",
+          "score": 0.9994999766349792,
+          "subfield": {
+            "display_name": "Biomedical Engineering",
+            "id": "https://openalex.org/subfields/2204"
+          }
+        },
+        {
+          "display_name": "Human Motion and Animation",
+          "domain": {
+            "display_name": "Physical Sciences",
+            "id": "https://openalex.org/domains/3"
+          },
+          "field": {
+            "display_name": "Engineering",
+            "id": "https://openalex.org/fields/22"
+          },
+          "id": "https://openalex.org/T12290",
+          "score": 9.999999747378752e-05,
+          "subfield": {
+            "display_name": "Control and Systems Engineering",
+            "id": "https://openalex.org/subfields/2207"
+          }
+        },
+        {
+          "display_name": "Mechanics and Biomechanics Studies",
+          "domain": {
+            "display_name": "Physical Sciences",
+            "id": "https://openalex.org/domains/3"
+          },
+          "field": {
+            "display_name": "Engineering",
+            "id": "https://openalex.org/fields/22"
+          },
+          "id": "https://openalex.org/T13752",
+          "score": 0.0,
+          "subfield": {
+            "display_name": "Biomedical Engineering",
+            "id": "https://openalex.org/subfields/2204"
+          }
+        }
+      ],
+      "type": "article",
+      "updated_date": "2026-10-16T09:59:22.235173",
+      "volume": null
+    },
+    {
+      "abstract_inverted_index": null,
+      "apc_list": {
+        "currency": "USD",
+        "value": 2670,
+        "value_usd": 2670
+      },
+      "apc_paid": null,
+      "authorships": [
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "raw_affiliation_string": "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "raw_affiliation_string": "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing, 100190, China"
+            }
+          ],
+          "author": {
+            "display_name": "Feng Zhang",
+            "id": "https://openalex.org/A5100401287",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-8399-6143"
+            ],
+            "orcid": "https://orcid.org/0000-0002-8399-6143"
+          },
+          "author_position": "first",
+          "countries": [
+            "CN"
+          ],
+          "institutions": [
+            {
+              "country_code": "CN",
+              "display_name": "Chinese Academy of Sciences",
+              "id": "https://openalex.org/I19820366",
+              "lineage": [
+                "https://openalex.org/I19820366"
+              ],
+              "ror": "https://ror.org/034t30j35",
+              "type": "government"
+            },
+            {
+              "country_code": "CN",
+              "display_name": "Institute of Automation",
+              "id": "https://openalex.org/I4210112150",
+              "lineage": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "ror": "https://ror.org/022c3hy66",
+              "type": "facility"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China",
+            "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing, 100190, China"
+          ],
+          "raw_author_name": "Feng Zhang",
+          "raw_orcid": null
+        },
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "raw_affiliation_string": "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "raw_affiliation_string": "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing, 100190, China"
+            }
+          ],
+          "author": {
+            "display_name": "Pengfeng Li",
+            "id": "https://openalex.org/A5033135309",
+            "observed_orcids": [
+              "https://orcid.org/0009-0009-8743-5114"
+            ],
+            "orcid": "https://orcid.org/0009-0009-8743-5114"
+          },
+          "author_position": "middle",
+          "countries": [
+            "CN"
+          ],
+          "institutions": [
+            {
+              "country_code": "CN",
+              "display_name": "Chinese Academy of Sciences",
+              "id": "https://openalex.org/I19820366",
+              "lineage": [
+                "https://openalex.org/I19820366"
+              ],
+              "ror": "https://ror.org/034t30j35",
+              "type": "government"
+            },
+            {
+              "country_code": "CN",
+              "display_name": "Institute of Automation",
+              "id": "https://openalex.org/I4210112150",
+              "lineage": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "ror": "https://ror.org/022c3hy66",
+              "type": "facility"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China",
+            "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing, 100190, China"
+          ],
+          "raw_author_name": "Pengfeng Li",
+          "raw_orcid": null
+        },
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "raw_affiliation_string": "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "raw_affiliation_string": "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing, 100190, China"
+            }
+          ],
+          "author": {
+            "display_name": "Zeng‐Guang Hou",
+            "id": "https://openalex.org/A5109333020",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-1534-5840"
+            ],
+            "orcid": "https://orcid.org/0000-0002-1534-5840"
+          },
+          "author_position": "middle",
+          "countries": [
+            "CN"
+          ],
+          "institutions": [
+            {
+              "country_code": "CN",
+              "display_name": "Chinese Academy of Sciences",
+              "id": "https://openalex.org/I19820366",
+              "lineage": [
+                "https://openalex.org/I19820366"
+              ],
+              "ror": "https://ror.org/034t30j35",
+              "type": "government"
+            },
+            {
+              "country_code": "CN",
+              "display_name": "Institute of Automation",
+              "id": "https://openalex.org/I4210112150",
+              "lineage": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "ror": "https://ror.org/022c3hy66",
+              "type": "facility"
+            }
+          ],
+          "is_corresponding": true,
+          "raw_affiliation_strings": [
+            "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China",
+            "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing, 100190, China"
+          ],
+          "raw_author_name": "Zeng-Guang Hou",
+          "raw_orcid": null
+        },
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I2802459333"
+              ],
+              "raw_affiliation_string": "Department of SCI Surgery, China Rehabilitation Research Center, Beijing 100068, China"
+            }
+          ],
+          "author": {
+            "display_name": "Zhen Yu Lu",
+            "id": "https://openalex.org/A5111977099",
+            "observed_orcids": [],
+            "orcid": null
+          },
+          "author_position": "middle",
+          "countries": [
+            "CN"
+          ],
+          "institutions": [
+            {
+              "country_code": "CN",
+              "display_name": "China Rehabilitation Research Center",
+              "id": "https://openalex.org/I2802459333",
+              "lineage": [
+                "https://openalex.org/I2802459333"
+              ],
+              "ror": "https://ror.org/02bpqmq41",
+              "type": "healthcare"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "Department of SCI Surgery, China Rehabilitation Research Center, Beijing 100068, China"
+          ],
+          "raw_author_name": "Zhen Lu",
+          "raw_orcid": null
+        },
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "raw_affiliation_string": "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "raw_affiliation_string": "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing, 100190, China"
+            }
+          ],
+          "author": {
+            "display_name": "Yixiong Chen",
+            "id": "https://openalex.org/A5046162600",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-4425-3216"
+            ],
+            "orcid": "https://orcid.org/0000-0002-4425-3216"
+          },
+          "author_position": "middle",
+          "countries": [
+            "CN"
+          ],
+          "institutions": [
+            {
+              "country_code": "CN",
+              "display_name": "Chinese Academy of Sciences",
+              "id": "https://openalex.org/I19820366",
+              "lineage": [
+                "https://openalex.org/I19820366"
+              ],
+              "ror": "https://ror.org/034t30j35",
+              "type": "government"
+            },
+            {
+              "country_code": "CN",
+              "display_name": "Institute of Automation",
+              "id": "https://openalex.org/I4210112150",
+              "lineage": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "ror": "https://ror.org/022c3hy66",
+              "type": "facility"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China",
+            "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing, 100190, China"
+          ],
+          "raw_author_name": "Yixiong Chen",
+          "raw_orcid": null
+        },
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "raw_affiliation_string": "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "raw_affiliation_string": "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing, 100190, China"
+            }
+          ],
+          "author": {
+            "display_name": "Qingling Li",
+            "id": "https://openalex.org/A5108575694",
+            "observed_orcids": [],
+            "orcid": null
+          },
+          "author_position": "middle",
+          "countries": [
+            "CN"
+          ],
+          "institutions": [
+            {
+              "country_code": "CN",
+              "display_name": "Chinese Academy of Sciences",
+              "id": "https://openalex.org/I19820366",
+              "lineage": [
+                "https://openalex.org/I19820366"
+              ],
+              "ror": "https://ror.org/034t30j35",
+              "type": "government"
+            },
+            {
+              "country_code": "CN",
+              "display_name": "Institute of Automation",
+              "id": "https://openalex.org/I4210112150",
+              "lineage": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "ror": "https://ror.org/022c3hy66",
+              "type": "facility"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China",
+            "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing, 100190, China"
+          ],
+          "raw_author_name": "Qingling Li",
+          "raw_orcid": null
+        },
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "raw_affiliation_string": "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "raw_affiliation_string": "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing, 100190, China"
+            }
+          ],
+          "author": {
+            "display_name": "Min Han Tan",
+            "id": "https://openalex.org/A5024708104",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-1986-8438"
+            ],
+            "orcid": "https://orcid.org/0000-0002-1986-8438"
+          },
+          "author_position": "last",
+          "countries": [
+            "CN"
+          ],
+          "institutions": [
+            {
+              "country_code": "CN",
+              "display_name": "Chinese Academy of Sciences",
+              "id": "https://openalex.org/I19820366",
+              "lineage": [
+                "https://openalex.org/I19820366"
+              ],
+              "ror": "https://ror.org/034t30j35",
+              "type": "government"
+            },
+            {
+              "country_code": "CN",
+              "display_name": "Institute of Automation",
+              "id": "https://openalex.org/I4210112150",
+              "lineage": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210112150"
+              ],
+              "ror": "https://ror.org/022c3hy66",
+              "type": "facility"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing 100190, China",
+            "State Key Laboratory of Intelligent Control and Management of Complex Systems, Institute of Automation, Chinese Academy of Sciences, Beijing, 100190, China"
+          ],
+          "raw_author_name": "Min Tan",
+          "raw_orcid": null
+        }
+      ],
+      "awards": [],
+      "best_oa_location": null,
+      "biblio": {
+        "first_page": "139",
+        "issue": "1",
+        "last_page": "148",
+        "volume": "78"
+      },
+      "citation_normalized_percentile": {
+        "is_in_top_10_percent": false,
+        "is_in_top_1_percent": false,
+        "value": 0.83923573
+      },
+      "cited_by_count": 203,
+      "cited_by_percentile_year": {
+        "max": 100,
+        "min": 94
+      },
+      "concepts": [
+        {
+          "display_name": "Ankle",
+          "id": "https://openalex.org/C2778640784",
+          "level": 2,
+          "score": 0.7389401793479919,
+          "wikidata": "https://www.wikidata.org/wiki/Q168002"
+        },
+        {
+          "display_name": "Joint (building)",
+          "id": "https://openalex.org/C18555067",
+          "level": 2,
+          "score": 0.6395329236984253,
+          "wikidata": "https://www.wikidata.org/wiki/Q8375051"
+        },
+        {
+          "display_name": "Treadmill",
+          "id": "https://openalex.org/C2781464450",
+          "level": 2,
+          "score": 0.578849732875824,
+          "wikidata": "https://www.wikidata.org/wiki/Q839144"
+        },
+        {
+          "display_name": "Knee Joint",
+          "id": "https://openalex.org/C2908736133",
+          "level": 2,
+          "score": 0.5651770830154419,
+          "wikidata": "https://www.wikidata.org/wiki/Q37425"
+        },
+        {
+          "display_name": "Physical medicine and rehabilitation",
+          "id": "https://openalex.org/C99508421",
+          "level": 1,
+          "score": 0.5340942740440369,
+          "wikidata": "https://www.wikidata.org/wiki/Q2678675"
+        },
+        {
+          "display_name": "Artificial neural network",
+          "id": "https://openalex.org/C50644808",
+          "level": 2,
+          "score": 0.5240535736083984,
+          "wikidata": "https://www.wikidata.org/wiki/Q192776"
+        },
+        {
+          "display_name": "Mean squared error",
+          "id": "https://openalex.org/C139945424",
+          "level": 2,
+          "score": 0.5077630281448364,
+          "wikidata": "https://www.wikidata.org/wiki/Q1940696"
+        },
+        {
+          "display_name": "Computer science",
+          "id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.4821438491344452,
+          "wikidata": "https://www.wikidata.org/wiki/Q21198"
+        },
+        {
+          "display_name": "Electromyography",
+          "id": "https://openalex.org/C2777515770",
+          "level": 2,
+          "score": 0.477690726518631,
+          "wikidata": "https://www.wikidata.org/wiki/Q507369"
+        },
+        {
+          "display_name": "Rehabilitation",
+          "id": "https://openalex.org/C2778818304",
+          "level": 2,
+          "score": 0.43628519773483276,
+          "wikidata": "https://www.wikidata.org/wiki/Q1819478"
+        },
+        {
+          "display_name": "Mathematics",
+          "id": "https://openalex.org/C33923547",
+          "level": 0,
+          "score": 0.3757680058479309,
+          "wikidata": "https://www.wikidata.org/wiki/Q395"
+        },
+        {
+          "display_name": "Medicine",
+          "id": "https://openalex.org/C71924100",
+          "level": 0,
+          "score": 0.3557945787906647,
+          "wikidata": "https://www.wikidata.org/wiki/Q11190"
+        },
+        {
+          "display_name": "Physical therapy",
+          "id": "https://openalex.org/C1862650",
+          "level": 1,
+          "score": 0.301887571811676,
+          "wikidata": "https://www.wikidata.org/wiki/Q186005"
+        },
+        {
+          "display_name": "Artificial intelligence",
+          "id": "https://openalex.org/C154945302",
+          "level": 1,
+          "score": 0.2966192364692688,
+          "wikidata": "https://www.wikidata.org/wiki/Q11660"
+        },
+        {
+          "display_name": "Statistics",
+          "id": "https://openalex.org/C105795698",
+          "level": 1,
+          "score": 0.13540425896644592,
+          "wikidata": "https://www.wikidata.org/wiki/Q12483"
+        },
+        {
+          "display_name": "Engineering",
+          "id": "https://openalex.org/C127413603",
+          "level": 0,
+          "score": 0.11868590116500854,
+          "wikidata": "https://www.wikidata.org/wiki/Q11023"
+        },
+        {
+          "display_name": "Anatomy",
+          "id": "https://openalex.org/C105702510",
+          "level": 1,
+          "score": 0.09928447008132935,
+          "wikidata": "https://www.wikidata.org/wiki/Q514"
+        },
+        {
+          "display_name": "Surgery",
+          "id": "https://openalex.org/C141071460",
+          "level": 1,
+          "score": 0.07406190037727356,
+          "wikidata": "https://www.wikidata.org/wiki/Q40821"
+        },
+        {
+          "display_name": "Structural engineering",
+          "id": "https://openalex.org/C66938386",
+          "level": 1,
+          "score": 0.06654718518257141,
+          "wikidata": "https://www.wikidata.org/wiki/Q633538"
+        }
+      ],
+      "content_urls": null,
+      "corresponding_author_ids": [
+        "https://openalex.org/A5109333020"
+      ],
+      "corresponding_institution_ids": [
+        "https://openalex.org/I19820366",
+        "https://openalex.org/I4210112150"
+      ],
+      "countries_distinct_count": 1,
+      "counts_by_year": [
+        {
+          "cited_by_count": 6,
+          "year": 2026
+        },
+        {
+          "cited_by_count": 15,
+          "year": 2025
+        },
+        {
+          "cited_by_count": 17,
+          "year": 2024
+        },
+        {
+          "cited_by_count": 21,
+          "year": 2023
+        },
+        {
+          "cited_by_count": 19,
+          "year": 2022
+        },
+        {
+          "cited_by_count": 29,
+          "year": 2021
+        },
+        {
+          "cited_by_count": 21,
+          "year": 2020
+        },
+        {
+          "cited_by_count": 22,
+          "year": 2019
+        },
+        {
+          "cited_by_count": 15,
+          "year": 2018
+        },
+        {
+          "cited_by_count": 11,
+          "year": 2017
+        },
+        {
+          "cited_by_count": 11,
+          "year": 2016
+        },
+        {
+          "cited_by_count": 6,
+          "year": 2015
+        },
+        {
+          "cited_by_count": 5,
+          "year": 2014
+        },
+        {
+          "cited_by_count": 2,
+          "year": 2013
+        },
+        {
+          "cited_by_count": 3,
+          "year": 2012
+        }
+      ],
+      "created_date": "2025-10-10T00:00:00",
+      "display_name": "sEMG-based continuous estimation of joint angles of human legs by using BP neural network",
+      "doi": "https://doi.org/10.1016/j.neucom.2011.05.033",
+      "funders": [],
+      "fwci": 1.824,
+      "has_content": {
+        "grobid_xml": false,
+        "pdf": false
+      },
+      "has_fulltext": false,
+      "id": "https://openalex.org/W2072588720",
+      "ids": {
+        "doi": "https://doi.org/10.1016/j.neucom.2011.05.033",
+        "mag": "2072588720",
+        "openalex": "https://openalex.org/W2072588720"
+      },
+      "indexed_in": [
+        "crossref"
+      ],
+      "institutions": [],
+      "institutions_distinct_count": 3,
+      "is_paratext": false,
+      "is_retracted": false,
+      "is_xpac": false,
+      "keywords": [
+        {
+          "display_name": "surface electromyography",
+          "id": "https://openalex.org/keywords/surface-electromyography",
+          "score": 0.9940000176429749
+        },
+        {
+          "display_name": "joint angle estimation",
+          "id": "https://openalex.org/keywords/joint-angle-estimation",
+          "score": 0.9279999732971191
+        },
+        {
+          "display_name": "BP neural network",
+          "id": "https://openalex.org/keywords/back-propagation-neural-network",
+          "score": 0.8029999732971191
+        },
+        {
+          "display_name": "spinal cord injury",
+          "id": "https://openalex.org/keywords/spinal-cord-injury",
+          "score": 0.9409999847412109
+        },
+        {
+          "display_name": "treadmill exercise",
+          "id": "https://openalex.org/keywords/treadmill-exercise",
+          "score": 0.7699999809265137
+        },
+        {
+          "display_name": "leg extension",
+          "id": "https://openalex.org/keywords/leg-extension",
+          "score": 0.9850000143051147
+        },
+        {
+          "display_name": "functional electrical stimulation",
+          "id": "https://openalex.org/keywords/functional-electrical-stimulation",
+          "score": 0.7699999809265137
+        },
+        {
+          "display_name": "rehabilitation robotics",
+          "id": "https://openalex.org/keywords/rehabilitation-robotics",
+          "score": 0.824999988079071
+        },
+        {
+          "display_name": "stroke rehabilitation",
+          "id": "https://openalex.org/keywords/stroke-rehabilitation",
+          "score": 0.890999972820282
+        }
+      ],
+      "language": "en",
+      "locations": [
+        {
+          "doi": "https://doi.org/10.1016/j.neucom.2011.05.033",
+          "id": "doi:10.1016/j.neucom.2011.05.033",
+          "is_accepted": true,
+          "is_oa": false,
+          "is_published": true,
+          "landing_page_url": "https://doi.org/10.1016/j.neucom.2011.05.033",
+          "license": null,
+          "license_id": null,
+          "pdf_url": null,
+          "raw_source_name": "Neurocomputing",
+          "raw_type": "journal-article",
+          "source": {
+            "display_name": "Neurocomputing",
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "host_organization_name": "Elsevier BV",
+            "id": "https://openalex.org/S45693802",
+            "is_core": true,
+            "is_in_doaj": false,
+            "is_oa": false,
+            "issn": [
+              "0925-2312",
+              "1872-8286"
+            ],
+            "issn_l": "0925-2312",
+            "listed_in": [
+              "anvur-scientific",
+              "ccf-c",
+              "cwts-core",
+              "dongbi-b",
+              "doyens",
+              "jufo-2",
+              "ki-jl-2",
+              "norway-2",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "type": "journal"
+          },
+          "version": "publishedVersion"
+        }
+      ],
+      "locations_count": 1,
+      "mesh": [],
+      "open_access": {
+        "any_repository_has_fulltext": false,
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null
+      },
+      "primary_location": {
+        "doi": "https://doi.org/10.1016/j.neucom.2011.05.033",
+        "id": "doi:10.1016/j.neucom.2011.05.033",
+        "is_accepted": true,
+        "is_oa": false,
+        "is_published": true,
+        "landing_page_url": "https://doi.org/10.1016/j.neucom.2011.05.033",
+        "license": null,
+        "license_id": null,
+        "pdf_url": null,
+        "raw_source_name": "Neurocomputing",
+        "raw_type": "journal-article",
+        "source": {
+          "display_name": "Neurocomputing",
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "host_organization_name": "Elsevier BV",
+          "id": "https://openalex.org/S45693802",
+          "is_core": true,
+          "is_in_doaj": false,
+          "is_oa": false,
+          "issn": [
+            "0925-2312",
+            "1872-8286"
+          ],
+          "issn_l": "0925-2312",
+          "listed_in": [
+            "anvur-scientific",
+            "ccf-c",
+            "cwts-core",
+            "dongbi-b",
+            "doyens",
+            "jufo-2",
+            "ki-jl-2",
+            "norway-2",
+            "poland-140",
+            "russia-white-list-1",
+            "vabb-shw"
+          ],
+          "type": "journal"
+        },
+        "version": "publishedVersion"
+      },
+      "primary_topic": {
+        "display_name": "Muscle activation and electromyography studies",
+        "domain": {
+          "display_name": "Physical Sciences",
+          "id": "https://openalex.org/domains/3"
+        },
+        "field": {
+          "display_name": "Engineering",
+          "id": "https://openalex.org/fields/22"
+        },
+        "id": "https://openalex.org/T10784",
+        "score": 0.9990000128746033,
+        "subfield": {
+          "display_name": "Biomedical Engineering",
+          "id": "https://openalex.org/subfields/2204"
+        }
+      },
+      "publication_date": "2011-08-27",
+      "publication_year": 2011,
+      "referenced_works": [
+        "https://openalex.org/W384456245",
+        "https://openalex.org/W639661492",
+        "https://openalex.org/W1507137415",
+        "https://openalex.org/W1527392160",
+        "https://openalex.org/W1552504640",
+        "https://openalex.org/W1605883445",
+        "https://openalex.org/W1808788800",
+        "https://openalex.org/W1970108221",
+        "https://openalex.org/W1972194218",
+        "https://openalex.org/W1974314376",
+        "https://openalex.org/W1985158854",
+        "https://openalex.org/W2012300725",
+        "https://openalex.org/W2046075739",
+        "https://openalex.org/W2053806627",
+        "https://openalex.org/W2071270654",
+        "https://openalex.org/W2086061329",
+        "https://openalex.org/W2087435447",
+        "https://openalex.org/W2092827359",
+        "https://openalex.org/W2093254109",
+        "https://openalex.org/W2094885728",
+        "https://openalex.org/W2100832974",
+        "https://openalex.org/W2101988387",
+        "https://openalex.org/W2110119146",
+        "https://openalex.org/W2120557068",
+        "https://openalex.org/W2122612627",
+        "https://openalex.org/W2122920178",
+        "https://openalex.org/W2129308247",
+        "https://openalex.org/W2133644836",
+        "https://openalex.org/W2135945666",
+        "https://openalex.org/W2137087502",
+        "https://openalex.org/W2138983889",
+        "https://openalex.org/W2143692582",
+        "https://openalex.org/W2146409459",
+        "https://openalex.org/W2152048394",
+        "https://openalex.org/W2156290302",
+        "https://openalex.org/W2156914236",
+        "https://openalex.org/W2157409090",
+        "https://openalex.org/W2157780858",
+        "https://openalex.org/W2158728671",
+        "https://openalex.org/W2160565505",
+        "https://openalex.org/W2164006146",
+        "https://openalex.org/W2168025035",
+        "https://openalex.org/W2988754001",
+        "https://openalex.org/W4210973470",
+        "https://openalex.org/W4234616580"
+      ],
+      "referenced_works_count": 45,
+      "related_works": [
+        "https://openalex.org/W2376139493",
+        "https://openalex.org/W2911808920",
+        "https://openalex.org/W2141253262",
+        "https://openalex.org/W3156756500",
+        "https://openalex.org/W4251090744",
+        "https://openalex.org/W2386293158",
+        "https://openalex.org/W2433638048",
+        "https://openalex.org/W2006061919",
+        "https://openalex.org/W4282981700",
+        "https://openalex.org/W170922090"
+      ],
+      "relevance_score": 105.81318,
+      "study_designs": [],
+      "sustainable_development_goals": [
+        {
+          "display_name": "Good health and well-being",
+          "id": "https://metadata.un.org/sdg/3",
+          "score": 0.9476000070571899
+        }
+      ],
+      "sustainable_development_goals_aurora": [
+        {
+          "display_name": "Good health and well-being",
+          "id": "https://metadata.un.org/sdg/3",
+          "score": 0.699999988079071
+        }
+      ],
+      "title": "sEMG-based continuous estimation of joint angles of human legs by using BP neural network",
+      "topics": [
+        {
+          "display_name": "Muscle activation and electromyography studies",
+          "domain": {
+            "display_name": "Physical Sciences",
+            "id": "https://openalex.org/domains/3"
+          },
+          "field": {
+            "display_name": "Engineering",
+            "id": "https://openalex.org/fields/22"
+          },
+          "id": "https://openalex.org/T10784",
+          "score": 0.9990000128746033,
+          "subfield": {
+            "display_name": "Biomedical Engineering",
+            "id": "https://openalex.org/subfields/2204"
+          }
+        },
+        {
+          "display_name": "Stroke Rehabilitation and Recovery",
+          "domain": {
+            "display_name": "Health Sciences",
+            "id": "https://openalex.org/domains/4"
+          },
+          "field": {
+            "display_name": "Medicine",
+            "id": "https://openalex.org/fields/27"
+          },
+          "id": "https://openalex.org/T10510",
+          "score": 0.00019999999494757503,
+          "subfield": {
+            "display_name": "Rehabilitation",
+            "id": "https://openalex.org/subfields/2742"
+          }
+        },
+        {
+          "display_name": "Prosthetics and Rehabilitation Robotics",
+          "domain": {
+            "display_name": "Physical Sciences",
+            "id": "https://openalex.org/domains/3"
+          },
+          "field": {
+            "display_name": "Engineering",
+            "id": "https://openalex.org/fields/22"
+          },
+          "id": "https://openalex.org/T11023",
+          "score": 0.00019999999494757503,
+          "subfield": {
+            "display_name": "Biomedical Engineering",
+            "id": "https://openalex.org/subfields/2204"
+          }
+        }
+      ],
+      "type": "article",
+      "updated_date": "2026-10-17T09:40:24.721904",
+      "volume": null
+    },
+    {
+      "abstract_inverted_index": {
+        "(Root-Mean-Square": [
+          65
+        ],
+        "(force": [
+          111
+        ],
+        "(sEMG": [
+          196
+        ],
+        "(sEMG)": [
+          5
+        ],
+        "1)": [
+          86,
+          179
+        ],
+        "10.47": [
+          163
+        ],
+        "13.54": [
+          158
+        ],
+        "2)": [
+          105,
+          193
+        ],
+        "20.44": [
+          71,
+          155
+        ],
+        "3)": [
+          118
+        ],
+        "7.86": [
+          68
+        ],
+        "8.48": [
+          169
+        ],
+        "Error)": [
+          66
+        ],
+        "Experiments": [
+          130
+        ],
+        "However,": [
+          19
+        ],
+        "Many": [
+          0
+        ],
+        "One": [
+          28
+        ],
+        "Our": [
+          175
+        ],
+        "RMSE": [
+          64,
+          151
+        ],
+        "The": [
+          145
+        ],
+        "Therefore,": [
+          77
+        ],
+        "This": [
+          39,
+          57
+        ],
+        "a": [
+          48,
+          120
+        ],
+        "adding": [
+          106
+        ],
+        "additional": [
+          115
+        ],
+        "address": [
+          83
+        ],
+        "adverse": [
+          208
+        ],
+        "affect": [
+          24
+        ],
+        "all": [
+          92
+        ],
+        "an": [
+          60,
+          114,
+          202
+        ],
+        "and": [
+          17,
+          117,
+          128,
+          168,
+          186,
+          192,
+          198
+        ],
+        "angle": [
+          55,
+          190
+        ],
+        "angle,": [
+          11
+        ],
+        "applicability.": [
+          27
+        ],
+        "approach": [
+          124
+        ],
+        "are": [
+          131
+        ],
+        "as": [
+          113
+        ],
+        "based": [
+          125
+        ],
+        "can": [
+          46,
+          183
+        ],
+        "clinical": [
+          26
+        ],
+        "conducted": [
+          132
+        ],
+        "control": [
+          13
+        ],
+        "daily": [
+          37
+        ],
+        "data": [
+          90,
+          100
+        ],
+        "demonstrates": [
+          41
+        ],
+        "developing": [
+          119
+        ],
+        "during": [
+          36
+        ],
+        "effect": [
+          209
+        ],
+        "efficient": [
+          203
+        ],
+        "elbow": [
+          54
+        ],
+        "electromyogram": [
+          4
+        ],
+        "estimate": [
+          8
+        ],
+        "estimation": [
+          123,
+          191
+        ],
+        "estimation.": [
+          56
+        ],
+        "exoskeletons": [
+          16
+        ],
+        "experimental": [
+          75
+        ],
+        "factors": [
+          22,
+          31
+        ],
+        "feasibility": [
+          139
+        ],
+        "five": [
+          134
+        ],
+        "for": [
+          12,
+          101
+        ],
+        "force": [
+          199
+        ],
+        "form": [
+          96
+        ],
+        "from": [
+          67,
+          91,
+          154
+        ],
+        "fusion": [
+          195
+        ],
+        "have": [
+          47
+        ],
+        "hybrid": [
+          122
+        ],
+        "impact": [
+          50,
+          58
+        ],
+        "improve": [
+          184
+        ],
+        "in": [
+          62,
+          73
+        ],
+        "increase": [
+          61
+        ],
+        "indicates": [
+          177
+        ],
+        "input;": [
+          116
+        ],
+        "investigate": [
+          137
+        ],
+        "is": [
+          32,
+          152,
+          201
+        ],
+        "issue:": [
+          85
+        ],
+        "its": [
+          25
+        ],
+        "joint": [
+          10,
+          189
+        ],
+        "leads": [
+          59
+        ],
+        "load": [
+          34,
+          44,
+          109,
+          127,
+          211
+        ],
+        "loads": [
+          93
+        ],
+        "mean": [
+          63,
+          150
+        ],
+        "measured": [
+          108
+        ],
+        "method": [
+          161,
+          166,
+          172
+        ],
+        "methods": [
+          81,
+          182
+        ],
+        "methods.": [
+          144
+        ],
+        "model;": [
+          104
+        ],
+        "of": [
+          14,
+          29,
+          53,
+          140,
+          210
+        ],
+        "on": [
+          51,
+          126,
+          188
+        ],
+        "one,": [
+          162
+        ],
+        "our": [
+          74
+        ],
+        "paper": [
+          40
+        ],
+        "performance": [
+          52,
+          185
+        ],
+        "pooled": [
+          98
+        ],
+        "pooling": [
+          87
+        ],
+        "practical": [
+          21
+        ],
+        "propose": [
+          79
+        ],
+        "proposed": [
+          142,
+          181
+        ],
+        "prostheses.": [
+          18
+        ],
+        "reduced": [
+          153
+        ],
+        "resolve": [
+          206
+        ],
+        "respectively.": [
+          174
+        ],
+        "results": [
+          146
+        ],
+        "sEMG.": [
+          129
+        ],
+        "sensor": [
+          194,
+          197
+        ],
+        "sensor)": [
+          112,
+          200
+        ],
+        "several": [
+          20
+        ],
+        "show": [
+          147
+        ],
+        "signals": [
+          6
+        ],
+        "stability": [
+          187
+        ],
+        "still": [
+          23
+        ],
+        "studies": [
+          1
+        ],
+        "study": [
+          176
+        ],
+        "subjects": [
+          135
+        ],
+        "substantial": [
+          49
+        ],
+        "surface": [
+          3
+        ],
+        "test.": [
+          76
+        ],
+        "that": [
+          42,
+          148,
+          178
+        ],
+        "the": [
+          9,
+          33,
+          43,
+          88,
+          97,
+          102,
+          107,
+          138,
+          141,
+          149,
+          180,
+          207
+        ],
+        "these": [
+          30
+        ],
+        "this": [
+          84
+        ],
+        "three": [
+          80,
+          143
+        ],
+        "three,": [
+          173
+        ],
+        "to": [
+          7,
+          70,
+          82,
+          95,
+          136,
+          157,
+          205
+        ],
+        "together": [
+          94
+        ],
+        "training": [
+          89,
+          99,
+          103
+        ],
+        "two,": [
+          167
+        ],
+        "two-step": [
+          121
+        ],
+        "upper-limb": [
+          15
+        ],
+        "use": [
+          2
+        ],
+        "use.": [
+          38
+        ],
+        "using": [
+          160,
+          165,
+          171
+        ],
+        "value": [
+          110
+        ],
+        "variation": [
+          35,
+          45
+        ],
+        "variation.": [
+          212
+        ],
+        "way": [
+          204
+        ],
+        "we": [
+          78
+        ],
+        "with": [
+          133
+        ],
+        "°": [
+          69,
+          72,
+          156,
+          159,
+          164,
+          170
+        ]
+      },
+      "apc_list": {
+        "currency": "USD",
+        "value": 2075,
+        "value_usd": 2075
+      },
+      "apc_paid": null,
+      "authorships": [
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I76130692"
+              ],
+              "raw_affiliation_string": "College of Computer Science and Technology, Zhejiang University, Hangzhou, China"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I9300472"
+              ],
+              "raw_affiliation_string": "Faculty of Science and Technology, Bournemouth University, Poole, UK"
+            }
+          ],
+          "author": {
+            "display_name": "Zhichuan Tang",
+            "id": "https://openalex.org/A5052628703",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-1730-1120"
+            ],
+            "orcid": "https://orcid.org/0000-0002-1730-1120"
+          },
+          "author_position": "first",
+          "countries": [
+            "CN",
+            "GB"
+          ],
+          "institutions": [
+            {
+              "country_code": "CN",
+              "display_name": "Zhejiang University",
+              "id": "https://openalex.org/I76130692",
+              "lineage": [
+                "https://openalex.org/I76130692"
+              ],
+              "ror": "https://ror.org/00a2xv884",
+              "type": "education"
+            },
+            {
+              "country_code": "GB",
+              "display_name": "Bournemouth University",
+              "id": "https://openalex.org/I9300472",
+              "lineage": [
+                "https://openalex.org/I9300472"
+              ],
+              "ror": "https://ror.org/05wwcw481",
+              "type": "education"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "College of Computer Science and Technology, Zhejiang University, Hangzhou, China",
+            "Faculty of Science and Technology, Bournemouth University, Poole, UK"
+          ],
+          "raw_author_name": "Zhichuan Tang",
+          "raw_orcid": null
+        },
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I9300472"
+              ],
+              "raw_affiliation_string": "Faculty of Science and Technology, Bournemouth University, Poole, UK"
+            }
+          ],
+          "author": {
+            "display_name": "Hongnian Yu",
+            "id": "https://openalex.org/A5037783994",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-2894-2086",
+              "https://orcid.org/0000-0001-9263-5035"
+            ],
+            "orcid": "https://orcid.org/0000-0003-2894-2086"
+          },
+          "author_position": "middle",
+          "countries": [
+            "GB"
+          ],
+          "institutions": [
+            {
+              "country_code": "GB",
+              "display_name": "Bournemouth University",
+              "id": "https://openalex.org/I9300472",
+              "lineage": [
+                "https://openalex.org/I9300472"
+              ],
+              "ror": "https://ror.org/05wwcw481",
+              "type": "education"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "Faculty of Science and Technology, Bournemouth University, Poole, UK"
+          ],
+          "raw_author_name": "Hongnian Yu",
+          "raw_orcid": null
+        },
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I9300472"
+              ],
+              "raw_affiliation_string": "Faculty of Management, Bournemouth University, Poole, UK"
+            }
+          ],
+          "author": {
+            "display_name": "Shuang Cang",
+            "id": "https://openalex.org/A5084481538",
+            "observed_orcids": [],
+            "orcid": null
+          },
+          "author_position": "last",
+          "countries": [
+            "GB"
+          ],
+          "institutions": [
+            {
+              "country_code": "GB",
+              "display_name": "Bournemouth University",
+              "id": "https://openalex.org/I9300472",
+              "lineage": [
+                "https://openalex.org/I9300472"
+              ],
+              "ror": "https://ror.org/05wwcw481",
+              "type": "education"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "Faculty of Management, Bournemouth University, Poole, UK"
+          ],
+          "raw_author_name": "Shuang Cang",
+          "raw_orcid": null
+        }
+      ],
+      "awards": [],
+      "best_oa_location": null,
+      "biblio": {
+        "first_page": "1342",
+        "issue": "12",
+        "last_page": "1350",
+        "volume": "24"
+      },
+      "citation_normalized_percentile": {
+        "is_in_top_10_percent": false,
+        "is_in_top_1_percent": false,
+        "value": 0.87130388
+      },
+      "cited_by_count": 71,
+      "cited_by_percentile_year": {
+        "max": 99,
+        "min": 93
+      },
+      "concepts": [
+        {
+          "display_name": "Mean squared error",
+          "id": "https://openalex.org/C139945424",
+          "level": 2,
+          "score": 0.7111457586288452,
+          "wikidata": "https://www.wikidata.org/wiki/Q1940696"
+        },
+        {
+          "display_name": "Pooling",
+          "id": "https://openalex.org/C70437156",
+          "level": 2,
+          "score": 0.583951473236084,
+          "wikidata": "https://www.wikidata.org/wiki/Q7228652"
+        },
+        {
+          "display_name": "Joint (building)",
+          "id": "https://openalex.org/C18555067",
+          "level": 2,
+          "score": 0.5287484526634216,
+          "wikidata": "https://www.wikidata.org/wiki/Q8375051"
+        },
+        {
+          "display_name": "Computer science",
+          "id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.5131362080574036,
+          "wikidata": "https://www.wikidata.org/wiki/Q21198"
+        },
+        {
+          "display_name": "Root mean square",
+          "id": "https://openalex.org/C71907059",
+          "level": 2,
+          "score": 0.4938703179359436,
+          "wikidata": "https://www.wikidata.org/wiki/Q223323"
+        },
+        {
+          "display_name": "Stability (learning theory)",
+          "id": "https://openalex.org/C112972136",
+          "level": 2,
+          "score": 0.45810365676879883,
+          "wikidata": "https://www.wikidata.org/wiki/Q7595718"
+        },
+        {
+          "display_name": "Control theory (sociology)",
+          "id": "https://openalex.org/C47446073",
+          "level": 3,
+          "score": 0.4464261531829834,
+          "wikidata": "https://www.wikidata.org/wiki/Q5165890"
+        },
+        {
+          "display_name": "Simulation",
+          "id": "https://openalex.org/C44154836",
+          "level": 1,
+          "score": 0.38989561796188354,
+          "wikidata": "https://www.wikidata.org/wiki/Q45045"
+        },
+        {
+          "display_name": "Mathematics",
+          "id": "https://openalex.org/C33923547",
+          "level": 0,
+          "score": 0.3236178159713745,
+          "wikidata": "https://www.wikidata.org/wiki/Q395"
+        },
+        {
+          "display_name": "Statistics",
+          "id": "https://openalex.org/C105795698",
+          "level": 1,
+          "score": 0.30895328521728516,
+          "wikidata": "https://www.wikidata.org/wiki/Q12483"
+        },
+        {
+          "display_name": "Control (management)",
+          "id": "https://openalex.org/C2775924081",
+          "level": 2,
+          "score": 0.22306865453720093,
+          "wikidata": "https://www.wikidata.org/wiki/Q55608371"
+        },
+        {
+          "display_name": "Artificial intelligence",
+          "id": "https://openalex.org/C154945302",
+          "level": 1,
+          "score": 0.19835713505744934,
+          "wikidata": "https://www.wikidata.org/wiki/Q11660"
+        },
+        {
+          "display_name": "Engineering",
+          "id": "https://openalex.org/C127413603",
+          "level": 0,
+          "score": 0.19629892706871033,
+          "wikidata": "https://www.wikidata.org/wiki/Q11023"
+        },
+        {
+          "display_name": "Structural engineering",
+          "id": "https://openalex.org/C66938386",
+          "level": 1,
+          "score": 0.1923198699951172,
+          "wikidata": "https://www.wikidata.org/wiki/Q633538"
+        },
+        {
+          "display_name": "Machine learning",
+          "id": "https://openalex.org/C119857082",
+          "level": 1,
+          "score": 0.08756065368652344,
+          "wikidata": "https://www.wikidata.org/wiki/Q2539"
+        },
+        {
+          "display_name": "Electrical engineering",
+          "id": "https://openalex.org/C119599485",
+          "level": 1,
+          "score": 0.0,
+          "wikidata": "https://www.wikidata.org/wiki/Q43035"
+        }
+      ],
+      "content_urls": null,
+      "corresponding_author_ids": [],
+      "corresponding_institution_ids": [],
+      "countries_distinct_count": 2,
+      "counts_by_year": [
+        {
+          "cited_by_count": 1,
+          "year": 2026
+        },
+        {
+          "cited_by_count": 5,
+          "year": 2025
+        },
+        {
+          "cited_by_count": 8,
+          "year": 2024
+        },
+        {
+          "cited_by_count": 9,
+          "year": 2023
+        },
+        {
+          "cited_by_count": 3,
+          "year": 2022
+        },
+        {
+          "cited_by_count": 8,
+          "year": 2021
+        },
+        {
+          "cited_by_count": 9,
+          "year": 2020
+        },
+        {
+          "cited_by_count": 14,
+          "year": 2019
+        },
+        {
+          "cited_by_count": 5,
+          "year": 2018
+        },
+        {
+          "cited_by_count": 6,
+          "year": 2017
+        },
+        {
+          "cited_by_count": 3,
+          "year": 2016
+        }
+      ],
+      "created_date": "2025-10-10T00:00:00",
+      "display_name": "Impact of Load Variation on Joint Angle Estimation From Surface EMG Signals",
+      "doi": "https://doi.org/10.1109/tnsre.2015.2502663",
+      "funders": [],
+      "fwci": 2.205,
+      "has_content": {
+        "grobid_xml": false,
+        "pdf": false
+      },
+      "has_fulltext": false,
+      "id": "https://openalex.org/W2345301146",
+      "ids": {
+        "doi": "https://doi.org/10.1109/tnsre.2015.2502663",
+        "mag": "2345301146",
+        "openalex": "https://openalex.org/W2345301146",
+        "pmid": "https://pubmed.ncbi.nlm.nih.gov/26600163"
+      },
+      "indexed_in": [
+        "crossref",
+        "doaj",
+        "pubmed"
+      ],
+      "institutions": [],
+      "institutions_distinct_count": 2,
+      "is_paratext": false,
+      "is_retracted": false,
+      "is_xpac": false,
+      "keywords": [
+        {
+          "display_name": "surface electromyography",
+          "id": "https://openalex.org/keywords/surface-electromyography",
+          "score": 0.9179999828338623
+        },
+        {
+          "display_name": "joint angle estimation",
+          "id": "https://openalex.org/keywords/joint-angle-estimation",
+          "score": 0.9860000014305115
+        },
+        {
+          "display_name": "elbow angle",
+          "id": "https://openalex.org/keywords/elbow-angle",
+          "score": 0.6349999904632568
+        },
+        {
+          "display_name": "load variation",
+          "id": "https://openalex.org/keywords/load-variation",
+          "score": 0.9900000095367432
+        },
+        {
+          "display_name": "prosthetic control",
+          "id": "https://openalex.org/keywords/prosthesis-control",
+          "score": 0.8529999852180481
+        },
+        {
+          "display_name": "force sensor",
+          "id": "https://openalex.org/keywords/force-sensor",
+          "score": 0.6859999895095825
+        },
+        {
+          "display_name": "sensor fusion",
+          "id": "https://openalex.org/keywords/sensor-fusion",
+          "score": 0.9440000057220459
+        },
+        {
+          "display_name": "hybrid estimation",
+          "id": "https://openalex.org/keywords/hybrid-estimation",
+          "score": 0.7580000162124634
+        },
+        {
+          "display_name": "electromyography-based control",
+          "id": "https://openalex.org/keywords/electromyography-based-control",
+          "score": 0.4020000100135803
+        }
+      ],
+      "language": "en",
+      "locations": [
+        {
+          "doi": "https://doi.org/10.1109/tnsre.2015.2502663",
+          "id": "doi:10.1109/tnsre.2015.2502663",
+          "is_accepted": true,
+          "is_oa": false,
+          "is_published": true,
+          "landing_page_url": "https://doi.org/10.1109/tnsre.2015.2502663",
+          "license": null,
+          "license_id": null,
+          "pdf_url": null,
+          "raw_source_name": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+          "raw_type": "journal-article",
+          "source": {
+            "display_name": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "id": "https://openalex.org/S98183460",
+            "is_core": true,
+            "is_in_doaj": true,
+            "is_oa": false,
+            "issn": [
+              "1534-4320",
+              "1558-0210"
+            ],
+            "issn_l": "1534-4320",
+            "listed_in": [
+              "cwts-core",
+              "doaj",
+              "dongbi-b",
+              "doyens",
+              "jufo-2",
+              "ki-jl-1",
+              "medline",
+              "norway-2",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "type": "journal"
+          },
+          "version": "publishedVersion"
+        },
+        {
+          "doi": null,
+          "id": "pmid:26600163",
+          "is_accepted": true,
+          "is_oa": false,
+          "is_published": true,
+          "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/26600163",
+          "license": null,
+          "license_id": null,
+          "pdf_url": null,
+          "raw_source_name": "IEEE transactions on neural systems and rehabilitation engineering : a publication of the IEEE Engineering in Medicine and Biology Society",
+          "raw_type": "Journal Article",
+          "source": {
+            "display_name": "PubMed",
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "host_organization_name": "National Institutes of Health",
+            "id": "https://openalex.org/S4306525036",
+            "is_core": false,
+            "is_in_doaj": false,
+            "is_oa": false,
+            "issn": null,
+            "issn_l": null,
+            "listed_in": [],
+            "type": "repository"
+          },
+          "version": "publishedVersion"
+        },
+        {
+          "doi": null,
+          "id": "pmh:oai:repository@napier.ac.uk:2246976",
+          "is_accepted": true,
+          "is_oa": false,
+          "is_published": true,
+          "landing_page_url": "http://researchrepository.napier.ac.uk/Output/2246976",
+          "license": null,
+          "license_id": null,
+          "pdf_url": null,
+          "raw_source_name": "",
+          "raw_type": "Journal Article",
+          "source": {
+            "display_name": "Edinburgh Napier Research Repository (Edinburgh Napier University)",
+            "host_organization": "https://openalex.org/I251738",
+            "host_organization_lineage": [
+              "https://openalex.org/I251738"
+            ],
+            "host_organization_lineage_names": [],
+            "host_organization_name": "Edinburgh Napier University",
+            "id": "https://openalex.org/S4306402591",
+            "is_core": false,
+            "is_in_doaj": false,
+            "is_oa": false,
+            "issn": null,
+            "issn_l": null,
+            "listed_in": [],
+            "type": "repository"
+          },
+          "version": "publishedVersion"
+        },
+        {
+          "doi": null,
+          "id": "pmh:oai:irep.ntu.ac.uk:40538",
+          "is_accepted": true,
+          "is_oa": false,
+          "is_published": false,
+          "landing_page_url": "http://irep.ntu.ac.uk/id/eprint/40538/1/1357089_a855_Cang.pdf",
+          "license": null,
+          "license_id": null,
+          "pdf_url": "http://irep.ntu.ac.uk/id/eprint/40538/1/1357089_a855_Cang.pdf",
+          "raw_source_name": "",
+          "raw_type": "Article",
+          "source": {
+            "display_name": "Nottingham Trent University's Institutional Repository (Nottingham Trent Repository)",
+            "host_organization": "https://openalex.org/I52590639",
+            "host_organization_lineage": [
+              "https://openalex.org/I52590639"
+            ],
+            "host_organization_lineage_names": [],
+            "host_organization_name": "Nottingham Trent University",
+            "id": "https://openalex.org/S4306400559",
+            "is_core": false,
+            "is_in_doaj": false,
+            "is_oa": false,
+            "issn": null,
+            "issn_l": null,
+            "listed_in": [],
+            "type": "repository"
+          },
+          "version": "acceptedVersion"
+        },
+        {
+          "doi": null,
+          "id": "pmh:oai:napier-surface.worktribe.com:2246976",
+          "is_accepted": false,
+          "is_oa": false,
+          "is_published": false,
+          "landing_page_url": "http://researchrepository.napier.ac.uk/Output/2246976",
+          "license": null,
+          "license_id": null,
+          "pdf_url": null,
+          "raw_source_name": "",
+          "raw_type": "Journal Article",
+          "source": {
+            "display_name": "Research Output (Edinburgh Napier University)",
+            "host_organization": "https://openalex.org/I251738",
+            "host_organization_lineage": [
+              "https://openalex.org/I251738"
+            ],
+            "host_organization_lineage_names": [],
+            "host_organization_name": "Edinburgh Napier University",
+            "id": "https://openalex.org/S4306400544",
+            "is_core": false,
+            "is_in_doaj": false,
+            "is_oa": false,
+            "issn": null,
+            "issn_l": null,
+            "listed_in": [],
+            "type": "repository"
+          },
+          "version": "submittedVersion"
+        },
+        {
+          "doi": null,
+          "id": "pmh:oai:nrl.northumbria.ac.uk:37030",
+          "is_accepted": false,
+          "is_oa": false,
+          "is_published": false,
+          "landing_page_url": "http://nrl.northumbria.ac.uk/37030/",
+          "license": null,
+          "license_id": null,
+          "pdf_url": null,
+          "raw_source_name": "",
+          "raw_type": "Article",
+          "source": {
+            "display_name": "Northumbria Research Link (Northumbria University)",
+            "host_organization": "https://openalex.org/I32394136",
+            "host_organization_lineage": [
+              "https://openalex.org/I32394136"
+            ],
+            "host_organization_lineage_names": [],
+            "host_organization_name": "Northumbria University",
+            "id": "https://openalex.org/S4306401884",
+            "is_core": false,
+            "is_in_doaj": false,
+            "is_oa": false,
+            "issn": null,
+            "issn_l": null,
+            "listed_in": [],
+            "type": "repository"
+          },
+          "version": "submittedVersion"
+        }
+      ],
+      "locations_count": 6,
+      "mesh": [
+        {
+          "descriptor_name": "Adult",
+          "descriptor_ui": "D000328",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Adult",
+          "descriptor_ui": "D000328",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Adult",
+          "descriptor_ui": "D000328",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Algorithms",
+          "descriptor_ui": "D000465",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Algorithms",
+          "descriptor_ui": "D000465",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Algorithms",
+          "descriptor_ui": "D000465",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Computer Simulation",
+          "descriptor_ui": "D003198",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Computer Simulation",
+          "descriptor_ui": "D003198",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Computer Simulation",
+          "descriptor_ui": "D003198",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Elbow Joint",
+          "descriptor_ui": "D004551",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Elbow Joint",
+          "descriptor_ui": "D004551",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Elbow Joint",
+          "descriptor_ui": "D004551",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Electromyography",
+          "descriptor_ui": "D004576",
+          "is_major_topic": false,
+          "qualifier_name": "methods",
+          "qualifier_ui": "Q000379"
+        },
+        {
+          "descriptor_name": "Electromyography",
+          "descriptor_ui": "D004576",
+          "is_major_topic": false,
+          "qualifier_name": "methods",
+          "qualifier_ui": "Q000379"
+        },
+        {
+          "descriptor_name": "Electromyography",
+          "descriptor_ui": "D004576",
+          "is_major_topic": false,
+          "qualifier_name": "methods",
+          "qualifier_ui": "Q000379"
+        },
+        {
+          "descriptor_name": "Feasibility Studies",
+          "descriptor_ui": "D005240",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Feasibility Studies",
+          "descriptor_ui": "D005240",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Feasibility Studies",
+          "descriptor_ui": "D005240",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Humans",
+          "descriptor_ui": "D006801",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Humans",
+          "descriptor_ui": "D006801",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Humans",
+          "descriptor_ui": "D006801",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Male",
+          "descriptor_ui": "D008297",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Male",
+          "descriptor_ui": "D008297",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Male",
+          "descriptor_ui": "D008297",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Models, Biological",
+          "descriptor_ui": "D008954",
+          "is_major_topic": true,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Models, Biological",
+          "descriptor_ui": "D008954",
+          "is_major_topic": true,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Models, Biological",
+          "descriptor_ui": "D008954",
+          "is_major_topic": true,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Muscle Contraction",
+          "descriptor_ui": "D009119",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Muscle Contraction",
+          "descriptor_ui": "D009119",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Muscle Contraction",
+          "descriptor_ui": "D009119",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Sensitivity and Specificity",
+          "descriptor_ui": "D012680",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Sensitivity and Specificity",
+          "descriptor_ui": "D012680",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Sensitivity and Specificity",
+          "descriptor_ui": "D012680",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Stress, Mechanical",
+          "descriptor_ui": "D013314",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Stress, Mechanical",
+          "descriptor_ui": "D013314",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Stress, Mechanical",
+          "descriptor_ui": "D013314",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Reproducibility of Results",
+          "descriptor_ui": "D015203",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Reproducibility of Results",
+          "descriptor_ui": "D015203",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Reproducibility of Results",
+          "descriptor_ui": "D015203",
+          "is_major_topic": false,
+          "qualifier_name": null,
+          "qualifier_ui": null
+        },
+        {
+          "descriptor_name": "Range of Motion, Articular",
+          "descriptor_ui": "D016059",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Range of Motion, Articular",
+          "descriptor_ui": "D016059",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Range of Motion, Articular",
+          "descriptor_ui": "D016059",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Weight-Bearing",
+          "descriptor_ui": "D016474",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Weight-Bearing",
+          "descriptor_ui": "D016474",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        },
+        {
+          "descriptor_name": "Weight-Bearing",
+          "descriptor_ui": "D016474",
+          "is_major_topic": false,
+          "qualifier_name": "physiology",
+          "qualifier_ui": "Q000502"
+        }
+      ],
+      "open_access": {
+        "any_repository_has_fulltext": false,
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null
+      },
+      "primary_location": {
+        "doi": "https://doi.org/10.1109/tnsre.2015.2502663",
+        "id": "doi:10.1109/tnsre.2015.2502663",
+        "is_accepted": true,
+        "is_oa": false,
+        "is_published": true,
+        "landing_page_url": "https://doi.org/10.1109/tnsre.2015.2502663",
+        "license": null,
+        "license_id": null,
+        "pdf_url": null,
+        "raw_source_name": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+        "raw_type": "journal-article",
+        "source": {
+          "display_name": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+          "host_organization": "https://openalex.org/P4310319808",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310319808"
+          ],
+          "host_organization_lineage_names": [
+            "Institute of Electrical and Electronics Engineers"
+          ],
+          "host_organization_name": "Institute of Electrical and Electronics Engineers",
+          "id": "https://openalex.org/S98183460",
+          "is_core": true,
+          "is_in_doaj": true,
+          "is_oa": false,
+          "issn": [
+            "1534-4320",
+            "1558-0210"
+          ],
+          "issn_l": "1534-4320",
+          "listed_in": [
+            "cwts-core",
+            "doaj",
+            "dongbi-b",
+            "doyens",
+            "jufo-2",
+            "ki-jl-1",
+            "medline",
+            "norway-2",
+            "poland-140",
+            "russia-white-list-1",
+            "vabb-shw"
+          ],
+          "type": "journal"
+        },
+        "version": "publishedVersion"
+      },
+      "primary_topic": {
+        "display_name": "Muscle activation and electromyography studies",
+        "domain": {
+          "display_name": "Physical Sciences",
+          "id": "https://openalex.org/domains/3"
+        },
+        "field": {
+          "display_name": "Engineering",
+          "id": "https://openalex.org/fields/22"
+        },
+        "id": "https://openalex.org/T10784",
+        "score": 0.9994999766349792,
+        "subfield": {
+          "display_name": "Biomedical Engineering",
+          "id": "https://openalex.org/subfields/2204"
+        }
+      },
+      "publication_date": "2015-11-20",
+      "publication_year": 2015,
+      "referenced_works": [
+        "https://openalex.org/W164543927",
+        "https://openalex.org/W1970566563",
+        "https://openalex.org/W1971656355",
+        "https://openalex.org/W1973013564",
+        "https://openalex.org/W1977872363",
+        "https://openalex.org/W1984252493",
+        "https://openalex.org/W1984675336",
+        "https://openalex.org/W1991397260",
+        "https://openalex.org/W1995211373",
+        "https://openalex.org/W2003345831",
+        "https://openalex.org/W2006741565",
+        "https://openalex.org/W2008437881",
+        "https://openalex.org/W2020341541",
+        "https://openalex.org/W2025503276",
+        "https://openalex.org/W2029895515",
+        "https://openalex.org/W2047121348",
+        "https://openalex.org/W2048207309",
+        "https://openalex.org/W2057170399",
+        "https://openalex.org/W2059530986",
+        "https://openalex.org/W2067317338",
+        "https://openalex.org/W2076024315",
+        "https://openalex.org/W2087455143",
+        "https://openalex.org/W2106526692",
+        "https://openalex.org/W2108225567",
+        "https://openalex.org/W2108437236",
+        "https://openalex.org/W2117656142",
+        "https://openalex.org/W2121350220",
+        "https://openalex.org/W2128756490",
+        "https://openalex.org/W2129308247",
+        "https://openalex.org/W2134490360",
+        "https://openalex.org/W2141195300",
+        "https://openalex.org/W2147641365",
+        "https://openalex.org/W2151875561",
+        "https://openalex.org/W2153635508",
+        "https://openalex.org/W2167582671",
+        "https://openalex.org/W2168035362",
+        "https://openalex.org/W2171188488",
+        "https://openalex.org/W2488164446",
+        "https://openalex.org/W4236488173"
+      ],
+      "referenced_works_count": 39,
+      "related_works": [
+        "https://openalex.org/W2953234277",
+        "https://openalex.org/W2626256601",
+        "https://openalex.org/W2900413183",
+        "https://openalex.org/W147410782",
+        "https://openalex.org/W4287804464",
+        "https://openalex.org/W3022252430",
+        "https://openalex.org/W3103989898",
+        "https://openalex.org/W2152352598",
+        "https://openalex.org/W803346624",
+        "https://openalex.org/W3108539254"
+      ],
+      "relevance_score": 105.657555,
+      "study_designs": [],
+      "sustainable_development_goals": [
+        {
+          "display_name": "Good health and well-being",
+          "id": "https://metadata.un.org/sdg/3",
+          "score": 0.5683000087738037
+        }
+      ],
+      "sustainable_development_goals_aurora": [],
+      "title": "Impact of Load Variation on Joint Angle Estimation From Surface EMG Signals",
+      "topics": [
+        {
+          "display_name": "Muscle activation and electromyography studies",
+          "domain": {
+            "display_name": "Physical Sciences",
+            "id": "https://openalex.org/domains/3"
+          },
+          "field": {
+            "display_name": "Engineering",
+            "id": "https://openalex.org/fields/22"
+          },
+          "id": "https://openalex.org/T10784",
+          "score": 0.9994999766349792,
+          "subfield": {
+            "display_name": "Biomedical Engineering",
+            "id": "https://openalex.org/subfields/2204"
+          }
+        },
+        {
+          "display_name": "Prosthetics and Rehabilitation Robotics",
+          "domain": {
+            "display_name": "Physical Sciences",
+            "id": "https://openalex.org/domains/3"
+          },
+          "field": {
+            "display_name": "Engineering",
+            "id": "https://openalex.org/fields/22"
+          },
+          "id": "https://openalex.org/T11023",
+          "score": 0.0003000000142492354,
+          "subfield": {
+            "display_name": "Biomedical Engineering",
+            "id": "https://openalex.org/subfields/2204"
+          }
+        },
+        {
+          "display_name": "Stroke Rehabilitation and Recovery",
+          "domain": {
+            "display_name": "Health Sciences",
+            "id": "https://openalex.org/domains/4"
+          },
+          "field": {
+            "display_name": "Medicine",
+            "id": "https://openalex.org/fields/27"
+          },
+          "id": "https://openalex.org/T10510",
+          "score": 0.0,
+          "subfield": {
+            "display_name": "Rehabilitation",
+            "id": "https://openalex.org/subfields/2742"
+          }
+        }
+      ],
+      "type": "article",
+      "updated_date": "2026-09-24T07:57:37.273135",
+      "volume": null
+    },
+    {
+      "abstract_inverted_index": {
+        "(BPNN)": [
+          104
+        ],
+        "(EMG)": [
+          14
+        ],
+        "(VHM)": [
+          124
+        ],
+        "A": [
+          99,
+          120
+        ],
+        "BPNN": [
+          131
+        ],
+        "Based": [
+          52
+        ],
+        "EMG": [
+          28,
+          55,
+          118
+        ],
+        "EMG.": [
+          186
+        ],
+        "Human": [
+          122
+        ],
+        "In": [
+          0,
+          87
+        ],
+        "Model": [
+          123
+        ],
+        "The": [
+          140,
+          154,
+          169
+        ],
+        "Therefore,": [
+          71
+        ],
+        "VHM": [
+          167
+        ],
+        "Virtual": [
+          121
+        ],
+        "a": [
+          49,
+          166
+        ],
+        "ability": [
+          21
+        ],
+        "accurate": [
+          83
+        ],
+        "achieve": [
+          82
+        ],
+        "also": [
+          126
+        ],
+        "an": [
+          90
+        ],
+        "and": [
+          111,
+          128,
+          145,
+          165
+        ],
+        "angle": [
+          94
+        ],
+        "angle.": [
+          70,
+          139
+        ],
+        "angles": [
+          114,
+          183
+        ],
+        "are": [
+          149
+        ],
+        "back": [
+          100
+        ],
+        "based": [
+          184
+        ],
+        "be": [
+          37,
+          61,
+          176
+        ],
+        "becomes": [
+          74
+        ],
+        "between": [
+          142
+        ],
+        "biological": [
+          33
+        ],
+        "by": [
+          46
+        ],
+        "can": [
+          36,
+          175
+        ],
+        "could": [
+          60
+        ],
+        "detect": [
+          23
+        ],
+        "developed": [
+          106,
+          127
+        ],
+        "development": [
+          2
+        ],
+        "developments": [
+          158
+        ],
+        "due": [
+          18
+        ],
+        "effectiveness": [
+          155
+        ],
+        "elbow": [
+          112
+        ],
+        "electrode.": [
+          51
+        ],
+        "electromyogram": [
+          13
+        ],
+        "estimate": [
+          108
+        ],
+        "estimated": [
+          138
+        ],
+        "estimation": [
+          64,
+          73,
+          95,
+          180
+        ],
+        "evaluate": [
+          40
+        ],
+        "evaluated": [
+          160
+        ],
+        "extracted": [
+          62
+        ],
+        "factors": [
+          80
+        ],
+        "for": [
+          7
+        ],
+        "force": [
+          68
+        ],
+        "four": [
+          162
+        ],
+        "from": [
+          115
+        ],
+        "healthy": [
+          163
+        ],
+        "human": [
+          12
+        ],
+        "important": [
+          79
+        ],
+        "in": [
+          151,
+          178
+        ],
+        "integrated": [
+          129
+        ],
+        "intended": [
+          26,
+          58,
+          85
+        ],
+        "is": [
+          15,
+          29,
+          97,
+          105,
+          125,
+          159
+        ],
+        "its": [
+          20
+        ],
+        "joint": [
+          66,
+          93,
+          113,
+          182
+        ],
+        "kind": [
+          31
+        ],
+        "limb": [
+          9,
+          92,
+          147
+        ],
+        "means": [
+          47
+        ],
+        "methodology": [
+          96,
+          174
+        ],
+        "most": [
+          78
+        ],
+        "motion": [
+          59
+        ],
+        "motion.": [
+          27,
+          86
+        ],
+        "movements": [
+          148
+        ],
+        "muscles": [
+          45
+        ],
+        "network": [
+          103
+        ],
+        "neural": [
+          102
+        ],
+        "observed": [
+          150
+        ],
+        "of": [
+          3,
+          32,
+          43,
+          48,
+          65,
+          76,
+          136,
+          156,
+          181
+        ],
+        "on": [
+          53,
+          185
+        ],
+        "one": [
+          30,
+          75
+        ],
+        "or": [
+          69
+        ],
+        "our": [
+          157
+        ],
+        "paper,": [
+          89
+        ],
+        "paper.": [
+          153
+        ],
+        "perform": [
+          133
+        ],
+        "performance": [
+          42
+        ],
+        "propagation": [
+          101
+        ],
+        "proposed.": [
+          98
+        ],
+        "recorded": [
+          38,
+          54,
+          117
+        ],
+        "rehabilitation": [
+          5,
+          10
+        ],
+        "relationships": [
+          141
+        ],
+        "results": [
+          170
+        ],
+        "robot-assisted": [
+          4
+        ],
+        "sEMG": [
+          143
+        ],
+        "sensor": [
+          50
+        ],
+        "shoulder": [
+          110
+        ],
+        "show": [
+          171
+        ],
+        "signal": [
+          34
+        ],
+        "signals": [
+          144
+        ],
+        "signals,": [
+          56
+        ],
+        "signals.": [
+          119
+        ],
+        "simulation": [
+          135
+        ],
+        "simulation.": [
+          168
+        ],
+        "skeletal": [
+          44
+        ],
+        "subjects": [
+          164
+        ],
+        "systems": [
+          6
+        ],
+        "that": [
+          35,
+          172
+        ],
+        "the": [
+          1,
+          24,
+          41,
+          77,
+          109,
+          116,
+          134,
+          137,
+          173,
+          179
+        ],
+        "therapy,": [
+          11
+        ],
+        "this": [
+          72,
+          88,
+          152
+        ],
+        "to": [
+          19,
+          22,
+          39,
+          81,
+          107,
+          132
+        ],
+        "torque,": [
+          67
+        ],
+        "upper": [
+          8,
+          91,
+          146
+        ],
+        "used": [
+          17,
+          177
+        ],
+        "user": [
+          25,
+          57,
+          84
+        ],
+        "via": [
+          63
+        ],
+        "widely": [
+          16
+        ],
+        "with": [
+          130,
+          161
+        ]
+      },
+      "apc_list": {
+        "currency": "USD",
+        "value": 2000,
+        "value_usd": 2000
+      },
+      "apc_paid": {
+        "currency": "USD",
+        "value": 2000,
+        "value_usd": 2000
+      },
+      "authorships": [
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I114017466"
+              ],
+              "raw_affiliation_string": "School of Electrical, Mechanical and Mechatronic Systems, Faculty of Engineering, University of Technology Sydney, Australia"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I114017466"
+              ],
+              "raw_affiliation_string": "1 School of Electrical, Mechanical and Mechatronic Systems, Faculty of Engineering, University of Technology Sydney, Australia"
+            }
+          ],
+          "author": {
+            "display_name": "Yee Mon Aung",
+            "id": "https://openalex.org/A5110175698",
+            "observed_orcids": [],
+            "orcid": null
+          },
+          "author_position": "first",
+          "countries": [
+            "AU"
+          ],
+          "institutions": [
+            {
+              "country_code": "AU",
+              "display_name": "University of Technology Sydney",
+              "id": "https://openalex.org/I114017466",
+              "lineage": [
+                "https://openalex.org/I114017466"
+              ],
+              "ror": "https://ror.org/03f0f6041",
+              "type": "education"
+            }
+          ],
+          "is_corresponding": true,
+          "raw_affiliation_strings": [
+            "School of Electrical, Mechanical and Mechatronic Systems, Faculty of Engineering, University of Technology Sydney, Australia",
+            "1 School of Electrical, Mechanical and Mechatronic Systems, Faculty of Engineering, University of Technology Sydney, Australia"
+          ],
+          "raw_author_name": "Yee Mon Aung",
+          "raw_orcid": null
+        },
+        {
+          "affiliations": [
+            {
+              "institution_ids": [
+                "https://openalex.org/I114017466"
+              ],
+              "raw_affiliation_string": "School of Electrical, Mechanical and Mechatronic Systems, Faculty of Engineering, University of Technology Sydney, Australia"
+            },
+            {
+              "institution_ids": [
+                "https://openalex.org/I114017466"
+              ],
+              "raw_affiliation_string": "1 School of Electrical, Mechanical and Mechatronic Systems, Faculty of Engineering, University of Technology Sydney, Australia"
+            }
+          ],
+          "author": {
+            "display_name": "Adel Ali Al-Jumaily",
+            "id": "https://openalex.org/A5062452600",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-0297-2463"
+            ],
+            "orcid": "https://orcid.org/0000-0003-0297-2463"
+          },
+          "author_position": "last",
+          "countries": [
+            "AU"
+          ],
+          "institutions": [
+            {
+              "country_code": "AU",
+              "display_name": "University of Technology Sydney",
+              "id": "https://openalex.org/I114017466",
+              "lineage": [
+                "https://openalex.org/I114017466"
+              ],
+              "ror": "https://ror.org/03f0f6041",
+              "type": "education"
+            }
+          ],
+          "is_corresponding": false,
+          "raw_affiliation_strings": [
+            "School of Electrical, Mechanical and Mechatronic Systems, Faculty of Engineering, University of Technology Sydney, Australia",
+            "1 School of Electrical, Mechanical and Mechatronic Systems, Faculty of Engineering, University of Technology Sydney, Australia"
+          ],
+          "raw_author_name": "Adel Al-Jumaily",
+          "raw_orcid": null
+        }
+      ],
+      "awards": [],
+      "best_oa_location": {
+        "doi": "https://doi.org/10.5772/56717",
+        "id": "doi:10.5772/56717",
+        "is_accepted": true,
+        "is_oa": true,
+        "is_published": true,
+        "landing_page_url": "https://doi.org/10.5772/56717",
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "pdf_url": null,
+        "raw_source_name": "International Journal of Advanced Robotic Systems",
+        "raw_type": "journal-article",
+        "source": {
+          "display_name": "International Journal of Advanced Robotic Systems",
+          "host_organization": "https://openalex.org/P4310320017",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320017"
+          ],
+          "host_organization_lineage_names": [
+            "SAGE Publishing"
+          ],
+          "host_organization_name": "SAGE Publishing",
+          "id": "https://openalex.org/S169266912",
+          "is_core": true,
+          "is_in_doaj": true,
+          "is_oa": true,
+          "issn": [
+            "1729-8806",
+            "1729-8814"
+          ],
+          "issn_l": "1729-8806",
+          "listed_in": [
+            "anvur-class-a",
+            "anvur-scientific",
+            "cwts-core",
+            "doaj",
+            "dongbi-b",
+            "norway-1",
+            "poland-40",
+            "russia-white-list-2",
+            "vabb-shw"
+          ],
+          "type": "journal"
+        },
+        "version": "publishedVersion"
+      },
+      "biblio": {
+        "first_page": null,
+        "issue": "10",
+        "last_page": null,
+        "volume": "10"
+      },
+      "citation_normalized_percentile": {
+        "is_in_top_10_percent": false,
+        "is_in_top_1_percent": false,
+        "value": 0.82457333
+      },
+      "cited_by_count": 70,
+      "cited_by_percentile_year": {
+        "max": 99,
+        "min": 89
+      },
+      "concepts": [
+        {
+          "display_name": "Computer science",
+          "id": "https://openalex.org/C41008148",
+          "level": 0,
+          "score": 0.7805091142654419,
+          "wikidata": "https://www.wikidata.org/wiki/Q21198"
+        },
+        {
+          "display_name": "Joint (building)",
+          "id": "https://openalex.org/C18555067",
+          "level": 2,
+          "score": 0.5785074830055237,
+          "wikidata": "https://www.wikidata.org/wiki/Q8375051"
+        },
+        {
+          "display_name": "SIGNAL (programming language)",
+          "id": "https://openalex.org/C2779843651",
+          "level": 2,
+          "score": 0.5235235691070557,
+          "wikidata": "https://www.wikidata.org/wiki/Q7390335"
+        },
+        {
+          "display_name": "Artificial intelligence",
+          "id": "https://openalex.org/C154945302",
+          "level": 1,
+          "score": 0.465542197227478,
+          "wikidata": "https://www.wikidata.org/wiki/Q11660"
+        },
+        {
+          "display_name": "Torque",
+          "id": "https://openalex.org/C144171764",
+          "level": 2,
+          "score": 0.46023818850517273,
+          "wikidata": "https://www.wikidata.org/wiki/Q48103"
+        },
+        {
+          "display_name": "Elbow",
+          "id": "https://openalex.org/C2781184374",
+          "level": 2,
+          "score": 0.458710253238678,
+          "wikidata": "https://www.wikidata.org/wiki/Q42586"
+        },
+        {
+          "display_name": "Electromyography",
+          "id": "https://openalex.org/C2777515770",
+          "level": 2,
+          "score": 0.4302055537700653,
+          "wikidata": "https://www.wikidata.org/wiki/Q507369"
+        },
+        {
+          "display_name": "Upper limb",
+          "id": "https://openalex.org/C2776660947",
+          "level": 2,
+          "score": 0.4269024729728699,
+          "wikidata": "https://www.wikidata.org/wiki/Q841423"
+        },
+        {
+          "display_name": "Computer vision",
+          "id": "https://openalex.org/C31972630",
+          "level": 1,
+          "score": 0.37660253047943115,
+          "wikidata": "https://www.wikidata.org/wiki/Q844240"
+        },
+        {
+          "display_name": "Simulation",
+          "id": "https://openalex.org/C44154836",
+          "level": 1,
+          "score": 0.37104517221450806,
+          "wikidata": "https://www.wikidata.org/wiki/Q45045"
+        },
+        {
+          "display_name": "Physical medicine and rehabilitation",
+          "id": "https://openalex.org/C99508421",
+          "level": 1,
+          "score": 0.20450395345687866,
+          "wikidata": "https://www.wikidata.org/wiki/Q2678675"
+        },
+        {
+          "display_name": "Medicine",
+          "id": "https://openalex.org/C71924100",
+          "level": 0,
+          "score": 0.09348884224891663,
+          "wikidata": "https://www.wikidata.org/wiki/Q11190"
+        },
+        {
+          "display_name": "Anatomy",
+          "id": "https://openalex.org/C105702510",
+          "level": 1,
+          "score": 0.08591413497924805,
+          "wikidata": "https://www.wikidata.org/wiki/Q514"
+        },
+        {
+          "display_name": "Engineering",
+          "id": "https://openalex.org/C127413603",
+          "level": 0,
+          "score": 0.08257296681404114,
+          "wikidata": "https://www.wikidata.org/wiki/Q11023"
+        },
+        {
+          "display_name": "Programming language",
+          "id": "https://openalex.org/C199360897",
+          "level": 1,
+          "score": 0.0,
+          "wikidata": "https://www.wikidata.org/wiki/Q9143"
+        },
+        {
+          "display_name": "Physics",
+          "id": "https://openalex.org/C121332964",
+          "level": 0,
+          "score": 0.0,
+          "wikidata": "https://www.wikidata.org/wiki/Q413"
+        },
+        {
+          "display_name": "Thermodynamics",
+          "id": "https://openalex.org/C97355855",
+          "level": 1,
+          "score": 0.0,
+          "wikidata": "https://www.wikidata.org/wiki/Q11473"
+        },
+        {
+          "display_name": "Architectural engineering",
+          "id": "https://openalex.org/C170154142",
+          "level": 1,
+          "score": 0.0,
+          "wikidata": "https://www.wikidata.org/wiki/Q150737"
+        }
+      ],
+      "content_urls": null,
+      "corresponding_author_ids": [
+        "https://openalex.org/A5110175698"
+      ],
+      "corresponding_institution_ids": [
+        "https://openalex.org/I114017466"
+      ],
+      "countries_distinct_count": 1,
+      "counts_by_year": [
+        {
+          "cited_by_count": 5,
+          "year": 2025
+        },
+        {
+          "cited_by_count": 6,
+          "year": 2024
+        },
+        {
+          "cited_by_count": 3,
+          "year": 2023
+        },
+        {
+          "cited_by_count": 8,
+          "year": 2022
+        },
+        {
+          "cited_by_count": 10,
+          "year": 2021
+        },
+        {
+          "cited_by_count": 8,
+          "year": 2020
+        },
+        {
+          "cited_by_count": 9,
+          "year": 2019
+        },
+        {
+          "cited_by_count": 4,
+          "year": 2018
+        },
+        {
+          "cited_by_count": 8,
+          "year": 2017
+        },
+        {
+          "cited_by_count": 7,
+          "year": 2016
+        },
+        {
+          "cited_by_count": 1,
+          "year": 2015
+        },
+        {
+          "cited_by_count": 1,
+          "year": 2014
+        }
+      ],
+      "created_date": "2025-10-10T00:00:00",
+      "display_name": "Estimation of Upper Limb Joint Angle Using Surface EMG Signal",
+      "doi": "https://doi.org/10.5772/56717",
+      "funders": [],
+      "fwci": 1.5963,
+      "has_content": {
+        "grobid_xml": false,
+        "pdf": false
+      },
+      "has_fulltext": false,
+      "id": "https://openalex.org/W2121350220",
+      "ids": {
+        "doi": "https://doi.org/10.5772/56717",
+        "mag": "2121350220",
+        "openalex": "https://openalex.org/W2121350220"
+      },
+      "indexed_in": [
+        "crossref",
+        "doaj"
+      ],
+      "institutions": [],
+      "institutions_distinct_count": 1,
+      "is_paratext": false,
+      "is_retracted": false,
+      "is_xpac": false,
+      "keywords": [
+        {
+          "display_name": "surface electromyography",
+          "id": "https://openalex.org/keywords/surface-electromyography",
+          "score": 0.9700000286102295
+        },
+        {
+          "display_name": "rehabilitation robotics",
+          "id": "https://openalex.org/keywords/rehabilitation-robotics",
+          "score": 0.8669999837875366
+        },
+        {
+          "display_name": "shoulder angle",
+          "id": "https://openalex.org/keywords/shoulder-joint-angle",
+          "score": 0.8640000224113464
+        },
+        {
+          "display_name": "elbow angle",
+          "id": "https://openalex.org/keywords/elbow-angle",
+          "score": 1.0
+        },
+        {
+          "display_name": "BP neural network",
+          "id": "https://openalex.org/keywords/back-propagation-neural-network",
+          "score": 0.9390000104904175
+        },
+        {
+          "display_name": "virtual human model",
+          "id": "https://openalex.org/keywords/virtual-human-model",
+          "score": 0.9900000095367432
+        }
+      ],
+      "language": "en",
+      "locations": [
+        {
+          "doi": "https://doi.org/10.5772/56717",
+          "id": "doi:10.5772/56717",
+          "is_accepted": true,
+          "is_oa": true,
+          "is_published": true,
+          "landing_page_url": "https://doi.org/10.5772/56717",
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "pdf_url": null,
+          "raw_source_name": "International Journal of Advanced Robotic Systems",
+          "raw_type": "journal-article",
+          "source": {
+            "display_name": "International Journal of Advanced Robotic Systems",
+            "host_organization": "https://openalex.org/P4310320017",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320017"
+            ],
+            "host_organization_lineage_names": [
+              "SAGE Publishing"
+            ],
+            "host_organization_name": "SAGE Publishing",
+            "id": "https://openalex.org/S169266912",
+            "is_core": true,
+            "is_in_doaj": true,
+            "is_oa": true,
+            "issn": [
+              "1729-8806",
+              "1729-8814"
+            ],
+            "issn_l": "1729-8806",
+            "listed_in": [
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "doaj",
+              "dongbi-b",
+              "norway-1",
+              "poland-40",
+              "russia-white-list-2",
+              "vabb-shw"
+            ],
+            "type": "journal"
+          },
+          "version": "publishedVersion"
+        },
+        {
+          "doi": null,
+          "id": "pmh:oai:doaj.org/article:1906beaa88b14defb924063ac17cbad7",
+          "is_accepted": false,
+          "is_oa": true,
+          "is_published": false,
+          "landing_page_url": "https://doaj.org/article/1906beaa88b14defb924063ac17cbad7",
+          "license": "cc-by-sa",
+          "license_id": "https://openalex.org/licenses/cc-by-sa",
+          "pdf_url": null,
+          "raw_source_name": "International Journal of Advanced Robotic Systems, Vol 10 (2013)",
+          "raw_type": "article",
+          "source": {
+            "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+            "host_organization": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "host_organization_name": null,
+            "id": "https://openalex.org/S4306401280",
+            "is_core": false,
+            "is_in_doaj": false,
+            "is_oa": false,
+            "issn": null,
+            "issn_l": null,
+            "listed_in": [],
+            "type": "repository"
+          },
+          "version": "submittedVersion"
+        },
+        {
+          "doi": null,
+          "id": "pmh:oai:intechopen.com:45797",
+          "is_accepted": false,
+          "is_oa": true,
+          "is_published": false,
+          "landing_page_url": "http://www.intechopen.com/articles/show/title/estimation-of-upper-limb-joint-angle-using-surface-emg-signal",
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "pdf_url": null,
+          "raw_source_name": "http://www.intechopen.com/download/pdf/pdfs_id/45797",
+          "raw_type": "369",
+          "source": {
+            "display_name": "Contact-less Assessment of In-vivo Body Signals Using Microwave Doppler Radar (InTech)",
+            "host_organization": "https://openalex.org/I4210154139",
+            "host_organization_lineage": [
+              "https://openalex.org/I4210154139"
+            ],
+            "host_organization_lineage_names": [],
+            "host_organization_name": "Intech (Slovakia)",
+            "id": "https://openalex.org/S4306401291",
+            "is_core": false,
+            "is_in_doaj": false,
+            "is_oa": false,
+            "issn": null,
+            "issn_l": null,
+            "listed_in": [],
+            "type": "repository"
+          },
+          "version": "submittedVersion"
+        },
+        {
+          "doi": null,
+          "id": "pmh:oai:opus.lib.uts.edu.au:10453/116155",
+          "is_accepted": false,
+          "is_oa": true,
+          "is_published": false,
+          "landing_page_url": "http://hdl.handle.net/10453/116155",
+          "license": "other-oa",
+          "license_id": "https://openalex.org/licenses/other-oa",
+          "pdf_url": null,
+          "raw_source_name": "",
+          "raw_type": "Journal Article",
+          "source": {
+            "display_name": "UTS ePRESS (University of Technology Sydney)",
+            "host_organization": "https://openalex.org/I114017466",
+            "host_organization_lineage": [
+              "https://openalex.org/I114017466"
+            ],
+            "host_organization_lineage_names": [],
+            "host_organization_name": "University of Technology Sydney",
+            "id": "https://openalex.org/S4306401357",
+            "is_core": false,
+            "is_in_doaj": false,
+            "is_oa": false,
+            "issn": null,
+            "issn_l": null,
+            "listed_in": [],
+            "type": "repository"
+          },
+          "version": "submittedVersion"
+        },
+        {
+          "doi": null,
+          "id": "pmh:oai:opus.lib.uts.edu.au:10453/26558",
+          "is_accepted": false,
+          "is_oa": false,
+          "is_published": false,
+          "landing_page_url": "http://hdl.handle.net/10453/26558",
+          "license": null,
+          "license_id": null,
+          "pdf_url": null,
+          "raw_source_name": "",
+          "raw_type": "Journal article",
+          "source": {
+            "display_name": "UTS ePRESS (University of Technology Sydney)",
+            "host_organization": "https://openalex.org/I114017466",
+            "host_organization_lineage": [
+              "https://openalex.org/I114017466"
+            ],
+            "host_organization_lineage_names": [],
+            "host_organization_name": "University of Technology Sydney",
+            "id": "https://openalex.org/S4306401357",
+            "is_core": false,
+            "is_in_doaj": false,
+            "is_oa": false,
+            "issn": null,
+            "issn_l": null,
+            "listed_in": [],
+            "type": "repository"
+          },
+          "version": "submittedVersion"
+        }
+      ],
+      "locations_count": 5,
+      "mesh": [],
+      "open_access": {
+        "any_repository_has_fulltext": true,
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.5772/56717"
+      },
+      "primary_location": {
+        "doi": "https://doi.org/10.5772/56717",
+        "id": "doi:10.5772/56717",
+        "is_accepted": true,
+        "is_oa": true,
+        "is_published": true,
+        "landing_page_url": "https://doi.org/10.5772/56717",
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "pdf_url": null,
+        "raw_source_name": "International Journal of Advanced Robotic Systems",
+        "raw_type": "journal-article",
+        "source": {
+          "display_name": "International Journal of Advanced Robotic Systems",
+          "host_organization": "https://openalex.org/P4310320017",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320017"
+          ],
+          "host_organization_lineage_names": [
+            "SAGE Publishing"
+          ],
+          "host_organization_name": "SAGE Publishing",
+          "id": "https://openalex.org/S169266912",
+          "is_core": true,
+          "is_in_doaj": true,
+          "is_oa": true,
+          "issn": [
+            "1729-8806",
+            "1729-8814"
+          ],
+          "issn_l": "1729-8806",
+          "listed_in": [
+            "anvur-class-a",
+            "anvur-scientific",
+            "cwts-core",
+            "doaj",
+            "dongbi-b",
+            "norway-1",
+            "poland-40",
+            "russia-white-list-2",
+            "vabb-shw"
+          ],
+          "type": "journal"
+        },
+        "version": "publishedVersion"
+      },
+      "primary_topic": {
+        "display_name": "Muscle activation and electromyography studies",
+        "domain": {
+          "display_name": "Physical Sciences",
+          "id": "https://openalex.org/domains/3"
+        },
+        "field": {
+          "display_name": "Engineering",
+          "id": "https://openalex.org/fields/22"
+        },
+        "id": "https://openalex.org/T10784",
+        "score": 0.9984999895095825,
+        "subfield": {
+          "display_name": "Biomedical Engineering",
+          "id": "https://openalex.org/subfields/2204"
+        }
+      },
+      "publication_date": "2013-01-01",
+      "publication_year": 2013,
+      "referenced_works": [
+        "https://openalex.org/W1517677814",
+        "https://openalex.org/W1973393642",
+        "https://openalex.org/W1974148763",
+        "https://openalex.org/W1984952512",
+        "https://openalex.org/W2041753918",
+        "https://openalex.org/W2071758640",
+        "https://openalex.org/W2096347511",
+        "https://openalex.org/W2126663592",
+        "https://openalex.org/W2140865320",
+        "https://openalex.org/W2157697917",
+        "https://openalex.org/W2161260155",
+        "https://openalex.org/W2168025035",
+        "https://openalex.org/W2168035362",
+        "https://openalex.org/W2543193073"
+      ],
+      "referenced_works_count": 14,
+      "related_works": [
+        "https://openalex.org/W2376139493",
+        "https://openalex.org/W2609289561",
+        "https://openalex.org/W2911808920",
+        "https://openalex.org/W2364463730",
+        "https://openalex.org/W2141253262",
+        "https://openalex.org/W3156756500",
+        "https://openalex.org/W4251090744",
+        "https://openalex.org/W2053552914",
+        "https://openalex.org/W2434699082",
+        "https://openalex.org/W3024237627"
+      ],
+      "relevance_score": 104.91393,
+      "study_designs": [],
+      "sustainable_development_goals": [
+        {
+          "display_name": "Good health and well-being",
+          "id": "https://metadata.un.org/sdg/3",
+          "score": 0.6240000128746033
+        }
+      ],
+      "sustainable_development_goals_aurora": [
+        {
+          "display_name": "Good health and well-being",
+          "id": "https://metadata.un.org/sdg/3",
+          "score": 0.7699999809265137
+        }
+      ],
+      "title": "Estimation of Upper Limb Joint Angle Using Surface EMG Signal",
+      "topics": [
+        {
+          "display_name": "Muscle activation and electromyography studies",
+          "domain": {
+            "display_name": "Physical Sciences",
+            "id": "https://openalex.org/domains/3"
+          },
+          "field": {
+            "display_name": "Engineering",
+            "id": "https://openalex.org/fields/22"
+          },
+          "id": "https://openalex.org/T10784",
+          "score": 0.9984999895095825,
+          "subfield": {
+            "display_name": "Biomedical Engineering",
+            "id": "https://openalex.org/subfields/2204"
+          }
+        },
+        {
+          "display_name": "Stroke Rehabilitation and Recovery",
+          "domain": {
+            "display_name": "Health Sciences",
+            "id": "https://openalex.org/domains/4"
+          },
+          "field": {
+            "display_name": "Medicine",
+            "id": "https://openalex.org/fields/27"
+          },
+          "id": "https://openalex.org/T10510",
+          "score": 0.00039999998989515007,
+          "subfield": {
+            "display_name": "Rehabilitation",
+            "id": "https://openalex.org/subfields/2742"
+          }
+        },
+        {
+          "display_name": "Prosthetics and Rehabilitation Robotics",
+          "domain": {
+            "display_name": "Physical Sciences",
+            "id": "https://openalex.org/domains/3"
+          },
+          "field": {
+            "display_name": "Engineering",
+            "id": "https://openalex.org/fields/22"
+          },
+          "id": "https://openalex.org/T11023",
+          "score": 0.00019999999494757503,
+          "subfield": {
+            "display_name": "Biomedical Engineering",
+            "id": "https://openalex.org/subfields/2204"
+          }
+        }
+      ],
+      "type": "article",
+      "updated_date": "2026-10-14T16:39:01.820549",
+      "volume": null
+    }
+  ]
+}

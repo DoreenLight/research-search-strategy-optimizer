@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "research-case.schema.json", "type": "object",
+  "required": ["schema_version", "case_id", "research_scope", "concept_groups"],
+  "properties": {
+    "schema_version": {"const": "0.1"}, "case_id": {"type": "string", "minLength": 1},
+    "research_scope": {"$ref": "research-scope.schema.json"},
+    "concept_groups": {"type": "array", "items": {"$ref": "concept-group.schema.json"}, "minItems": 2, "maxItems": 5},
+    "independent_relevance_set": {"type": ["array", "null"], "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "judgments": {"type": "array", "items": {"$ref": "judgment.schema.json"}},
+    "notes": {"type": "string"}
+  }, "additionalProperties": false
+}

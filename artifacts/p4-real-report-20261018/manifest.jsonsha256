@@ -1,0 +1,11 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "benchmark.json": "8fe60d8c7081499b0e5c04fccac30cf169596cccbbe8dd775d06b7b5196585e9",
+    "benchmark.md": "a238916dfccec1e49fdd19c347aaeba05c4d8332c80a5f91cf31b02676c60647",
+    "review-queue.jsonl": "918b947043f14cdb996c27a3b0102c49af9afd63d53153ef1f992c2a49ec7c51"
+  },
+  "input_manifest_sha256": "928ef57e6098ff297e432689b4bf841922c215b77e4918e51e983011874d48cb",
+  "schema_version": "0.1",
+  "status": "completed"
+}

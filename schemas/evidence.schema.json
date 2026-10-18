@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "evidence.schema.json", "type": "object",
+  "required": ["schema_version", "evidence_id", "source_type", "source_url", "evidence_level", "retrieved_at", "locator", "supports", "paper_id", "excerpt", "run_ids"],
+  "properties": {
+    "schema_version": {"const": "0.1"}, "evidence_id": {"type": "string", "minLength": 1},
+    "source_type": {"enum": ["paper_metadata", "openalex_keyword", "controlled_vocabulary"]},
+    "source_url": {"type": ["string", "null"]}, "evidence_level": {"enum": ["A", "B", "C", "U"]},
+    "retrieved_at": {"type": ["string", "null"], "format": "date-time"}, "locator": {"type": ["string", "null"]},
+    "supports": {"type": ["string", "null"]}, "paper_id": {"type": ["string", "null"]},
+    "excerpt": {"type": ["string", "null"]}, "run_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+  }, "additionalProperties": false
+}

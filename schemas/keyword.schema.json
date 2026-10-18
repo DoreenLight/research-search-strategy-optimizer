@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "keyword.schema.json", "type": "object",
+  "required": ["schema_version", "term_id", "term", "canonical_term", "category", "relationship", "source_type", "evidence_status", "evidence_ids", "retrieval_status", "paper_ids", "document_frequency", "adopted"],
+  "properties": {
+    "schema_version": {"const": "0.1"}, "term_id": {"type": "string", "minLength": 1}, "term": {"type": "string", "minLength": 1},
+    "canonical_term": {"type": "string", "minLength": 1}, "category": {"type": "string", "minLength": 1},
+    "relationship": {"enum": ["core", "equivalent", "broader", "narrower", "related_task", "alternative_method", "application", "observed_term", "unclassified"]},
+    "source_type": {"enum": ["llm_candidate", "paper_metadata", "openalex_keyword", "controlled_vocabulary"]},
+    "evidence_status": {"enum": ["unverified_candidate", "observed_in_paper", "database_assigned", "controlled_vocabulary_confirmed", "reviewed"]},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "retrieval_status": {"enum": ["untested", "executed", "evaluated", "rejected"]},
+    "paper_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "document_frequency": {"type": "integer", "minimum": 0}, "adopted": {"type": "boolean"}
+  }, "additionalProperties": false
+}

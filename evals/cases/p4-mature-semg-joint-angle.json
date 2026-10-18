@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.1",
+  "case_id": "p4-mature-semg-joint-angle",
+  "research_scope": {
+    "schema_version": "0.1",
+    "scope_id": "scope-p4-mature-semg",
+    "mode": "exploratory",
+    "description": "检索基于表面肌电估计或预测人体关节角度的研究；将 Transformer 作为可单独比较的方法分支，而不是探索检索的必选条件。",
+    "research_object": ["人体关节角度"],
+    "input_modality": ["表面肌电"],
+    "research_task": ["关节角度估计", "关节角度预测"],
+    "method": ["Transformer（可选方法分支）"],
+    "application": [],
+    "constraints": {},
+    "unspecified": ["关节部位", "人群", "预测时间跨度", "实时性", "发表日期", "语言"]
+  },
+  "concept_groups": [
+    {"group_id": "input", "role": "input", "label": "输入模态", "terms": ["surface electromyography", "sEMG"]},
+    {"group_id": "object", "role": "object", "label": "研究对象", "terms": ["joint angle"]},
+    {"group_id": "task", "role": "task", "label": "研究任务", "terms": ["estimation", "prediction"]},
+    {"group_id": "method", "role": "method", "label": "可选方法分支", "terms": ["Transformer"]}
+  ],
+  "independent_relevance_set": null,
+  "judgments": [],
+  "notes": "P4 mature 分层的预设范围样例，不是已执行基准或成熟度实证。人工真值未提供；未填写论文 ID、相关性标签或效果数字。概念组内英文词是待人工核对的候选词；估计与预测的纳入边界、joint kinematics 等更宽词须单独审阅。使用前由协调人冻结 discovery/test 划分并独立建立测试参考集。"
+}

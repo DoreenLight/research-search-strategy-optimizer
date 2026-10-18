@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "concept-group.schema.json", "type": "object",
+  "required": ["group_id", "label", "terms"], "properties": {
+    "group_id": {"type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9_-]*$"},
+    "label": {"type": "string", "minLength": 1},
+    "role": {"enum": ["input", "object", "task", "method", "application", "input_modality", "research_object", "research_task"]},
+    "terms": {"type": "array", "items": {"type": "string", "minLength": 1, "maxLength": 200}, "minItems": 1, "maxItems": 50}
+  }, "additionalProperties": false
+}

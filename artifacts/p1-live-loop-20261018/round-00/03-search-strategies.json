@@ -1,0 +1,157 @@
+[
+  {
+    "database": "openalex",
+    "group_ids": [
+      "input",
+      "object"
+    ],
+    "groups": [
+      {
+        "group_id": "input",
+        "label": "输入模态",
+        "role": "input",
+        "terms": [
+          "surface electromyography",
+          "sEMG"
+        ]
+      },
+      {
+        "group_id": "object",
+        "label": "研究对象",
+        "role": "object",
+        "terms": [
+          "joint angle"
+        ]
+      }
+    ],
+    "logic": {
+      "groups": [
+        "input",
+        "object"
+      ],
+      "op": "AND"
+    },
+    "plan_id": "plan-9e34ea8469d3",
+    "query": "(\"surface electromyography\" OR \"sEMG\") AND (\"joint angle\")",
+    "reason": null,
+    "schema_version": "0.1",
+    "status": "planned",
+    "strategy": "exploratory",
+    "syntax_status": "local_checked",
+    "version": 1
+  },
+  {
+    "database": "openalex",
+    "group_ids": [
+      "input",
+      "object",
+      "task"
+    ],
+    "groups": [
+      {
+        "group_id": "input",
+        "label": "输入模态",
+        "role": "input",
+        "terms": [
+          "surface electromyography",
+          "sEMG"
+        ]
+      },
+      {
+        "group_id": "object",
+        "label": "研究对象",
+        "role": "object",
+        "terms": [
+          "joint angle"
+        ]
+      },
+      {
+        "group_id": "task",
+        "label": "研究任务",
+        "role": "task",
+        "terms": [
+          "estimation",
+          "prediction"
+        ]
+      }
+    ],
+    "logic": {
+      "groups": [
+        "input",
+        "object",
+        "task"
+      ],
+      "op": "AND"
+    },
+    "plan_id": "plan-7e6e33787081",
+    "query": "(\"surface electromyography\" OR \"sEMG\") AND (\"joint angle\") AND (\"estimation\" OR \"prediction\")",
+    "reason": null,
+    "schema_version": "0.1",
+    "status": "planned",
+    "strategy": "focused",
+    "syntax_status": "local_checked",
+    "version": 1
+  },
+  {
+    "database": "openalex",
+    "group_ids": [
+      "input",
+      "object",
+      "task",
+      "method"
+    ],
+    "groups": [
+      {
+        "group_id": "input",
+        "label": "输入模态",
+        "role": "input",
+        "terms": [
+          "surface electromyography",
+          "sEMG"
+        ]
+      },
+      {
+        "group_id": "object",
+        "label": "研究对象",
+        "role": "object",
+        "terms": [
+          "joint angle"
+        ]
+      },
+      {
+        "group_id": "task",
+        "label": "研究任务",
+        "role": "task",
+        "terms": [
+          "estimation",
+          "prediction"
+        ]
+      },
+      {
+        "group_id": "method",
+        "label": "方法分支",
+        "role": "method",
+        "terms": [
+          "Transformer"
+        ]
+      }
+    ],
+    "logic": {
+      "groups": [
+        "input",
+        "object",
+        "task",
+        "method"
+      ],
+      "op": "AND"
+    },
+    "plan_id": "plan-e7a1ff1c355c",
+    "query": "(\"surface electromyography\" OR \"sEMG\") AND (\"joint angle\") AND (\"estimation\" OR \"prediction\") AND (\"Transformer\")",
+    "reason": null,
+    "schema_version": "0.1",
+    "status": "planned",
+    "strategy": "method_specific",
+    "syntax_status": "local_checked",
+    "version": 1
+  }
+]

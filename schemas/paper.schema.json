@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "paper.schema.json", "type": "object",
+  "required": ["schema_version", "paper_id", "title", "source_run_ids"],
+  "properties": {
+    "schema_version": {"const": "0.1"}, "paper_id": {"type": "string", "minLength": 1}, "title": {"type": "string", "minLength": 1},
+    "abstract": {"type": ["string", "null"]}, "openalex_id": {"type": ["string", "null"]}, "doi": {"type": ["string", "null"]},
+    "pmid": {"type": ["string", "null"]}, "publication_year": {"type": ["integer", "null"]},
+    "authors": {"type": "array", "items": {"type": "string"}}, "source_title": {"type": ["string", "null"]},
+    "author_keywords": {"type": "array", "items": {"type": "string"}}, "database_keywords": {"type": "array", "items": {"type": "string"}},
+    "source_url": {"type": ["string", "null"]}, "retrieved_at": {"type": ["string", "null"], "format": "date-time"},
+    "source_run_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+  }, "additionalProperties": false
+}

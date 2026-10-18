@@ -1,0 +1,530 @@
+{
+  "actual_case_count": 1,
+  "benchmark_id": "p0-p1-real-20261018",
+  "case_count_match": true,
+  "cases": [
+    {
+      "case_id": "semg-joint-angle-real",
+      "domain_kind": "mature",
+      "human_judgments": {},
+      "mode_stats": {
+        "live": {
+          "executed_run_count": 6,
+          "failed_run_count": 0,
+          "not_executed_run_count": 0,
+          "partial_run_count": 0,
+          "registered_run_count": 6,
+          "request_count": 6,
+          "successful_run_count": 6
+        },
+        "replay": {
+          "executed_run_count": 0,
+          "failed_run_count": 0,
+          "not_executed_run_count": 0,
+          "partial_run_count": 0,
+          "registered_run_count": 0,
+          "request_count": 0,
+          "successful_run_count": 0
+        },
+        "synthetic": {
+          "executed_run_count": 0,
+          "failed_run_count": 0,
+          "not_executed_run_count": 0,
+          "partial_run_count": 0,
+          "registered_run_count": 0,
+          "request_count": 0,
+          "successful_run_count": 0
+        }
+      },
+      "model_judgments": {},
+      "reference_set_used_for_recall": false,
+      "runs": [
+        {
+          "baseline_id": "A",
+          "comparison_available": true,
+          "comparison_baseline_id": "A",
+          "confirmed_new_relevant_count": 0,
+          "confirmed_new_relevant_ids": [],
+          "cost_basis": "candidate_total_cost_not_candidate_minus_anchor",
+          "cost_per_incremental_confirmed_relevant_usd": null,
+          "deduplicated_count": 14,
+          "eligible_for_metrics": true,
+          "estimated_cost_usd": null,
+          "existing_catalog_overlap_count": 0,
+          "fetched_count": 15,
+          "gain_attribution": "strategy_version_not_individual_terms",
+          "human_labels_used": false,
+          "judged_count": 0,
+          "known_relevant_hits_at_k": null,
+          "metrics": {
+            "deduplicated_count": 14,
+            "effective_k": 14,
+            "fetched_count": 15,
+            "judged_count": 0,
+            "judged_precision": null,
+            "k": 20,
+            "precision_at_available": null,
+            "precision_at_k": null,
+            "recall_at_k": null,
+            "reference_hits_at_k": null,
+            "relevant_found": null,
+            "returned_count": 15,
+            "unjudged_count": 14
+          },
+          "mode": "live",
+          "model_labels_present": false,
+          "model_labels_used": false,
+          "new_relevance_complete": true,
+          "new_unique_count": 0,
+          "new_unique_ids": [],
+          "observed_unique_count": 14,
+          "paper_ids": [
+            "https://openalex.org/W1918406696",
+            "https://openalex.org/W2091022037",
+            "https://openalex.org/W4284878820",
+            "https://openalex.org/W2076757040",
+            "https://openalex.org/W2086303648",
+            "https://openalex.org/W2072588720",
+            "https://openalex.org/W3013651137",
+            "https://openalex.org/W3121018641",
+            "https://openalex.org/W4402270704",
+            "https://openalex.org/W4407450426",
+            "https://openalex.org/W4385757465",
+            "https://openalex.org/W4402054497",
+            "https://openalex.org/W7133186646",
+            "https://openalex.org/W4416190202"
+          ],
+          "precision_at_k": null,
+          "real_advantage_eligible": false,
+          "real_evidence": true,
+          "recall_at_k": null,
+          "reference_hits_at_k": null,
+          "relevance_basis": "unavailable",
+          "reported_count": null,
+          "reported_counts_by_source": [
+            {
+              "database": null,
+              "reported_count": 8188,
+              "source_record_index": 0
+            },
+            {
+              "database": null,
+              "reported_count": 5206,
+              "source_record_index": 1
+            },
+            {
+              "database": null,
+              "reported_count": 481,
+              "source_record_index": 2
+            }
+          ],
+          "request_count": 3,
+          "screening_minutes": null,
+          "source_record_count": 3,
+          "source_records": [
+            {
+              "baseline_id": "A",
+              "deduplicated_count": 5,
+              "estimated_cost_usd": null,
+              "fetched_count": 5,
+              "mode": "live",
+              "paper_ids": [
+                "https://openalex.org/W1918406696",
+                "https://openalex.org/W2091022037",
+                "https://openalex.org/W4284878820",
+                "https://openalex.org/W2076757040",
+                "https://openalex.org/W2086303648"
+              ],
+              "reported_count": 8188,
+              "request_count": 1,
+              "screening_minutes": null,
+              "source_explanation": "p0-live-20261018; run=run-plan-9e34ea8469d3; no human labels",
+              "status": "success"
+            },
+            {
+              "baseline_id": "A",
+              "deduplicated_count": 5,
+              "estimated_cost_usd": null,
+              "fetched_count": 5,
+              "mode": "live",
+              "paper_ids": [
+                "https://openalex.org/W4284878820",
+                "https://openalex.org/W2072588720",
+                "https://openalex.org/W3013651137",
+                "https://openalex.org/W3121018641",
+                "https://openalex.org/W4402270704"
+              ],
+              "reported_count": 5206,
+              "request_count": 1,
+              "screening_minutes": null,
+              "source_explanation": "p0-live-20261018; run=run-plan-7e6e33787081; no human labels",
+              "status": "success"
+            },
+            {
+              "baseline_id": "A",
+              "deduplicated_count": 5,
+              "estimated_cost_usd": null,
+              "fetched_count": 5,
+              "mode": "live",
+              "paper_ids": [
+                "https://openalex.org/W4407450426",
+                "https://openalex.org/W4385757465",
+                "https://openalex.org/W4402054497",
+                "https://openalex.org/W7133186646",
+                "https://openalex.org/W4416190202"
+              ],
+              "reported_count": 481,
+              "request_count": 1,
+              "screening_minutes": null,
+              "source_explanation": "p0-live-20261018; run=run-plan-e7a1ff1c355c; no human labels",
+              "status": "success"
+            }
+          ],
+          "status": "success",
+          "total_unique_count": 14,
+          "unjudged_count": 14,
+          "unjudged_new_count": 0
+        },
+        {
+          "baseline_id": "B",
+          "comparison_available": true,
+          "comparison_baseline_id": "A",
+          "confirmed_new_relevant_count": null,
+          "confirmed_new_relevant_ids": [],
+          "cost_basis": "candidate_total_cost_not_candidate_minus_anchor",
+          "cost_per_incremental_confirmed_relevant_usd": null,
+          "deduplicated_count": 14,
+          "eligible_for_metrics": true,
+          "estimated_cost_usd": null,
+          "existing_catalog_overlap_count": 0,
+          "fetched_count": 15,
+          "gain_attribution": "strategy_version_not_individual_terms",
+          "human_labels_used": false,
+          "judged_count": 0,
+          "known_relevant_hits_at_k": null,
+          "metrics": {
+            "deduplicated_count": 14,
+            "effective_k": 14,
+            "fetched_count": 15,
+            "judged_count": 0,
+            "judged_precision": null,
+            "k": 20,
+            "precision_at_available": null,
+            "precision_at_k": null,
+            "recall_at_k": null,
+            "reference_hits_at_k": null,
+            "relevant_found": null,
+            "returned_count": 15,
+            "unjudged_count": 14
+          },
+          "mode": "live",
+          "model_labels_present": false,
+          "model_labels_used": false,
+          "new_relevance_complete": false,
+          "new_unique_count": 6,
+          "new_unique_ids": [
+            "https://openalex.org/W2147019512",
+            "https://openalex.org/W2129308247",
+            "https://openalex.org/W2762367260",
+            "https://openalex.org/W2345301146",
+            "https://openalex.org/W2121350220",
+            "https://openalex.org/W4396625904"
+          ],
+          "observed_unique_count": 14,
+          "paper_ids": [
+            "https://openalex.org/W2091022037",
+            "https://openalex.org/W2147019512",
+            "https://openalex.org/W1918406696",
+            "https://openalex.org/W2129308247",
+            "https://openalex.org/W2076757040",
+            "https://openalex.org/W2762367260",
+            "https://openalex.org/W2072588720",
+            "https://openalex.org/W2345301146",
+            "https://openalex.org/W2121350220",
+            "https://openalex.org/W4385757465",
+            "https://openalex.org/W4402054497",
+            "https://openalex.org/W4396625904",
+            "https://openalex.org/W4407450426",
+            "https://openalex.org/W7133186646"
+          ],
+          "precision_at_k": null,
+          "real_advantage_eligible": false,
+          "real_evidence": true,
+          "recall_at_k": null,
+          "reference_hits_at_k": null,
+          "relevance_basis": "unavailable",
+          "reported_count": null,
+          "reported_counts_by_source": [
+            {
+              "database": null,
+              "reported_count": 9676,
+              "source_record_index": 0
+            },
+            {
+              "database": null,
+              "reported_count": 6066,
+              "source_record_index": 1
+            },
+            {
+              "database": null,
+              "reported_count": 503,
+              "source_record_index": 2
+            }
+          ],
+          "request_count": 3,
+          "screening_minutes": null,
+          "source_record_count": 3,
+          "source_records": [
+            {
+              "baseline_id": "B",
+              "deduplicated_count": 5,
+              "estimated_cost_usd": null,
+              "fetched_count": 5,
+              "mode": "live",
+              "paper_ids": [
+                "https://openalex.org/W2091022037",
+                "https://openalex.org/W2147019512",
+                "https://openalex.org/W1918406696",
+                "https://openalex.org/W2129308247",
+                "https://openalex.org/W2076757040"
+              ],
+              "reported_count": 9676,
+              "request_count": 1,
+              "screening_minutes": null,
+              "source_explanation": "round-01; run=run-plan-9f53bf8e0114; no human labels",
+              "status": "success"
+            },
+            {
+              "baseline_id": "B",
+              "deduplicated_count": 5,
+              "estimated_cost_usd": null,
+              "fetched_count": 5,
+              "mode": "live",
+              "paper_ids": [
+                "https://openalex.org/W2129308247",
+                "https://openalex.org/W2762367260",
+                "https://openalex.org/W2072588720",
+                "https://openalex.org/W2345301146",
+                "https://openalex.org/W2121350220"
+              ],
+              "reported_count": 6066,
+              "request_count": 1,
+              "screening_minutes": null,
+              "source_explanation": "round-01; run=run-plan-188d45bc721e; no human labels",
+              "status": "success"
+            },
+            {
+              "baseline_id": "B",
+              "deduplicated_count": 5,
+              "estimated_cost_usd": null,
+              "fetched_count": 5,
+              "mode": "live",
+              "paper_ids": [
+                "https://openalex.org/W4385757465",
+                "https://openalex.org/W4402054497",
+                "https://openalex.org/W4396625904",
+                "https://openalex.org/W4407450426",
+                "https://openalex.org/W7133186646"
+              ],
+              "reported_count": 503,
+              "request_count": 1,
+              "screening_minutes": null,
+              "source_explanation": "round-01; run=run-plan-e897cecbb89d; no human labels",
+              "status": "success"
+            }
+          ],
+          "status": "success",
+          "total_unique_count": 14,
+          "unjudged_count": 14,
+          "unjudged_new_count": 6
+        }
+      ],
+      "split": "discovery"
+    }
+  ],
+  "comparison_baseline_id": "A",
+  "historical_run_count": null,
+  "input_manifest": {
+    "benchmark_id": "p0-p1-real-20261018",
+    "cases": [
+      {
+        "case_id": "semg-joint-angle-real",
+        "domain_kind": "mature",
+        "human_judgments": {},
+        "model_judgments": {},
+        "notes": "Real OpenAlex P0/P1 runs imported after the fact; no independent relevance set; no performance claim.",
+        "reference_set": null,
+        "runs": [
+          {
+            "baseline_id": "A",
+            "deduplicated_count": 5,
+            "estimated_cost_usd": null,
+            "fetched_count": 5,
+            "mode": "live",
+            "paper_ids": [
+              "https://openalex.org/W1918406696",
+              "https://openalex.org/W2091022037",
+              "https://openalex.org/W4284878820",
+              "https://openalex.org/W2076757040",
+              "https://openalex.org/W2086303648"
+            ],
+            "reported_count": 8188,
+            "request_count": 1,
+            "screening_minutes": null,
+            "source_explanation": "p0-live-20261018; run=run-plan-9e34ea8469d3; no human labels",
+            "status": "success"
+          },
+          {
+            "baseline_id": "A",
+            "deduplicated_count": 5,
+            "estimated_cost_usd": null,
+            "fetched_count": 5,
+            "mode": "live",
+            "paper_ids": [
+              "https://openalex.org/W4284878820",
+              "https://openalex.org/W2072588720",
+              "https://openalex.org/W3013651137",
+              "https://openalex.org/W3121018641",
+              "https://openalex.org/W4402270704"
+            ],
+            "reported_count": 5206,
+            "request_count": 1,
+            "screening_minutes": null,
+            "source_explanation": "p0-live-20261018; run=run-plan-7e6e33787081; no human labels",
+            "status": "success"
+          },
+          {
+            "baseline_id": "A",
+            "deduplicated_count": 5,
+            "estimated_cost_usd": null,
+            "fetched_count": 5,
+            "mode": "live",
+            "paper_ids": [
+              "https://openalex.org/W4407450426",
+              "https://openalex.org/W4385757465",
+              "https://openalex.org/W4402054497",
+              "https://openalex.org/W7133186646",
+              "https://openalex.org/W4416190202"
+            ],
+            "reported_count": 481,
+            "request_count": 1,
+            "screening_minutes": null,
+            "source_explanation": "p0-live-20261018; run=run-plan-e7a1ff1c355c; no human labels",
+            "status": "success"
+          },
+          {
+            "baseline_id": "B",
+            "deduplicated_count": 5,
+            "estimated_cost_usd": null,
+            "fetched_count": 5,
+            "mode": "live",
+            "paper_ids": [
+              "https://openalex.org/W2091022037",
+              "https://openalex.org/W2147019512",
+              "https://openalex.org/W1918406696",
+              "https://openalex.org/W2129308247",
+              "https://openalex.org/W2076757040"
+            ],
+            "reported_count": 9676,
+            "request_count": 1,
+            "screening_minutes": null,
+            "source_explanation": "round-01; run=run-plan-9f53bf8e0114; no human labels",
+            "status": "success"
+          },
+          {
+            "baseline_id": "B",
+            "deduplicated_count": 5,
+            "estimated_cost_usd": null,
+            "fetched_count": 5,
+            "mode": "live",
+            "paper_ids": [
+              "https://openalex.org/W2129308247",
+              "https://openalex.org/W2762367260",
+              "https://openalex.org/W2072588720",
+              "https://openalex.org/W2345301146",
+              "https://openalex.org/W2121350220"
+            ],
+            "reported_count": 6066,
+            "request_count": 1,
+            "screening_minutes": null,
+            "source_explanation": "round-01; run=run-plan-188d45bc721e; no human labels",
+            "status": "success"
+          },
+          {
+            "baseline_id": "B",
+            "deduplicated_count": 5,
+            "estimated_cost_usd": null,
+            "fetched_count": 5,
+            "mode": "live",
+            "paper_ids": [
+              "https://openalex.org/W4385757465",
+              "https://openalex.org/W4402054497",
+              "https://openalex.org/W4396625904",
+              "https://openalex.org/W4407450426",
+              "https://openalex.org/W7133186646"
+            ],
+            "reported_count": 503,
+            "request_count": 1,
+            "screening_minutes": null,
+            "source_explanation": "round-01; run=run-plan-e897cecbb89d; no human labels",
+            "status": "success"
+          }
+        ],
+        "split": "discovery"
+      }
+    ],
+    "comparison_baseline_id": "A",
+    "k": 20,
+    "planned_case_count": 1,
+    "planned_run_count": 6,
+    "schema_version": "0.1"
+  },
+  "input_manifest_sha256": "928ef57e6098ff297e432689b4bf841922c215b77e4918e51e983011874d48cb",
+  "k": 20,
+  "planned_case_count": 1,
+  "planned_run_count": 6,
+  "retained_configuration_count": null,
+  "schema_version": "0.1",
+  "scope": "offline_benchmark_and_human_review_not_productization",
+  "summary": {
+    "actual_executed_case_count": 1,
+    "actual_executed_run_count": 6,
+    "actual_live_request_count": 6,
+    "benchmark_new_request_count": 0,
+    "mode_stats": {
+      "live": {
+        "executed_run_count": 6,
+        "failed_run_count": 0,
+        "not_executed_run_count": 0,
+        "partial_run_count": 0,
+        "registered_run_count": 6,
+        "request_count": 6,
+        "successful_run_count": 6
+      },
+      "replay": {
+        "executed_run_count": 0,
+        "failed_run_count": 0,
+        "not_executed_run_count": 0,
+        "partial_run_count": 0,
+        "registered_run_count": 0,
+        "request_count": 0,
+        "successful_run_count": 0
+      },
+      "synthetic": {
+        "executed_run_count": 0,
+        "failed_run_count": 0,
+        "not_executed_run_count": 0,
+        "partial_run_count": 0,
+        "registered_run_count": 0,
+        "request_count": 0,
+        "successful_run_count": 0
+      }
+    },
+    "pending_review_count": 20,
+    "real_advantage_demonstrated": false,
+    "real_successful_case_count": 1,
+    "real_successful_run_count": 6,
+    "registered_run_count": 6
+  },
+  "theoretical_search_space_size": null
+}

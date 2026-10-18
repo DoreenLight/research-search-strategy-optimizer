@@ -1,0 +1,70 @@
+{
+  "case_id": "semg-input-variant",
+  "concept_groups": [
+    {
+      "group_id": "input",
+      "label": "输入模态",
+      "role": "input",
+      "terms": [
+        "surface electromyography",
+        "sEMG",
+        "surface EMG"
+      ]
+    },
+    {
+      "group_id": "object",
+      "label": "研究对象",
+      "role": "object",
+      "terms": [
+        "joint angle"
+      ]
+    },
+    {
+      "group_id": "task",
+      "label": "研究任务",
+      "role": "task",
+      "terms": [
+        "estimation",
+        "prediction"
+      ]
+    },
+    {
+      "group_id": "method",
+      "label": "方法分支",
+      "role": "method",
+      "terms": [
+        "Transformer"
+      ]
+    }
+  ],
+  "independent_relevance_set": null,
+  "judgments": [],
+  "research_scope": {
+    "application": [],
+    "constraints": {},
+    "description": "基于表面肌电预测人体关节角度，想了解 Transformer 和其他方法的研究情况。",
+    "input_modality": [
+      "表面肌电"
+    ],
+    "method": [
+      "Transformer（方法分支，不限制探索检索）"
+    ],
+    "mode": "exploratory",
+    "research_object": [
+      "人体关节角度"
+    ],
+    "research_task": [
+      "关节角度估计或预测"
+    ],
+    "schema_version": "0.1",
+    "scope_id": "scope-semg",
+    "unspecified": [
+      "具体关节",
+      "实时性",
+      "预测时间跨度",
+      "发表日期",
+      "人群"
+    ]
+  },
+  "schema_version": "0.1"
+}

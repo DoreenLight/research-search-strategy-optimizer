@@ -1,0 +1,80 @@
+{
+  "human_judgment_count": 0,
+  "human_label_conflicts_treated_as_uncertain": [],
+  "independent_relevance_set_size": null,
+  "interpretation": "Synthetic data tests engineering only; no real-world effectiveness claims.",
+  "model_judgments": {
+    "count": 0,
+    "judgment_ids": [],
+    "used_for_precision": false
+  },
+  "schema_version": "0.1",
+  "scope": "engineering_and_exploratory_only",
+  "snapshot_kind": "synthetic_test_fixture",
+  "strategies": [
+    {
+      "database_reported_count": 3,
+      "effectiveness_evaluated": false,
+      "metrics": {
+        "deduplicated_count": 3,
+        "effective_k": 3,
+        "fetched_count": 3,
+        "judged_count": 0,
+        "judged_precision": null,
+        "k": 10,
+        "precision_at_available": null,
+        "precision_at_k": null,
+        "recall_at_k": null,
+        "reference_hits_at_k": null,
+        "relevant_found": null,
+        "returned_count": 3,
+        "unjudged_count": 3
+      },
+      "plan_id": "plan-9e34ea8469d3",
+      "status": "success"
+    },
+    {
+      "database_reported_count": 2,
+      "effectiveness_evaluated": false,
+      "metrics": {
+        "deduplicated_count": 2,
+        "effective_k": 2,
+        "fetched_count": 2,
+        "judged_count": 0,
+        "judged_precision": null,
+        "k": 10,
+        "precision_at_available": null,
+        "precision_at_k": null,
+        "recall_at_k": null,
+        "reference_hits_at_k": null,
+        "relevant_found": null,
+        "returned_count": 2,
+        "unjudged_count": 2
+      },
+      "plan_id": "plan-7e6e33787081",
+      "status": "success"
+    },
+    {
+      "database_reported_count": 1,
+      "effectiveness_evaluated": false,
+      "metrics": {
+        "deduplicated_count": 1,
+        "effective_k": 1,
+        "fetched_count": 1,
+        "judged_count": 0,
+        "judged_precision": null,
+        "k": 10,
+        "precision_at_available": null,
+        "precision_at_k": null,
+        "recall_at_k": null,
+        "reference_hits_at_k": null,
+        "relevant_found": null,
+        "returned_count": 1,
+        "unjudged_count": 1
+      },
+      "plan_id": "plan-e7a1ff1c355c",
+      "status": "success"
+    }
+  ],
+  "synthetic_fixture_only": true
+}

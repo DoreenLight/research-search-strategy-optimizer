@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "count": 3
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W900000000001",
+      "keywords": [
+        {
+          "display_name": "surface electromyography"
+        },
+        {
+          "display_name": "joint angle estimation"
+        }
+      ],
+      "publication_year": 2026,
+      "title": "Synthetic fixture: surface EMG joint angle estimation"
+    },
+    {
+      "id": "https://openalex.org/W900000000002",
+      "keywords": [
+        {
+          "display_name": "surface electromyography"
+        },
+        {
+          "display_name": "joint angle prediction"
+        }
+      ],
+      "publication_year": 2026,
+      "title": "Synthetic fixture: joint angle prediction from sEMG"
+    },
+    {
+      "id": "https://openalex.org/W900000000003",
+      "keywords": [
+        {
+          "display_name": "surface electromyography"
+        },
+        {
+          "display_name": "Transformer"
+        }
+      ],
+      "publication_year": 2026,
+      "title": "Synthetic fixture: Transformer for surface EMG joint angle estimation"
+    }
+  ]
+}

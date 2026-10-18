@@ -1,0 +1,43 @@
+{
+  "case_id": "semg-baseline",
+  "content_hash": "d4b5336bdd82ca2ba63502455a4ed04c4c1f13542407a6cca6bff8f62e64c63e",
+  "created_at": "2026-10-18T03:47:00.623441+00:00",
+  "execution_parameters": {
+    "filters": {},
+    "k": 10,
+    "per_page": 5
+  },
+  "files": {
+    "01-research-scope.json": "996dd4a16ae8f20a8be7b5cb692c4deefef24618084436115233bea904644653",
+    "02-keywords.json": "c62a0e876021b3cdda7c6121f5c032ef8d3d2b4172fc29c45fb30c025db64a18",
+    "03-search-strategies.json": "e75829e4dc764a037688b12205d78aa4acf03c9138b27213ce61f506349e7b9b",
+    "04-papers.jsonl": "089c14b30e5e37a96a02932ef5e620db518644adbf3610f9a12e487439d0961f",
+    "05-search-runs.jsonl": "cf2f52aafcd8ac5d97ef4e014ce6507bf7f4abc10e935f25d232d66a52ac4c0f",
+    "06-evaluation.json": "768f5da8cab2b7ea5dbaa7acad4784e19d8b25070e70cd6c348555bd2909d509",
+    "07-evidence.jsonl": "10ae2d4cbd558d725ba5545df0698c584e621f79e96d62fb775ac2964e31b23e",
+    "08-cooccurrence.json": "2c78ca809c5321fd4a55e4fe3e2615bb4fdb710de76e58791a3515744e4a621c",
+    "09-deduplication.json": "f44af232aea8c283907f3b3669d0ba164d24e7acafc128b93c8668c88e8ba2f8",
+    "10-judgments.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "README.md": "ddae02bf0ac8d24a29f38912b7348dfe4c1be47b26499eddd2db66a48376329a",
+    "input-case.json": "d74c8eaed9bf41c950c95e907e8a631e35c71a23f02af3b3a90ad10f68e1c222",
+    "raw/run-plan-7e6e33787081.json": "f3e1f55fa1739b669e21f8201703e87ae5cd95683f66fa37e59e1ea34e67ae5c",
+    "raw/run-plan-9e34ea8469d3.json": "f411195a5e3b35e4e172bf9075a1bceea4dd3145c82f9cffe7c0aa3bf4343a94",
+    "raw/run-plan-e7a1ff1c355c.json": "0091869794ee0d1e1206ef63152cef42eb561019e814e576f42f4383478db855",
+    "replay-bundle.json": "6cfeb57b4839397175e4e1ffe63b76737abea162d7fe7fddd43e60f55611a631"
+  },
+  "mode": "live",
+  "package_schema_version": "0.1",
+  "result_status": "live_complete",
+  "snapshot_kind": "live_capture",
+  "status": "completed",
+  "summary": {
+    "executed_plan_count": 3,
+    "failed_plan_count": 0,
+    "output_dir": "artifacts/p1-live-loop-20261018/round-00",
+    "paper_count": 14,
+    "partial_plan_count": 0,
+    "replayed_plan_count": 0,
+    "request_count": 3,
+    "status": "live_complete"
+  }
+}

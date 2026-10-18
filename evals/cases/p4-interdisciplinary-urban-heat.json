@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1",
+  "case_id": "p4-interdisciplinary-urban-heat",
+  "research_scope": {
+    "schema_version": "0.1",
+    "scope_id": "scope-p4-interdisciplinary-heat",
+    "mode": "exploratory",
+    "description": "检索利用遥感观测研究城市热岛与热脆弱性评估的工作，审阅地理遥感与公共健康语境间的任务边界，不把地表温度反演自动视为健康风险证据。",
+    "research_object": ["城市热岛"],
+    "input_modality": ["遥感观测"],
+    "research_task": ["热脆弱性评估"],
+    "method": [],
+    "application": ["城市环境与公共健康研究"],
+    "constraints": {},
+    "unspecified": ["城市或区域", "遥感平台", "人群", "空间尺度", "健康结局", "发表日期", "语言"]
+  },
+  "concept_groups": [
+    {"group_id": "input", "role": "input", "label": "输入模态", "terms": ["remote sensing"]},
+    {"group_id": "object", "role": "object", "label": "研究对象", "terms": ["urban heat island"]},
+    {"group_id": "task", "role": "task", "label": "跨学科任务边界", "terms": ["heat vulnerability assessment"]}
+  ],
+  "independent_relevance_set": null,
+  "judgments": [],
+  "notes": "P4 interdisciplinary 分层的预设范围样例。人工真值未提供；无论文 ID、标签和跨库收益数字。heat exposure、heat risk、heat vulnerability 不默认同义；仅测量地表温度的论文是否纳入需按冻结后的研究范围人工判断。没有指定方法时，不将 method-specific 查询计作独立已执行配置。"
+}

@@ -1,0 +1,695 @@
+{
+  "document_count": 3,
+  "edges": [
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "angle estimation",
+      "target": "emg joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "angle estimation",
+      "target": "emg joint angle"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "angle estimation",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "angle estimation",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "angle estimation",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "angle estimation",
+      "target": "surface emg"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "angle estimation",
+      "target": "surface emg joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "angle estimation",
+      "target": "synthetic fixture"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "angle estimation",
+      "target": "transformer"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "angle estimation",
+      "target": "transformer for surface"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "source": "angle prediction",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "source": "angle prediction",
+      "target": "joint angle prediction"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "source": "angle prediction",
+      "target": "prediction from semg"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "source": "angle prediction",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "source": "angle prediction",
+      "target": "synthetic fixture"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint",
+      "target": "emg joint angle"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint",
+      "target": "surface emg"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint",
+      "target": "surface emg joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint",
+      "target": "synthetic fixture"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint",
+      "target": "transformer"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint",
+      "target": "transformer for surface"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint angle",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint angle",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint angle",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint angle",
+      "target": "surface emg"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint angle",
+      "target": "surface emg joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint angle",
+      "target": "synthetic fixture"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint angle",
+      "target": "transformer"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "emg joint angle",
+      "target": "transformer for surface"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "joint angle",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "source": "joint angle",
+      "target": "joint angle prediction"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "source": "joint angle",
+      "target": "prediction from semg"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000002",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "joint angle",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "joint angle",
+      "target": "surface emg"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "joint angle",
+      "target": "surface emg joint"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000002",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "joint angle",
+      "target": "synthetic fixture"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "joint angle",
+      "target": "transformer"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "joint angle",
+      "target": "transformer for surface"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "joint angle estimation",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "joint angle estimation",
+      "target": "surface emg"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "joint angle estimation",
+      "target": "surface emg joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "joint angle estimation",
+      "target": "synthetic fixture"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "joint angle estimation",
+      "target": "transformer"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "joint angle estimation",
+      "target": "transformer for surface"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "source": "joint angle prediction",
+      "target": "prediction from semg"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "source": "joint angle prediction",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "source": "joint angle prediction",
+      "target": "synthetic fixture"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "source": "prediction from semg",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "source": "prediction from semg",
+      "target": "synthetic fixture"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "surface electromyography",
+      "target": "surface emg"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "surface electromyography",
+      "target": "surface emg joint"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000002",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "surface electromyography",
+      "target": "synthetic fixture"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "surface electromyography",
+      "target": "transformer"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "surface electromyography",
+      "target": "transformer for surface"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "surface emg",
+      "target": "surface emg joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "surface emg",
+      "target": "synthetic fixture"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "surface emg",
+      "target": "transformer"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "surface emg",
+      "target": "transformer for surface"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "surface emg joint",
+      "target": "synthetic fixture"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "surface emg joint",
+      "target": "transformer"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "surface emg joint",
+      "target": "transformer for surface"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "synthetic fixture",
+      "target": "transformer"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "synthetic fixture",
+      "target": "transformer for surface"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "source": "transformer",
+      "target": "transformer for surface"
+    }
+  ],
+  "nodes": [
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000002",
+        "https://openalex.org/W900000000003"
+      ],
+      "term": "joint angle"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000002",
+        "https://openalex.org/W900000000003"
+      ],
+      "term": "surface electromyography"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000002",
+        "https://openalex.org/W900000000003"
+      ],
+      "term": "synthetic fixture"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "term": "angle estimation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "term": "emg joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "term": "emg joint angle"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "term": "joint angle estimation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "term": "surface emg"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W900000000001",
+        "https://openalex.org/W900000000003"
+      ],
+      "term": "surface emg joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "term": "angle prediction"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "term": "joint angle prediction"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000002"
+      ],
+      "term": "prediction from semg"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "term": "transformer"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W900000000003"
+      ],
+      "term": "transformer for surface"
+    }
+  ],
+  "note": "cooccurrence != semantic equivalence; statistical n-grams are not semantic terms; no automatic query adoption.",
+  "schema_version": "0.1",
+  "selection_rule": "Top 30 multiword observations or author/database labels by descending document_frequency, then lexical term."
+}

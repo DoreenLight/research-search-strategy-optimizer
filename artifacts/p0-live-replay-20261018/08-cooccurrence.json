@@ -1,0 +1,2986 @@
+{
+  "document_count": 14,
+  "edges": [
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "absolute error",
+      "target": "angle prediction"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "absolute error",
+      "target": "angle prediction model"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "absolute error",
+      "target": "based on semg"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "absolute error",
+      "target": "bidirectional long"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "absolute error",
+      "target": "bidirectional long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "absolute error",
+      "target": "experimental results"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "absolute error",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "absolute error",
+      "target": "joint angle prediction"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "absolute error",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "absolute error",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "absolute error",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "absolute error",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "absolute error",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "absolute error",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "absolute error",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "absolute error",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "angle estimation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "angle prediction"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "angle prediction model"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "based on semg"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "continuous estimation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W2091022037",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "joint angle prediction"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W2091022037",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W2091022037",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle changes",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle estimation",
+      "target": "angle prediction"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle estimation",
+      "target": "angle prediction model"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "angle estimation",
+      "target": "angles based"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "angle estimation",
+      "target": "ankle joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle estimation",
+      "target": "based on semg"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "angle estimation",
+      "target": "based on surface"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle estimation",
+      "target": "continuous estimation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "angle estimation",
+      "target": "estimate joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "angle estimation",
+      "target": "estimation of joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle estimation",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle estimation",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle estimation",
+      "target": "joint angle prediction"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle estimation",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "angle estimation",
+      "target": "joint angles based"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "angle estimation",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle estimation",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle estimation",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle estimation",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "angle estimation",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle estimation",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle estimation",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle estimation",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction",
+      "target": "angle prediction model"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction",
+      "target": "based on semg"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle prediction",
+      "target": "continuous estimation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction",
+      "target": "experimental results"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle prediction",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction",
+      "target": "joint angle prediction"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle prediction",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle prediction",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle prediction",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction model",
+      "target": "based on semg"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle prediction model",
+      "target": "continuous estimation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction model",
+      "target": "experimental results"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction model",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle prediction model",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction model",
+      "target": "joint angle prediction"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction model",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle prediction model",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle prediction model",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction model",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction model",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "angle prediction model",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction model",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "angle prediction model",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "angles based",
+      "target": "ankle joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "angles based",
+      "target": "based on semg"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "angles based",
+      "target": "based on surface"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "angles based",
+      "target": "continuous estimation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "angles based",
+      "target": "correlation coefficient"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "angles based",
+      "target": "estimate joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "angles based",
+      "target": "estimation of joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3013651137"
+      ],
+      "source": "angles based",
+      "target": "experimental results"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "angles based",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "angles based",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3013651137"
+      ],
+      "source": "angles based",
+      "target": "joint angle prediction"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "angles based",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "angles based",
+      "target": "joint angles based"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "angles based",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3013651137"
+      ],
+      "source": "angles based",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "angles based",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "angles based",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "angles based",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "ankle joint",
+      "target": "based on surface"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "ankle joint",
+      "target": "bidirectional long"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "ankle joint",
+      "target": "bidirectional long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "ankle joint",
+      "target": "continuous estimation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "ankle joint",
+      "target": "correlation coefficient"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "ankle joint",
+      "target": "estimate joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "ankle joint",
+      "target": "estimation of joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "ankle joint",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "ankle joint",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "ankle joint",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "ankle joint",
+      "target": "joint angles based"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "ankle joint",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "ankle joint",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "ankle joint",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "ankle joint",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "ankle joint",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "ankle joint",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "ankle joint",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "based on semg",
+      "target": "based on surface"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "based on semg",
+      "target": "continuous estimation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "based on semg",
+      "target": "correlation coefficient"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "based on semg",
+      "target": "experimental results"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "based on semg",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "based on semg",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "based on semg",
+      "target": "joint angle prediction"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "based on semg",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "based on semg",
+      "target": "joint angles based"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "based on semg",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "based on semg",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "based on semg",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "based on semg",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "based on semg",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "based on semg",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "based on semg",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "based on semg",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "based on surface",
+      "target": "continuous estimation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "based on surface",
+      "target": "correlation coefficient"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "based on surface",
+      "target": "estimate joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "based on surface",
+      "target": "estimation of joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3013651137"
+      ],
+      "source": "based on surface",
+      "target": "experimental results"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "based on surface",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "based on surface",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3013651137"
+      ],
+      "source": "based on surface",
+      "target": "joint angle prediction"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "based on surface",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "based on surface",
+      "target": "joint angles based"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "based on surface",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3013651137"
+      ],
+      "source": "based on surface",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "based on surface",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "based on surface",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "based on surface",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long",
+      "target": "bidirectional long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "bidirectional long",
+      "target": "correlation coefficient"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "bidirectional long",
+      "target": "estimate joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "bidirectional long",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "bidirectional long",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "bidirectional long short-term",
+      "target": "correlation coefficient"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "bidirectional long short-term",
+      "target": "estimate joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "bidirectional long short-term",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long short-term",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "bidirectional long short-term",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long short-term",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long short-term",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long short-term",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long short-term",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long short-term",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "bidirectional long short-term",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "continuous estimation",
+      "target": "estimate joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "continuous estimation",
+      "target": "estimation of joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "continuous estimation",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "continuous estimation",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "continuous estimation",
+      "target": "joint angle prediction"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "continuous estimation",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "continuous estimation",
+      "target": "joint angles based"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "continuous estimation",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "continuous estimation",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "continuous estimation",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "continuous estimation",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "continuous estimation",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "continuous estimation",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "continuous estimation",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "continuous estimation",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "correlation coefficient",
+      "target": "estimate joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "correlation coefficient",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "correlation coefficient",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "correlation coefficient",
+      "target": "joint angles based"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "correlation coefficient",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "correlation coefficient",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "correlation coefficient",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "correlation coefficient",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "correlation coefficient",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "correlation coefficient",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "correlation coefficient",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4416190202"
+      ],
+      "source": "electromyography signals",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W2086303648"
+      ],
+      "source": "electromyography signals",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4416190202"
+      ],
+      "source": "electromyography signals",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W2086303648",
+        "https://openalex.org/W4416190202"
+      ],
+      "source": "electromyography signals",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "estimate joint",
+      "target": "estimation of joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "estimate joint",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "estimate joint",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "estimate joint",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "estimate joint",
+      "target": "joint angles based"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "estimate joint",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "estimate joint",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "estimate joint",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "estimate joint",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "estimate joint",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "estimate joint",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "estimate joint",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "estimation of joint",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "estimation of joint",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "estimation of joint",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "estimation of joint",
+      "target": "joint angles based"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "estimation of joint",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "estimation of joint",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "estimation of joint",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "estimation of joint",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "experimental results",
+      "target": "joint angle"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "experimental results",
+      "target": "joint angle prediction"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "experimental results",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3013651137"
+      ],
+      "source": "experimental results",
+      "target": "joint angles based"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "experimental results",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "experimental results",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3013651137"
+      ],
+      "source": "experimental results",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "experimental results",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "experimental results",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "joint angle",
+      "target": "joint angle estimation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "joint angle",
+      "target": "joint angle prediction"
+    },
+    {
+      "document_frequency": 8,
+      "paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W2091022037",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4284878820",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "joint angle",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "joint angle",
+      "target": "joint angles based"
+    },
+    {
+      "document_frequency": 5,
+      "paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W4416190202"
+      ],
+      "source": "joint angle",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "joint angle",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "joint angle",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "joint angle",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "joint angle",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 4,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "joint angle",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "joint angle",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 9,
+      "paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W2091022037",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4284878820",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W4416190202"
+      ],
+      "source": "joint angle",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "joint angle estimation",
+      "target": "joint angle prediction"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "joint angle estimation",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "joint angle estimation",
+      "target": "joint angles based"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "joint angle estimation",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "joint angle estimation",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "joint angle estimation",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "joint angle estimation",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "source": "joint angle estimation",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "joint angle estimation",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "joint angle estimation",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "joint angle estimation",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "joint angle prediction",
+      "target": "joint angles"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3013651137"
+      ],
+      "source": "joint angle prediction",
+      "target": "joint angles based"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "joint angle prediction",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "joint angle prediction",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "joint angle prediction",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "joint angle prediction",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "joint angle prediction",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "joint angle prediction",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "joint angle prediction",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "joint angles",
+      "target": "joint angles based"
+    },
+    {
+      "document_frequency": 4,
+      "paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "joint angles",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "joint angles",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "joint angles",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "joint angles",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 5,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "joint angles",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 6,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "joint angles",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 4,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "joint angles",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 13,
+      "paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W2076757040",
+        "https://openalex.org/W2086303648",
+        "https://openalex.org/W2091022037",
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4284878820",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "joint angles",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "joint angles based",
+      "target": "knee joint"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W3013651137"
+      ],
+      "source": "joint angles based",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "joint angles based",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "joint angles based",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "joint angles based",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "knee joint",
+      "target": "long short-term"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "knee joint",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "source": "knee joint",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "knee joint",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "source": "knee joint",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 5,
+      "paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W4416190202"
+      ],
+      "source": "knee joint",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "long short-term",
+      "target": "long short-term memory"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "long short-term",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "long short-term",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "long short-term",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "long short-term",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "long short-term",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "long short-term memory",
+      "target": "prediction model"
+    },
+    {
+      "document_frequency": 1,
+      "paper_ids": [
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "long short-term memory",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "long short-term memory",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "long short-term memory",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "long short-term memory",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "prediction model",
+      "target": "rehabilitation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4402054497"
+      ],
+      "source": "prediction model",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "prediction model",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "source": "prediction model",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 4,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "rehabilitation",
+      "target": "semg signals"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "rehabilitation",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 5,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "rehabilitation",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "semg signals",
+      "target": "short-term memory"
+    },
+    {
+      "document_frequency": 6,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "semg signals",
+      "target": "surface electromyography"
+    },
+    {
+      "document_frequency": 4,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ],
+      "source": "short-term memory",
+      "target": "surface electromyography"
+    }
+  ],
+  "nodes": [
+    {
+      "document_frequency": 14,
+      "paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W2076757040",
+        "https://openalex.org/W2086303648",
+        "https://openalex.org/W2091022037",
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4284878820",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W4416190202",
+        "https://openalex.org/W7133186646"
+      ],
+      "term": "surface electromyography"
+    },
+    {
+      "document_frequency": 13,
+      "paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W2076757040",
+        "https://openalex.org/W2086303648",
+        "https://openalex.org/W2091022037",
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4284878820",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ],
+      "term": "joint angles"
+    },
+    {
+      "document_frequency": 9,
+      "paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W2091022037",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4284878820",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W4416190202"
+      ],
+      "term": "joint angle"
+    },
+    {
+      "document_frequency": 6,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "term": "semg signals"
+    },
+    {
+      "document_frequency": 5,
+      "paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W4416190202"
+      ],
+      "term": "knee joint"
+    },
+    {
+      "document_frequency": 5,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ],
+      "term": "rehabilitation"
+    },
+    {
+      "document_frequency": 4,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ],
+      "term": "short-term memory"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "term": "angles based"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "term": "based on semg"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "term": "based on surface"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "term": "continuous estimation"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "term": "joint angle estimation"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "term": "joint angle prediction"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ],
+      "term": "joint angles based"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "term": "long short-term"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "term": "long short-term memory"
+    },
+    {
+      "document_frequency": 3,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "term": "prediction model"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ],
+      "term": "absolute error"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W2091022037",
+        "https://openalex.org/W4402054497"
+      ],
+      "term": "angle changes"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402054497"
+      ],
+      "term": "angle estimation"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "term": "angle prediction"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4407450426"
+      ],
+      "term": "angle prediction model"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402270704"
+      ],
+      "term": "ankle joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "term": "bidirectional long"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "term": "bidirectional long short-term"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402270704"
+      ],
+      "term": "correlation coefficient"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W2086303648",
+        "https://openalex.org/W4416190202"
+      ],
+      "term": "electromyography signals"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4402270704"
+      ],
+      "term": "estimate joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W2072588720",
+        "https://openalex.org/W3121018641"
+      ],
+      "term": "estimation of joint"
+    },
+    {
+      "document_frequency": 2,
+      "paper_ids": [
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4407450426"
+      ],
+      "term": "experimental results"
+    }
+  ],
+  "note": "cooccurrence != semantic equivalence; statistical n-grams are not semantic terms; no automatic query adoption.",
+  "schema_version": "0.1",
+  "selection_rule": "Top 30 multiword observations or author/database labels by descending document_frequency, then lexical term."
+}

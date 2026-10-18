@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.1",
+  "case_id": "p4-medical-chest-radiograph-pneumonia",
+  "research_scope": {
+    "schema_version": "0.1",
+    "scope_id": "scope-p4-medical-pneumonia",
+    "mode": "systematic_preparation",
+    "description": "检索以胸部 X 线影像辅助识别肺炎的诊断研究，将深度学习作为可选方法分支；用于比较检索覆盖和人工筛选负担，不评判临床有效性或替代诊断。",
+    "research_object": ["肺炎"],
+    "input_modality": ["胸部 X 线影像"],
+    "research_task": ["肺炎辅助诊断或识别"],
+    "method": ["深度学习（可选方法分支）"],
+    "application": ["医学影像诊断研究"],
+    "constraints": {},
+    "unspecified": ["成人或儿童", "诊断金标准", "回顾性或前瞻性设计", "外部验证", "病原类型", "发表日期", "语言"]
+  },
+  "concept_groups": [
+    {"group_id": "input", "role": "input", "label": "输入模态", "terms": ["chest radiograph", "chest X-ray"]},
+    {"group_id": "object", "role": "object", "label": "研究对象", "terms": ["pneumonia"]},
+    {"group_id": "task", "role": "task", "label": "研究任务", "terms": ["diagnosis", "detection"]},
+    {"group_id": "method", "role": "method", "label": "可选方法分支", "terms": ["deep learning"]}
+  ],
+  "independent_relevance_set": null,
+  "judgments": [],
+  "notes": "P4 medical 分层的预设范围样例，不是已完成的系统综述或医学产品。人工真值未提供；无论文 ID 和人工标签。诊断与检测是否满足同一纳入标准需人工确认；CT 与胸片不默认同义。医学主题词与自由词须并行复核，不能凭数据库标签直接判定相关，也不能将检索命中解释为诊断准确性。"
+}

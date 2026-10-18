@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "search-plan.schema.json", "type": "object",
+  "required": ["schema_version", "plan_id", "version", "strategy", "database", "group_ids", "groups", "logic", "query", "status", "reason", "syntax_status"],
+  "properties": {
+    "schema_version": {"const": "0.1"}, "plan_id": {"type": "string", "minLength": 1}, "version": {"type": "integer", "minimum": 1},
+    "strategy": {"enum": ["exploratory", "focused", "method_specific"]}, "database": {"const": "openalex"},
+    "group_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "groups": {"type": "array", "items": {"$ref": "concept-group.schema.json"}, "minItems": 1},
+    "logic": {"type": "object", "required": ["op", "groups"], "properties": {"op": {"const": "AND"}, "groups": {"type": "array", "items": {"type": "string"}}}, "additionalProperties": false},
+    "query": {"type": "string", "minLength": 1}, "status": {"enum": ["planned", "not_applicable"]},
+    "reason": {"type": ["string", "null"]}, "syntax_status": {"enum": ["local_checked", "remote_executed"]}
+  }, "additionalProperties": false
+}

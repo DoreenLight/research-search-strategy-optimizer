@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>科研检索策略优化器 · 研究索引</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap');
+    :root{--paper:#f7f5f0;--ink:#14171e;--muted:#677080;--line:#e5e0d5;--card:#fff;--green:#2f6f5e;--orange:#c97b3f;--soft:#edf4ef}
+    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:Outfit, sans-serif;line-height:1.55}
+    .wrap{max-width:1120px;margin:0 auto;padding:38px 24px 64px}.eyebrow{font:500 12px 'JetBrains Mono',monospace;color:var(--green);letter-spacing:.08em;text-transform:uppercase}
+    h1,h2{font-family:'DM Serif Display',serif;font-weight:400;letter-spacing:-.02em} h1{font-size:clamp(34px,5vw,64px);line-height:1.03;margin:14px 0 14px;max-width:850px} h2{font-size:30px;margin:0 0 14px} p{margin:0 0 12px;color:#3a4256}.hero{padding:46px 0 38px;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:end}.lede{font-size:18px;max-width:690px}.stamp{font:12px 'JetBrains Mono',monospace;color:var(--muted);padding:18px;border:1px solid var(--line);background:#fffaf1;border-radius:14px}
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 52px}.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;min-height:115px;position:relative}.step strong{display:block;color:var(--green);font-size:13px;margin-bottom:8px}.step span{font-size:15px}.step:not(:last-child)::after{content:'→';position:absolute;right:-17px;top:42px;color:var(--orange);font-size:22px;z-index:2}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0 50px}.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 4px 16px -8px rgba(50,40,20,.12)}.panel h3{font-size:18px;margin:0 0 12px}.tag{display:inline-flex;align-items:center;border-radius:999px;background:var(--soft);color:var(--green);padding:5px 10px;font-size:12px;margin:3px 4px 3px 0}.tag.warn{background:#fff0e5;color:#9c5725}.matrix{width:100%;border-collapse:collapse;font-size:14px}.matrix th,.matrix td{text-align:left;border-bottom:1px solid var(--line);padding:11px 8px;vertical-align:top}.matrix th{color:var(--muted);font-weight:500}.source{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}.source:last-child{border-bottom:0}.source-id{font:500 12px 'JetBrains Mono',monospace;color:var(--orange);min-width:94px}.source a{color:var(--green);text-decoration:none}.source small{display:block;color:var(--muted);margin-top:3px}.timeline{list-style:none;margin:0;padding:0;display:grid;gap:14px}.timeline li{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:start}.phase{font:500 12px 'JetBrains Mono',monospace;color:var(--green);padding-top:3px}.foot{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:13px}.mono{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)}
+    @media(max-width:760px){.hero,.grid{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.step:not(:last-child)::after{display:none}.wrap{padding-left:18px;padding-right:18px}.hero{gap:20px}.timeline li{grid-template-columns:58px 1fr}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div><div class="eyebrow">Research Search Strategy Optimizer · evidence index</div><h1>把“我要搜什么”变成一套能复查的检索策略。</h1><p class="lede">本页是项目研究资料库的可查看索引：追踪官方能力、原始方法、竞品边界和 P0—P4 路线图。它不把模型生成词、搜索命中数或未实测产品体验写成事实。</p></div>
+      <div class="stamp"><b>当前状态</b><br>方向已确定 · 设计已批准<br>阶段：P0—P4 代码完成 · 真实 P0/P1 已运行<br>日期：2026-10-18<br><br><span class="mono">P0 first · evidence before expansion</span></div>
+    </section>
+
+    <div class="flow">
+      <div class="step"><strong>01 · 意图</strong><span>研究对象、输入、任务、方法、应用、限制</span></div>
+      <div class="step"><strong>02 · 证据</strong><span>真实论文、来源字段、术语关系、验证状态</span></div>
+      <div class="step"><strong>03 · 策略</strong><span>探索、聚焦、方法限定三类逻辑</span></div>
+      <div class="step"><strong>04 · 审计</strong><span>执行日志、论文集合、指标和限制</span></div>
+    </div>
+
+    <section><h2>研究判断</h2><div class="grid">
+      <div class="panel"><h3>做什么</h3><p>将 LLM 的语义理解与 Python 的确定性操作分开：模型负责概念解释，脚本负责请求、去重、计数、查询和日志。</p><span class="tag">证据可追溯</span><span class="tag">数据库无关逻辑</span><span class="tag">可重复评测</span></div>
+      <div class="panel"><h3>暂时不做什么</h3><p>不把关键词数量当成功，不把推荐列表当完整检索，不把未登录产品的宣传数字当实际效果，不在 P0 引入收费文本标注端点。</p><span class="tag warn">不伪造完整覆盖</span><span class="tag warn">不混淆计划与执行</span></div>
+    </div></section>
+
+    <section><h2>能力边界矩阵</h2><div class="panel"><table class="matrix"><thead><tr><th>对象</th><th>本轮已核实</th><th>本轮状态</th><th>对 P0 的作用</th></tr></thead><tbody>
+      <tr><td>OpenAlex Works</td><td>文本/关键词字段、布尔搜索、语义搜索、长查询拆分建议</td><td><span class="tag">官方文档已读</span></td><td>元数据检索与 Query Adapter</td></tr>
+      <tr><td>OpenAlex /text</td><td>topics/keywords aboutness 端点及文档限制</td><td><span class="tag warn">暂不调用</span></td><td>记录为后续能力，不混入 P0 成本</td></tr>
+      <tr><td>litsearchr</td><td>关键词抽取、共现网络、概念组、布尔检索</td><td><span class="tag">仓库已读</span></td><td>借鉴真实论文反向发现术语</td></tr>
+      <tr><td>Elicit / ResearchRabbit / Scite</td><td>官方工作流或 API 能力定位</td><td><span class="tag warn">未登录实测</span></td><td>作为竞品边界，不作性能结论</td></tr>
+      <tr><td>Agent Skills</td><td>目录、SKILL.md、frontmatter、渐进披露</td><td><span class="tag">规范已读</span></td><td>英文技能包结构约束</td></tr>
+    </tbody></table></div></section>
+
+    <section><h2>路线图</h2><div class="panel"><ol class="timeline">
+      <li><div class="phase">P0</div><div><b>证据支撑的策略生成</b><p>意图契约、OpenAlex 元数据、术语证据、三类查询、执行日志和工程评测。</p></div></li>
+      <li><div class="phase">P1</div><div><b>闭环优化</b><p>多轮版本、遗漏分析、增量收益、停止和回退规则。</p></div></li>
+      <li><div class="phase">P2</div><div><b>多数据库与独立发现</b><p>PubMed/MeSH、Semantic Scholar、引文扩展和跨源去重。</p></div></li>
+      <li><div class="phase">P3</div><div><b>科研工作流集成</b><p>合法论文获取、阅读工作台、增量更新。</p></div></li>
+      <li><div class="phase">P4</div><div><b>质量强化与可选产品化</b><p>多领域基准、人工审阅和是否前端化的证据决策。</p></div></li>
+    </ol></div></section>
+
+    <section><h2>关键来源</h2><label for="source-filter" style="display:block;color:var(--muted);font-size:14px;margin-bottom:8px">检索来源名称、关键词或状态</label><input id="source-filter" type="search" placeholder="例如：OpenAlex、标准、未核验" style="width:100%;padding:12px 15px;border:1px solid var(--line);border-radius:10px;background:white;color:var(--ink);font:inherit;margin-bottom:14px"/><p id="source-count" role="status" aria-live="polite" class="mono"></p><div class="panel" id="source-list">
+      <div class="source"><div class="source-id">OA-SEARCH</div><div><a href="https://help.openalex.org/api/searching/" target="_blank">OpenAlex Search</a><small>官方 API 文档 · Works 搜索、布尔、语义和 URL 限制</small></div></div>
+      <div class="source"><div class="source-id">OA-ABOUT</div><div><a href="https://help.openalex.org/api/tag-aboutness/" target="_blank">OpenAlex Tag Aboutness</a><small>官方 API 文档 · 文本 topics/keywords；P0 暂不调用</small></div></div>
+      <div class="source"><div class="source-id">LIT-REPO</div><div><a href="https://github.com/elizagrames/litsearchr" target="_blank">litsearchr</a><small>官方开源仓库 · 共现网络和布尔策略</small></div></div>
+      <div class="source"><div class="source-id">SCITE-DOCS</div><div><a href="https://docs.scite.ai/" target="_blank">Scite API</a><small>官方文档 · 全文检索、引文上下文和 API/MCP</small></div></div>
+      <div class="source"><div class="source-id">SKILL-SPEC</div><div><a href="https://agentskills.io/specification" target="_blank">Agent Skills Specification</a><small>官方规范 · SKILL.md、目录和渐进披露</small></div></div>
+      <div class="source"><div class="source-id">PRESS</div><div><a href="https://pubmed.ncbi.nlm.nih.gov/27005575/?format=pubmed" target="_blank">PRESS 2015</a><small>原始摘要 · 六维同行复核标准；全文细则未读</small></div></div>
+      <div class="source"><div class="source-id">PRISMA-S</div><div><a href="https://www.prisma-statement.org/prisma-search" target="_blank">PRISMA-Search</a><small>官方标准 · 16 项报告要求；不等于召回率认证</small></div></div>
+      <div class="source"><div class="source-id">YALE</div><div><a href="https://mesh.med.yale.edu/help" target="_blank">Yale MeSH Analyzer</a><small>大学官方帮助 · PMID 反向分析 MeSH 与作者词；未实测</small></div></div>
+      <div class="source"><div class="source-id">AHRQ / TERA</div><div><a href="methods-and-secondary-tools.md">未核验线索与辅助工具</a><small>AHRQ 102/21 未核验、TERA 身份未确认；Litmaps/Connected Papers/2Dsearch 边界</small></div></div>
+      <div class="source"><div class="source-id">DECISIONS</div><div><a href="competitive-analysis.md">竞品分析与 P0 选型决策</a><small>复用、研发、待核验 · 证据等级与附件纠错台账</small></div></div>
+    </div></section>
+
+    <p class="foot">完整来源分级见 <a href="source-index.md">source-index.md</a>；批准设计、路线图和 P0 计划见 <span class="mono">docs/plans/</span>。本页是展示索引，不替代结构化运行数据。</p>
+  </main>
+<script>
+const filter = document.getElementById('source-filter');
+const sources = [...document.querySelectorAll('#source-list .source')];
+function updateSources() {
+  const q = filter.value.trim().toLocaleLowerCase();
+  let count = 0;
+  for (const row of sources) { row.hidden = !row.textContent.toLocaleLowerCase().includes(q); if (!row.hidden) count++; }
+  document.getElementById('source-count').textContent = `${count} / ${sources.length} 条来源`;
+}
+filter.addEventListener('input', updateSources);
+updateSources();
+</script>
+</body>
+</html>

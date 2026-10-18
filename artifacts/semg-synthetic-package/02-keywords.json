@@ -1,0 +1,632 @@
+[
+  {
+    "adopted": false,
+    "canonical_term": "angle",
+    "category": "unclassified",
+    "document_frequency": 3,
+    "evidence_ids": [
+      "evidence-00001",
+      "evidence-00002",
+      "evidence-00003"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000002",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "angle",
+    "term_id": "term-00001"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "angle estimation",
+    "category": "unclassified",
+    "document_frequency": 2,
+    "evidence_ids": [
+      "evidence-00004",
+      "evidence-00005"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "angle estimation",
+    "term_id": "term-00002"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "angle prediction",
+    "category": "unclassified",
+    "document_frequency": 1,
+    "evidence_ids": [
+      "evidence-00006"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000002"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "angle prediction",
+    "term_id": "term-00003"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "emg",
+    "category": "unclassified",
+    "document_frequency": 2,
+    "evidence_ids": [
+      "evidence-00007",
+      "evidence-00008"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "emg",
+    "term_id": "term-00004"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "emg joint",
+    "category": "unclassified",
+    "document_frequency": 2,
+    "evidence_ids": [
+      "evidence-00009",
+      "evidence-00010"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "emg joint",
+    "term_id": "term-00005"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "emg joint angle",
+    "category": "unclassified",
+    "document_frequency": 2,
+    "evidence_ids": [
+      "evidence-00011",
+      "evidence-00012"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "emg joint angle",
+    "term_id": "term-00006"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "estimation",
+    "category": "unclassified",
+    "document_frequency": 2,
+    "evidence_ids": [
+      "evidence-00013",
+      "evidence-00014"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "estimation",
+    "term_id": "term-00007"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "fixture",
+    "category": "unclassified",
+    "document_frequency": 3,
+    "evidence_ids": [
+      "evidence-00015",
+      "evidence-00016",
+      "evidence-00017"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000002",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "fixture",
+    "term_id": "term-00008"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "joint",
+    "category": "unclassified",
+    "document_frequency": 3,
+    "evidence_ids": [
+      "evidence-00018",
+      "evidence-00019",
+      "evidence-00020"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000002",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "joint",
+    "term_id": "term-00009"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "joint angle",
+    "category": "unclassified",
+    "document_frequency": 3,
+    "evidence_ids": [
+      "evidence-00021",
+      "evidence-00022",
+      "evidence-00023"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000002",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "joint angle",
+    "term_id": "term-00010"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "joint angle estimation",
+    "category": "unclassified",
+    "document_frequency": 1,
+    "evidence_ids": [
+      "evidence-00024"
+    ],
+    "evidence_status": "database_assigned",
+    "paper_ids": [
+      "https://openalex.org/W900000000001"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "openalex_keyword",
+    "term": "joint angle estimation",
+    "term_id": "term-00011"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "joint angle estimation",
+    "category": "unclassified",
+    "document_frequency": 2,
+    "evidence_ids": [
+      "evidence-00025",
+      "evidence-00026"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "joint angle estimation",
+    "term_id": "term-00012"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "joint angle prediction",
+    "category": "unclassified",
+    "document_frequency": 1,
+    "evidence_ids": [
+      "evidence-00027"
+    ],
+    "evidence_status": "database_assigned",
+    "paper_ids": [
+      "https://openalex.org/W900000000002"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "openalex_keyword",
+    "term": "joint angle prediction",
+    "term_id": "term-00013"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "joint angle prediction",
+    "category": "unclassified",
+    "document_frequency": 1,
+    "evidence_ids": [
+      "evidence-00028"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000002"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "joint angle prediction",
+    "term_id": "term-00014"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "prediction",
+    "category": "unclassified",
+    "document_frequency": 1,
+    "evidence_ids": [
+      "evidence-00029"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000002"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "prediction",
+    "term_id": "term-00015"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "prediction from semg",
+    "category": "unclassified",
+    "document_frequency": 1,
+    "evidence_ids": [
+      "evidence-00030"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000002"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "prediction from semg",
+    "term_id": "term-00016"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "semg",
+    "category": "unclassified",
+    "document_frequency": 1,
+    "evidence_ids": [
+      "evidence-00031"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000002"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "semg",
+    "term_id": "term-00017"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "surface",
+    "category": "unclassified",
+    "document_frequency": 2,
+    "evidence_ids": [
+      "evidence-00032",
+      "evidence-00033"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "surface",
+    "term_id": "term-00018"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "surface electromyography",
+    "category": "unclassified",
+    "document_frequency": 3,
+    "evidence_ids": [
+      "evidence-00034",
+      "evidence-00035",
+      "evidence-00036"
+    ],
+    "evidence_status": "database_assigned",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000002",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "openalex_keyword",
+    "term": "surface electromyography",
+    "term_id": "term-00019"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "surface emg",
+    "category": "unclassified",
+    "document_frequency": 2,
+    "evidence_ids": [
+      "evidence-00037",
+      "evidence-00038"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "surface emg",
+    "term_id": "term-00020"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "surface emg joint",
+    "category": "unclassified",
+    "document_frequency": 2,
+    "evidence_ids": [
+      "evidence-00039",
+      "evidence-00040"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "surface emg joint",
+    "term_id": "term-00021"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "synthetic",
+    "category": "unclassified",
+    "document_frequency": 3,
+    "evidence_ids": [
+      "evidence-00041",
+      "evidence-00042",
+      "evidence-00043"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000002",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "synthetic",
+    "term_id": "term-00022"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "synthetic fixture",
+    "category": "unclassified",
+    "document_frequency": 3,
+    "evidence_ids": [
+      "evidence-00044",
+      "evidence-00045",
+      "evidence-00046"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000001",
+      "https://openalex.org/W900000000002",
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "synthetic fixture",
+    "term_id": "term-00023"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "transformer",
+    "category": "unclassified",
+    "document_frequency": 1,
+    "evidence_ids": [
+      "evidence-00047"
+    ],
+    "evidence_status": "database_assigned",
+    "paper_ids": [
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "openalex_keyword",
+    "term": "transformer",
+    "term_id": "term-00024"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "transformer",
+    "category": "unclassified",
+    "document_frequency": 1,
+    "evidence_ids": [
+      "evidence-00048"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "transformer",
+    "term_id": "term-00025"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "transformer for surface",
+    "category": "unclassified",
+    "document_frequency": 1,
+    "evidence_ids": [
+      "evidence-00049"
+    ],
+    "evidence_status": "observed_in_paper",
+    "paper_ids": [
+      "https://openalex.org/W900000000003"
+    ],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "paper_metadata",
+    "term": "transformer for surface",
+    "term_id": "term-00026"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "estimation",
+    "category": "unclassified",
+    "document_frequency": 0,
+    "evidence_ids": [],
+    "evidence_status": "unverified_candidate",
+    "paper_ids": [],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "llm_candidate",
+    "term": "estimation",
+    "term_id": "term-00027"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "joint angle",
+    "category": "unclassified",
+    "document_frequency": 0,
+    "evidence_ids": [],
+    "evidence_status": "unverified_candidate",
+    "paper_ids": [],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "llm_candidate",
+    "term": "joint angle",
+    "term_id": "term-00028"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "prediction",
+    "category": "unclassified",
+    "document_frequency": 0,
+    "evidence_ids": [],
+    "evidence_status": "unverified_candidate",
+    "paper_ids": [],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "llm_candidate",
+    "term": "prediction",
+    "term_id": "term-00029"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "semg",
+    "category": "unclassified",
+    "document_frequency": 0,
+    "evidence_ids": [],
+    "evidence_status": "unverified_candidate",
+    "paper_ids": [],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "llm_candidate",
+    "term": "semg",
+    "term_id": "term-00030"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "surface electromyography",
+    "category": "unclassified",
+    "document_frequency": 0,
+    "evidence_ids": [],
+    "evidence_status": "unverified_candidate",
+    "paper_ids": [],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "llm_candidate",
+    "term": "surface electromyography",
+    "term_id": "term-00031"
+  },
+  {
+    "adopted": false,
+    "canonical_term": "transformer",
+    "category": "unclassified",
+    "document_frequency": 0,
+    "evidence_ids": [],
+    "evidence_status": "unverified_candidate",
+    "paper_ids": [],
+    "relationship": "unclassified",
+    "retrieval_status": "untested",
+    "schema_version": "0.1",
+    "source_type": "llm_candidate",
+    "term": "transformer",
+    "term_id": "term-00032"
+  }
+]
