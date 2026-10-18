@@ -96,6 +96,9 @@ def build_parser() -> argparse.ArgumentParser:
     adopt.add_argument("reviewed_keywords", type=Path)
     adopt.add_argument("--group-id", required=True)
     adopt.add_argument("--output", type=Path, required=True)
+    fusion = commands.add_parser("provider-fusion", help="Fuse local PubMed/Semantic Scholar provider results offline")
+    fusion.add_argument("inputs", nargs="+", type=Path, help="ProviderResult JSON files; no network requests")
+    fusion.add_argument("--output", type=Path, required=True)
     provider_search = commands.add_parser("provider-search", help="Plan or execute an injected P2 provider search")
     provider_search.add_argument("provider", choices=["pubmed", "semantic_scholar"])
     provider_search.add_argument("query")
@@ -189,6 +192,9 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "adopt-keywords":
             from .keyword_adoption import adopt_reviewed_keywords
             _dump(adopt_reviewed_keywords(args.case, args.reviewed_keywords, args.output, group_id=args.group_id))
+        elif args.command == "provider-fusion":
+            from .providers import export_provider_fusion
+            _dump(export_provider_fusion(args.inputs, args.output))
         elif args.command == "provider-search":
             from .providers import PubMedProvider, SearchRequest, SemanticScholarProvider
             provider = PubMedProvider() if args.provider == "pubmed" else SemanticScholarProvider()

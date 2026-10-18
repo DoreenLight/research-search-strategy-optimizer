@@ -38,6 +38,7 @@ OpenAlex 官方文档已核实其 Works 搜索、布尔查询、语义搜索、�
 - `python3 scripts/research-search.py review-workbench artifacts/p1-loop/round-00 artifacts/p1-loop/round-01 --output artifacts/p1-review-workbench`
 - `python3 scripts/research-search.py review-session artifacts/p1-loop --judgments artifacts/p1-review-workbench/judgments.jsonl --output artifacts/p1-loop-reviewed`
 - `python3 scripts/research-search.py adopt-keywords evals/cases/semg-joint-angle.json artifacts/p1-loop/round-01/reviewed-keywords.json --group-id input --output artifacts/semg-input-reviewed.json`
+- `python3 scripts/research-search.py provider-fusion artifacts/pubmed-result.json artifacts/semantic-scholar-result.json --output artifacts/provider-fusion`
 - `python3 scripts/research-search.py provider-search pubmed "surface electromyography joint angle" --output artifacts/pubmed-plan.json`
 - `python3 scripts/research-search.py provider-discover citation "DOI:10.3390/s23125404" --output artifacts/citation-plan.json`
 - `python3 scripts/research-search.py acquisition-handoff artifacts/p0-live-20261018 --output artifacts/acquisition-queue.json`
