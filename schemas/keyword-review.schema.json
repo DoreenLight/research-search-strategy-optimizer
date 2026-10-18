@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "keyword-review.schema.json", "type": "object",
+  "required": ["term", "relationship", "review_status", "reviewed_by", "reviewed_at", "reason", "retrieval_status", "adopted"],
+  "properties": {
+    "term": {"type": "string", "minLength": 1},
+    "relationship": {"enum": ["equivalent", "broader", "narrower", "related_task", "alternative_method", "application", "unclassified"]},
+    "review_status": {"enum": ["approved", "rejected", "pending"]},
+    "reviewed_by": {"type": "string", "pattern": "\\S"},
+    "reviewed_at": {"type": "string", "format": "date-time"},
+    "reason": {"type": "string", "pattern": "\\S"},
+    "retrieval_status": {"enum": ["untested", "executed", "evaluated", "rejected"]},
+    "adopted": {"type": "boolean"}
+  },
+  "allOf": [{"if": {"properties": {"adopted": {"const": true}}},
+             "then": {"properties": {"review_status": {"const": "approved"}, "relationship": {"not": {"const": "unclassified"}}}}}],
+  "additionalProperties": false
+}

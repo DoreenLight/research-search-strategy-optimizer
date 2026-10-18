@@ -7,6 +7,7 @@
     "concept_groups": {"type": "array", "items": {"$ref": "concept-group.schema.json"}, "minItems": 2, "maxItems": 5},
     "independent_relevance_set": {"type": ["array", "null"], "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
     "judgments": {"type": "array", "items": {"$ref": "judgment.schema.json"}},
+    "keyword_reviews": {"type": "array", "items": {"$ref": "keyword-review.schema.json"}},
     "notes": {"type": "string"}
   }, "additionalProperties": false
 }

@@ -15,6 +15,9 @@ package-dir = {"" = "scripts"}
 [tool.setuptools.packages.find]
 where = ["scripts"]
 
+[tool.setuptools.package-data]
+research_search = ["*.html"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"

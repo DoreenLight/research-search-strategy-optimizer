@@ -8,14 +8,16 @@ import inspect
 import json
 import math
 import os
+from pathlib import Path
 import re
 import time
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import parse_qsl, quote, quote_plus, urlencode, urlsplit, urlunsplit
+from urllib.parse import parse_qsl, quote, quote_plus, unquote, unquote_plus, urlencode, urlsplit, urlunsplit
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
 from .models import Paper
+from .query_cache import CacheRequest, CacheWriteError, QueryCache
 
 
 RequestFn = Callable[..., Any]
@@ -41,6 +43,9 @@ class OpenAlexSearchResult:
     attempts: list[dict[str, Any]] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
     retrieved_at: str = ""
+    cache_hit: bool = False
+    metadata_bytes: int = 0
+    cache_key: str | None = None
 
 
 class _NoRedirectHandler(HTTPRedirectHandler):
@@ -65,9 +70,32 @@ def _now(timestamp: float | None = None) -> str:
     return datetime.fromtimestamp(timestamp, timezone.utc).isoformat()
 
 
+def _contains_named_credential(value: Any, secrets: tuple[str, ...] = ()) -> bool:
+    text = str(value)
+    variants = {text}
+    current = text
+    for _ in range(3):
+        current = unquote_plus(current)
+        variants.add(current)
+        current = unquote(current)
+        variants.add(current)
+    for secret in secrets:
+        if secret:
+            encoded = {secret, quote(secret, safe=""), quote_plus(secret)}
+            if any(item in candidate for candidate in variants for item in encoded):
+                return True
+    return any(
+        _is_sensitive_key(candidate.strip().split("=", 1)[0]) or
+        re.search(r"(?i)\bbearer(?:\s|%20|\+)", candidate) or
+        re.search(r"(?i)(?:api[_-]?key|access[_-]?token|authorization|client[_-]?secret)\s*(?:=|:)", candidate)
+        for candidate in variants
+    )
+
+
 def _is_sensitive_key(key: str) -> bool:
     return re.sub(r"[^a-z0-9]", "", key.lower()) in {
-        "apikey", "authorization", "bearertoken", "accesstoken", "clientsecret",
+        "apikey", "authorization", "accesstoken", "authtoken", "bearertoken",
+        "clientsecret", "password", "privatekey", "refreshtoken", "secret", "token",
     }
 
 
@@ -91,7 +119,7 @@ def _redact_text(value: Any, secrets: tuple[str, ...] = ()) -> str:
         r"\1<redacted>", text,
     )
     text = re.sub(
-        r"(?i)([\"']?(?:api[_-]?key|access[_-]?token|authorization)[\"']?\s*(?:[=:]|%3d)\s*[\"']?)[^\s\"'&,;}\]]+",
+        r"(?i)([\"']?(?:api[_-]?key|access[_-]?token|authorization|client[_-]?secret|password|private[_-]?key|refresh[_-]?token|secret|token)[\"']?\s*(?:[=:]|%3d|%3a)\s*[\"']?)[^\s\"'&,;}\]]+",
         r"\1<redacted>", text,
     )
     return text
@@ -99,6 +127,52 @@ def _redact_text(value: Any, secrets: tuple[str, ...] = ()) -> str:
 
 def _clean_error(value: Any, secrets: tuple[str, ...] = ()) -> str:
     return _redact_text(value, secrets)[:500]
+
+
+def _contains_known_secret(value: Any, secrets: tuple[str, ...]) -> bool:
+    if not secrets:
+        return False
+    if isinstance(value, Mapping):
+        return any(_contains_known_secret(key, secrets) or _contains_known_secret(item, secrets)
+                   for key, item in value.items())
+    if isinstance(value, (list, tuple)):
+        return any(_contains_known_secret(item, secrets) for item in value)
+    if not isinstance(value, str):
+        return False
+    candidates = {value}
+    for _ in range(3):
+        decoded = {unquote_plus(item) for item in candidates}
+        if decoded <= candidates:
+            break
+        candidates.update(decoded)
+    variants = {secret for secret in secrets if secret}
+    variants.update(quote(secret, safe="") for secret in secrets if secret)
+    variants.update(quote_plus(secret) for secret in secrets if secret)
+    return any(candidate == variant or variant in candidate for candidate in candidates for variant in variants)
+
+
+def _contains_sensitive_marker(value: Any) -> bool:
+    if isinstance(value, Mapping):
+        return any(
+            isinstance(key, str) and _is_sensitive_key(key)
+            or _contains_sensitive_marker(key)
+            or _contains_sensitive_marker(item)
+            for key, item in value.items()
+        )
+    if isinstance(value, (list, tuple)):
+        return any(_contains_sensitive_marker(item) for item in value)
+    if not isinstance(value, str):
+        return False
+    candidates = {value}
+    for _ in range(3):
+        decoded = {unquote_plus(item) for item in candidates}
+        if decoded <= candidates:
+            break
+        candidates.update(decoded)
+    pattern = re.compile(
+        r"(?i)(?:bearer(?:\\s+|%20|\\+)|(?:api[_-]?key|access[_-]?token|authorization|client[_-]?secret|password|private[_-]?key|refresh[_-]?token|secret|token)(?:\\s*|%20)*(?:=|%3d|:))"
+    )
+    return any(pattern.search(candidate) is not None for candidate in candidates)
 
 
 def _redact_data(value: Any, secrets: tuple[str, ...]) -> Any:
@@ -262,6 +336,7 @@ class _Response:
     error_message: str | None = None
     retryable: bool = False
     headers: Any = None
+    metadata_bytes: int = 0
 
 
 class OpenAlexClient:
@@ -281,7 +356,8 @@ class OpenAlexClient:
         max_retries: int = 2, max_requests: int | None = None, max_wait: float = 60.0,
         backoff_factor: float = 0.5, min_request_interval: float = 1.0,
         clock: Callable[[], float] | None = None, sleep: Callable[[float], None] | None = None,
-        wall_clock: Callable[[], float] | None = None,
+        wall_clock: Callable[[], float] | None = None, cache_dir: Path | str | None = None,
+        api_version: str = "works-v1",
         max_abstract_position: int = MAX_ABSTRACT_POSITION,
         max_abstract_tokens: int = MAX_ABSTRACT_TOKENS, max_abstract_bytes: int = MAX_ABSTRACT_BYTES,
     ) -> None:
@@ -307,6 +383,8 @@ class OpenAlexClient:
                 raise ValueError(f"{name} must be a non-negative integer")
         if api_key is not None and not isinstance(api_key, str):
             raise ValueError("api_key must be a string or None")
+        if not isinstance(api_version, str) or not api_version:
+            raise ValueError("api_version must be a non-empty string")
         self.request_fn = request_fn or transport or self._default_transport
         self.api_key = os.getenv("OPENALEX_API_KEY") if api_key is None else api_key
         self.timeout, self.total_timeout = float(timeout), total_timeout
@@ -317,6 +395,8 @@ class OpenAlexClient:
         self.wall_clock = wall_clock or time.time
         self.max_abstract_position = max_abstract_position
         self.max_abstract_tokens, self.max_abstract_bytes = max_abstract_tokens, max_abstract_bytes
+        self.api_version = api_version
+        self.cache = QueryCache(cache_dir, provider="openalex", api_version=api_version) if cache_dir is not None else None
         self._requests_made = 0
         self._last_request_at: float | None = None
 
@@ -367,10 +447,12 @@ class OpenAlexClient:
             headers = getattr(response, "headers", None)
             body_error = None
             payload = None
+            metadata_bytes = 0
             try:
                 body = response.read()
                 if not isinstance(body, (bytes, bytearray)):
                     raise TypeError("response body must be bytes")
+                metadata_bytes = len(body)
                 payload = json.loads(bytes(body).decode("utf-8"), parse_constant=lambda _: (_ for _ in ()).throw(ValueError("non-finite JSON number")))
             except (TypeError, ValueError, UnicodeError, RecursionError, OSError) as error:
                 body_error = error
@@ -382,14 +464,16 @@ class OpenAlexClient:
                     status=status, payload=payload, error_type="http_error",
                     error_message=_clean_error(message, self._secrets()),
                     retryable=status in RETRYABLE_STATUSES, headers=headers,
+                    metadata_bytes=metadata_bytes,
                 )
             if body_error is not None:
                 error_type = "timeout" if _timeout_error(body_error) else (
                     "transport_error" if isinstance(body_error, OSError) else "invalid_response"
                 )
                 return _Response(status=status, error_type=error_type, error_message=_clean_error(body_error, self._secrets()),
-                                 retryable=error_type != "invalid_response", headers=headers)
-            return _Response(status=status, payload=payload, headers=headers)
+                                 retryable=error_type != "invalid_response", headers=headers,
+                                 metadata_bytes=metadata_bytes)
+            return _Response(status=status, payload=payload, headers=headers, metadata_bytes=metadata_bytes)
         except (URLError, TimeoutError, OSError) as error:
             return _Response(status=status, error_type="timeout" if _timeout_error(error) else "transport_error",
                              error_message=_clean_error(error, self._secrets()), retryable=True)
@@ -498,8 +582,42 @@ class OpenAlexClient:
                 params["filter"] = ",".join(clauses)
         started_at = self.clock()
         result = OpenAlexSearchResult(status="failed", retrieved_at=self._timestamp())
+        cache_request = CacheRequest(
+            provider="openalex", query=search, filters=dict(filters or {}), per_page=per_page,
+            cursor=cursor, api_version=self.api_version,
+        )
+        cache_key: str | None = None
+        cache_warning: str | None = None
+        secrets = self._secrets()
+        sensitive_request = _contains_named_credential(search, secrets) or _contains_named_credential(cursor or "", secrets) or _contains_named_credential(self.api_version, secrets)
+        if filters:
+            sensitive_request = sensitive_request or any(_contains_named_credential(key, secrets) or _contains_named_credential(value, secrets) for key, value in filters.items())
+        if sensitive_request:
+            cache_warning = "cache_bypassed_sensitive_request"
+        if self.cache is not None and not sensitive_request:
+            try:
+                cache_key = self.cache.key(cache_request)
+                cached = self.cache.load(cache_request)
+            except (TypeError, ValueError, OverflowError, RecursionError):
+                cache_warning = "cache_bypassed_invalid_parameters"
+                cached = None
+            if cached is not None:
+                replayed = self.parse_response(cached["response"], cached["retrieved_at"])
+                replayed.request_url = _redact_text(cached.get("request_metadata", {}).get("request_url"), self._secrets())
+                if replayed.status not in {"success", "partial"}:
+                    cached = None
+                else:
+                    replayed.cache_hit = True
+                    replayed.cache_key = cache_key
+                    replayed.warnings = [*replayed.warnings, "cache_hit"]
+                    return replayed
+        result.cache_key = cache_key
+        if cache_warning:
+            result.warnings.append(cache_warning)
         url = f"{self.base_url}?{urlencode(params)}"
         result.request_url = self._safe_url(url)
+        if sensitive_request:
+            result.request_url = "<redacted-url>"
         if len(url.encode("utf-8")) > MAX_URL_BYTES:
             result.error_type, result.error_message = "url_too_long", "request URL exceeds 4094 bytes; query was not sent or rewritten"
             return result
@@ -522,6 +640,7 @@ class OpenAlexClient:
             self._requests_made += 1
             self._last_request_at = self.clock()
             response = self._receive(request, timeout)
+            result.metadata_bytes += response.metadata_bytes
             attempt = {"request_url": result.request_url, "timestamp": timestamp,
                        "status": response.status, "error_type": response.error_type}
             result.attempts.append(attempt)
@@ -539,8 +658,24 @@ class OpenAlexClient:
             if response.error_type is None:
                 parsed = self.parse_response(response.payload, result.retrieved_at)
                 parsed.request_url, parsed.request_count, parsed.attempts = result.request_url, result.request_count, result.attempts
+                parsed.metadata_bytes = result.metadata_bytes
+                parsed.cache_key = result.cache_key
+                parsed.warnings = [*result.warnings, *parsed.warnings]
                 attempt["error_type"] = parsed.error_type
                 remaining = self._remaining(started_at)
+                if self.cache is not None and parsed.status in {"success", "partial"} and parsed.raw_response is not None and cache_warning is None and (remaining is None or remaining > 0):
+                    try:
+                        self.cache.store(
+                            cache_request,
+                            request_url=parsed.request_url,
+                            retrieved_at=parsed.retrieved_at,
+                            response=parsed.raw_response,
+                        )
+                    except (CacheWriteError, TypeError, ValueError, OSError, OverflowError, RecursionError) as error:
+                        warning = "cache_write_failed"
+                        if isinstance(error, CacheWriteError) and error.scratch_path is not None:
+                            warning = f"cache_write_failed:{error.scratch_path}"
+                        parsed.warnings.append(warning)
                 if remaining is not None and remaining <= 0:
                     parsed.status, parsed.papers, parsed.fetched_count = "failed", [], 0
                     parsed.error_type, parsed.error_message = "timeout", "total timeout exceeded"

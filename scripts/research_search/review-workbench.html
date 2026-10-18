@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>本地人工审阅工作台</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f4ed;
+      --surface: #fffdf8;
+      --surface-2: #f0f2e9;
+      --line: #d7ded5;
+      --line-strong: #aebdaf;
+      --ink: #17382d;
+      --muted: #5f6d64;
+      --accent: #1f6b4d;
+      --accent-strong: #15543b;
+      --accent-soft: #dfeee4;
+      --warn: #9a5d1d;
+      --warn-soft: #f9ecd7;
+      --danger: #9b3f35;
+      --shadow: 0 12px 34px rgba(35, 62, 47, .08);
+      font-family: Outfit, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+    button, input, textarea, select { font: inherit; }
+    button, input, textarea, select { border-radius: 10px; }
+    button { cursor: pointer; }
+    button:disabled { cursor: not-allowed; opacity: .55; }
+    :focus-visible {
+      outline: 3px solid #e5a844;
+      outline-offset: 2px;
+    }
+
+    .shell { width: min(1500px, 100%); margin: 0 auto; padding: 24px; }
+    .masthead {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 22px;
+      margin-bottom: 18px;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 5px; font-size: clamp(1.55rem, 2.5vw, 2.15rem); letter-spacing: -.025em; }
+    h2 { margin-bottom: 8px; font-size: 1.05rem; }
+    h3 { margin-bottom: 5px; font-size: .96rem; }
+    .lede { max-width: 760px; margin-bottom: 0; color: var(--muted); }
+    .blind-note {
+      max-width: 330px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .toolbar, .progress-card, .scope-card, .workspace-panel, .detail-card {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .toolbar { padding: 16px; border-radius: 16px; margin-bottom: 15px; }
+    .toolbar-grid {
+      display: grid;
+      grid-template-columns: minmax(180px, 1fr) minmax(190px, 1fr) auto auto;
+      gap: 12px;
+      align-items: end;
+    }
+    .field { display: flex; flex-direction: column; gap: 5px; }
+    .field label, .legend-label { color: var(--muted); font-size: .81rem; font-weight: 700; letter-spacing: .015em; }
+    .required::after { content: " *"; color: var(--danger); }
+    input[type="text"], input[type="search"], textarea, select {
+      width: 100%;
+      border: 1px solid var(--line-strong);
+      background: #fffefa;
+      color: var(--ink);
+      padding: 9px 11px;
+    }
+    textarea { min-height: 105px; resize: vertical; }
+    input::placeholder, textarea::placeholder { color: #849087; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .button {
+      min-height: 40px;
+      border: 1px solid var(--accent);
+      padding: 9px 14px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 750;
+    }
+    .button.secondary {
+      border-color: var(--line-strong);
+      background: var(--surface-2);
+      color: var(--ink);
+    }
+    .button.ghost {
+      border-color: var(--line-strong);
+      background: transparent;
+      color: var(--accent-strong);
+    }
+    .button:hover:not(:disabled) { background: var(--accent-strong); }
+    .button.secondary:hover:not(:disabled), .button.ghost:hover:not(:disabled) { background: var(--accent-soft); }
+    .file-input { display: none; }
+    .file-label { display: inline-flex; align-items: center; }
+    .toolbar-status { min-height: 22px; margin: 11px 2px 0; color: var(--muted); font-size: .86rem; }
+    .toolbar-status.error { color: var(--danger); font-weight: 700; }
+    .toolbar-status.success { color: var(--accent-strong); font-weight: 700; }
+
+    .progress-card { padding: 14px 16px; border-radius: 14px; margin-bottom: 15px; }
+    .scope-card { padding: 16px; border-radius: 16px; margin-bottom: 15px; }
+    .scope-card h2 { margin-bottom: 5px; }
+    .scope-description { margin: 0 0 13px; color: var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; }
+    .scope-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px; }
+    .scope-item { min-width: 0; }
+    .scope-label { display: block; margin-bottom: 3px; color: var(--muted); font-size: .8rem; font-weight: 750; }
+    .scope-value { white-space: pre-wrap; overflow-wrap: anywhere; }
+    .scope-value.empty { color: var(--muted); }
+    .progress-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+    .progress-text { color: var(--muted); font-size: .87rem; }
+    progress { width: 100%; height: 12px; accent-color: var(--accent); }
+    progress::-webkit-progress-bar { border-radius: 999px; background: var(--surface-2); }
+    progress::-webkit-progress-value { border-radius: 999px; background: var(--accent); }
+    progress::-moz-progress-bar { border-radius: 999px; background: var(--accent); }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(280px, .82fr) minmax(380px, 1.45fr);
+      gap: 15px;
+      align-items: start;
+    }
+    .workspace-panel { min-width: 0; border-radius: 16px; overflow: hidden; }
+    .panel-head { padding: 15px 16px 12px; border-bottom: 1px solid var(--line); }
+    .panel-head-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .count-badge {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-width: 32px; height: 26px; padding: 0 8px;
+      border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: .8rem; font-weight: 800;
+    }
+    .filters { display: grid; grid-template-columns: 1fr 140px; gap: 8px; margin-top: 11px; }
+    .queue-list {
+      max-height: min(68vh, 780px);
+      min-height: 280px;
+      overflow: auto;
+      margin: 0;
+      padding: 8px;
+      list-style: none;
+    }
+    .queue-list:focus { outline: 2px solid var(--line-strong); outline-offset: -2px; }
+    .queue-item { margin: 0 0 7px; }
+    .queue-button {
+      display: block;
+      width: 100%;
+      border: 1px solid transparent;
+      padding: 12px;
+      text-align: left;
+      background: transparent;
+      color: var(--ink);
+    }
+    .queue-button:hover { border-color: var(--line); background: var(--surface-2); }
+    .queue-button[aria-selected="true"] { border-color: var(--accent); background: var(--accent-soft); }
+    .queue-title { display: block; margin-bottom: 4px; font-weight: 760; }
+    .queue-meta, .queue-status { display: block; color: var(--muted); font-size: .78rem; }
+    .queue-status { margin-top: 5px; color: var(--accent-strong); font-weight: 700; }
+    .queue-status.pending { color: var(--warn); }
+    .empty-list { padding: 28px 16px; color: var(--muted); text-align: center; }
+
+    .detail-card { border-radius: 16px; padding: 21px; }
+    .detail-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; margin-bottom: 16px; }
+    .detail-title { margin-bottom: 7px; font-size: clamp(1.2rem, 2vw, 1.6rem); line-height: 1.25; }
+    .detail-id { color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .82rem; overflow-wrap: anywhere; }
+    .detail-section { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 14px; }
+    .metadata-grid { display: grid; grid-template-columns: minmax(90px, .28fr) 1fr; gap: 8px 14px; }
+    .identifier { overflow-wrap: anywhere; }
+    .meta-label { color: var(--muted); font-size: .84rem; font-weight: 750; }
+    .meta-value { min-width: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .abstract { white-space: pre-wrap; overflow-wrap: anywhere; }
+    .keywords { display: flex; flex-wrap: wrap; gap: 6px; }
+    .keyword {
+      display: inline-flex; max-width: 100%; padding: 4px 8px; border: 1px solid var(--line);
+      border-radius: 999px; background: var(--surface-2); color: var(--ink); font-size: .8rem; overflow-wrap: anywhere;
+    }
+    .review-form { margin-top: 20px; padding-top: 17px; border-top: 1px solid var(--line); }
+    .choice-group { display: flex; flex-wrap: wrap; gap: 8px; margin: 7px 0 13px; }
+    .choice {
+      display: inline-flex; align-items: center; gap: 7px; min-height: 42px;
+      padding: 8px 12px; border: 1px solid var(--line-strong); border-radius: 10px;
+      background: #fffefa; color: var(--ink); cursor: pointer;
+    }
+    .choice:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); font-weight: 750; }
+    .choice input { accent-color: var(--accent); }
+    .help { margin: 5px 0 0; color: var(--muted); font-size: .8rem; }
+    .form-error { min-height: 20px; margin: 8px 0 0; color: var(--danger); font-size: .84rem; font-weight: 700; }
+    .detail-actions { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 12px; }
+    .detail-actions .button-row { justify-content: flex-end; }
+    .not-selected { padding: 45px 20px; color: var(--muted); text-align: center; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+
+    @media (max-width: 960px) {
+      .toolbar-grid { grid-template-columns: 1fr 1fr; }
+      .toolbar-grid .button-row { grid-column: 1 / -1; }
+      .masthead { flex-direction: column; }
+      .blind-note { max-width: none; }
+    }
+    @media (max-width: 760px) {
+      .shell { padding: 14px; }
+      .workspace { grid-template-columns: 1fr; }
+      .queue-list { max-height: 42vh; min-height: 180px; }
+      .detail-card { padding: 16px; }
+    }
+    @media (max-width: 520px) {
+      .toolbar-grid, .filters { grid-template-columns: 1fr; }
+      .metadata-grid { grid-template-columns: 1fr; gap: 2px; }
+      .meta-label { margin-top: 7px; }
+      .detail-actions { align-items: stretch; flex-direction: column; }
+      .detail-actions .button-row { justify-content: stretch; }
+      .detail-actions .button { flex: 1; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div>
+        <h1>本地人工审阅工作台</h1>
+        <p class="lede">按论文元数据进行独立相关性判断。页面只展示审阅所需信息，不显示检索来源、模型判断或其他审阅者记录。</p>
+      </div>
+      <aside class="blind-note">离线盲审：页面不访问网络。完整来源审计保存在旁边的 <code>review-queue.jsonl</code>，审阅完成后可在本地查看。</aside>
+    </header>
+
+    <section class="toolbar" aria-labelledby="session-heading">
+      <h2 id="session-heading">审阅会话</h2>
+      <div class="toolbar-grid">
+        <div class="field">
+          <label class="required" for="reviewer-id">reviewer_id</label>
+          <input id="reviewer-id" type="text" autocomplete="off" maxlength="200" placeholder="例如 reviewer-01" required>
+        </div>
+        <div class="field">
+          <span class="legend-label">本地文件</span>
+          <div class="button-row">
+            <button class="button secondary" id="queue-file-button" type="button">读取 review-queue.jsonl</button>
+            <input class="file-input" id="queue-file" type="file" accept=".jsonl,.ndjson,.txt,application/json">
+          </div>
+        </div>
+        <div class="field">
+          <span class="legend-label">判断记录</span>
+          <div class="button-row">
+            <button class="button secondary" id="judgments-file-button" type="button">导入本人 judgments.jsonl</button>
+            <input class="file-input" id="judgments-file" type="file" accept=".jsonl,.ndjson,.txt,application/json">
+          </div>
+        </div>
+        <div class="field">
+          <span class="legend-label">导出</span>
+          <button class="button" id="export-button" type="button">导出 judgments.jsonl</button>
+        </div>
+      </div>
+      <p class="toolbar-status" id="toolbar-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="scope-card" aria-labelledby="scope-heading">
+      <h2 id="scope-heading">当前研究范围</h2>
+      <p class="scope-description" id="scope-description"></p>
+      <div class="scope-grid">
+        <div class="scope-item"><span class="scope-label">研究对象</span><span class="scope-value" id="scope-research-object"></span></div>
+        <div class="scope-item"><span class="scope-label">输入模态</span><span class="scope-value" id="scope-input-modality"></span></div>
+        <div class="scope-item"><span class="scope-label">研究任务</span><span class="scope-value" id="scope-research-task"></span></div>
+        <div class="scope-item"><span class="scope-label">方法</span><span class="scope-value" id="scope-method"></span></div>
+        <div class="scope-item"><span class="scope-label">应用</span><span class="scope-value" id="scope-application"></span></div>
+        <div class="scope-item"><span class="scope-label">约束</span><span class="scope-value" id="scope-constraints"></span></div>
+        <div class="scope-item"><span class="scope-label">未指定项</span><span class="scope-value" id="scope-unspecified"></span></div>
+      </div>
+    </section>
+
+    <section class="progress-card" aria-labelledby="progress-heading">
+      <div class="progress-top">
+        <strong id="progress-heading">审阅进度</strong>
+        <span class="progress-text" id="progress-text">尚未填写 reviewer_id</span>
+      </div>
+      <progress id="progress-bar" max="100" value="0" aria-label="审阅进度"></progress>
+    </section>
+
+    <section class="workspace" aria-label="论文审阅工作区">
+      <section class="workspace-panel" aria-labelledby="queue-heading">
+        <div class="panel-head">
+          <div class="panel-head-row">
+            <h2 id="queue-heading">论文队列</h2>
+            <span class="count-badge" id="queue-count">0</span>
+          </div>
+          <div class="filters">
+            <div class="field">
+              <label for="search-input">搜索可见字段</label>
+              <input id="search-input" type="search" autocomplete="off" placeholder="标题、作者、ID、摘要或关键词">
+            </div>
+            <div class="field">
+              <label for="status-filter">状态</label>
+              <select id="status-filter">
+                <option value="all">全部</option>
+                <option value="unreviewed">未审阅</option>
+                <option value="relevant">相关</option>
+                <option value="irrelevant">不相关</option>
+                <option value="uncertain">待确认</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <ul class="queue-list" id="queue-list" role="listbox" aria-label="论文列表" tabindex="0"></ul>
+      </section>
+
+      <section class="detail-card" aria-labelledby="detail-heading">
+        <div id="detail-empty" class="not-selected">从左侧选择一篇论文开始审阅。</div>
+        <div id="detail-content" hidden>
+          <div class="detail-header">
+            <div>
+              <h2 class="detail-title" id="detail-heading"></h2>
+              <div class="detail-id" id="detail-id"></div>
+            </div>
+            <span class="count-badge" id="detail-status">未审阅</span>
+          </div>
+          <div class="metadata-grid">
+            <div class="meta-label">作者</div>
+            <div class="meta-value" id="detail-authors"></div>
+            <div class="meta-label">年份</div>
+            <div class="meta-value" id="detail-year"></div>
+            <div class="meta-label">DOI</div>
+            <div class="meta-value identifier" id="detail-doi"></div>
+            <div class="meta-label">PMID</div>
+            <div class="meta-value identifier" id="detail-pmid"></div>
+            <div class="meta-label">OpenAlex ID</div>
+            <div class="meta-value identifier" id="detail-openalex-id"></div>
+          </div>
+          <div class="detail-section">
+            <h3>摘要</h3>
+            <div class="abstract" id="detail-abstract"></div>
+          </div>
+          <div class="detail-section">
+            <h3>原始数据库关键词</h3>
+            <div class="keywords" id="detail-keywords"></div>
+          </div>
+
+          <form class="review-form" id="review-form">
+            <fieldset>
+              <legend class="required">相关性判断</legend>
+              <div class="choice-group">
+                <label class="choice"><input type="radio" name="label" value="relevant">相关</label>
+                <label class="choice"><input type="radio" name="label" value="irrelevant">不相关</label>
+                <label class="choice"><input type="radio" name="label" value="uncertain">待确认</label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label class="required" for="rationale">原因</label>
+              <textarea id="rationale" required placeholder="说明与研究范围的关系"></textarea>
+            </div>
+            <div class="field" style="margin-top: 11px">
+              <label class="required" for="evidence-locator">证据定位</label>
+              <input id="evidence-locator" type="text" required placeholder="例如：摘要第 2 句；表 1；页码/段落/关键词">
+              <p class="help">请填写可复核的定位，不要求在页面中打开外部链接。</p>
+            </div>
+            <p class="form-error" id="form-error" role="alert"></p>
+            <div class="detail-actions">
+              <span class="help">Ctrl / ⌘ + Enter 可保存并进入下一篇</span>
+              <div class="button-row">
+                <button class="button ghost" id="clear-button" type="button">清空本篇表单</button>
+                <button class="button" id="save-button" type="submit">保存并下一篇</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script type="application/json" id="initial-workbench-data">__WORKBENCH_DATA_JSON__</script>
+  <script>
+    (() => {
+      "use strict";
+
+      const LABELS = Object.freeze({ relevant: "相关", irrelevant: "不相关", uncertain: "待确认" });
+      const REQUIRED_JUDGMENT_KEYS = Object.freeze([
+        "schema_version", "judgment_id", "paper_id", "scope_id", "label",
+        "judge_type", "rationale", "judged_at", "reviewer_id", "evidence_locator"
+      ]);
+      const initialElement = document.getElementById("initial-workbench-data");
+      const initialData = JSON.parse(initialElement.textContent || "{}");
+      const state = {
+        scopeId: typeof initialData.scope_id === "string" ? initialData.scope_id : "",
+        queueFingerprint: typeof initialData.queue_fingerprint === "string" ? initialData.queue_fingerprint : "",
+        items: [],
+        judgments: [],
+        activeReviewer: "",
+        selectedId: null,
+        search: "",
+        filter: "all"
+      };
+
+      const $ = (id) => document.getElementById(id);
+      const reviewerInput = $("reviewer-id");
+      const queueList = $("queue-list");
+      const searchInput = $("search-input");
+      const statusFilter = $("status-filter");
+      const form = $("review-form");
+      const rationaleInput = $("rationale");
+      const evidenceInput = $("evidence-locator");
+      const formError = $("form-error");
+      const saveButton = $("save-button");
+      const toolbarStatus = $("toolbar-status");
+
+      function setToolbarStatus(message, kind = "") {
+        toolbarStatus.textContent = message || "";
+        toolbarStatus.className = "toolbar-status" + (kind ? " " + kind : "");
+      }
+
+      function isPlainObject(value) {
+        return value !== null && typeof value === "object" && !Array.isArray(value);
+      }
+
+      function nonEmptyString(value, field) {
+        if (typeof value !== "string" || !value.trim()) {
+          throw new Error(field + " 必须是非空字符串");
+        }
+        return value;
+      }
+
+      function isIsoDateTime(value) {
+        if (typeof value !== "string") return false;
+        const parts = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.\d{1,9})?(?:Z|[+-](\d{2}):(\d{2}))$/.exec(value);
+        if (!parts) return false;
+        const [, yearText, monthText, dayText, hourText, minuteText, secondText, zoneHour, zoneMinute] = parts;
+        const [year, month, day, hour, minute, second] = [yearText, monthText, dayText, hourText, minuteText, secondText].map(Number);
+        const leap = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+        const daysInMonth = [31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        return month >= 1 && month <= 12 && day >= 1 && day <= daysInMonth[month - 1] &&
+          hour <= 23 && minute <= 59 && second <= 59 && Number(zoneHour || 0) <= 23 && Number(zoneMinute || 0) <= 59 &&
+          !Number.isNaN(Date.parse(value));
+      }
+
+      function validateBlindItem(item) {
+        if (!isPlainObject(item)) throw new Error("队列记录必须是对象");
+        const paperId = nonEmptyString(item.paper_id, "paper_id");
+        const title = nonEmptyString(item.title, "title");
+        if (!Array.isArray(item.authors) || item.authors.some((value) => typeof value !== "string")) {
+          throw new Error("authors 必须是字符串数组");
+        }
+        if (item.publication_year !== null && item.publication_year !== undefined &&
+            (!Number.isInteger(item.publication_year) || item.publication_year < 0 || item.publication_year > 3000)) {
+          throw new Error("publication_year 无效");
+        }
+        if (item.abstract !== null && item.abstract !== undefined && typeof item.abstract !== "string") {
+          throw new Error("abstract 必须是字符串或 null");
+        }
+        if (!Array.isArray(item.database_keywords) || item.database_keywords.some((value) => typeof value !== "string")) {
+          throw new Error("database_keywords 必须是字符串数组");
+        }
+        for (const [field, label] of [["doi", "doi"], ["pmid", "pmid"], ["openalex_id", "openalex_id"]]) {
+          if (item[field] !== null && item[field] !== undefined && typeof item[field] !== "string") {
+            throw new Error(label + " 必须是字符串或 null");
+          }
+        }
+        return { paper_id: paperId, title, authors: item.authors.slice(), publication_year: item.publication_year ?? null,
+          abstract: item.abstract ?? null, database_keywords: item.database_keywords.slice(), doi: item.doi ?? null,
+          pmid: item.pmid ?? null, openalex_id: item.openalex_id ?? null };
+      }
+
+      function validateInitialData() {
+        if (initialData.schema_version !== "0.1" || !state.scopeId || !state.queueFingerprint ||
+            !isPlainObject(initialData.research_scope) || typeof initialData.research_scope.description !== "string" ||
+            !Array.isArray(initialData.items)) {
+          throw new Error("初始工作台数据无效");
+        }
+        const seen = new Set();
+        state.items = initialData.items.map(validateBlindItem).map((item) => {
+          if (seen.has(item.paper_id)) throw new Error("队列包含重复 paper_id");
+          seen.add(item.paper_id);
+          return item;
+        });
+      }
+
+      function currentReviewer() {
+        return reviewerInput.value.trim();
+      }
+
+      function storageKey(reviewer) {
+        return "review-workbench:" + encodeURIComponent(state.scopeId) + ":" +
+          encodeURIComponent(state.queueFingerprint) + ":" + encodeURIComponent(reviewer);
+      }
+
+      function safeStorage() {
+        try {
+          const testKey = "__review_workbench_storage_test__";
+          window.localStorage.setItem(testKey, "1");
+          window.localStorage.removeItem(testKey);
+          return window.localStorage;
+        } catch (_error) {
+          return null;
+        }
+      }
+
+      function validateJudgment(value, reviewer, knownIds) {
+        if (!isPlainObject(value)) throw new Error("判断记录必须是对象");
+        const keys = Object.keys(value).sort();
+        const expected = REQUIRED_JUDGMENT_KEYS.slice().sort();
+        if (keys.length !== expected.length || keys.some((key, index) => key !== expected[index])) {
+          throw new Error("判断记录字段不符合 0.1 schema");
+        }
+        if (value.schema_version !== "0.1") throw new Error("judgment schema_version 必须为 0.1");
+        const judgmentId = nonEmptyString(value.judgment_id, "judgment_id");
+        const paperId = nonEmptyString(value.paper_id, "paper_id");
+        if (!knownIds.has(paperId)) throw new Error("judgment.paper_id 不在当前队列");
+        if (value.scope_id !== state.scopeId) throw new Error("judgment.scope_id 与当前工作台不一致");
+        if (!Object.prototype.hasOwnProperty.call(LABELS, value.label)) throw new Error("label 无效");
+        if (value.judge_type !== "human") throw new Error("judge_type 必须为 human");
+        const rationale = nonEmptyString(value.rationale, "rationale");
+        const evidenceLocator = nonEmptyString(value.evidence_locator, "evidence_locator");
+        const recordReviewer = nonEmptyString(value.reviewer_id, "reviewer_id");
+        if (recordReviewer !== reviewer) throw new Error("只能导入当前 reviewer_id 的判断");
+        if (!isIsoDateTime(value.judged_at)) throw new Error("judged_at 必须是 ISO 日期时间");
+        return { schema_version: "0.1", judgment_id: judgmentId, paper_id: paperId, scope_id: state.scopeId,
+          label: value.label, judge_type: "human", rationale, judged_at: value.judged_at,
+          reviewer_id: recordReviewer, evidence_locator: evidenceLocator };
+      }
+
+      function judgmentKey(record) {
+        return record.reviewer_id + "\u0000" + record.paper_id;
+      }
+
+      function ownJudgmentsFor(reviewer) {
+        return state.judgments.filter((record) => record.reviewer_id === reviewer);
+      }
+
+      function loadLocalJudgments(reviewer) {
+        if (!reviewer) return [];
+        const storage = safeStorage();
+        if (!storage) return [];
+        try {
+          const raw = storage.getItem(storageKey(reviewer));
+          if (!raw) return [];
+          const envelope = JSON.parse(raw);
+          if (!isPlainObject(envelope) || envelope.scope_id !== state.scopeId ||
+              envelope.queue_fingerprint !== state.queueFingerprint || envelope.reviewer_id !== reviewer ||
+              !Array.isArray(envelope.judgments)) return [];
+          const knownIds = new Set(state.items.map((item) => item.paper_id));
+          const records = envelope.judgments.map((record) => validateJudgment(record, reviewer, knownIds));
+          const seen = new Set();
+          return records.filter((record) => {
+            const key = judgmentKey(record);
+            if (seen.has(key)) return false;
+            seen.add(key);
+            return true;
+          });
+        } catch (_error) {
+          return [];
+        }
+      }
+
+      function saveLocalJudgments() {
+        const reviewer = state.activeReviewer;
+        if (!reviewer) return;
+        const storage = safeStorage();
+        if (!storage) return;
+        try {
+          storage.setItem(storageKey(reviewer), JSON.stringify({
+            schema_version: "0.1",
+            scope_id: state.scopeId,
+            queue_fingerprint: state.queueFingerprint,
+            reviewer_id: reviewer,
+            judgments: ownJudgmentsFor(reviewer)
+          }));
+        } catch (_error) {
+          // file:// and browser privacy settings may disable localStorage.
+        }
+      }
+
+      function findJudgment(paperId) {
+        const reviewer = state.activeReviewer;
+        if (!reviewer) return null;
+        return state.judgments.find((record) => record.reviewer_id === reviewer && record.paper_id === paperId) || null;
+      }
+
+      function statusLabel(paperId) {
+        const record = findJudgment(paperId);
+        return record ? record.label : "unreviewed";
+      }
+
+      function statusText(status) {
+        if (status === "unreviewed") return "未审阅";
+        return LABELS[status] || "未审阅";
+      }
+
+      function visibleItems() {
+        const needle = state.search.trim().toLocaleLowerCase();
+        return state.items.filter((item) => {
+          const status = statusLabel(item.paper_id);
+          if (state.filter !== "all" && status !== state.filter) return false;
+          if (!needle) return true;
+          const haystack = [item.paper_id, item.title, item.abstract || "", ...item.authors, ...item.database_keywords]
+            .join(" ").toLocaleLowerCase();
+          return haystack.includes(needle);
+        });
+      }
+
+      function clearChildren(node) {
+        while (node.firstChild) node.removeChild(node.firstChild);
+      }
+
+      function renderQueue() {
+        const items = visibleItems();
+        clearChildren(queueList);
+        $("queue-count").textContent = String(items.length);
+        if (!items.length) {
+          const empty = document.createElement("li");
+          empty.className = "empty-list";
+          empty.textContent = state.items.length ? "没有符合当前搜索或状态的论文。" : "当前队列没有论文。";
+          queueList.appendChild(empty);
+          return;
+        }
+        items.forEach((item) => {
+          const li = document.createElement("li");
+          li.className = "queue-item";
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "queue-button";
+          button.dataset.paperId = item.paper_id;
+          button.setAttribute("role", "option");
+          button.setAttribute("aria-selected", item.paper_id === state.selectedId ? "true" : "false");
+          const title = document.createElement("span");
+          title.className = "queue-title";
+          title.textContent = item.title;
+          const meta = document.createElement("span");
+          meta.className = "queue-meta";
+          meta.textContent = [item.publication_year ?? "年份未提供", item.authors.length ? item.authors.join("、") : "作者未提供", item.paper_id].join(" · ");
+          const status = document.createElement("span");
+          const currentStatus = statusLabel(item.paper_id);
+          status.className = "queue-status" + (currentStatus === "unreviewed" ? " pending" : "");
+          status.textContent = statusText(currentStatus);
+          button.append(title, meta, status);
+          button.addEventListener("click", () => selectPaper(item.paper_id));
+          li.appendChild(button);
+          queueList.appendChild(li);
+        });
+      }
+
+      function setText(id, value, fallback = "未提供") {
+        $(id).textContent = value === null || value === undefined || value === "" ? fallback : String(value);
+      }
+
+      function renderKeywords(values) {
+        const host = $("detail-keywords");
+        clearChildren(host);
+        if (!values.length) {
+          setText("detail-keywords", "未提供");
+          return;
+        }
+        values.forEach((value) => {
+          const chip = document.createElement("span");
+          chip.className = "keyword";
+          chip.textContent = value;
+          host.appendChild(chip);
+        });
+      }
+
+      function setFormFromJudgment(record) {
+        document.querySelectorAll('input[name="label"]').forEach((input) => { input.checked = Boolean(record && input.value === record.label); });
+        rationaleInput.value = record ? record.rationale : "";
+        evidenceInput.value = record ? record.evidence_locator : "";
+        formError.textContent = "";
+      }
+
+      function renderDetail() {
+        const item = state.items.find((candidate) => candidate.paper_id === state.selectedId);
+        const empty = $("detail-empty");
+        const content = $("detail-content");
+        if (!item) {
+          empty.hidden = false;
+          content.hidden = true;
+          saveButton.disabled = true;
+          return;
+        }
+        empty.hidden = true;
+        content.hidden = false;
+        setText("detail-heading", item.title);
+        setText("detail-id", item.paper_id);
+        setText("detail-authors", item.authors.length ? item.authors.join("、") : null);
+        setText("detail-year", item.publication_year);
+        setText("detail-doi", item.doi);
+        setText("detail-pmid", item.pmid);
+        setText("detail-openalex-id", item.openalex_id);
+        setText("detail-abstract", item.abstract);
+        renderKeywords(item.database_keywords);
+        const status = statusLabel(item.paper_id);
+        setText("detail-status", statusText(status));
+        setFormFromJudgment(findJudgment(item.paper_id));
+        saveButton.disabled = !state.activeReviewer;
+      }
+
+      function updateProgress() {
+        const total = state.items.length;
+        const reviewed = state.activeReviewer ? state.items.filter((item) => statusLabel(item.paper_id) !== "unreviewed").length : 0;
+        const percent = total ? Math.round((reviewed / total) * 100) : 0;
+        $("progress-bar").value = percent;
+        $("progress-text").textContent = state.activeReviewer ? (reviewed + " / " + total + " 篇已审阅（" + percent + "%）") : "尚未填写 reviewer_id";
+      }
+
+      function scopeValue(value) {
+        if (Array.isArray(value)) return value.length ? value.join("、") : "未提供";
+        if (isPlainObject(value)) {
+          const entries = Object.entries(value).filter(([, item]) => item !== null && item !== undefined && item !== "");
+          return entries.length ? entries.map(([key, item]) => key + "：" + String(item)).join("；") : "未提供";
+        }
+        return value === null || value === undefined || value === "" ? "未提供" : String(value);
+      }
+
+      function renderScope() {
+        const scope = initialData.research_scope || {};
+        $("scope-description").textContent = scopeValue(scope.description);
+        [["scope-research-object", scope.research_object], ["scope-input-modality", scope.input_modality],
+          ["scope-research-task", scope.research_task], ["scope-method", scope.method],
+          ["scope-application", scope.application], ["scope-constraints", scope.constraints],
+          ["scope-unspecified", scope.unspecified]].forEach(([id, value]) => {
+            const node = $(id);
+            node.textContent = scopeValue(value);
+            node.classList.toggle("empty", node.textContent === "未提供");
+          });
+      }
+
+      function render() {
+        renderScope();
+        renderQueue();
+        renderDetail();
+        updateProgress();
+      }
+
+      function selectPaper(paperId) {
+        if (!state.items.some((item) => item.paper_id === paperId)) return;
+        state.selectedId = paperId;
+        render();
+        const selected = queueList.querySelector('[data-paper-id="' + CSS.escape(paperId) + '"]');
+        if (selected) selected.focus();
+      }
+
+      function activateReviewer(value) {
+        const reviewer = value.trim();
+        if (reviewer === state.activeReviewer) return;
+        state.activeReviewer = reviewer;
+        const loaded = loadLocalJudgments(reviewer);
+        const existingKeys = new Set(state.judgments.map(judgmentKey));
+        state.judgments.push(...loaded.filter((record) => !existingKeys.has(judgmentKey(record))));
+        formError.textContent = "";
+        setToolbarStatus(reviewer ? ("当前审阅者：" + reviewer + "。每位审阅者的本地记录相互隔离。") : "请先填写 reviewer_id。", reviewer ? "success" : "");
+        render();
+      }
+
+      function selectedLabel() {
+        const input = document.querySelector('input[name="label"]:checked');
+        return input ? input.value : "";
+      }
+
+      function makeJudgmentId() {
+        if (window.crypto && typeof window.crypto.randomUUID === "function") return "human-" + window.crypto.randomUUID();
+        return "human-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2);
+      }
+
+      function saveCurrent(event) {
+        event.preventDefault();
+        formError.textContent = "";
+        const typedReviewer = currentReviewer();
+        if (typedReviewer !== state.activeReviewer) activateReviewer(typedReviewer);
+        if (!state.activeReviewer) {
+          formError.textContent = "请先填写 reviewer_id。";
+          reviewerInput.focus();
+          return;
+        }
+        const item = state.items.find((candidate) => candidate.paper_id === state.selectedId);
+        if (!item) {
+          formError.textContent = "请先选择论文。";
+          return;
+        }
+        const label = selectedLabel();
+        const rationale = rationaleInput.value.trim();
+        const evidenceLocator = evidenceInput.value.trim();
+        if (!label || !Object.prototype.hasOwnProperty.call(LABELS, label)) {
+          formError.textContent = "请选择相关 / 不相关 / 待确认。";
+          return;
+        }
+        if (!rationale) {
+          formError.textContent = "原因不能为空。";
+          rationaleInput.focus();
+          return;
+        }
+        if (!evidenceLocator) {
+          formError.textContent = "证据定位不能为空。";
+          evidenceInput.focus();
+          return;
+        }
+        const previous = findJudgment(item.paper_id);
+        const record = {
+          schema_version: "0.1",
+          judgment_id: previous ? previous.judgment_id : makeJudgmentId(),
+          paper_id: item.paper_id,
+          scope_id: state.scopeId,
+          label,
+          judge_type: "human",
+          rationale,
+          judged_at: new Date().toISOString(),
+          reviewer_id: state.activeReviewer,
+          evidence_locator: evidenceLocator
+        };
+        const validated = validateJudgment(record, state.activeReviewer, new Set(state.items.map((candidate) => candidate.paper_id)));
+        const key = judgmentKey(validated);
+        state.judgments = state.judgments.filter((candidate) => judgmentKey(candidate) !== key);
+        state.judgments.push(validated);
+        saveLocalJudgments();
+        const currentIndex = state.items.findIndex((candidate) => candidate.paper_id === item.paper_id);
+        const next = state.items.slice(currentIndex + 1).find((candidate) => statusLabel(candidate.paper_id) === "unreviewed") ||
+          state.items.find((candidate) => statusLabel(candidate.paper_id) === "unreviewed");
+        state.selectedId = next ? next.paper_id : item.paper_id;
+        setToolbarStatus("已保存本篇判断。", "success");
+        render();
+      }
+
+      function clearCurrent() {
+        setFormFromJudgment(null);
+        formError.textContent = "";
+      }
+
+      function parseJsonLines(text, label) {
+        const records = [];
+        const lines = text.replace(/^\uFEFF/, "").split(/\r?\n/);
+        lines.forEach((line, index) => {
+          if (!line.trim()) return;
+          try {
+            const value = JSON.parse(line);
+            if (!isPlainObject(value)) throw new Error("记录必须是对象");
+            records.push(value);
+          } catch (error) {
+            throw new Error(label + "第 " + (index + 1) + " 行无效：" + error.message);
+          }
+        });
+        return records;
+      }
+
+      function queueRecordProjection(record) {
+        if (!isPlainObject(record) || record.schema_version !== "0.1" || record.scope_id !== state.scopeId ||
+            record.queue_fingerprint !== state.queueFingerprint) {
+          throw new Error("队列记录的 schema、scope 或 queue fingerprint 不匹配");
+        }
+        return validateBlindItem(record);
+      }
+
+      function importQueueText(text) {
+        const records = parseJsonLines(text, "review-queue.jsonl");
+        if (!records.length) throw new Error("review-queue.jsonl 不能为空");
+        const seen = new Set();
+        const projected = records.map(queueRecordProjection).filter((item) => {
+          if (seen.has(item.paper_id)) throw new Error("review-queue.jsonl 包含重复 paper_id");
+          seen.add(item.paper_id);
+          return true;
+        });
+        const currentById = new Map(state.items.map((item) => [item.paper_id, item]));
+        if (projected.length !== currentById.size || projected.some((item) => !currentById.has(item.paper_id))) {
+          throw new Error("导入队列与当前工作台不是同一组论文");
+        }
+        if (projected.some((item) => JSON.stringify(item) !== JSON.stringify(currentById.get(item.paper_id)))) {
+          throw new Error("导入队列元数据与当前工作台指纹不一致；请重新导出工作台");
+        }
+        // Preserve the exporter's stable blinded ordering, not file line order.
+        const importedById = new Map(projected.map((item) => [item.paper_id, item]));
+        state.items = state.items.map((item) => importedById.get(item.paper_id));
+        if (!state.items.some((item) => item.paper_id === state.selectedId)) state.selectedId = state.items[0]?.paper_id || null;
+        setToolbarStatus("已读取队列文件；盲审页面仍只保留可见论文字段。", "success");
+        render();
+      }
+
+      function importJudgmentsText(text) {
+        const reviewer = currentReviewer();
+        if (!reviewer) throw new Error("导入前必须填写 reviewer_id");
+        const records = parseJsonLines(text, "judgments.jsonl");
+        if (!records.length) throw new Error("judgments.jsonl 不能为空");
+        const knownIds = new Set(state.items.map((item) => item.paper_id));
+        const imported = records.map((record) => validateJudgment(record, reviewer, knownIds));
+        const ids = new Set();
+        const paperKeys = new Set();
+        imported.forEach((record) => {
+          if (ids.has(record.judgment_id)) throw new Error("judgments.jsonl 包含重复 judgment_id");
+          const key = judgmentKey(record);
+          if (paperKeys.has(key)) throw new Error("同一 reviewer 对同一 paper_id 有重复判断");
+          ids.add(record.judgment_id);
+          paperKeys.add(key);
+        });
+        const importedByKey = new Map(imported.map((record) => [judgmentKey(record), record]));
+        // Only the current reviewer's key-space is replaced. Other reviewers,
+        // if present from a prior in-memory integration, remain untouched.
+        state.judgments = state.judgments.filter((record) => !importedByKey.has(judgmentKey(record)));
+        state.judgments.push(...imported);
+        saveLocalJudgments();
+        setToolbarStatus("已导入本人判断；未覆盖其他审阅者的记录。", "success");
+        render();
+      }
+
+      function readFile(file, callback) {
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+          try { callback(String(reader.result || "")); }
+          catch (error) { setToolbarStatus(error.message || "文件读取失败。", "error"); }
+        };
+        reader.onerror = () => setToolbarStatus("无法读取所选文件。", "error");
+        reader.readAsText(file, "utf-8");
+      }
+
+      function exportJudgments() {
+        const reviewer = currentReviewer();
+        if (!reviewer) {
+          setToolbarStatus("导出前必须填写 reviewer_id。", "error");
+          reviewerInput.focus();
+          return;
+        }
+        const records = ownJudgmentsFor(reviewer).slice().sort((left, right) =>
+          left.paper_id.localeCompare(right.paper_id) || left.judged_at.localeCompare(right.judged_at) || left.judgment_id.localeCompare(right.judgment_id));
+        if (!records.length) {
+          setToolbarStatus("暂无可导出的判断。请至少保存一篇。", "error");
+          return;
+        }
+        const text = records.map((record) => JSON.stringify(record)).join("\n") + "\n";
+        const blob = new Blob([text], { type: "application/x-ndjson;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const anchor = document.createElement("a");
+        anchor.href = url;
+        anchor.download = "judgments.jsonl";
+        document.body.appendChild(anchor);
+        anchor.click();
+        anchor.remove();
+        window.setTimeout(() => URL.revokeObjectURL(url), 0);
+        setToolbarStatus("已生成 judgments.jsonl 下载文件。", "success");
+      }
+
+      queueList.addEventListener("keydown", (event) => {
+        const buttons = [...queueList.querySelectorAll(".queue-button")];
+        if (!buttons.length) return;
+        const current = document.activeElement;
+        const index = buttons.indexOf(current);
+        let nextIndex = -1;
+        if (event.key === "ArrowDown") nextIndex = index < buttons.length - 1 ? index + 1 : 0;
+        if (event.key === "ArrowUp") nextIndex = index > 0 ? index - 1 : buttons.length - 1;
+        if (event.key === "Home") nextIndex = 0;
+        if (event.key === "End") nextIndex = buttons.length - 1;
+        if (nextIndex >= 0) {
+          event.preventDefault();
+          buttons[nextIndex].focus();
+          buttons[nextIndex].click();
+        }
+      });
+      reviewerInput.addEventListener("input", () => activateReviewer(reviewerInput.value));
+      reviewerInput.addEventListener("change", () => activateReviewer(reviewerInput.value));
+      reviewerInput.addEventListener("blur", () => {
+        if (reviewerInput.value.trim() !== state.activeReviewer) activateReviewer(reviewerInput.value);
+      });
+      searchInput.addEventListener("input", () => { state.search = searchInput.value; renderQueue(); });
+      statusFilter.addEventListener("change", () => { state.filter = statusFilter.value; renderQueue(); });
+      form.addEventListener("submit", saveCurrent);
+      form.addEventListener("keydown", (event) => {
+        if ((event.ctrlKey || event.metaKey) && event.key === "Enter") saveCurrent(event);
+      });
+      $("clear-button").addEventListener("click", clearCurrent);
+      $("export-button").addEventListener("click", exportJudgments);
+      $("queue-file-button").addEventListener("click", () => $("queue-file").click());
+      $("judgments-file-button").addEventListener("click", () => $("judgments-file").click());
+      $("queue-file").addEventListener("change", (event) => {
+        readFile(event.target.files[0], importQueueText);
+        event.target.value = "";
+      });
+      $("judgments-file").addEventListener("change", (event) => {
+        readFile(event.target.files[0], importJudgmentsText);
+        event.target.value = "";
+      });
+
+      try {
+        validateInitialData();
+        state.selectedId = state.items[0]?.paper_id || null;
+        render();
+      } catch (error) {
+        setToolbarStatus(error.message || "初始工作台数据无效。", "error");
+        $("detail-empty").textContent = "工作台数据无效，无法开始审阅。";
+      }
+    })();
+  </script>
+</body>
+</html>

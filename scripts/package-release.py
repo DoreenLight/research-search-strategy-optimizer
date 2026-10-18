@@ -19,6 +19,7 @@ def package_release(target: Path) -> int:
                 entries[f"{NAME}/{prefix}{path.relative_to(base).as_posix()}"] = path
     include(ROOT / NAME, "", "*.md")
     include(ROOT / "scripts" / "research_search", "scripts/research_search/", "*.py")
+    include(ROOT / "scripts" / "research_search", "scripts/research_search/", "*.html")
     include(ROOT / "schemas", "schemas/", "*.json")
     include(ROOT / "assets", "assets/", "*.md")
     entries[f"{NAME}/scripts/research-search.py"] = ROOT / "scripts/research-search.py"

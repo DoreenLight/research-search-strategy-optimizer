@@ -51,6 +51,7 @@ def build_parser() -> argparse.ArgumentParser:
     search.add_argument("--per-page", type=int, default=10)
     search.add_argument("--use-api-key", action="store_true", help="Explicitly use OPENALEX_API_KEY; default anonymous")
     search.add_argument("--max-requests", type=int, default=1)
+    search.add_argument("--cache-dir", type=Path, help="Optional local cache for redacted provider responses")
     search.add_argument("--output", type=Path, help="Save complete redacted search response; refuses overwrite")
     run = commands.add_parser("run", help="Create a linked Research Search Package")
     run.add_argument("case", type=Path)
@@ -61,6 +62,8 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--per-page", type=int, default=10)
     run.add_argument("--max-requests", type=int, default=3)
     run.add_argument("--use-api-key", action="store_true")
+    run.add_argument("--cache-dir", type=Path, help="Optional local cache; requires --live to execute")
+    run.add_argument("--candidate-limit", type=int, default=50)
     optimize = commands.add_parser("optimize", help="Run a versioned P1 plan/replay/live optimization session")
     optimize.add_argument("config", type=Path)
     optimize.add_argument("--output", type=Path, required=True)
@@ -68,6 +71,7 @@ def build_parser() -> argparse.ArgumentParser:
     optimize.add_argument("--per-page", type=int, default=10)
     optimize.add_argument("--max-requests", type=int, default=None)
     optimize.add_argument("--use-api-key", action="store_true")
+    optimize.add_argument("--cache-dir", type=Path, help="Optional local cache for live OpenAlex requests")
     acquisition = commands.add_parser("acquisition-handoff", help="Build a lawful metadata-only acquisition queue")
     acquisition.add_argument("source", type=Path)
     acquisition.add_argument("--output", type=Path)
@@ -80,6 +84,18 @@ def build_parser() -> argparse.ArgumentParser:
     benchmark = commands.add_parser("benchmark", help="Summarize supplied P4 benchmark observations offline")
     benchmark.add_argument("manifest", type=Path)
     benchmark.add_argument("--output", type=Path, required=True)
+    review = commands.add_parser("review-workbench", help="Export a blinded, offline human review workbench")
+    review.add_argument("packages", nargs="+", type=Path, help="Validated Research Search Packages to pool")
+    review.add_argument("--output", type=Path, required=True)
+    review_session = commands.add_parser("review-session", help="Re-evaluate a P1 session offline using exported human judgments")
+    review_session.add_argument("session", type=Path)
+    review_session.add_argument("--judgments", type=Path, action="append", required=True)
+    review_session.add_argument("--output", type=Path, required=True)
+    adopt = commands.add_parser("adopt-keywords", help="Explicitly apply approved reviewed keywords to a new case")
+    adopt.add_argument("case", type=Path)
+    adopt.add_argument("reviewed_keywords", type=Path)
+    adopt.add_argument("--group-id", required=True)
+    adopt.add_argument("--output", type=Path, required=True)
     provider_search = commands.add_parser("provider-search", help="Plan or execute an injected P2 provider search")
     provider_search.add_argument("provider", choices=["pubmed", "semantic_scholar"])
     provider_search.add_argument("query")
@@ -122,7 +138,7 @@ def main(argv: list[str] | None = None) -> int:
             if args.output and args.output.exists():
                 raise FileExistsError("output exists; choose a new filename")
             client = OpenAlexClient(api_key=None if args.use_api_key else "", max_retries=0,
-                                    max_requests=args.max_requests, timeout=15)
+                                    max_requests=args.max_requests, timeout=15, cache_dir=args.cache_dir)
             result = client.search_works(args.search, per_page=args.per_page)
             payload = asdict(result)
             if args.output:
@@ -138,9 +154,9 @@ def main(argv: list[str] | None = None) -> int:
             from .workflow import run_package
             case = _json(args.case)
             client = OpenAlexClient(api_key=None if args.use_api_key else "", max_retries=0,
-                                    max_requests=args.max_requests, timeout=15) if args.live else None
+                                    max_requests=args.max_requests, timeout=15, cache_dir=args.cache_dir) if args.live else None
             summary = run_package(case, args.output, snapshots=_json(args.snapshots) if args.snapshots else None,
-                                  client=client, per_page=args.per_page)
+                                  client=client, per_page=args.per_page, candidate_limit=args.candidate_limit)
             _dump(summary)
             return 2 if summary["status"] in {"failed", "partial"} else 0
         elif args.command == "optimize":
@@ -150,7 +166,7 @@ def main(argv: list[str] | None = None) -> int:
                 config["max_requests"] = args.max_requests
             request_budget = config.get("max_requests", 0)
             client = OpenAlexClient(api_key=None if args.use_api_key else "", max_retries=0,
-                                    max_requests=request_budget, timeout=15) if args.live else None
+                                    max_requests=request_budget, timeout=15, cache_dir=args.cache_dir) if args.live else None
             _dump(run_optimization(config, args.output, client=client, per_page=args.per_page))
         elif args.command == "acquisition-handoff":
             from .acquisition_handoff import acquisition_handoff
@@ -164,6 +180,15 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "benchmark":
             from .benchmark import run_benchmark
             _dump(run_benchmark(_json(args.manifest), args.output))
+        elif args.command == "review-workbench":
+            from .review_workbench import export_review_workbench
+            _dump(export_review_workbench(args.packages, args.output))
+        elif args.command == "review-session":
+            from .review_session import review_optimization_session
+            _dump(review_optimization_session(args.session, args.judgments, args.output))
+        elif args.command == "adopt-keywords":
+            from .keyword_adoption import adopt_reviewed_keywords
+            _dump(adopt_reviewed_keywords(args.case, args.reviewed_keywords, args.output, group_id=args.group_id))
         elif args.command == "provider-search":
             from .providers import PubMedProvider, SearchRequest, SemanticScholarProvider
             provider = PubMedProvider() if args.provider == "pubmed" else SemanticScholarProvider()

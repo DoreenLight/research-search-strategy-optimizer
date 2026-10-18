@@ -43,8 +43,9 @@ def next_round(config, ids, labels):
 
 def test_complete_human_positive_gain_retains_and_writes_active_case(tmp_path):
     config = cfg()
+    config['precision_k'] = 2
     config['rounds'].append(next_round(config, ['https://openalex.org/W1', 'https://openalex.org/W2'],
-                                             {'https://openalex.org/W2': 'relevant'}))
+                                             {'https://openalex.org/W1': 'relevant', 'https://openalex.org/W2': 'relevant'}))
     result = run_optimization(config, tmp_path / 'loop')
     assert result['active_version'] == 1
     history = json.loads((tmp_path / 'loop/history.json').read_text())

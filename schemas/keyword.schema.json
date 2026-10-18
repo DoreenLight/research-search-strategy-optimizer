@@ -10,6 +10,10 @@
     "evidence_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "retrieval_status": {"enum": ["untested", "executed", "evaluated", "rejected"]},
     "paper_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
-    "document_frequency": {"type": "integer", "minimum": 0}, "adopted": {"type": "boolean"}
+    "document_frequency": {"type": "integer", "minimum": 0}, "adopted": {"type": "boolean"},
+    "review_status": {"enum": ["approved", "rejected", "pending"]},
+    "reviewed_by": {"type": "string", "pattern": "\\S"},
+    "reviewed_at": {"type": "string", "format": "date-time"},
+    "reason": {"type": "string", "pattern": "\\S"}
   }, "additionalProperties": false
 }

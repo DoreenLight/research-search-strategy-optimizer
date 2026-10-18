@@ -4,6 +4,8 @@
   "properties": {"schema_version": {"const": "0.1"}, "judgment_id": {"type": "string", "minLength": 1},
     "paper_id": {"type": "string", "minLength": 1}, "scope_id": {"type": "string", "minLength": 1},
     "label": {"enum": ["relevant", "irrelevant", "uncertain"]}, "judge_type": {"enum": ["human", "model"]},
-    "rationale": {"type": "string", "minLength": 1}, "judged_at": {"type": "string", "format": "date-time"}},
+    "rationale": {"type": "string", "minLength": 1}, "judged_at": {"type": "string", "format": "date-time"},
+    "reviewer_id": {"type": "string", "pattern": "\\S"},
+    "evidence_locator": {"type": "string", "pattern": "\\S"}},
   "additionalProperties": false
 }

@@ -12,6 +12,7 @@ from typing import Any
 
 from .keyword_extractor import extract_terms
 from .keyword_normalizer import normalize_term
+from .keyword_pipeline import DEFAULT_CANDIDATE_LIMIT, keyword_layers
 from .models import ConceptGroup, Evidence, KeywordCandidate, Paper, SearchRun, TermOccurrence
 from .openalex_client import OpenAlexClient
 from .paper_deduplicator import deduplicate_papers
@@ -110,7 +111,7 @@ def _contains(paper: Paper, field: str, excerpt: str) -> bool:
 def _make_keyword_records(
     papers: list[Paper], occurrences: list[TermOccurrence], *, snapshot_kind: str = "live_capture",
     source_papers: list[Paper] | None = None, aliases: dict[str, str] | None = None,
-) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
     paper_by_id = {paper.paper_id: paper for paper in papers}
     originals: dict[str, list[Paper]] = defaultdict(list)
     for paper in source_papers if source_papers is not None else papers:
@@ -123,12 +124,20 @@ def _make_keyword_records(
         grouped[(item.term, source_type)].setdefault((item.paper_id, item.source_field), item)
     keywords: list[dict[str, Any]] = []
     evidence: list[dict[str, Any]] = []
+    raw_observations: list[dict[str, Any]] = []
     for (term, source_type), observations in sorted(grouped.items()):
         evidence_ids: list[str] = []
         paper_ids = sorted({paper_id for paper_id, _ in observations})
         for (paper_id, field), item in sorted(observations.items()):
             paper = paper_by_id[paper_id]
             excerpt = item.original_term
+            raw_observations.append({
+                "term": item.term,
+                "source_field": field,
+                "paper_id": paper_id,
+                "excerpt": excerpt,
+                "evidence_status": item.evidence_status,
+            })
             if not excerpt or not _contains(paper, field, excerpt):
                 raise ValueError("term excerpt is not locatable in its original field")
             sources = [source for source in originals[paper_id] if _contains(source, field, excerpt)]
@@ -148,11 +157,14 @@ def _make_keyword_records(
             evidence_status="database_assigned" if source_type == "openalex_keyword" else "observed_in_paper",
             evidence_ids=evidence_ids, paper_ids=paper_ids, document_frequency=len(paper_ids), adopted=False,
         ).to_dict())
-    return keywords, evidence
+    return keywords, evidence, raw_observations
 
 
 def _add_concept_candidates(keywords: list[dict[str, Any]], groups: list[ConceptGroup]) -> None:
+    existing = {item["term"].casefold() for item in keywords}
     for term in sorted({normalize_term(term) for group in groups for term in group.terms}):
+        if term.casefold() in existing:
+            continue
         keywords.append(KeywordCandidate(
             term_id=f"term-{len(keywords) + 1:05d}", term=term, canonical_term=term,
             category="unclassified", relationship="unclassified", source_type="llm_candidate",
@@ -224,6 +236,9 @@ def _summary(runs: list[dict[str, Any]], mode: str, paper_count: int, output: Pa
     partial = sum(run["status"] == "partial" for run in runs)
     status = "planned" if mode == "planned" else "failed" if failed and not available else "partial" if failed or partial else f"{mode}_complete"
     return {"status": status, "request_count": sum(run["request_count"] for run in runs),
+            "api_request_count": sum(run["request_count"] for run in runs),
+            "metadata_bytes": sum(run.get("metadata_bytes", 0) for run in runs),
+            "cache_hit_count": sum(run.get("cache_hit", False) for run in runs), "screening_minutes": None,
             "executed_plan_count": sum(run["mode"] == "live" and run["request_count"] > 0 for run in runs),
             "replayed_plan_count": sum(run["mode"] == "replay" and run["status"] != "not_executed" for run in runs),
             "failed_plan_count": failed, "partial_plan_count": partial, "paper_count": paper_count, "output_dir": str(output)}
@@ -260,7 +275,8 @@ def _manifest(output: Path, metadata: dict[str, Any]) -> None:
 
 
 def run_package(case: dict[str, Any], output_dir: Path, *, snapshots: dict[str, Any] | None = None,
-                client: OpenAlexClient | None = None, per_page: int = 10, k: int = 10) -> dict[str, Any]:
+                client: OpenAlexClient | None = None, per_page: int = 10, k: int = 10,
+                candidate_limit: int = DEFAULT_CANDIDATE_LIMIT) -> dict[str, Any]:
     """Plan, replay, or execute explicit OpenAlex strategies and write one package.
 
     Invalid inputs are rejected before output creation. Existing destinations are
@@ -270,6 +286,8 @@ def run_package(case: dict[str, Any], output_dir: Path, *, snapshots: dict[str, 
     filters = _filters(case)
     if type(per_page) is not int or not 1 <= per_page <= 100 or type(k) is not int or k <= 0:
         raise ValueError("per_page must be 1..100 and k must be a positive integer")
+    if type(candidate_limit) is not int or not 1 <= candidate_limit <= 500:
+        raise ValueError("candidate_limit must be between 1 and 500")
     if snapshots is not None and client is not None:
         raise ValueError("provide snapshots or a live client, not both")
     groups = _concept_groups(case)
@@ -286,7 +304,7 @@ def run_package(case: dict[str, Any], output_dir: Path, *, snapshots: dict[str, 
     snapshot_kind = snapshots["snapshot_kind"] if snapshots is not None else "live_capture" if client is not None else None
     metadata: dict[str, Any] = {"package_schema_version": "0.1", "created_at": _now(), "case_id": case["case_id"],
                                 "mode": mode, "snapshot_kind": snapshot_kind, "status": "in_progress",
-                                "execution_parameters": {"per_page": per_page, "k": k, "filters": filters}}
+                                "execution_parameters": {"per_page": per_page, "k": k, "filters": filters, "candidate_limit": candidate_limit}}
     output_dir.mkdir(parents=True, exist_ok=False)
     all_papers: list[Paper] = []
     runs: list[dict[str, Any]] = []
@@ -324,6 +342,8 @@ def run_package(case: dict[str, Any], output_dir: Path, *, snapshots: dict[str, 
                 error_type=result.error_type, error_message=result.error_message, mode=mode,
                 paper_ids=[paper.paper_id for paper in papers], raw_path=raw_path,
                 attempts=[] if item is not None else result.attempts, warnings=result.warnings,
+                cache_hit=bool(getattr(result, "cache_hit", False)), cache_key=getattr(result, "cache_key", None),
+                metadata_bytes=0 if item is not None else int(getattr(result, "metadata_bytes", 0)),
             ).to_dict())
 
         deduped = deduplicate_papers(all_papers)
@@ -346,9 +366,18 @@ def run_package(case: dict[str, Any], output_dir: Path, *, snapshots: dict[str, 
                 paper_runs[paper_id].add(run["run_id"])
         papers = [replace(paper, source_run_ids=sorted(paper_runs[paper.paper_id])) for paper in deduped.papers]
         occurrences = [replace(item, paper_id=paper.paper_id) for paper in papers for item in extract_terms(paper)]
-        keywords, evidence = _make_keyword_records(papers, occurrences, snapshot_kind=snapshot_kind or "live_capture",
-                                                   source_papers=all_papers, aliases=aliases)
+        keywords, evidence, raw_observations = _make_keyword_records(
+            papers, occurrences, snapshot_kind=snapshot_kind or "live_capture",
+            source_papers=all_papers, aliases=aliases,
+        )
         _add_concept_candidates(keywords, groups)
+        layers = keyword_layers(
+            keywords, evidence, limit=candidate_limit, reviews=case.get("keyword_reviews", []),
+        )
+        raw_observations = layers["observations"]
+        candidate_keywords = layers["candidates"]["terms"]
+        reviewed_keywords = layers["reviewed"]
+        keywords = layers["keywords"]
         judgments = [{**item, "paper_id": canonical(item["paper_id"])} for item in case.get("judgments", [])]
         scope = case["research_scope"]
         plan_records = [plan.to_dict() for plan in plans]
@@ -356,6 +385,13 @@ def run_package(case: dict[str, Any], output_dir: Path, *, snapshots: dict[str, 
         _write_json(output_dir / "input-case.json", case)
         _write_json(output_dir / "01-research-scope.json", scope)
         _write_json(output_dir / "02-keywords.json", keywords)
+        _write_jsonl(output_dir / "raw-observations.jsonl", raw_observations)
+        _write_json(output_dir / "candidate-terms.json", layers["candidates"])
+        _write_json(output_dir / "reviewed-keywords.json", {
+            "schema_version": "0.1",
+            "adoption_rule": "Only explicitly reviewed and adopted terms are formal retrieval terms.",
+            "terms": reviewed_keywords,
+        })
         _write_json(output_dir / "03-search-strategies.json", plan_records)
         _write_jsonl(output_dir / "04-papers.jsonl", paper_records)
         _write_jsonl(output_dir / "05-search-runs.jsonl", runs)

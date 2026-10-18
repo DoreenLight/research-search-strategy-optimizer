@@ -10,6 +10,7 @@
     "request_url": {"type": ["string", "null"]}, "error_type": {"type": ["string", "null"]}, "error_message": {"type": ["string", "null"]},
     "paper_ids": {"type": "array", "items": {"type": "string"}}, "raw_path": {"type": ["string", "null"]},
     "attempts": {"type": "array", "items": {"type": "object"}}, "warnings": {"type": "array", "items": {"type": "string"}},
-    "mode": {"enum": ["planned", "live", "replay"]}, "estimated_cost_usd": {"type": ["number", "null"], "minimum": 0}
+    "mode": {"enum": ["planned", "live", "replay"]}, "estimated_cost_usd": {"type": ["number", "null"], "minimum": 0},
+    "cache_hit": {"type": "boolean"}, "cache_key": {"type": ["string", "null"]}, "metadata_bytes": {"type": "integer", "minimum": 0}
   }, "additionalProperties": false
 }

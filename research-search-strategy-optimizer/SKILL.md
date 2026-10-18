@@ -38,7 +38,7 @@ metadata:
    Run the deterministic companion scripts for field-preserving extraction, identifier deduplication, and metric calculation; record planned, executed, successful, partial, and failed runs separately.
 6. Evaluate retrieval only against an explicitly defined reference set and human judgments.
    Report returned, fetched, and deduplicated counts separately; partial labels never become negative labels; leave recall/precision unavailable when the required reference or judgments are absent.
-7. Export and validate a Research Search Package with scope, keywords, evidence, papers, strategies, run logs, evaluation, raw snapshots, judgments, and a manifest.
+7. Export and validate a Research Search Package with scope, raw observations, bounded candidate terms, explicitly reviewed keywords, evidence, papers, strategies, run logs, evaluation, raw snapshots, judgments, and a manifest.
 
 ## Output contract
 
@@ -53,6 +53,8 @@ Return or write:
 - P2 provider results with source and discovery-channel status when PubMed/MeSH or Semantic Scholar adapters are used.
 - P3 metadata-only acquisition and reading exports; these do not download full text, bypass access controls, scan a Vault, or launch Obsidian.
 - P4 benchmark summaries and human-review queues; missing labels remain unknown and do not become negative examples.
+- P1 review workbench exports are offline and blinded; candidate ranking is not semantic approval, and only an explicit `adopt-keywords` action adds approved terms to a new case.
+- Optional query caching is local, redacted, content-addressed, and cache hits do not consume network request budget.
 
 ## Failure handling
 

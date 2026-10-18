@@ -103,6 +103,9 @@ class SearchRun:
     warnings: list[str] = field(default_factory=list)
     mode: str = "live"
     estimated_cost_usd: float | None = None
+    cache_hit: bool = False
+    cache_key: str | None = None
+    metadata_bytes: int = 0
     schema_version: str = SCHEMA_VERSION
 
     def to_dict(self) -> dict[str, Any]:

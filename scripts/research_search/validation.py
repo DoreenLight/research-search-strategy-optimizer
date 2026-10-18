@@ -45,6 +45,8 @@ def validate_case(case: Any) -> None:
     scope_id = case["research_scope"]["scope_id"]
     if any(j["scope_id"] != scope_id for j in case.get("judgments", [])):
         raise ValueError("judgment scope_id mismatch")
+    for review in case.get("keyword_reviews", []):
+        validate_record("keyword-review", review)
 
 
 def _read_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -66,6 +68,22 @@ def validate_package(output: Path, *, check_hashes: bool = True) -> dict[str, in
                         ("search-run", runs), ("evidence", evidence), ("judgment", judgments)]:
         for item in items:
             validate_record(kind, item)
+    candidate_terms_path = output / "candidate-terms.json"
+    if candidate_terms_path.exists():
+        candidate_terms = json.loads(candidate_terms_path.read_text(encoding="utf-8"))
+        if not isinstance(candidate_terms, dict) or not isinstance(candidate_terms.get("terms"), list):
+            raise ValueError("candidate-terms must contain terms[]")
+        for item in candidate_terms["terms"]:
+            if not isinstance(item, dict) or not isinstance(item.get("candidate_rank"), int):
+                raise ValueError("candidate term rank is invalid")
+            validate_record("keyword", {key: value for key, value in item.items() if key != "candidate_rank" and key not in {"source_fields", "source_field_count", "observed_in_multiple_papers", "review_status"}})
+    reviewed_terms_path = output / "reviewed-keywords.json"
+    if reviewed_terms_path.exists():
+        reviewed_terms = json.loads(reviewed_terms_path.read_text(encoding="utf-8"))
+        if not isinstance(reviewed_terms, dict) or not isinstance(reviewed_terms.get("terms"), list):
+            raise ValueError("reviewed-keywords must contain terms[]")
+        for item in reviewed_terms["terms"]:
+            validate_record("keyword", item)
     def index(items: list[dict[str, Any]], key: str) -> dict[str, dict[str, Any]]:
         result = {item[key]: item for item in items}
         if len(result) != len(items):
@@ -75,6 +93,17 @@ def validate_package(output: Path, *, check_hashes: bool = True) -> dict[str, in
     paper_ids = index(papers, "paper_id")
     run_ids = index(runs, "run_id")
     evidence_ids = index(evidence, "evidence_id")
+    observations_path = output / "raw-observations.jsonl"
+    if observations_path.exists():
+        observations = _read_jsonl(observations_path)
+        for item in observations:
+            if not isinstance(item.get("term"), str) or not item["term"].strip():
+                raise ValueError("raw observation term is invalid")
+            if item.get("paper_id") not in paper_ids or item.get("evidence_id") not in evidence_ids:
+                raise ValueError("raw observation has dangling paper/evidence ID")
+            evidence_item = evidence_ids[item["evidence_id"]]
+            if item.get("source_field") != evidence_item.get("locator") or item.get("excerpt") != evidence_item.get("excerpt"):
+                raise ValueError("raw observation evidence mismatch")
     index(keywords, "term_id")
     index(judgments, "judgment_id")
     for plan in plans:
