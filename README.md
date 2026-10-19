@@ -39,6 +39,8 @@ OpenAlex 官方文档已核实其 Works 搜索、布尔查询、语义搜索、�
 - `python3 scripts/research-search.py review-session artifacts/p1-loop --judgments artifacts/p1-review-workbench/judgments.jsonl --output artifacts/p1-loop-reviewed`
 - `python3 scripts/research-search.py adopt-keywords evals/cases/semg-joint-angle.json artifacts/p1-loop/round-01/reviewed-keywords.json --group-id input --output artifacts/semg-input-reviewed.json`
 - `python3 scripts/research-search.py keyword-network artifacts/p0-live-20261018 artifacts/p1-live-loop-20261018/round-01 --output artifacts/keyword-network-semg --max-cooccurrence-edges 50000 --max-cooccurrence-degree 25`
+- `python3 scripts/research-search.py keyword-frontier artifacts/keyword-network-semg --output artifacts/keyword-frontier --limit 30`
+- `python3 scripts/research-search.py keyword-edge-review artifacts/keyword-network-semg artifacts/keyword-frontier/candidate-frontier.json --output artifacts/keyword-edge-review`
 - `python3 scripts/research-search.py provider-fusion artifacts/pubmed-result.json artifacts/semantic-scholar-result.json --output artifacts/provider-fusion`
 - `python3 scripts/research-search.py run evals/cases/p4-mature-semg-joint-angle.json --provider-plan artifacts/p2-provider-plan.json --live --provider-max-requests 4 --output artifacts/p4-live-package`
 - `python3 scripts/research-search.py p4-review benchmark-manifest.json --reference-ids <frozen-id-1> <frozen-id-2> --reference-source "external frozen source/date" --reviewers reviewer-a.jsonl reviewer-b.jsonl --test-case-id p4-test --output artifacts/p4-review`

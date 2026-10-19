@@ -133,6 +133,31 @@ def build_parser() -> argparse.ArgumentParser:
     network.add_argument("--max-cooccurrence-edges", type=int, default=50000)
     network.add_argument("--max-cooccurrence-degree", type=int, default=25)
     network.add_argument("--min-cooccurrence-document-frequency", type=int, default=2)
+    frontier = commands.add_parser("keyword-frontier", help="Rank bounded candidate keyword-network edges")
+    frontier.add_argument("network", type=Path)
+    frontier.add_argument("--output", type=Path, required=True)
+    frontier.add_argument("--limit", type=int, default=30)
+    edge_review = commands.add_parser("keyword-edge-review", help="Export an offline candidate-edge review workbench")
+    edge_review.add_argument("network", type=Path)
+    edge_review.add_argument("frontier", type=Path)
+    edge_review.add_argument("--output", type=Path, required=True)
+    adopt_edge_cmd = commands.add_parser("adopt-edge", help="Explicitly adopt an approved keyword-network edge")
+    adopt_edge_cmd.add_argument("case", type=Path)
+    adopt_edge_cmd.add_argument("network", type=Path)
+    adopt_edge_cmd.add_argument("review_events", type=Path)
+    adopt_edge_cmd.add_argument("--edge-id", required=True)
+    adopt_edge_cmd.add_argument("--output", type=Path, required=True)
+    experiment = commands.add_parser("network-experiment", help="Create a P1 config from one adopted network edge")
+    experiment.add_argument("base_config", type=Path)
+    experiment.add_argument("candidate_case", type=Path)
+    experiment.add_argument("--edge-id", required=True)
+    experiment.add_argument("--review-event-id", action="append", required=True)
+    experiment.add_argument("--output", type=Path, required=True)
+    edge_consensus = commands.add_parser("keyword-edge-consensus", help="Aggregate two independent synthetic/real edge reviews")
+    edge_consensus.add_argument("frontier", type=Path)
+    edge_consensus.add_argument("--reviewers", nargs=2, type=Path, required=True)
+    edge_consensus.add_argument("--adjudication", type=Path)
+    edge_consensus.add_argument("--output", type=Path, required=True)
     validate = commands.add_parser("validate-package", help="Validate schemas, links and file hashes")
     validate.add_argument("package", type=Path)
     return parser
@@ -256,6 +281,23 @@ def main(argv: list[str] | None = None) -> int:
                 max_cooccurrence_degree=args.max_cooccurrence_degree,
                 min_cooccurrence_document_frequency=args.min_cooccurrence_document_frequency,
             ))
+        elif args.command == "keyword-frontier":
+            from .keyword_network_ops import score_keyword_frontier
+            _dump(score_keyword_frontier(args.network, args.output, limit=args.limit))
+        elif args.command == "keyword-edge-review":
+            from .keyword_network_ops import export_edge_review_workbench
+            _dump(export_edge_review_workbench(args.network, args.frontier, args.output))
+        elif args.command == "adopt-edge":
+            from .keyword_network_ops import adopt_edge
+            _dump(adopt_edge(args.case, args.network, args.review_events, args.edge_id, args.output))
+        elif args.command == "network-experiment":
+            from .keyword_network_ops import build_network_experiment_config
+            _dump(build_network_experiment_config(_json(args.base_config), _json(args.candidate_case),
+                                                   edge_id=args.edge_id, review_event_ids=args.review_event_id,
+                                                   output_path=args.output))
+        elif args.command == "keyword-edge-consensus":
+            from .keyword_network_ops import aggregate_edge_reviews
+            _dump(aggregate_edge_reviews(args.frontier, args.reviewers, args.output, adjudication_path=args.adjudication))
         elif args.command == "validate-package":
             _dump({"status": "valid", **validate_package(args.package)})
         return 0

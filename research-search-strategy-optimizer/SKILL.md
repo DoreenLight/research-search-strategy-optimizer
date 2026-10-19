@@ -56,6 +56,7 @@ Return or write:
 - P1 review workbench exports are offline and blinded; candidate ranking is not semantic approval, and only an explicit `adopt-keywords` action adds approved terms to a new case.
 - Optional query caching is local, redacted, content-addressed, and cache hits do not consume network request budget.
 - `keyword-network` is a read-only, offline evidence-network build; observations and candidate edges never become approved/adopted query terms implicitly. Cooccurrence edges are bounded by default to prevent n-gram graph explosion.
+- `keyword-frontier` and `keyword-edge-review` rank/export candidate edges only; `adopt-edge` is the explicit step that can produce a new case, and synthetic review fixtures must be marked as such.
 
 ## Failure handling
 

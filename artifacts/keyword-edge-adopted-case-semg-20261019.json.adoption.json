@@ -1,0 +1,11 @@
+{
+  "adopted_term": "knee joint",
+  "edge_id": "edge-07358d0650d02b7214e3",
+  "group_id": "input",
+  "review_event_ids": [
+    "consensus-edge-07358d0650d02b7214e3"
+  ],
+  "rollback_target": "semg-joint-angle",
+  "status": "candidate",
+  "synthetic_review": true
+}

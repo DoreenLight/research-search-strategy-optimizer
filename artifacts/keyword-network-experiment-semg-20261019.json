@@ -1,0 +1,249 @@
+{
+  "branches_remaining": 1,
+  "max_requests": 6,
+  "max_rounds": 2,
+  "rounds": [
+    {
+      "case": {
+        "case_id": "semg-baseline",
+        "concept_groups": [
+          {
+            "group_id": "input",
+            "label": "输入模态",
+            "role": "input",
+            "terms": [
+              "surface electromyography",
+              "sEMG"
+            ]
+          },
+          {
+            "group_id": "object",
+            "label": "研究对象",
+            "role": "object",
+            "terms": [
+              "joint angle"
+            ]
+          },
+          {
+            "group_id": "task",
+            "label": "研究任务",
+            "role": "task",
+            "terms": [
+              "estimation",
+              "prediction"
+            ]
+          },
+          {
+            "group_id": "method",
+            "label": "方法分支",
+            "role": "method",
+            "terms": [
+              "Transformer"
+            ]
+          }
+        ],
+        "independent_relevance_set": null,
+        "judgments": [],
+        "research_scope": {
+          "application": [],
+          "constraints": {},
+          "description": "基于表面肌电预测人体关节角度，想了解 Transformer 和其他方法的研究情况。",
+          "input_modality": [
+            "表面肌电"
+          ],
+          "method": [
+            "Transformer（方法分支，不限制探索检索）"
+          ],
+          "mode": "exploratory",
+          "research_object": [
+            "人体关节角度"
+          ],
+          "research_task": [
+            "关节角度估计或预测"
+          ],
+          "schema_version": "0.1",
+          "scope_id": "scope-semg",
+          "unspecified": [
+            "具体关节",
+            "实时性",
+            "预测时间跨度",
+            "发表日期",
+            "人群"
+          ]
+        },
+        "schema_version": "0.1"
+      },
+      "rationale": "原始sEMG关节角度科研范围，三类检索作为基线；未指定关节、实时性、人群和应用。"
+    },
+    {
+      "case": {
+        "case_id": "semg-input-variant",
+        "concept_groups": [
+          {
+            "group_id": "input",
+            "label": "输入模态",
+            "role": "input",
+            "terms": [
+              "surface electromyography",
+              "sEMG",
+              "surface EMG"
+            ]
+          },
+          {
+            "group_id": "object",
+            "label": "研究对象",
+            "role": "object",
+            "terms": [
+              "joint angle"
+            ]
+          },
+          {
+            "group_id": "task",
+            "label": "研究任务",
+            "role": "task",
+            "terms": [
+              "estimation",
+              "prediction"
+            ]
+          },
+          {
+            "group_id": "method",
+            "label": "方法分支",
+            "role": "method",
+            "terms": [
+              "Transformer"
+            ]
+          }
+        ],
+        "independent_relevance_set": null,
+        "judgments": [],
+        "research_scope": {
+          "application": [],
+          "constraints": {},
+          "description": "基于表面肌电预测人体关节角度，想了解 Transformer 和其他方法的研究情况。",
+          "input_modality": [
+            "表面肌电"
+          ],
+          "method": [
+            "Transformer（方法分支，不限制探索检索）"
+          ],
+          "mode": "exploratory",
+          "research_object": [
+            "人体关节角度"
+          ],
+          "research_task": [
+            "关节角度估计或预测"
+          ],
+          "schema_version": "0.1",
+          "scope_id": "scope-semg",
+          "unspecified": [
+            "具体关节",
+            "实时性",
+            "预测时间跨度",
+            "发表日期",
+            "人群"
+          ]
+        },
+        "schema_version": "0.1"
+      },
+      "change_relationship": "equivalent",
+      "evidence_paper_ids": [
+        "https://openalex.org/W2508553996"
+      ],
+      "judgments": [],
+      "new_terms": [
+        "surface EMG"
+      ],
+      "rationale": "OpenAlex W2508553996 摘要观察到 surface EMG，宿主Agent审阅为输入术语候选变体；检索收益待人工判断。",
+      "reviewed_by": "agent"
+    },
+    {
+      "case": {
+        "case_id": "semg-joint-angle",
+        "concept_groups": [
+          {
+            "group_id": "input",
+            "label": "输入模态",
+            "role": "input",
+            "terms": [
+              "surface electromyography",
+              "sEMG",
+              "knee joint"
+            ]
+          },
+          {
+            "group_id": "object",
+            "label": "研究对象",
+            "role": "object",
+            "terms": [
+              "joint angle"
+            ]
+          },
+          {
+            "group_id": "task",
+            "label": "研究任务",
+            "role": "task",
+            "terms": [
+              "estimation",
+              "prediction"
+            ]
+          },
+          {
+            "group_id": "method",
+            "label": "方法分支",
+            "role": "method",
+            "terms": [
+              "Transformer"
+            ]
+          }
+        ],
+        "independent_relevance_set": null,
+        "judgments": [],
+        "notes": "宿主 Agent 的结构化输入示例，不是脚本自动翻译结果。组内词是待审候选；joint kinematics 比 joint angle 宽，未默认合并为同义组。本例没有人工真值集。",
+        "research_scope": {
+          "application": [],
+          "constraints": {},
+          "description": "基于表面肌电预测人体关节角度，想了解 Transformer 和其他方法的研究情况。",
+          "input_modality": [
+            "表面肌电"
+          ],
+          "method": [
+            "Transformer（方法分支，不限制探索检索）"
+          ],
+          "mode": "exploratory",
+          "research_object": [
+            "人体关节角度"
+          ],
+          "research_task": [
+            "关节角度估计或预测"
+          ],
+          "schema_version": "0.1",
+          "scope_id": "scope-semg",
+          "unspecified": [
+            "具体关节",
+            "实时性",
+            "预测时间跨度",
+            "发表日期",
+            "人群"
+          ]
+        },
+        "schema_version": "0.1"
+      },
+      "change_relationship": "unclassified",
+      "judgments": [],
+      "keyword_network_edge_ids": [
+        "edge-07358d0650d02b7214e3"
+      ],
+      "new_terms": [
+        "knee joint"
+      ],
+      "rationale": "Keyword network edge edge-07358d0650d02b7214e3 explicit adoption; synthetic review input.",
+      "review_event_ids": [
+        "consensus-edge-07358d0650d02b7214e3"
+      ],
+      "reviewed_by": "keyword-network-review",
+      "separate_branch": false
+    }
+  ],
+  "session_id": "semg-live-loop-20261018"
+}

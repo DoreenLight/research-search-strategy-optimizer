@@ -1,0 +1,18 @@
+{
+  "files": {
+    "edge-conflicts.jsonl": "c50f583cba3016c7c1a2836a5e8bf1551cb97a474d6fad5e755b7288578a1bda",
+    "edge-consensus.jsonl": "665ed02b79675c8d082d3be5334de305796bb65c3a1b1fc8c0a3acd8406acac4",
+    "summary.json": "4fef896756fcdc44f6b1e6457f8edbbcbe85ad87cff59eb705561e886bb7595a"
+  },
+  "schema_version": "0.1",
+  "status": "completed",
+  "summary": {
+    "adjudicated_count": 29,
+    "approved_count": 1,
+    "conflict_count": 0,
+    "edge_count": 30,
+    "missing_count": 0,
+    "synthetic_review": true
+  },
+  "synthetic_review": true
+}
