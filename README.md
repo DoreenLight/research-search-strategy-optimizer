@@ -38,6 +38,7 @@ OpenAlex 官方文档已核实其 Works 搜索、布尔查询、语义搜索、�
 - `python3 scripts/research-search.py review-workbench artifacts/p1-loop/round-00 artifacts/p1-loop/round-01 --output artifacts/p1-review-workbench`
 - `python3 scripts/research-search.py review-session artifacts/p1-loop --judgments artifacts/p1-review-workbench/judgments.jsonl --output artifacts/p1-loop-reviewed`
 - `python3 scripts/research-search.py adopt-keywords evals/cases/semg-joint-angle.json artifacts/p1-loop/round-01/reviewed-keywords.json --group-id input --output artifacts/semg-input-reviewed.json`
+- `python3 scripts/research-search.py keyword-network artifacts/p0-live-20261018 artifacts/p1-live-loop-20261018/round-01 --output artifacts/keyword-network-semg --max-cooccurrence-edges 50000 --max-cooccurrence-degree 25`
 - `python3 scripts/research-search.py provider-fusion artifacts/pubmed-result.json artifacts/semantic-scholar-result.json --output artifacts/provider-fusion`
 - `python3 scripts/research-search.py run evals/cases/p4-mature-semg-joint-angle.json --provider-plan artifacts/p2-provider-plan.json --live --provider-max-requests 4 --output artifacts/p4-live-package`
 - `python3 scripts/research-search.py p4-review benchmark-manifest.json --reference-ids <frozen-id-1> <frozen-id-2> --reference-source "external frozen source/date" --reviewers reviewer-a.jsonl reviewer-b.jsonl --test-case-id p4-test --output artifacts/p4-review`
@@ -53,7 +54,7 @@ OpenAlex 官方文档已核实其 Works 搜索、布尔查询、语义搜索、�
 
 `run` 默认只生成方案，不访问网络。加 `--snapshots <bundle.json>` 为离线重放；加 `--live --per-page 10 --max-requests 3` 才执行联网检索。默认不使用账户密钥；主动指定 `--use-api-key` 后才读取 OPENALEX_API_KEY。未知费用为 null，匿名请求也受官方免费额度与限流约束。输出目录已存在会拒绝覆盖。执行包会同时写出 `raw-observations.jsonl`、限额排序的 `candidate-terms.json` 和只有明确审阅项的 `reviewed-keywords.json`；候选排序不等于语义批准。
 
-`--cache-dir` 为显式启用的本地脱敏响应缓存；缓存命中不消耗网络请求预算，运行记录分别保存 `api_request_count`、`metadata_bytes` 和 `cache_hit_count`。`review-workbench` 生成完全离线的盲审页面与来源审计队列；`review-session` 使用导出的人工判断在原快照上重评，永不覆盖源会话或新增网络请求。
+`--cache-dir` 为显式启用的本地脱敏响应缓存；缓存命中不消耗网络请求预算，运行记录分别保存 `api_request_count`、`metadata_bytes` 和 `cache_hit_count`。`review-workbench` 生成完全离线的盲审页面与来源审计队列；`review-session` 使用导出的人工判断在原快照上重评，永不覆盖源会话或新增网络请求。`keyword-network` 只读构建证据网络；完整观察保留，但共现候选边默认限制为最多 50,000 条且单节点最多 25 条，避免 n-gram 组合爆炸。
 
 自包含发布 ZIP 将脚本、Schema 和示例放进同一个英文技能目录，可单独使用。源码的 Skill 入口与根目录脚本是单一来源；不自动注册全局技能或发布公网。
 

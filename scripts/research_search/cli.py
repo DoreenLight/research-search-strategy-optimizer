@@ -127,6 +127,12 @@ def build_parser() -> argparse.ArgumentParser:
     rerank.add_argument("--output", type=Path, required=True)
     rerank.add_argument("--top-k", type=int, default=20)
     rerank.add_argument("--use-typesafe", action="store_true", help="Explicitly use TYPESAFE_API_KEY")
+    network = commands.add_parser("keyword-network", help="Build a read-only keyword evidence network from validated packages")
+    network.add_argument("packages", nargs="+", type=Path)
+    network.add_argument("--output", type=Path, required=True)
+    network.add_argument("--max-cooccurrence-edges", type=int, default=50000)
+    network.add_argument("--max-cooccurrence-degree", type=int, default=25)
+    network.add_argument("--min-cooccurrence-document-frequency", type=int, default=2)
     validate = commands.add_parser("validate-package", help="Validate schemas, links and file hashes")
     validate.add_argument("package", type=Path)
     return parser
@@ -242,6 +248,14 @@ def main(argv: list[str] | None = None) -> int:
             from .typesafe_reranker import RerankConfig
             config = RerankConfig(api_key=None if args.use_typesafe else "", top_k=args.top_k)
             _dump(rerank_package_topk(args.package, strategy=args.strategy, output_dir=args.output, config=config))
+        elif args.command == "keyword-network":
+            from .keyword_network import build_keyword_network
+            _dump(build_keyword_network(
+                args.packages, args.output,
+                max_cooccurrence_edges=args.max_cooccurrence_edges,
+                max_cooccurrence_degree=args.max_cooccurrence_degree,
+                min_cooccurrence_document_frequency=args.min_cooccurrence_document_frequency,
+            ))
         elif args.command == "validate-package":
             _dump({"status": "valid", **validate_package(args.package)})
         return 0

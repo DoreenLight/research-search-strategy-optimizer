@@ -1,0 +1,1639 @@
+{
+  "deferred_count": 2165,
+  "edges": [
+    {
+      "confidence": null,
+      "edge_id": "edge-001ac5f136e45b9c1191",
+      "evidence_ids": [
+        "evidence-00873",
+        "evidence-00874",
+        "evidence-01659",
+        "evidence-01660"
+      ],
+      "object": "lex-89f52b7b36c4f20c9a2d",
+      "observation_ids": [
+        "obs-3bb8f38cfc161e35cc4a",
+        "obs-3dd8b8176fe773bfe179",
+        "obs-74c52e31c3d9f16840fd",
+        "obs-adbf904358c4b48e9e66"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-cbce80646fc0b451ed50",
+      "supporting_paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W2147019512"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-0065b7803debf4e464ae",
+      "evidence_ids": [
+        "evidence-01697",
+        "evidence-01858",
+        "evidence-02043",
+        "evidence-02241"
+      ],
+      "object": "lex-d72654219839d9bdfe31",
+      "observation_ids": [
+        "obs-6877d5743487004bc3fc",
+        "obs-90049ea117cb0b67f2f8",
+        "obs-ba0808c7b8dca821b283",
+        "obs-ffeb4d19c9c823fd60ec"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-ca14f2d697f4a6282cb7",
+      "supporting_paper_ids": [
+        "https://openalex.org/W2121350220",
+        "https://openalex.org/W4284878820"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-0092908d3993eeb0fa7e",
+      "evidence_ids": [
+        "evidence-00442",
+        "evidence-00444",
+        "evidence-00476",
+        "evidence-00477"
+      ],
+      "object": "lex-258d4366ba5a7aefa367",
+      "observation_ids": [
+        "obs-0e174033cfb7b418703b",
+        "obs-37b5cf46e1721911f732",
+        "obs-b2bbbae5fba6dc01a8b9",
+        "obs-f9c595624e81d4fc8995"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-1bd6e93ba89eeb6ba5b6",
+      "supporting_paper_ids": [
+        "https://openalex.org/W4396625904",
+        "https://openalex.org/W4407450426"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-00b8b7d9bf690ea27097",
+      "evidence_ids": [
+        "evidence-01023",
+        "evidence-01024",
+        "evidence-02217",
+        "evidence-02218"
+      ],
+      "object": "lex-2beb394f1481c9fbf6b5",
+      "observation_ids": [
+        "obs-45eb2dbd2a81a53a4304",
+        "obs-a046e433de4fd63da401",
+        "obs-ad3dd6da1641221098f7",
+        "obs-e3c3395bbd67c118e6d1"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-a8c6c092f943c582df82",
+      "supporting_paper_ids": [
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W7133186646"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-00c5d71bcde3aa591970",
+      "evidence_ids": [
+        "evidence-01209",
+        "evidence-01366",
+        "evidence-01367",
+        "evidence-01750",
+        "evidence-01923",
+        "evidence-01924"
+      ],
+      "object": "lex-a3023428fdb41b4f2b9e",
+      "observation_ids": [
+        "obs-0c9987c4df2590208ee8",
+        "obs-1ac035ffc508efebf8c2",
+        "obs-a34f7c51f7ae729c22da",
+        "obs-a3526f1f6d88cbbd5814",
+        "obs-d5411bc27092e9770695",
+        "obs-f233d0655515ed86ac07"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 3,
+      "status": "candidate",
+      "subject": "lex-099493f5a049326a65fe",
+      "supporting_paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4396625904",
+        "https://openalex.org/W4402270704"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-00e2288b7523aa32530d",
+      "evidence_ids": [
+        "evidence-00785",
+        "evidence-00786",
+        "evidence-02400",
+        "evidence-02401"
+      ],
+      "object": "lex-4d5b36dcc03f2372ccc9",
+      "observation_ids": [
+        "obs-7a34283f837050b4a373",
+        "obs-a9db66af0270fbecd48b",
+        "obs-d3f214f9f3524f360fca",
+        "obs-e49efb754d406420167a"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-c945f989ecc9a18e610c",
+      "supporting_paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W2147019512"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-00e82bd138ccb07922eb",
+      "evidence_ids": [
+        "evidence-01040",
+        "evidence-01041",
+        "evidence-01042",
+        "evidence-01215",
+        "evidence-01588",
+        "evidence-01589",
+        "evidence-01754"
+      ],
+      "object": "lex-a64f06269bb01ec60fb3",
+      "observation_ids": [
+        "obs-0867ba72c91da58255c6",
+        "obs-13a10994c6b49f87024c",
+        "obs-2a3ace1026388ebe7b69",
+        "obs-54373a4cd807e5ee147a",
+        "obs-78dcdd9795402ea4019f",
+        "obs-e2d52942d7a866015c3d",
+        "obs-f407f9f584c1a8fbc298"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 3,
+      "status": "candidate",
+      "subject": "lex-0d4c3ec87fb6d557666a",
+      "supporting_paper_ids": [
+        "https://openalex.org/W2121350220",
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W3121018641"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-013ae26f19520cdcc2b4",
+      "evidence_ids": [
+        "evidence-01275",
+        "evidence-01428",
+        "evidence-01429",
+        "evidence-01430",
+        "evidence-01816",
+        "evidence-02003",
+        "evidence-02005",
+        "evidence-02006"
+      ],
+      "object": "lex-42334cdecd9eec0f72ab",
+      "observation_ids": [
+        "obs-05178ccfeb365eac5335",
+        "obs-2f4a587b906c98db3d96",
+        "obs-66f6292aa1267ee99197",
+        "obs-6caeca0bec286c1257ae",
+        "obs-c95c4d64362b9e8e6dff",
+        "obs-d50fe13ef685b1b7f302",
+        "obs-e166ed58ca6a7e2674a9",
+        "obs-fdfeaef4ec2ae2bfbf6e"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 4,
+      "status": "candidate",
+      "subject": "lex-3d19c5913c2b11343e6f",
+      "supporting_paper_ids": [
+        "https://openalex.org/W4396625904",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W4407450426",
+        "https://openalex.org/W7133186646"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-0145948b0a48dd77ae24",
+      "evidence_ids": [
+        "evidence-00381",
+        "evidence-00454",
+        "evidence-00455",
+        "evidence-01746",
+        "evidence-01919",
+        "evidence-01920"
+      ],
+      "object": "lex-94ee3fd12ce5f07b6718",
+      "observation_ids": [
+        "obs-2a057a29589807245434",
+        "obs-419a92ebd2d98e179856",
+        "obs-6016a15f45b09c031433",
+        "obs-84ad393150f153245145",
+        "obs-8618d9f5168d169a4b4f",
+        "obs-e672094a9c47119a37aa"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 3,
+      "status": "candidate",
+      "subject": "lex-17f114ab71149efbf5a3",
+      "supporting_paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4396625904",
+        "https://openalex.org/W4402270704"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-015d1c3bab90c1aedbeb",
+      "evidence_ids": [
+        "evidence-01136",
+        "evidence-01138",
+        "evidence-01469",
+        "evidence-01470"
+      ],
+      "object": "lex-c644aa9101743c098f2d",
+      "observation_ids": [
+        "obs-153a97e9686f463157e5",
+        "obs-28b77cece2c851a293bc",
+        "obs-9f2937624cfd774f4561",
+        "obs-a934ab11329f76bff2ed"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-6022bfc092caf5b49ee5",
+      "supporting_paper_ids": [
+        "https://openalex.org/W2121350220",
+        "https://openalex.org/W4402054497"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-0198c72acaaad9261ad7",
+      "evidence_ids": [
+        "evidence-01195",
+        "evidence-01197",
+        "evidence-01353",
+        "evidence-01354",
+        "evidence-01355",
+        "evidence-01357",
+        "evidence-01838",
+        "evidence-01841",
+        "evidence-01842",
+        "evidence-02035",
+        "evidence-02036",
+        "evidence-02037",
+        "evidence-02038",
+        "evidence-02040",
+        "evidence-02041"
+      ],
+      "object": "lex-fed70536abf12ecfdd32",
+      "observation_ids": [
+        "obs-1039d1798637234a3d7b",
+        "obs-150078fcff15a2a99ef4",
+        "obs-299d692cf90bceddf2b1",
+        "obs-2ed99d19a31d7ca609ff",
+        "obs-39d9fcf6f1402e6f0979",
+        "obs-3f23bfb94cf19c9a65aa",
+        "obs-6a0a2aaf1343c8490681",
+        "obs-734db4bf8033b25c5f87",
+        "obs-997e4f6f7bc87e148caa",
+        "obs-adbca278d82837558e53",
+        "obs-b63e677646c7ef626a0f",
+        "obs-c1d483ec0c71891fa10f",
+        "obs-d97dd3e0e7a279797610",
+        "obs-e666559291f748bf11cf",
+        "obs-e911807cac9beccda95e"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 6,
+      "status": "candidate",
+      "subject": "lex-97d0d675b19fe944badb",
+      "supporting_paper_ids": [
+        "https://openalex.org/W2345301146",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4396625904",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-01dda8aa67d1adcd5a60",
+      "evidence_ids": [
+        "evidence-00549",
+        "evidence-00550",
+        "evidence-00551",
+        "evidence-00552",
+        "evidence-00650",
+        "evidence-00651",
+        "evidence-00655",
+        "evidence-00657",
+        "evidence-01336",
+        "evidence-01337",
+        "evidence-01480",
+        "evidence-01481",
+        "evidence-01483",
+        "evidence-01485",
+        "evidence-01486"
+      ],
+      "object": "lex-7f863af0c2543fe949e0",
+      "observation_ids": [
+        "obs-1db94e2fc79611b5e93d",
+        "obs-202bd418edfda775e5d7",
+        "obs-24d7bcc8a9d9c1c8fde3",
+        "obs-3bb5e07a9a9c5cb1c37d",
+        "obs-43c63ad78147f5ccd9ba",
+        "obs-5c18b022e702ec785e78",
+        "obs-641f94e705f44e8ec9d6",
+        "obs-7536e5d9013de68db485",
+        "obs-858c9cf5afa731217e6f",
+        "obs-a4008f432bf6ce74676e",
+        "obs-bd24bc810b4f2ac5490e",
+        "obs-c84488997a1904b7b314",
+        "obs-d8aff8572d8b35b58266",
+        "obs-e187abe23b9666d46023",
+        "obs-e4b56ea7889015af301c"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 6,
+      "status": "candidate",
+      "subject": "lex-149e1bac2b305a847dab",
+      "supporting_paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W2129308247",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4284878820",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W7133186646"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-01ef55979c547c17873e",
+      "evidence_ids": [
+        "evidence-00021",
+        "evidence-00048",
+        "evidence-00147",
+        "evidence-00206"
+      ],
+      "object": "lex-b769f9cef85bcd832c88",
+      "observation_ids": [
+        "obs-121f709377136c9577b9",
+        "obs-8ef7a4b4be88fe001984",
+        "obs-a73e9d28af813d84f73e",
+        "obs-f0bb3fccb06522fdf886"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-8b97ef3d1384e226b076",
+      "supporting_paper_ids": [
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-020fc37f85e00986a17c",
+      "evidence_ids": [
+        "evidence-00147",
+        "evidence-00205",
+        "evidence-00206",
+        "evidence-01727",
+        "evidence-01895",
+        "evidence-01897"
+      ],
+      "object": "lex-8dcd3a88e4db1c942e90",
+      "observation_ids": [
+        "obs-0723f9057f72e1da0309",
+        "obs-121f709377136c9577b9",
+        "obs-75e580b8e65708c8f7d8",
+        "obs-964785c9bd77285bd937",
+        "obs-9e74ba5f698a780c658b",
+        "obs-a73e9d28af813d84f73e"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 3,
+      "status": "candidate",
+      "subject": "lex-b769f9cef85bcd832c88",
+      "supporting_paper_ids": [
+        "https://openalex.org/W2121350220",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-0254e38f33563543532c",
+      "evidence_ids": [
+        "evidence-00355",
+        "evidence-00356",
+        "evidence-00436",
+        "evidence-00807",
+        "evidence-00952"
+      ],
+      "object": "lex-cc996d80373e4dbe70a3",
+      "observation_ids": [
+        "obs-0e6fc74be6cbfebf046d",
+        "obs-1817045a1ace7a78a09c",
+        "obs-84095302d31bed82cd68",
+        "obs-a683c10646e827b5f15c",
+        "obs-aa659d0d4f79972ed7c5"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-752240e3be23164c2e71",
+      "supporting_paper_ids": [
+        "https://openalex.org/W2345301146",
+        "https://openalex.org/W4284878820"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-02aac719f0a403b2a5cf",
+      "evidence_ids": [
+        "evidence-00418",
+        "evidence-00419",
+        "evidence-00420",
+        "evidence-00421",
+        "evidence-01300",
+        "evidence-01301",
+        "evidence-01302",
+        "evidence-01303"
+      ],
+      "object": "lex-0cf7f8cd83c1b11938c8",
+      "observation_ids": [
+        "obs-2414c5fc1c4a6705e9d1",
+        "obs-25c760879a9be3d65782",
+        "obs-404d55831e4c75e8e776",
+        "obs-6f1e51b74d80d9435192",
+        "obs-7cfeb42e9d208ef5366c",
+        "obs-ae73ed4c05a2ef9c4081",
+        "obs-d24b98725677920d7a46",
+        "obs-dbc83d648fb53b4d10fd"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 3,
+      "status": "candidate",
+      "subject": "lex-9cdf398983b28251d622",
+      "supporting_paper_ids": [
+        "https://openalex.org/W4396625904",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W7133186646"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-0334765a32b59aab4d5c",
+      "evidence_ids": [
+        "evidence-01127",
+        "evidence-01162",
+        "evidence-01294",
+        "evidence-01295",
+        "evidence-01316",
+        "evidence-01317"
+      ],
+      "object": "lex-90d38be40c5f2d287d92",
+      "observation_ids": [
+        "obs-5cbaa99812f8a13cba19",
+        "obs-61a117196f9d2b15df79",
+        "obs-8cdcb340b8f96e5db134",
+        "obs-a5586bfeeddd4930efaa",
+        "obs-bd3ca2865034e47f2ac1",
+        "obs-ccb51d2726e418dedcbb"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 3,
+      "status": "candidate",
+      "subject": "lex-23880756e61c6c15a87b",
+      "supporting_paper_ids": [
+        "https://openalex.org/W4396625904",
+        "https://openalex.org/W4402054497",
+        "https://openalex.org/W4402270704"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-0371b59a5d9d209ee357",
+      "evidence_ids": [
+        "evidence-00234",
+        "evidence-00235",
+        "evidence-01082",
+        "evidence-01083"
+      ],
+      "object": "lex-42f1559adfe1204786bc",
+      "observation_ids": [
+        "obs-0ab6322872686b697fa8",
+        "obs-12f59fa14922557580f6",
+        "obs-94840c8862d4b1ae5212",
+        "obs-abfa0299cef60f341a50"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-409bb9dd95789471c692",
+      "supporting_paper_ids": [
+        "https://openalex.org/W4396625904",
+        "https://openalex.org/W4402054497"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-0373e3bcdddc7255cc52",
+      "evidence_ids": [
+        "evidence-01711",
+        "evidence-01875",
+        "evidence-02095",
+        "evidence-02278"
+      ],
+      "object": "lex-9f57b69b0d956d5a45f1",
+      "observation_ids": [
+        "obs-2b01e4ec4a8e153217b4",
+        "obs-8dfbcf8332848eb36417",
+        "obs-b89c5f399d92fe326fb8",
+        "obs-ef32c196353a94741cb1"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-2a9f40ae3ae5b3ae0bad",
+      "supporting_paper_ids": [
+        "https://openalex.org/W2345301146",
+        "https://openalex.org/W3121018641"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-03825f7791790507ffe9",
+      "evidence_ids": [
+        "evidence-01097",
+        "evidence-01098",
+        "evidence-01162",
+        "evidence-01248",
+        "evidence-01316"
+      ],
+      "object": "lex-90d38be40c5f2d287d92",
+      "observation_ids": [
+        "obs-3b915d1d8dfcaf3c2f1b",
+        "obs-61a117196f9d2b15df79",
+        "obs-99c1dac8dc9ab40d5a96",
+        "obs-a5586bfeeddd4930efaa",
+        "obs-b262f081ca0237717c1b"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-9259ae484ea7d56e2d23",
+      "supporting_paper_ids": [
+        "https://openalex.org/W4396625904",
+        "https://openalex.org/W4402270704"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-0389a89b2732800eb27d",
+      "evidence_ids": [
+        "evidence-01211",
+        "evidence-01368",
+        "evidence-01483",
+        "evidence-01644"
+      ],
+      "object": "lex-67baafa36e7cd7e47a79",
+      "observation_ids": [
+        "obs-265781dbcbdeb099516b",
+        "obs-8170e6ebbc95613b1c7f",
+        "obs-9b872370e0b06b36d7de",
+        "obs-d3cd09652ca9b25b25dd"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-43b08557126118e8505e",
+      "supporting_paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4402270704"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-03fe0bcbe6afa478fee6",
+      "evidence_ids": [
+        "evidence-00016",
+        "evidence-00017",
+        "evidence-00018",
+        "evidence-00668",
+        "evidence-00669",
+        "evidence-00670",
+        "evidence-00672"
+      ],
+      "object": "lex-b2d7f58cf3e9d71ae7f4",
+      "observation_ids": [
+        "obs-696fcf1a4897dbbfbb9b",
+        "obs-b0f7493311d3084f247c",
+        "obs-b3abf02706f16a66c7b6",
+        "obs-d095656d9384c450984e",
+        "obs-d75d6507681685d602ec",
+        "obs-ed9917317162b117a7a5",
+        "obs-efe04ce20782288cb6f6"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 3,
+      "status": "candidate",
+      "subject": "lex-c9c7645549649b83e784",
+      "supporting_paper_ids": [
+        "https://openalex.org/W2147019512",
+        "https://openalex.org/W2345301146",
+        "https://openalex.org/W4396625904"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-04046a1a255efc5a6bf7",
+      "evidence_ids": [
+        "evidence-00029",
+        "evidence-00059",
+        "evidence-01287",
+        "evidence-01443"
+      ],
+      "object": "lex-602654a9c8d7c71d1bb7",
+      "observation_ids": [
+        "obs-33fcde1eca7b0e88dc66",
+        "obs-5d983f3315cb6a9d5c15",
+        "obs-96ff2a121805e7f90e61",
+        "obs-f6e8705a9c14fd3636fd"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-74d15afddcd1622c60bb",
+      "supporting_paper_ids": [
+        "https://openalex.org/W2121350220",
+        "https://openalex.org/W4284878820"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-04196f39216cfbd1a914",
+      "evidence_ids": [
+        "evidence-01065",
+        "evidence-01066",
+        "evidence-02400",
+        "evidence-02401"
+      ],
+      "object": "lex-4d5b36dcc03f2372ccc9",
+      "observation_ids": [
+        "obs-1f227ae3422870e2f7ba",
+        "obs-5ca4d8318e6334ae11c8",
+        "obs-a9db66af0270fbecd48b",
+        "obs-e49efb754d406420167a"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-bbe871ff8c58cbb50a1c",
+      "supporting_paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W2147019512"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-041d611bf8c3e9c4a692",
+      "evidence_ids": [
+        "evidence-00614",
+        "evidence-00725",
+        "evidence-00727",
+        "evidence-01589",
+        "evidence-01754",
+        "evidence-01755"
+      ],
+      "object": "lex-a64f06269bb01ec60fb3",
+      "observation_ids": [
+        "obs-13a10994c6b49f87024c",
+        "obs-17a31efb823393cde985",
+        "obs-2a3ace1026388ebe7b69",
+        "obs-4f6fc54b3d3d67caefe7",
+        "obs-4ff92a2af6f18e0a7442",
+        "obs-7a825ee3dfc89635e702"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 3,
+      "status": "candidate",
+      "subject": "lex-92afed56fd25cbfc42a3",
+      "supporting_paper_ids": [
+        "https://openalex.org/W2121350220",
+        "https://openalex.org/W2345301146",
+        "https://openalex.org/W3121018641"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-044203bc824b622db3a9",
+      "evidence_ids": [
+        "evidence-00672",
+        "evidence-00799",
+        "evidence-00801",
+        "evidence-01824",
+        "evidence-02016",
+        "evidence-02018"
+      ],
+      "object": "lex-01d0e09d82e0965ea11a",
+      "observation_ids": [
+        "obs-2b0a796af2822edd4029",
+        "obs-66e1fee10edfe3a14901",
+        "obs-84f11f70b4c80472f220",
+        "obs-8b9ffcf6cde293eca3eb",
+        "obs-c7299bebce21eb9fd895",
+        "obs-f68e67d66265c86c2bc5"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 3,
+      "status": "candidate",
+      "subject": "lex-e1a771538acc617b8be5",
+      "supporting_paper_ids": [
+        "https://openalex.org/W2121350220",
+        "https://openalex.org/W3121018641",
+        "https://openalex.org/W4385757465"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-04714488eac7f834a096",
+      "evidence_ids": [
+        "evidence-00070",
+        "evidence-00071",
+        "evidence-02021",
+        "evidence-02022",
+        "evidence-02025"
+      ],
+      "object": "lex-0e6c1907ffb9032c4a2f",
+      "observation_ids": [
+        "obs-13546c92b061d45e36ad",
+        "obs-38252d4a20b5c1fbcc20",
+        "obs-893ddc753010572f5458",
+        "obs-ab65ada095bcf1d050e3",
+        "obs-e763497e3c823c01c49c"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-e21843fe864262fe543b",
+      "supporting_paper_ids": [
+        "https://openalex.org/W2121350220",
+        "https://openalex.org/W7133186646"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-047201380e9fd03d55b7",
+      "evidence_ids": [
+        "evidence-00454",
+        "evidence-00455",
+        "evidence-01017",
+        "evidence-01018",
+        "evidence-01019"
+      ],
+      "object": "lex-d4d986f598a333ce6fe6",
+      "observation_ids": [
+        "obs-4009f8cd816cbc5bd981",
+        "obs-419a92ebd2d98e179856",
+        "obs-8618d9f5168d169a4b4f",
+        "obs-c901033bcc57d762a76d",
+        "obs-dff1f294088ee2b1b5c4"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-17f114ab71149efbf5a3",
+      "supporting_paper_ids": [
+        "https://openalex.org/W4385757465",
+        "https://openalex.org/W4396625904"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-04781ba95e448c7d7502",
+      "evidence_ids": [
+        "evidence-00473",
+        "evidence-00474",
+        "evidence-00475",
+        "evidence-00476",
+        "evidence-00477",
+        "evidence-02114",
+        "evidence-02115",
+        "evidence-02116",
+        "evidence-02118",
+        "evidence-02120"
+      ],
+      "object": "lex-eee980477167ee210301",
+      "observation_ids": [
+        "obs-0e7c7ebee4949ba9fad7",
+        "obs-2adc23c42d81af89e85f",
+        "obs-37b5cf46e1721911f732",
+        "obs-70621725bef9c2acffd7",
+        "obs-8311b31df6df21b9294f",
+        "obs-ba84099e4e9bd125cd57",
+        "obs-c030691279d6c718249c",
+        "obs-c8bf4fa63fdd8f4e32bf",
+        "obs-e05280b8b884c7239465",
+        "obs-f9c595624e81d4fc8995"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 5,
+      "status": "candidate",
+      "subject": "lex-258d4366ba5a7aefa367",
+      "supporting_paper_ids": [
+        "https://openalex.org/W2129308247",
+        "https://openalex.org/W2147019512",
+        "https://openalex.org/W2345301146",
+        "https://openalex.org/W4396625904",
+        "https://openalex.org/W4407450426"
+      ]
+    },
+    {
+      "confidence": null,
+      "edge_id": "edge-047a9d6414bdbc607d98",
+      "evidence_ids": [
+        "evidence-00234",
+        "evidence-00235",
+        "evidence-01316",
+        "evidence-01317"
+      ],
+      "object": "lex-90d38be40c5f2d287d92",
+      "observation_ids": [
+        "obs-12f59fa14922557580f6",
+        "obs-5cbaa99812f8a13cba19",
+        "obs-61a117196f9d2b15df79",
+        "obs-abfa0299cef60f341a50"
+      ],
+      "predicate": "cooccurs_with",
+      "scope_id": "scope-semg",
+      "source_count": 2,
+      "status": "candidate",
+      "subject": "lex-409bb9dd95789471c692",
+      "supporting_paper_ids": [
+        "https://openalex.org/W4396625904",
+        "https://openalex.org/W4402054497"
+      ]
+    }
+  ],
+  "schema_version": "0.1",
+  "scope_id": "scope-semg",
+  "selection_limit": 30,
+  "selection_rule": "Candidate cooccurrence edges and observed nodes only; no semantic approval or query adoption.",
+  "terms": [
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 4,
+      "evidence_status": "observed",
+      "label": "0",
+      "node_id": "lex-f191cf0c978cadcc66d3",
+      "node_type": "lexical_form",
+      "normalized_label": "0",
+      "observation_ids": [
+        "obs-3f51c87477d87c14b47e",
+        "obs-57cadca1effe661e03a9",
+        "obs-b8a3242d3aad352e9fbd",
+        "obs-f8f8384d7cbe1468973c"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W1918406696",
+        "https://openalex.org/W2129308247",
+        "https://openalex.org/W2147019512",
+        "https://openalex.org/W4407450426"
+      ],
+      "provider_count": 4,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "0 to 140",
+      "node_id": "lex-750a20684065fe693b3c",
+      "node_type": "lexical_form",
+      "normalized_label": "0 to 140",
+      "observation_ids": [
+        "obs-834e4d5054e97eedb96d"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2147019512"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "023",
+      "node_id": "lex-4ff88f99bd7a7c1847e5",
+      "node_type": "lexical_form",
+      "normalized_label": "023",
+      "observation_ids": [
+        "obs-6d24ac87bd0d910776d0"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2129308247"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "026",
+      "node_id": "lex-7c4928a0499c89df4c39",
+      "node_type": "lexical_form",
+      "normalized_label": "026",
+      "observation_ids": [
+        "obs-54cd191d2d425dda32ee"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2129308247"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "026 for slow",
+      "node_id": "lex-789b031d599d1deb9ca1",
+      "node_type": "lexical_form",
+      "normalized_label": "026 for slow",
+      "observation_ids": [
+        "obs-a02b26ce9d070e0016b0"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2129308247"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "036",
+      "node_id": "lex-965e03812c290466c16f",
+      "node_type": "lexical_form",
+      "normalized_label": "036",
+      "observation_ids": [
+        "obs-da7f63a0a7c724b641f2"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2129308247"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "036 for fast",
+      "node_id": "lex-8ae782c38c5086da3cd9",
+      "node_type": "lexical_form",
+      "normalized_label": "036 for fast",
+      "observation_ids": [
+        "obs-6cc6aa29b33b342f323c"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2129308247"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "05",
+      "node_id": "lex-3d6a12a7f161e141b194",
+      "node_type": "lexical_form",
+      "normalized_label": "05",
+      "observation_ids": [
+        "obs-58ac029a5d34a73b89d3"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W1918406696"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "065",
+      "node_id": "lex-873dea5d8045394215d9",
+      "node_type": "lexical_form",
+      "normalized_label": "065",
+      "observation_ids": [
+        "obs-a2126d32ec586c1da5fc"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W4407450426"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "085",
+      "node_id": "lex-068b8941c18279467d71",
+      "node_type": "lexical_form",
+      "normalized_label": "085",
+      "observation_ids": [
+        "obs-39817efbbeb4ceb96a26"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2129308247"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "098",
+      "node_id": "lex-9953b1b04dd0e9a5ea4b",
+      "node_type": "lexical_form",
+      "normalized_label": "098",
+      "observation_ids": [
+        "obs-b1533c333ae979570686"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2129308247"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "1",
+      "node_id": "lex-5a7da14f123249d5a51b",
+      "node_type": "lexical_form",
+      "normalized_label": "1",
+      "observation_ids": [
+        "obs-c31fbd90e267e3a73faa"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2345301146"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "database_assigned",
+      "label": "1/f spectrum",
+      "node_id": "lex-20137fd0d64f7ff1d9db",
+      "node_type": "lexical_form",
+      "normalized_label": "1/f spectrum",
+      "observation_ids": [
+        "obs-d6a5db60c7213a6245f3"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2086303648"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 5,
+      "evidence_status": "observed",
+      "label": "10",
+      "node_id": "lex-c9c7645549649b83e784",
+      "node_type": "lexical_form",
+      "normalized_label": "10",
+      "observation_ids": [
+        "obs-125e5d7a9f2fdc9a9223",
+        "obs-a0c23ba65b674782e987",
+        "obs-b0f7493311d3084f247c",
+        "obs-d75d6507681685d602ec",
+        "obs-ed9917317162b117a7a5"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2147019512",
+        "https://openalex.org/W2345301146",
+        "https://openalex.org/W4396625904",
+        "https://openalex.org/W4402270704",
+        "https://openalex.org/W7133186646"
+      ],
+      "provider_count": 5,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "10 degrees",
+      "node_id": "lex-5aac457d0f6f38682d22",
+      "node_type": "lexical_form",
+      "normalized_label": "10 degrees",
+      "observation_ids": [
+        "obs-b027ec60661dfcb45387"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W7133186646"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "10 most",
+      "node_id": "lex-515907874addf969167b",
+      "node_type": "lexical_form",
+      "normalized_label": "10 most",
+      "observation_ids": [
+        "obs-b54a704f49d69ba20494"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W4396625904"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "10 most important",
+      "node_id": "lex-3fd2b36980e12e193d6e",
+      "node_type": "lexical_form",
+      "normalized_label": "10 most important",
+      "observation_ids": [
+        "obs-65993d19698d4843de93"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W4396625904"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "10 subjects",
+      "node_id": "lex-7764b2f625035d098766",
+      "node_type": "lexical_form",
+      "normalized_label": "10 subjects",
+      "observation_ids": [
+        "obs-12ebd123ebeb6a81d92c"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W4396625904"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "100",
+      "node_id": "lex-1f60b157a7e9e7d19ea8",
+      "node_type": "lexical_form",
+      "normalized_label": "100",
+      "observation_ids": [
+        "obs-b7185cc040b8c598977f"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W4385757465"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "100 ms",
+      "node_id": "lex-fd2e9df4b3f5dbbd57dd",
+      "node_type": "lexical_form",
+      "normalized_label": "100 ms",
+      "observation_ids": [
+        "obs-44f3f259cc1518fea39b"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W4385757465"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "11",
+      "node_id": "lex-1e210c342b8195c22436",
+      "node_type": "lexical_form",
+      "normalized_label": "11",
+      "observation_ids": [
+        "obs-99ab5975f3732501eea8"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W4402270704"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "1143",
+      "node_id": "lex-12864720814e843fce73",
+      "node_type": "lexical_form",
+      "normalized_label": "1143",
+      "observation_ids": [
+        "obs-a1cbb840e3acad2d7676"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W3121018641"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "13",
+      "node_id": "lex-32a945b514698a93412c",
+      "node_type": "lexical_form",
+      "normalized_label": "13",
+      "observation_ids": [
+        "obs-eee500bcf876969bc980"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2345301146"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "140",
+      "node_id": "lex-a688a2abb015cea321e8",
+      "node_type": "lexical_form",
+      "normalized_label": "140",
+      "observation_ids": [
+        "obs-326ec2d6bb418402c7d8"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2147019512"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "140 degrees",
+      "node_id": "lex-342e9ef4df4c84c697b3",
+      "node_type": "lexical_form",
+      "normalized_label": "140 degrees",
+      "observation_ids": [
+        "obs-5f01e1988ac60a7aaf49"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2147019512"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "147",
+      "node_id": "lex-6fd00f9e1f2bc2d72763",
+      "node_type": "lexical_form",
+      "normalized_label": "147",
+      "observation_ids": [
+        "obs-22fd0635fd701fd854a7"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2129308247"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "163",
+      "node_id": "lex-cc48ed6310ad953d1fbb",
+      "node_type": "lexical_form",
+      "normalized_label": "163",
+      "observation_ids": [
+        "obs-7217b5d2d178eae8c8d1"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2129308247"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 3,
+      "evidence_status": "observed",
+      "label": "2",
+      "node_id": "lex-b617c7ca3ddb57297a88",
+      "node_type": "lexical_form",
+      "normalized_label": "2",
+      "observation_ids": [
+        "obs-3ce7782c8b20f5e5bfc1",
+        "obs-5a4248ae9a8bd9de8022",
+        "obs-88947c61b3df503b4b20"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2345301146",
+        "https://openalex.org/W3013651137",
+        "https://openalex.org/W4396625904"
+      ],
+      "provider_count": 3,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 2,
+      "evidence_status": "observed",
+      "label": "20",
+      "node_id": "lex-32d238c36dc101a91bfa",
+      "node_type": "lexical_form",
+      "normalized_label": "20",
+      "observation_ids": [
+        "obs-3f78154884615e837d39",
+        "obs-84a9f051572a77a37762"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2147019512",
+        "https://openalex.org/W2345301146"
+      ],
+      "provider_count": 2,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    },
+    {
+      "adopted_cases": [],
+      "created_from": "package-artifact",
+      "document_frequency": 1,
+      "evidence_status": "observed",
+      "label": "20 degree-ranges",
+      "node_id": "lex-0233a1b49d62fbfbfef1",
+      "node_type": "lexical_form",
+      "normalized_label": "20 degree-ranges",
+      "observation_ids": [
+        "obs-79793de85eff006fd259"
+      ],
+      "paper_ids": [
+        "https://openalex.org/W2147019512"
+      ],
+      "provider_count": 1,
+      "review_status": "pending",
+      "schema_version": "0.1",
+      "scope_ids": [
+        "scope-semg"
+      ],
+      "source_field_count": 1
+    }
+  ]
+}

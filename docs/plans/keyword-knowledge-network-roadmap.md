@@ -27,7 +27,7 @@
 | 里程碑 | 名称 | 目标 | 主要交付 | 完成门槛 |
 |---|---|---|---|---|
 | K0 | 规则冻结 | 固定网络边界和术语关系 | 本设计、字段枚举、审阅协议 | 关系类型和证据等级经确认；无隐式采用 |
-| K1 | 只读网络构建 | 从已有 package 生成稳定节点/边 | `keyword_network.py`、nodes/edges/observations | 重建稳定、来源可追溯、全量测试通过 |
+| K1 | 只读网络构建 | 从已有 package 生成稳定节点/边 | `keyword_network.py`、nodes/edges/observations | 已实现；旧 P0/P1 包兼容；实际 sEMG 样例 5.8MB、4,692 observations、2,362 nodes、5,415 bounded edges；无网络请求 |
 | K2 | 前沿排序 | 从候选边选择人工审阅队列 | `candidate-frontier.json`、评分说明 | 排序只改变顺序，不改变语义状态 |
 | K3 | 网络审阅 | 复用工作台完成节点/边审阅 | edge review 页面、review events | 两人/单人状态、冲突、pending 可保留 |
 | K4 | 显式采用 | 把 approved edge 生成新 case | `adopt-edge` 或扩展 `adopt-keywords` | 只改一个组；源 case 不覆盖；有 rollback target |
@@ -87,7 +87,7 @@ manifest.json
 - 节点 ID：由 scope、node_type、normalized label 生成；
 - `observed_in` 边：每个 observation 到 paper/field；
 - `database_assigned`：数据库关键词/MeSH 与 source record；
-- `cooccurs_with`：只在同一 paper/字段内生成，保存 document frequency；
+- `cooccurs_with`：只在同一 paper/字段内生成，保存 document frequency；默认最多 50,000 条、单节点最多 25 条、document frequency 至少 2；完整观察仍保留，边是可审阅候选前沿而不是完整笛卡尔积；
 - 关系边初始均为 `candidate` 或 `observed`，不能生成 approved equivalent；
 - P2 discovery channel 单独写 `discovered_by`，不能写成 `retrieved_by`。
 

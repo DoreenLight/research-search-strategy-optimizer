@@ -55,6 +55,7 @@ Return or write:
 - P4 benchmark summaries and human-review queues; missing labels remain unknown and do not become negative examples.
 - P1 review workbench exports are offline and blinded; candidate ranking is not semantic approval, and only an explicit `adopt-keywords` action adds approved terms to a new case.
 - Optional query caching is local, redacted, content-addressed, and cache hits do not consume network request budget.
+- `keyword-network` is a read-only, offline evidence-network build; observations and candidate edges never become approved/adopted query terms implicitly. Cooccurrence edges are bounded by default to prevent n-gram graph explosion.
 
 ## Failure handling
 

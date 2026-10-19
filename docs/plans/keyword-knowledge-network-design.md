@@ -113,7 +113,7 @@ export_network(network, output_dir) -> dict
 |---|---|---|---|
 | `observed_in` | 词形 → 论文字段 | 字段、原文片段、paper_id、run_id | `observed` |
 | `database_assigned` | 数据库词 → source record | Provider 字段和来源等级 | `observed` |
-| `cooccurs_with` | `joint angle` ↔ `sEMG` | 同文档/同字段统计 | `candidate` |
+| `cooccurs_with` | `joint angle` ↔ `sEMG` | 同文档/同字段统计；默认有界并保存端点 evidence | `candidate` |
 | `variant_of` | `sEMG` → `surface electromyography` | 论文证据 + 人工确认 | `candidate` |
 | `equivalent_to` | 两个词可互换 | 明确人工/Agent 审阅；最好有多来源证据 | `pending_review` |
 | `broader_than` | `joint kinematics` → `joint angle` | 概念层级理由 | `pending_review` |
