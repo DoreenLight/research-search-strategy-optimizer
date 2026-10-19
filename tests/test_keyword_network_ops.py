@@ -78,12 +78,12 @@ def test_adopt_edge_requires_explicit_approved_review_and_writes_new_case(tmp_pa
     frontier = score_keyword_frontier(network_dir, frontier_dir, limit=1)
     edge = frontier['edges'][0]
     review = tmp_path / 'review-events.jsonl'
-    review.write_text(json.dumps({
-        'review_event_id': 'review-1', 'edge_id': edge['edge_id'], 'reviewer_id': 'reviewer-a',
+    review.write_text(''.join(json.dumps({
+        'review_event_id': review_id, 'edge_id': edge['edge_id'], 'reviewer_id': reviewer,
         'label': 'approved', 'predicate': edge['predicate'], 'adopted_term': 'surface EMG',
         'group_id': 'input', 'rationale': 'Synthetic edge-review fixture', 'evidence_locator': 'title',
-        'judged_at': '2026-10-19T00:00:00+00:00', 'review_status': 'approved',
-    }) + '\n')
+        'judged_at': '2026-10-19T00:00:00+00:00', 'review_status': 'approved', 'synthetic_review': True,
+    }) + '\n' for review_id, reviewer in [('review-a', 'reviewer-a'), ('review-b', 'reviewer-b')]))
     output = tmp_path / 'adopted-case.json'
     result = adopt_edge(package / 'input-case.json', network_dir, review, edge['edge_id'], output)
     assert result['status'] == 'written'

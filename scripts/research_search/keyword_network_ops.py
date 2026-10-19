@@ -145,10 +145,11 @@ def adopt_edge(case_path: Path, network_dir: Path, review_events_path: Path, edg
         raise ValueError("edge_id not found")
     events = _jsonl(Path(review_events_path))
     approved = [event for event in events if event.get("edge_id") == edge_id and event.get("label") == "approved" and event.get("review_status") == "approved"]
-    if not approved:
-        raise ValueError("edge requires an explicit approved review event")
-    if len({event.get("reviewer_id") for event in approved}) < 1:
-        raise ValueError("approved edge requires reviewer_id")
+    reviewer_ids = {event.get("reviewer_id") for event in approved if event.get("reviewer_id")}
+    if len(reviewer_ids) < 2:
+        raise ValueError("edge requires two independent approved reviewer events")
+    if any(event.get("synthetic_review") is not True for event in approved):
+        raise ValueError("edge review provenance must be explicit")
     group_ids = {group["group_id"] for group in case["concept_groups"]}
     review = approved[-1]
     group_id = review.get("group_id")
@@ -254,15 +255,18 @@ def build_network_experiment_config(base_config: dict[str, Any], candidate_case:
     validate_case(base_config["rounds"][0]["case"])
     validate_case(candidate_case)
     parent = base_config["rounds"][0]["case"]
-    changed = []
-    for before, after in zip(parent["concept_groups"], candidate_case["concept_groups"]):
-        if set(before["terms"]) != set(after["terms"]):
-            changed.append(before["group_id"])
-    if len(changed) != 1:
-        raise ValueError("network experiment must change exactly one concept group")
+    before_groups = {item["group_id"]: item for item in parent["concept_groups"]}
+    after_groups = {item["group_id"]: item for item in candidate_case["concept_groups"]}
+    changed = [group_id for group_id in sorted(set(before_groups) | set(after_groups))
+               if before_groups.get(group_id, {}).get("terms") != after_groups.get(group_id, {}).get("terms")]
+    if len(changed) != 1 or set(before_groups) != set(after_groups):
+        raise ValueError("network experiment must change exactly one existing concept group")
     config = copy.deepcopy(base_config)
     config["rounds"] = list(config["rounds"]) + [{
         "case": candidate_case, "rationale": f"Keyword network edge {edge_id} explicit adoption; synthetic review input.",
+        "tested_in": {"edge_id": edge_id, "review_event_ids": list(review_event_ids), "synthetic_review": True,
+                      "query_version": "candidate", "request_count": None, "paper_ids": None,
+                      "confirmed_new_relevant_ids": None, "cost_usd": None, "screening_minutes": None},
         "reviewed_by": "keyword-network-review", "change_relationship": "unclassified",
         "keyword_network_edge_ids": [edge_id], "review_event_ids": list(review_event_ids),
         "new_terms": sorted(set(candidate_case["concept_groups"][0]["terms"]) - set(parent["concept_groups"][0]["terms"])),
