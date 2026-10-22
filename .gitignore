@@ -6,8 +6,15 @@ __pycache__/
 .coverage
 htmlcov/
 
-# macOS
-.DS_Store
+# Local run outputs and evidence archives (never published)
+artifacts/
+workspace/
+.query-cache/
+
+# Generated release archives
+*.zip
+*.tar.gz
+*.tgz
 
 # Local environments and credentials
 .venv/
@@ -16,10 +23,9 @@ venv/
 .env.*
 !.env.example
 
-# Generated release archives and extraction checks
-artifacts/*.zip
-artifacts/_zip-check/
-
-# Local editor / OS noise
+# macOS / Windows / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
 .vscode/
 .idea/

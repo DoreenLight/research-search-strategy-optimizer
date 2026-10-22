@@ -1,0 +1,23 @@
+# Normalize line endings: repository stores LF, working tree checks out LF on all platforms.
+* text=auto eol=lf
+
+# Explicit types (keeps diffs readable and avoids binary detection surprises).
+*.py    text diff=python
+*.md    text diff=markdown
+*.json  text
+*.jsonl text
+*.toml  text
+*.html  text
+*.css   text
+*.sh    text eol=lf
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+
+# Never diff/merge generated or vendored payloads.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.pdf   binary
+*.zip   binary
+*.pyc   binary
