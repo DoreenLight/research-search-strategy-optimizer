@@ -250,10 +250,10 @@ def test_mode_statistics_keep_live_requests_separate(tmp_path):
 def test_hash_manifest_matches_emitted_files(tmp_path):
     output = tmp_path / "hash"
     run_benchmark(_manifest(), output)
-    hashes = json.loads((output / "manifest.jsonsha256").read_text(encoding="utf-8"))
+    hashes = json.loads((output / "manifest.sha256.json").read_text(encoding="utf-8"))
     for name, digest in hashes["files"].items():
         assert hashlib.sha256((output / name).read_bytes()).hexdigest() == digest
-    assert "manifest.jsonsha256" not in hashes["files"]
+    assert "manifest.sha256.json" not in hashes["files"]
 
 
 def test_unsafe_source_path_is_rejected_without_writing(tmp_path):
@@ -441,7 +441,7 @@ def test_exact_output_inventory_and_chinese_report(tmp_path):
     output = tmp_path / "inventory"
     result = run_benchmark(_manifest(), output)
     assert {path.name for path in output.iterdir()} == {
-        "benchmark.json", "benchmark.md", "review-queue.jsonl", "manifest.jsonsha256",
+        "benchmark.json", "benchmark.md", "review-queue.jsonl", "manifest.sha256.json",
     }
     assert _read_report(output) == result
     text = (output / "benchmark.md").read_text(encoding="utf-8")

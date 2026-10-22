@@ -179,9 +179,9 @@ def test_output_hash_covers_three_payloads_not_itself(tmp_path):
     prepare_p4_review(
         _manifest(), ["p1"], "freeze source", _reviewers(tmp_path), output, test_case_id="test-case"
     )
-    hashes = json.loads((output / "manifest.jsonsha256").read_text(encoding="utf-8"))
+    hashes = json.loads((output / "manifest.sha256.json").read_text(encoding="utf-8"))
     assert set(hashes["files"]) == {"reviewed.jsonl", "conflicts.jsonl", "benchmark-manifest.json"}
-    assert "manifest.jsonsha256" not in hashes["files"]
+    assert "manifest.sha256.json" not in hashes["files"]
     for name, digest in hashes["files"].items():
         assert hashlib.sha256((output / name).read_bytes()).hexdigest() == digest
     assert (output / "reviewed.jsonl").read_bytes().endswith(b"\n")

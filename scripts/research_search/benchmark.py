@@ -469,7 +469,7 @@ def run_benchmark(manifest: dict, output_dir: Path) -> dict:
         "input_manifest_sha256": report["input_manifest_sha256"],
         "files": {name: hashlib.sha256(contents[name].encode("utf-8")).hexdigest() for name in _FILES},
     }
-    contents["manifest.jsonsha256"] = _json(hash_manifest)
+    contents["manifest.sha256.json"] = _json(hash_manifest)
     output_dir.mkdir(parents=True, exist_ok=False)
     for name, content in contents.items():
         with (output_dir / name).open("x", encoding="utf-8", newline="\n") as handle:

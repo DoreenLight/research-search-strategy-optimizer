@@ -107,7 +107,7 @@ manifest = {
         "runs": [],
     }],
 }
-report = run_benchmark(manifest, Path("artifacts/p4-plan-review-001"))
+report = run_benchmark(manifest, Path("artifacts/p4/p4-plan-review-001"))
 # actual_case_count == 1；actual_executed_case_count == 0；不是四次实验。
 ```
 
@@ -118,7 +118,7 @@ report = run_benchmark(manifest, Path("artifacts/p4-plan-review-001"))
 | `benchmark.json` | 与返回 dict 相同；含原输入快照、规范输入 SHA-256、计划数/实际数、分 mode 账本、逐 case/来源组指标及 source_records |
 | `benchmark.md` | 中文摘要、计划/执行区别、分模式账本、逐 case/baseline/mode 比较和单来源 reported_count |
 | `review-queue.jsonl` | 所有观察 ID 的待人工审阅池，case 内去重；不含 baseline、mode、模型标签、策略或排序分值；可能为空文件 |
-| `manifest.jsonsha256` | JSON 格式 SHA-256 清单，覆盖上面三个文件，`status=completed`；不自我哈希 |
+| `manifest.sha256.json` | JSON 格式 SHA-256 清单，覆盖上面三个文件，`status=completed`；不自我哈希 |
 
 输入哈希是 `json.dumps(input, ensure_ascii=False, sort_keys=True, separators=(",", ":"), allow_nan=False)` 的 UTF-8 SHA-256。输出哈希覆盖实际 UTF-8 字节（LF 换行），大小写十六进制为小写。输入不被修改。同一输入的重排对象键不改变输入哈希；数组次序会改变排名和哈希。清单仅检测内容一致性，不提供作者认证，也不证明输入是真的 live 记录。
 

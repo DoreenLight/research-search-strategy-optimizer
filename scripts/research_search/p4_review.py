@@ -230,5 +230,5 @@ def prepare_p4_review(
             "conflict_count": len(conflicts), "new_network_request_count": 0,
         },
     }
-    _write_payloads(output, {**payloads, "manifest.jsonsha256": json.dumps(hashes, ensure_ascii=False, indent=2, sort_keys=True) + "\n"})
+    _write_payloads(output, {**payloads, "manifest.sha256.json": json.dumps(hashes, ensure_ascii=False, indent=2, sort_keys=True) + "\n"})
     return result
