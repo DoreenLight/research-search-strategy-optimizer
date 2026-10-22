@@ -8,7 +8,7 @@
 - 三类数据库总命中：8,188 / 5,206 / 481。
 - 每策略实际抓取 5 条；联合去重后 14 篇。
 - P0 证据记录 2,245 条；候选词/统计短语 1,724 条。它们不是人工确认关键词或相关论文数。
-- 真实包：`artifacts/p0-live-20261018/`。
+- 真实包：`artifacts/p0/p0-live-20261018/`。
 - 同一真实快照离线重放：0 新请求，内容哈希一致，验证通过。
 
 ## P1
@@ -16,7 +16,7 @@
 - 真实两轮 OpenAlex 对照：6 次请求。
 - 基线 A 与候选 B 的联合结果观察到 6 个新增 ID。
 - 没有人工相关性标注，所以 `confirmed_gain=null`，候选版本停在 `pending_review`，active version 仍为基线。
-- 真实会话：`artifacts/p1-live-loop-20261018/`。
+- 真实会话：`artifacts/p1/p1-live-loop-20261018/`。
 - 已实现：版本差异、候选词建议、独立发现遗漏候选、共享预算、语义漂移停止、回退与 manifest。
 
 ## P2
@@ -28,7 +28,7 @@
 
 ## P3
 
-- 从真实 P0 包生成 14 篇阅读卡片：`artifacts/p3-reading-p0-20261018/`。
+- 从真实 P0 包生成 14 篇阅读卡片：`artifacts/p3/p3-reading-p0-20261018/`。
 - `open_obsidian` 返回 `manual_import_required`；不扫描、不写 Vault、不启动 Obsidian。
 - 不下载全文、不绕过付费墙；公开全文 URL 只有在输入记录明确给出公开断言时才进入获取队列。
 - P3 专项测试：37 项。
@@ -39,7 +39,7 @@
 - 真实 P0/P1 运行账本已导入：6 条 live runs，6 次历史请求，20 条待审论文。
 - `Recall@K`、`P@K`、confirmed new relevant、cost per relevant 全部按契约保持未知。
 - `real_advantage_demonstrated=false`。
-- benchmark 产物：`artifacts/p4-real-report-20261018/`。
+- benchmark 产物：`artifacts/p4/p4-real-report-20261018/`。
 - P4 定向测试：62 项；P2 provider 定向测试：42 项；P3 定向测试：37 项；P1 状态/安全/会话测试：27 项。
 
 ## `jev@typesafe` Top-K 重排

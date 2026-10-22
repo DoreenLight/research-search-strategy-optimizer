@@ -1,6 +1,6 @@
 # P2 联调结果离线融合
 
-输入：`../p2-live-20261018/pubmed-result.json` 与 `../p2-live-20261018/semantic-scholar-result.json`。
+输入：本地运行产物 `artifacts/p2/p2-live-20261018/pubmed-result.json` 与 `artifacts/p2/p2-live-20261018/semantic-scholar-result.json`（原始请求记录不随仓库发布）。
 
 - fusion 模式：`offline_fusion`
 - 本次新增网络请求：0

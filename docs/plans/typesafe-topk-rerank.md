@@ -21,9 +21,9 @@
 
 ```bash
 python3 scripts/research-search.py rerank-topk \
-  artifacts/p0-live-20261018 \
+  artifacts/p0/p0-live-20261018 \
   --strategy focused \
-  --output artifacts/jev-rerank-plan
+  --output artifacts/rerank/jev-rerank-plan
 ```
 
 真实调用需显式：
@@ -31,11 +31,11 @@ python3 scripts/research-search.py rerank-topk \
 ```bash
 export TYPESAFE_API_KEY='...'
 python3 scripts/research-search.py rerank-topk \
-  artifacts/p0-live-20261018 \
+  artifacts/p0/p0-live-20261018 \
   --strategy focused \
   --top-k 20 \
   --use-typesafe \
-  --output artifacts/jev-rerank-live
+  --output artifacts/rerank/jev-rerank-live
 ```
 
 ## 设计边界
